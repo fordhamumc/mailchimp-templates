@@ -2,9 +2,9 @@ doctype transitional
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    // [if !mso] <!
+    <!--[if !mso]><!-->
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    // <![endif]
+    <!--<![endif]-->
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     block title
       title Fordham University
@@ -15,10 +15,11 @@ html(xmlns='http://www.w3.org/1999/xhtml')
     block style-layout
     block style-template
     
-    //if (gte mso 9)|(IE)
-      style(type='text/css').
-        table {border-collapse: collapse;}
-        table td,
-        .contents {font-family: arial, sans-serif !important;}
+    <!--[if (gte mso 9)|(IE)]>
+    style.
+      table {border-collapse: collapse;}
+      table td,
+      .contents {font-family: arial, sans-serif !important;}
+    <![endif]-->
   body
     block body
