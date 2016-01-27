@@ -129,7 +129,7 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.jade',
-          '<%= paths.src %>/_components/**/*.jade'
+          '<%= paths.src %>/{_layouts,_components}/**/*.jade'
         ],
         tasks: ['jade']
       },
