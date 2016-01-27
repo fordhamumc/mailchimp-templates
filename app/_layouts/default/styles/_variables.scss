@@ -1,0 +1,68 @@
+// 
+//  Variables
+//  ---------------------------------
+
+
+// Base colors
+//---------------------
+
+$base-background:             #f9f9f9 !default;     
+$base-border:                 darken($base-background, 5%) !default;
+$content-background:          #ffffff !default;
+$text-color:                  #444444 !default;
+$heading-color:               #333333 !default;
+$primary-color:               #900028 !default;
+$meta-color:                  lighten($text-color, 18%) !default;
+$link-color:                  $primary-color !default;
+
+
+// Aside colors
+//---------------------
+
+$aside-background:            $base-background !default;
+$aside-color:                 lighten($text-color, 10%) !default;
+
+
+// Button colors
+//---------------------
+
+$btn-background:              $primary-color !default;
+$btn-color:                   #ffffff !default;
+$btn-secondary-background:    #ededed !default;
+$btn-secondary-color:         lighten($text-color, 7%) !default;
+
+
+// Footer colors
+//---------------------
+
+$footer-color:                $text-color !default;
+$footer-nav-background:       #5b6f7b !default;
+$footer-nav-color:            #ffffff !default;
+$footer-nav-link-color:       $footer-nav-color !default;
+
+
+// Fonts
+//---------------------
+
+$base-font:                   'Open Sans', Arial, sans-serif !default;
+$font-weight-base:            normal !default;
+$font-weight-bold:            bold !default;
+$font-size-base:              15px !default;
+$line-height-base:            1.6 !default;
+$line-height-large:           1.2 !default;
+$line-height-computed:        floor($font-size-base * $line-height-base) !default;
+
+
+// Spacing
+//---------------------
+
+$container-padding:           15px !default;
+$container-gutter:            25px !default;
+
+
+// Media Queries
+//---------------------
+
+$screen-sm:                   460px !default;
+$screen-xs:                   375px !default;
+

@@ -1,0 +1,149 @@
+// 
+//  Grid
+//  ---------------------------------
+
+
+// Multiple column layouts
+//---------------------
+
+.two-column,
+.three-column,
+.sidebar {
+	font-size: 0;
+	text-align: center;
+	
+	.column {
+		width: 100%;
+		display: inline-block;
+	}
+	
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.two-column,
+.three-column {
+	
+	.column {
+		vertical-align: top;
+	}
+}
+
+.sidebar {
+	
+	.column {
+		vertical-align: middle;
+	}
+	
+	img {
+		max-width: 80px;
+	}
+}
+
+
+// Two column layout
+//---------------------
+
+.two-column {	
+  
+	.column {
+		max-width: 300px;
+	}
+	
+	img {
+		max-width: 280px;
+	}
+	
+	.text {
+		padding-top: 10px;
+	}
+}
+
+
+// Three column layout
+//---------------------
+
+.three-column {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	.column {
+		max-width: 200px;
+	}
+	
+	.contents {
+  	text-align: center;
+	}
+	
+	img {
+		max-width: 180px;
+	}
+	
+	.text {
+		padding-top: 10px;
+	}
+}
+
+
+// Sidebar layout 
+//---------------------
+
+.sidebar {
+	
+	.aside {
+		max-width: 100px;
+	}
+	
+	.main {
+		max-width: 500px;
+	}
+}
+
+
+// Media Queries
+//---------------------
+
+@media screen and (max-width: $screen-sm) {
+  
+	.two-column {
+  	
+		.column {
+			max-width: 100% !important;
+		}
+		
+		img {
+			max-width: 100% !important;
+		}
+	}
+	
+	.three-column {
+  	
+		.column {
+			max-width: 100% !important;
+		}
+		
+		img {
+			max-width: 50% !important;
+		}
+	}
+}
+@media screen and (min-width: $screen-sm + 1) and (max-width: 600px + $container-padding * 2) {
+  
+	.three-column .column {
+		max-width: 33% !important;
+	}
+	
+	.two-column .column {
+		max-width: 50% !important;
+	}
+	
+	.sidebar .main {
+  	max-width: 100% !important;
+  	
+  	.contents {
+    	text-align: center !important;
+  	}
+	}
+}

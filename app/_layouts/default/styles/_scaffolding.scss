@@ -1,0 +1,67 @@
+// 
+//  Scaffolding 
+//  ---------------------------------
+
+
+// Links
+//---------------------
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+.textlink {
+  color: $text-color;
+}
+
+
+// Image defaults
+//---------------------
+
+img {
+  outline: none;
+  text-decoration: none;
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+  
+  a & {
+    border: 0;
+  }
+}
+
+.img_fix {
+  display: block;
+}
+
+.full-width-image img {
+	width: 100%;
+	max-width: 600px;
+	height: auto;
+}
+
+
+// Default content
+//---------------------
+
+.contents {
+  color: $text-color;
+  font-family: $base-font;
+  line-height: $line-height-base;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  text-align: left;
+}
+
+
+// Preheader
+//---------------------
+
+.preheader {
+  max-height:0;
+  overflow:hidden;
+  display:none;
+  mso-hide: all;
+  font-size:11px; 
+  color: #666666;
+}

@@ -1,0 +1,50 @@
+// 
+//  Reset Client-specific Styles 
+//  ---------------------------------
+
+
+body {
+	Margin: 0;
+	padding: 0;
+	min-width: 100%;
+	background-color: #ffffff;
+}
+
+table {
+	border-spacing: 0;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+td {
+	padding: 0;
+}
+
+.wrapper {
+	width: 100%;
+	table-layout: fixed;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+.webkit {
+	max-width: 600px;
+}
+
+.outer {
+	Margin: 0 auto;
+	width: 100%;
+	max-width: 600px;
+}
+
+.inner {
+	padding: $container-gutter $container-padding;
+}
+
+.contents {
+	width: 100%;
+}
+
+p {
+	Margin: 0;
+}

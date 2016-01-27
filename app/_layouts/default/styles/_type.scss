@@ -1,0 +1,70 @@
+// 
+//  Type
+//  ---------------------------------
+
+
+// Headings
+//---------------------
+
+#{headings()} {
+  Margin-top: 0;
+  color: $heading-color;
+  line-height: 1.2;
+  a {
+    text-decoration: none;
+    color: $link-color !important;
+  }
+}
+
+#{headings(1, 3)} {
+  Margin-bottom: ($line-height-computed / 2);
+}
+
+#{headings(4, 6)} {
+  Margin-bottom: ($line-height-computed / 2);
+}
+
+h1 { font-size: floor($font-size-base * 2.60); } 
+h2 { font-size: floor($font-size-base * 2.15); }
+h3 { font-size: ceil($font-size-base * 1.70); }
+h4 { font-size: ceil($font-size-base * 1.25); }
+h5 { font-size: $font-size-base; }
+h6 { font-size: ceil($font-size-base * 0.85); }
+
+
+// Paragraphs
+//---------------------
+
+p {
+  padding: 0;
+  Margin-bottom: 1.2em;
+}
+
+
+// Lists
+//---------------------
+
+ul {
+  margin:0;
+  Margin-bottom: ($line-height-computed - 7);
+}
+li {
+  Margin-bottom: 7px;
+}
+
+
+// Body Text
+//---------------------
+
+.lead {
+  font-size: ceil($font-size-base * 1.5)
+}
+
+
+// Emphasis
+//---------------------
+
+small   { 
+  color: lighten($text-color, 20%);
+  font-size: 85%; 
+}
