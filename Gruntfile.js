@@ -61,6 +61,12 @@ module.exports = function(grunt) {
           src: ['<%= paths.directory %>/<%= paths.images %>/**/*.{png,jpg,jpeg,gif}', '_components/**/*.{png,jpg,jpeg,gif}'],
           dest: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>',
           flatten: true
+        },{
+          expand: true,
+          cwd: '<%= paths.src %>',
+          src: '{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}',
+          dest: '<%= paths.tmp %>/<%= paths.directory %>/styles',
+          flatten: true
         }]
       }
     },
@@ -71,12 +77,12 @@ module.exports = function(grunt) {
      */
     compass: {
       options: {
-        sassDir: '<%= paths.src %>/<%= paths.directory %>',
-        httpImagesPath: '<%= paths.src %>/<%= paths.images %>'
+        sassDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
+        httpImagesPath: '<%= paths.src %>/<%= paths.directory %>/<%= paths.images %>'
       },
       dev: {
         options: {
-          cssDir: '<%= paths.tmp %>/<%= paths.directory %>/css',
+          cssDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
           imagesDir: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>',
           outputStyle: 'expanded',
           noLineComments: false
@@ -85,7 +91,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           force: true,
-          cssDir: '<%= paths.dist %>/<%= paths.directory %>/css',
+          cssDir: '<%= paths.dist %>/<%= paths.directory %>/styles',
           imagesDir: '<%= paths.dist %>/<%= paths.directory %>/<%= paths.images %>',
           noLineComments: true,
           assetCacheBuster: false,
@@ -139,7 +145,7 @@ module.exports = function(grunt) {
         },
         files: [
           '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-          '<%= paths.tmp %>/<%= paths.directory %>/css/{,*/}*.css',
+          '<%= paths.tmp %>/<%= paths.directory %>/styles/{,*/}*.css',
           '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>/{,*/}*.{png,jpg,jpeg,gif}'
         ]
       }
@@ -341,8 +347,7 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'chooseFile',
     'clean:dist',
-    'mkdir',
-    'img_find_and_copy',
+    'copy',
     'compass:dist',
     'jade',
     'imagemin',
