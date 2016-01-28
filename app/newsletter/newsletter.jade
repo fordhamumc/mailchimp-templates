@@ -2,13 +2,13 @@ extends ../_layouts/default/default.jade
 
 block title
   title Fordham Newsletter
+block style-template
+  link(rel='stylesheet', type='text/css', href='styles/newsletter.css')
 
 block body
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
-      table.outer.header(align='center')
-        tr
-          td.one-column
+      include ../_components/masthead/masthead.jade
           
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

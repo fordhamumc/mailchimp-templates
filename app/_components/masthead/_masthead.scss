@@ -1,0 +1,11 @@
+.masthead {
+  text-align: center;
+  
+	img {
+		max-width: 165px;
+	
+  	@media screen and(max-width: $screen-sm) {
+  		max-width: 165px !important;
+  	}
+	}
+}

@@ -21,6 +21,7 @@ td {
 }
 
 .wrapper {
+  background: $base-background;
 	width: 100%;
 	table-layout: fixed;
 	-webkit-text-size-adjust: 100%;
@@ -32,9 +33,16 @@ td {
 }
 
 .outer {
+  background: $content-background;
+  border: 1px solid $base-border;
 	Margin: 0 auto;
 	width: 100%;
 	max-width: 600px;
+}
+
+.header {
+  background: $base-background;
+  border: 0;
 }
 
 .inner {
