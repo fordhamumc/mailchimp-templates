@@ -54,14 +54,17 @@ module.exports = function(grunt) {
      * ===============================
      */
     copy: {
-      dist: {
+      images: {
         files: [{
           expand: true,
           cwd: '<%= paths.src %>',
           src: ['<%= paths.directory %>/<%= paths.images %>/**/*.{png,jpg,jpeg,gif}', '_components/**/*.{png,jpg,jpeg,gif}'],
           dest: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>',
           flatten: true
-        },{
+        }]
+      },
+      styles: {
+        files: [{
           expand: true,
           cwd: '<%= paths.src %>',
           src: '{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}',
@@ -125,8 +128,8 @@ module.exports = function(grunt) {
      */
     watch: {
       compass: {
-        files: ['<%= paths.src %>/scss/**/*.scss'],
-        tasks: ['compass:dev']
+        files: ['<%= paths.src %>/{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}'],
+        tasks: ['copy:styles','compass:dev']
       },
       jade: {
         options: {
