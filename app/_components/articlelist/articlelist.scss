@@ -1,0 +1,34 @@
+// Article list
+//---------------------
+
+.article-list {
+  list-style: none;
+  Margin-left: 0;
+  Margin-right: 0;
+  Margin-bottom: 40px;
+  padding-left:0;
+  padding-right:0;
+  
+  li {
+    border-bottom: 1px solid #f2f2f2;
+    Margin-bottom: 5px;
+    font-size: ceil($font-size-base * 1.25);
+    
+    small {
+      display: block;
+      color: $text-color;
+      font-size: $font-size-base;
+    }
+  }
+  
+  a {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: $text-color;
+  }
+
+  .article-list--last {
+    border-bottom: 0;
+  }
+}
