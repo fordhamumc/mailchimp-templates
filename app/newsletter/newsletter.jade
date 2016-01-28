@@ -6,11 +6,13 @@ block style-template
   link(rel='stylesheet', type='text/css', href='styles/newsletter.css')
 
 block body
-  center.wrapper
+  center.wrapper.header
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
       include ../_components/preheader/preheader.jade
       include ../_components/masthead/masthead.jade
+  center.wrapper.lead
+    .webkit
       include ../_components/leadstory/leadstory.jade
           
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

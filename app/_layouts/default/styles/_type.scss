@@ -8,12 +8,7 @@
 
 #{headings()} {
   Margin-top: 0;
-  color: $heading-color;
   line-height: 1.2;
-  a {
-    text-decoration: none;
-    color: $link-color !important;
-  }
 }
 
 #{headings(1, 3)} {

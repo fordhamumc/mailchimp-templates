@@ -1,0 +1,20 @@
+// Base style overrides
+//---------------------
+
+.lead,
+.lead .outer {
+  background: $primary-color;
+}
+
+.lead .contents {
+  color: #ffffff;
+}
+
+.lead a {
+  color: #ffffff;
+}
+
+.lead .btn {
+  background-color: #3a89a7;
+  border-color: darken(#3a89a7, 10%);
+}
