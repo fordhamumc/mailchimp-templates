@@ -1,18 +1,19 @@
 // Base style overrides
 //---------------------
 
+$base-background:             #ffffff;
+$content-border-width:        0px;
 
 
-// Default variables
+// Default styles
 //-------------------
 
-@import "variables";
+@import "base";
 
 
 // Components
 //-------------------
 
-// Masthead
 @import "masthead.scss";
 @import "preheader.scss";
 @import "leadstory.scss";
@@ -22,3 +23,5 @@
 
 // Newsletter Styles
 //-------------------
+
+@import "lead.scss";
