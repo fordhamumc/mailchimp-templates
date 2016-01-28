@@ -1,0 +1,14 @@
+table.outer
+  tr
+    td.two-column
+      <!--[if (gte mso 9)|(IE)]><table width="100%"><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><tr><td width="50%" valign="top"><![endif]-->
+      
+      include column.jade
+      
+      <!--[if (gte mso 9)|(IE)]></td><td width="50%" valign="top"><![endif]-->
+      
+      include column.jade
+      
+      <!--[if (gte mso 9)|(IE)]></td></tr><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></table><![endif]-->
