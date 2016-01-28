@@ -6,24 +6,29 @@
 // Base colors
 //---------------------
 
-$base-background:             #f9f9f9 !default;     
-$base-border:                 darken($base-background, 5%) !default;
-$content-background:          #ffffff !default;
 $text-color:                  #444444 !default;
-$heading-color:               #333333 !default;
 $primary-color:               #900028 !default;
 $meta-color:                  lighten($text-color, 18%) !default;
 $link-color:                  $primary-color !default;
 
 
-// Aside colors
+// Containers
+//---------------------
+
+$base-background:             #f9f9f9 !default;     
+$content-background:          #ffffff !default;
+$content-border-color:        darken($base-background, 5%) !default;
+$content-border-width:        0px 1px !default;
+
+
+// Aside
 //---------------------
 
 $aside-background:            $base-background !default;
 $aside-color:                 lighten($text-color, 10%) !default;
 
 
-// Button colors
+// Button
 //---------------------
 
 $btn-background:              $primary-color !default;
@@ -42,7 +47,7 @@ $footer-nav-color:            #ffffff !default;
 $footer-nav-link-color:       $footer-nav-color !default;
 
 
-// Fonts
+// Type
 //---------------------
 
 $base-font:                   'Open Sans', Arial, sans-serif !default;

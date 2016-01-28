@@ -34,7 +34,9 @@ td {
 
 .outer {
   background: $content-background;
-  border: 1px solid $base-border;
+  border-color: $content-border-color;
+  border-style: solid;
+  border-width: $content-border-width;
 	Margin: 0 auto;
 	width: 100%;
 	max-width: 600px;
