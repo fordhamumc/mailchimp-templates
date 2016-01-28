@@ -52,8 +52,9 @@ $footer-nav-link-color:       $footer-nav-color !default;
 
 $base-font:                   'Open Sans', Arial, sans-serif !default;
 $font-weight-base:            normal !default;
-$font-weight-bold:            bold !default;
+$font-weight-bold:            600 !default;
 $font-size-base:              15px !default;
+$headings-font-weight:        $font-weight-bold;
 $line-height-base:            1.6 !default;
 $line-height-large:           1.2 !default;
 $line-height-computed:        floor($font-size-base * $line-height-base) !default;
