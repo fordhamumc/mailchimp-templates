@@ -1,0 +1,42 @@
+// 
+//  Buttons
+//  ---------------------------------
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: $btn-background;
+  color: $btn-color;
+  border: 1px solid darken($btn-background, 10%);
+  border-radius: 4px;
+  letter-spacing: .05em;
+}
+.btn-sm {
+  font-size:floor($font-size-base * 0.9);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 3px;
+  letter-spacing: .06em;
+  
+}
+.btn-lg {
+  font-size: floor($font-size-base * 1.4);
+  Margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
+  border-radius: 5px;
+  letter-spacing: .03em;
+}
+.btn-secondary {
+  background: $btn-secondary-background;
+  border: 1px solid $btn-secondary-border;
+  color: $btn-secondary-color;
+}
