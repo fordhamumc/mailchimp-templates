@@ -1,0 +1,19 @@
+// 
+//  Section header
+//  ---------------------------------
+
+
+.section-header {
+  text-transform: uppercase;
+  padding-bottom: 0px;
+  font-weight: $font-weight-bold;
+  color: $meta-color;
+}
+
+.has-section-header .inner {
+  padding-top: 15px;
+  
+  &.section-header {
+    padding-top: 25px;
+  }
+}
