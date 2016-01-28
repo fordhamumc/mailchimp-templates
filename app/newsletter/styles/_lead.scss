@@ -6,6 +6,16 @@
   background: $primary-color;
 }
 
+.lead .outer {
+  padding-top: $container-gutter * 2;
+  padding-bottom: $container-gutter;
+  Margin-bottom: $container-gutter;
+  
+  @media screen and (max-width: 600px) {
+    padding-top: 0px !important;
+  }
+}
+
 .lead .contents {
   color: #ffffff;
 }
@@ -15,6 +25,8 @@
 }
 
 .lead .btn {
-  background-color: #3a89a7;
-  border-color: darken(#3a89a7, 10%);
+  //2c8db3
+  //dfb451
+  background-color: #2c8db3;
+  border-color: darken(#2c8db3, 10%);
 }
