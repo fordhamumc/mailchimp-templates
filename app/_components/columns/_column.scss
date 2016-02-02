@@ -3,5 +3,15 @@
 //  ---------------------------------
 
 .column-img {
-  padding-bottom: floor($container-gutter/2);
+  padding-bottom: 0;
+  
+  @media screen and(max-width: $screen-sm) {
+    padding: 0 !important;
+  }
+}
+
+@media screen and(max-width: $screen-sm) {
+  .column + .column {
+    padding-top: 25px !important;
+  }
 }
