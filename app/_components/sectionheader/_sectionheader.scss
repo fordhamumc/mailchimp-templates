@@ -14,6 +14,6 @@
   padding-top: 15px;
   
   &.section-header {
-    padding-top: 25px;
+    padding-top: $container-gutter - ($line-height-computed - $font-size-base)/2;
   }
 }
