@@ -58,6 +58,7 @@ $headings-font-weight:        $font-weight-bold;
 $line-height-base:            1.6 !default;
 $line-height-large:           1.2 !default;
 $line-height-computed:        floor($font-size-base * $line-height-base) !default;
+$line-height-offset:          ($line-height-computed - $font-size-base)/2 !default;
 
 
 // Spacing
