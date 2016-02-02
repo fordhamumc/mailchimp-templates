@@ -8,16 +8,20 @@
 
 #{headings()} {
   Margin-top: 0;
-  line-height: 1.2;
   font-weight: $headings-font-weight;
 }
 
 #{headings(1, 3)} {
   Margin-bottom: ($line-height-computed / 2);
+  line-height: 1.2;
+}
+
+h4 {
+  line-height: 1.5;
 }
 
 #{headings(4, 6)} {
-  Margin-bottom: ($line-height-computed / 2);
+  Margin-bottom: ($line-height-computed / 3);
 }
 
 h1 { font-size: floor($font-size-base * 2.60); } 
