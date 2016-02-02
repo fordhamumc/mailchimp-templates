@@ -133,24 +133,13 @@ module.exports = function(grunt) {
       },
       jade: {
         options: {
-          spawn: false,
-          livereload: true
+          spawn: false
         },
         files: [
           '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.jade',
           '<%= paths.src %>/{_layouts,_components}/**/*.jade'
         ],
         tasks: ['jade']
-      },
-      livereload: {
-        options: {
-          livereload: '<%= connect.options.livereload %>',
-        },
-        files: [
-          '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-          '<%= paths.tmp %>/<%= paths.directory %>/styles/{,*/}*.css',
-          '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>/{,*/}*.{png,jpg,jpeg,gif}'
-        ]
       }
     },
 
@@ -158,26 +147,32 @@ module.exports = function(grunt) {
      * Server Tasks
      * ===============================
      */
-    connect: {
-      options: {
-        open: true,
-        hostname: 'localhost',
-        port: 8000,
-        livereload: 35729
-      },
+    
+    browserSync: {
       dev: {
+        bsFiles: {
+          src: [
+            '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+            '<%= paths.tmp %>/<%= paths.directory %>/styles/{,*/}*.css',
+            '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>/{,*/}*.{png,jpg,jpeg,gif}'
+          ]
+        },
         options: {
-          base: '<%= paths.tmp %>/<%= paths.directory %>',
-          open: {
-            target: 'http://<%= connect.options.hostname %>:<%= connect.options.port %>/<%= paths.file %>.html'
-          }
+          server: {
+            baseDir: [
+              '<%= paths.tmp %>/<%= paths.directory %>'
+            ],
+            index: "<%= paths.file %>.html"
+          },
+          port: 3000,
+          watchTask: true
         }
       },
       dist: {
         options: {
-          keepalive: true,
-          livereload: false,
-          base: '<%= paths.dist %>/<%= paths.directory %>'
+          server: {
+            baseDir: '<%= paths.dist %>/<%= paths.directory %>'
+          }
         }
       }
     },
@@ -325,7 +320,7 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', function(target) {
 
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist']);
+      return grunt.task.run(['build', 'browserSync:dist']);
     }
 
     grunt.task.run([
@@ -334,7 +329,7 @@ module.exports = function(grunt) {
       'copy',
       'compass:dev',
       'jade',
-      'connect:dev',
+      'browserSync:dev',
       'watch'
     ]);
   });
