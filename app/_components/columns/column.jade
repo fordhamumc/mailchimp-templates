@@ -1,13 +1,29 @@
-.column
-  table(width='100%')
-    tr
-      td.inner.contents.column-img
-        a(href='#', target='_blank')
-          block column-img
-            img(src='http://placehold.it/405x225', width='270', alt='')
-    tr
-      td.inner.contents
-        h4
-          a(href='#', target='_blank') Lorem ipsum dolor sit amet
-        a.textlink(href='#', target='_blank')
-        | Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+mixin column(count, aspect, padding)
+  - count = count || 2
+  - padding = padding || 15
+  - aspect = aspect || 1.8
+  - container = Math.floor(600/count - padding*2)
+  - imgwidth = Math.floor(container * 1.5)
+  - imgheight = Math.floor(imgwidth/aspect)
+  
+  - content = ['Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.', 'Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id.', 'An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an.', 'His agam magna assentior eu, duo ex modo facete alterum. Vel ad suas lorem doming, suavitate adipiscing sit ut, erat iuvaret convenire qui et.', 'Te nec vidisse virtute, vix imperdiet abhorreant dissentiet an. Tota assueverit cu vis.']
+  - contentShort = ['Lorem ipsum dolor sit amet','Aenean vulputate eleifend tellus.', 'Quisque rutrum. Aenean imperdiet.', 'Nam eget dui. Etiam rhoncus.', 'Sed fringilla mauris sit amet nibh.', 'Aenean vulputate eleifend tellus.', 'Vivamus elementum semper nisi.']
+  
+  .column
+    table(width='100%')
+      tr
+        td.inner.contents.column-img
+          a(href='#', target='_blank')
+            block column-img
+              img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{container}', alt='')
+      tr
+        td.inner.contents
+          
+          h4
+            a(href='#', target='_blank') #{contentShort[Math.floor(Math.random() * contentShort.length)]}
+          a.textlink(href='#', target='_blank')
+          
+          if (count < 3)
+            | #{content[Math.floor(Math.random() * content.length)]}
+          else
+            | #{contentShort[Math.floor(Math.random() * contentShort.length)]}
