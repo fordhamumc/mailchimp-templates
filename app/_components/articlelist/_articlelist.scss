@@ -3,11 +3,8 @@
 
 .article-list {
   list-style: none;
-  Margin-left: 0;
-  Margin-right: 0;
-  Margin-bottom: 40px;
-  padding-left:0;
-  padding-right:0;
+  Margin: 0;
+  padding: 0;
   
   li {
     border-bottom: 1px solid #f2f2f2;
@@ -34,5 +31,10 @@
 
   .article-list--last {
     border-bottom: 0;
+    Margin-bottom: 0;
+    
+    a {
+      padding-bottom: 0;
+    }
   }
 }
