@@ -1,1 +1,10 @@
-a.btn(href='#', target='_blank') Button
+mixin btn(size)
+  - btn = btn || ""
+  - cl = ""
+  
+  if size === "small" || size === "sm"
+    - cl = "btn-sm"
+  if size === "large" || size === "lg"
+    - cl = "btn-lg"
+    
+  a.btn(href='#', target='_blank', class="#{cl}") Button
