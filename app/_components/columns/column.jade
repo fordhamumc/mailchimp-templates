@@ -22,7 +22,7 @@ mixin column(count, aspect, padding)
             a(href='#', target='_blank') #{contentShort[Math.floor(Math.random() * contentShort.length)]}
           a.textlink(href='#', target='_blank')
           
-          if (count < 3)
-            | #{content[Math.floor(Math.random() * content.length)]}
-          else
-            | #{contentShort[Math.floor(Math.random() * contentShort.length)]}
+            if (count < 3)
+              | #{content[Math.floor(Math.random() * content.length)]}
+            else
+              | #{contentShort[Math.floor(Math.random() * contentShort.length)]}
