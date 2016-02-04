@@ -9,5 +9,5 @@ table.outer.header
             ul.article-list
               each val, i in titles
                 li(class="#{(i === 0) ? 'article-list--first' : ''}#{(i === titles.length - 1) ? 'article-list--last' : ''}")
-                  h4
+                  h5
                     a(href='#') #{val}
