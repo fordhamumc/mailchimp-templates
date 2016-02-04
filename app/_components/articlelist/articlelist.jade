@@ -1,3 +1,5 @@
+- var titles = ["This is an Article Title","This is Another Article Title","This is a Longer Article Title It's Got a Much Longer Name Than the Others","Here is a Fourth Article","Now We Have Lots of Article Titles","This is the Last Article Title"]
+
 table.outer.header
   tr
     td.one-column
@@ -5,21 +7,7 @@ table.outer.header
         tr
           td.inner.contents
             ul.article-list
-              li.article-list--first
-                h4
-                  a(href='#') This is an Article Title
-              li 
-                h4
-                  a(href='#') This is Another Article Title
-              li 
-                h4
-                  a(href='#') This is a Longer Article Title It's Got a Much Longer Name Than the Others
-              li 
-                h4
-                  a(href='#') Here is a Fourth Article
-              li 
-                h4
-                  a(href='#') Now We Have Lots of Article Titles
-              li.article-list--last 
-                h4
-                  a(href='#') This is the Last Article Title
+              each val, i in titles
+                li(class="#{(i === 0) ? 'article-list--first' : ''}#{(i === titles.length - 1) ? 'article-list--last' : ''}")
+                  h4
+                    a(href='#') #{val}
