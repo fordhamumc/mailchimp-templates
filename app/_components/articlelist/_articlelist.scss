@@ -8,7 +8,9 @@
   
   li {
     border-bottom: 1px solid #f2f2f2;
-    Margin-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    Margin-bottom: 0;
     font-size: ceil($font-size-base * 1.25);
     
     small {
@@ -20,21 +22,17 @@
   
   a {
     display: block;
-    padding-top: 10px;
-    padding-bottom: 15px;
     color: $text-color;
   }
   
   h4 {
     Margin-bottom: 0;
   }
-
+  .article-list--first {
+    padding-top: 0;
+  }
   .article-list--last {
     border-bottom: 0;
-    Margin-bottom: 0;
-    
-    a {
-      padding-bottom: 0;
-    }
+    padding-bottom: 0;
   }
 }

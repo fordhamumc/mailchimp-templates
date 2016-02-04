@@ -16,6 +16,7 @@ $content-border-width:        0px;
 
 @import "masthead.scss";
 @import "preheader.scss";
+@import "colorblocks.scss";
 @import "leadstory.scss";
 @import "buttons.scss";
 @import "sectionheader.scss";
@@ -27,4 +28,4 @@ $content-border-width:        0px;
 // Newsletter Styles
 //-------------------
 
-@import "lead.scss";
+@import "colorblocks.scss";

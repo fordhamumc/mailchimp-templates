@@ -4,16 +4,17 @@
 
 
 .section-header {
-  text-transform: uppercase;
-  padding-bottom: 0px;
-  font-weight: $font-weight-bold;
-  color: $meta-color;
-}
-
-.has-section-header .inner {
-  padding-top: $container-gutter - 10 - $line-height-offset;
+  .contents {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    color: $meta-color;
+  }
   
-  &.section-header {
-    padding-top: $container-gutter - $line-height-offset;
+  a {
+    color: $meta-color;
+  }
+  
+  .inner {
+    padding-bottom: 0;
   }
 }

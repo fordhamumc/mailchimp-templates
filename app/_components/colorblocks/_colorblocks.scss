@@ -1,0 +1,75 @@
+// Color Block Mixin
+//---------------------
+
+@mixin color-block($background, $text, $button) {
+  &, .outer {
+    background: $background;
+  }
+  
+  .contents {
+    color: $text;
+  }
+  
+  .btn {
+    background-color: $button;
+    border-color: darken($button, 10%);
+    
+    @if lightness($button) < 50% {
+      color: #ffffff;
+    }
+    
+    @else {
+      color: $text-color;
+    }
+  }
+}
+
+
+// Color Block
+//---------------------
+
+.color-block .outer {
+  padding-top: $container-gutter;
+  padding-bottom: $container-gutter;
+  Margin-top: $container-gutter;
+  Margin-bottom: $container-gutter;
+  
+  @media screen and (max-width: $screen-sm) {
+    //padding-top: 0px !important;
+  }
+}
+
+.color-block .full-width-image {
+  padding-top: $container-gutter * 2;
+}
+
+.color-block .outer + .outer {
+  Margin-top: 0;
+  padding-top: 0;
+}
+
+.color-block .section-header {
+  padding-top: 0;
+  padding-bottom: 0;
+  Margin-bottom: 0;
+}
+
+
+// Lead (Primary color)
+//---------------------
+
+.color-block--lead {
+  @include color-block($primary-color, #ffffff, #2c8db3);
+  
+  a {
+    color: #ffffff;
+  }
+}
+
+
+// Aside (Aside color)
+//---------------------
+
+.color-block--aside {
+  @include color-block($aside-background, $aside-color, $btn-secondary-background);
+}

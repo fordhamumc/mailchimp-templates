@@ -1,17 +1,14 @@
 // 
-//  Buttons
+//  Column
 //  ---------------------------------
 
 .column-img {
   padding-bottom: 0;
-  
-  @media screen and(max-width: $screen-sm) {
-    padding: 0 !important;
-  }
 }
 
 @media screen and(max-width: $screen-sm) {
-  .column + .column {
-    padding-top: 25px !important;
+  .column-img {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

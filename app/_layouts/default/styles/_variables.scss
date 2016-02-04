@@ -24,8 +24,8 @@ $content-border-width:        0px 1px !default;
 // Aside
 //---------------------
 
-$aside-background:            $base-background !default;
-$aside-color:                 lighten($text-color, 10%) !default;
+$aside-background:            #ededed !default;
+$aside-color:                 $text-color !default;
 
 
 // Button
