@@ -18,8 +18,9 @@ mixin column(count, aspect, padding)
               img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{container}', alt='')
       tr
         td.inner.contents
-          #{(count < 3) ? 'h4' : 'h5'}
-            a(href='#', target='_blank') #{contentShort[Math.floor(Math.random() * contentShort.length)]}
+          if (count < 3)
+            h4
+              a(href='#', target='_blank') #{contentShort[Math.floor(Math.random() * contentShort.length)]}
           a.textlink(href='#', target='_blank')
           
             if (count < 3)
