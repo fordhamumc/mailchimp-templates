@@ -1,0 +1,17 @@
+// 
+//  Preheader
+//  ---------------------------------
+
+
+.footer {
+  font-size: floor($font-size-base * .9);
+  text-align: center;
+}
+
+.footer, .footer a {
+  color: $meta-color;
+}
+
+.footer-unsub {
+  font-weight: bold;
+}
