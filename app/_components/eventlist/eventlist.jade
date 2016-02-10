@@ -26,4 +26,5 @@ table.outer
               td.inner
                 a.btn.btn-sm.btn-block.btn-secondary(href="#", target="_blank") RSVP
         <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-        .event-hr
+        - if (i < 5)
+          .event-hr

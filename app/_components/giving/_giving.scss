@@ -1,0 +1,38 @@
+// Giving block
+//-------------------
+
+.giving-block, .giving-block .outer {
+  background: #6d9297;
+}
+
+.giving-block .outer {
+  padding: 0;
+}
+  
+.giving-block .contents,
+.giving-block a {
+  color: #ffffff;
+}
+
+.giving-block .btn {
+  background-color: #a4dce3;
+  border-color: darken(#f6ea5d, 10%);
+  border-color: transparent;
+  color: $text-color;
+}
+
+
+// Giving banner
+//-------------------
+
+.giving-banner {
+  text-align: center;
+  
+  h4 {
+    Margin-bottom: 0;
+  }
+  
+  em {
+    border-bottom: 2px solid #ffffff;
+  }
+}
