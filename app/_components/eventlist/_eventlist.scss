@@ -1,0 +1,59 @@
+// Event list
+//---------------------
+
+
+.event-image {
+  max-width: 200px;
+  
+  img {
+    max-width: 170px;
+  }
+}
+
+.event-description {
+  max-width: 300px;
+}
+
+.event-rsvp {
+  max-width: 100px;
+}
+
+.event-hr {
+  border-bottom: 1px solid $aside-background;
+  Margin-left: $container-padding;
+  Margin-right: $container-padding;
+}
+
+@media screen and (min-width: $screen-sm + 1) and (max-width: 600px + $container-padding * 2) {
+  .event-image {
+    max-width: 33% !important;
+  }
+  
+  .event-description {
+    max-width: 50% !important;
+  }
+  
+  .event-rsvp {
+    max-width: 17% !important;
+  }
+}
+
+@media screen and (max-width: $screen-sm) {
+  .event-description,
+  .event-image {
+    max-width: 100% !important;
+  }
+  
+  .event-image img { 
+    max-width: 50% !important;
+  }
+  
+  .event-description .contents {
+    text-align: center !important;
+  }  
+  
+  .event-description .inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}

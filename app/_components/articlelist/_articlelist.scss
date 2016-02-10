@@ -7,7 +7,7 @@
   padding: 0;
   
   li {
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid $aside-background;
     padding-top: 15px;
     padding-bottom: 15px;
     Margin-bottom: 0;
@@ -30,9 +30,5 @@
   }
   .article-list--first {
     padding-top: 0;
-  }
-  .article-list--last {
-    border-bottom: 0;
-    padding-bottom: 0;
   }
 }

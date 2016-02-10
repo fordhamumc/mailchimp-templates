@@ -1,0 +1,29 @@
+table.outer
+  - for (var i = 0; i < 6; i++)
+    tr
+      td.event-list.sidebar
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="200"><![endif]-->
+        .column.event-image
+          table(width='100%')
+            tr
+              td.inner
+                a(href="#", target="_blank")
+                  img(src="http://placehold.it/255x140", alt="")
+                  
+        <!--[if (gte mso 9)|(IE)]></td><td width="300"><![endif]-->
+        .column.event-description
+          table(width='100%')
+            tr
+              td.inner.contents
+                a(href="#", target="_blank")
+                  h5 Lorem ipsum dolor sit, consectetur adipisicing elit.
+                  span.textlink January 1 | New York City
+        
+        <!--[if (gte mso 9)|(IE)]></td><td width="100"><![endif]-->  
+        .column.event-rsvp
+          table(width='100%')
+            tr
+              td.inner
+                a.btn.btn-sm.btn-block.btn-secondary(href="#", target="_blank") RSVP
+        <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+        .event-hr
