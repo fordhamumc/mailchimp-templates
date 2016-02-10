@@ -4,12 +4,18 @@
 
 
 .footer {
-  font-size: floor($font-size-base * .9);
+  font-size: floor($font-size-base * .85);
   text-align: center;
 }
 
 .footer, .footer a {
   color: $meta-color;
+}
+
+.footer a {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .footer-unsub {

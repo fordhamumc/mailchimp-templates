@@ -7,15 +7,12 @@ table.outer
             | *|IFNOT:ARCHIVE_PAGE|* 
             p.footer-sentto This email was sent to *|EMAIL|* by *|LIST:COMPANY|*
             
-            p.footer-address *|HTML:LIST_ADDRESS_HTML|*
-            p.footer-contact *|LIST:PHONE|*  |  *|ABUSE_EMAIL|*
+            p.footer-contact *|HTML:LIST_ADDRESS_HTML|* <br />
+              | *|LIST:PHONE|*  |  *|ABUSE_EMAIL|*
             
             p.footer-unsub 
-              a(href="*|ARCHIVE|*", target="_blank") View in Browser
-              |  | 
-              a(href="*|UPDATE_PROFILE|*", target="_blank") Update Your Profile
-              |  |  
-              a(href="*|UNSUB|*", target="_blank") Unsubscribe from All Fordham Emails
+              a(href="*|UPDATE_PROFILE|*", target="_blank") Update Subscription Preferences
+              a(href="*|UNSUB|*", target="_blank") Unsubscribe From All Fordham Emails
             
             | *|END:IF|*
             p.footer-copyright Copyright *|CURRENT_YEAR|* *|USER:COMPANY|*. All rights reserved.
