@@ -33,7 +33,7 @@ $aside-color:                 $text-color !default;
 
 $btn-background:              $primary-color !default;
 $btn-color:                   #ffffff !default;
-$btn-secondary-background:    #ededed !default;
+$btn-secondary-background:    $aside-background !default;
 $btn-secondary-border:        darken($btn-secondary-background, 30%);
 $btn-secondary-color:         lighten($text-color, 7%) !default;
 
