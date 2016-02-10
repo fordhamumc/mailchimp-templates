@@ -140,6 +140,13 @@ module.exports = function(grunt) {
           '<%= paths.src %>/{_layouts,_components}/**/*.jade'
         ],
         tasks: ['jade']
+      },
+      image: {
+        files: [
+          '<%= paths.src %>/<%= paths.directory %>/<%= paths.images %>/**/*.{png,jpg,jpeg,gif}', 
+          '<%= paths.src %>/_components/**/*.{png,jpg,jpeg,gif}'
+        ],
+        tasks: ['copy:images']
       }
     },
 
