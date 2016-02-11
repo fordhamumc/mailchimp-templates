@@ -1,11 +1,13 @@
 // Giving block
 //-------------------
 
-.giving-block, .giving-block .outer {
+.giving-block {
   background: #6d9297;
+  border-top: 1px solid darken(#6d9297, 7%);
+  border-bottom: 1px solid darken(#6d9297, 7%);
 }
 
-.giving-block .outer {
+.giving-block .inner {
   padding: 0;
 }
   
