@@ -127,14 +127,14 @@ module.exports = function(grunt) {
      * ===============================
      */
     watch: {
+      options: {
+        spawn: false
+      },
       compass: {
         files: ['<%= paths.src %>/{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}'],
         tasks: ['copy:styles','compass:dev']
       },
       jade: {
-        options: {
-          spawn: false
-        },
         files: [
           '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.jade',
           '<%= paths.src %>/{_layouts,_components}/**/*.jade'
