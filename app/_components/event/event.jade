@@ -1,3 +1,5 @@
+include ../buttons/btn.jade
+
 table.outer
   tr
     td.one-column
@@ -11,3 +13,5 @@ table.outer
               img(src="http://placehold.it/400x250")
             h3 Saturday, February 8
             h4 Rose Hill Campus, Fordham University
+            div(style="padding-top: 10px;") 
+              +btn("large", "Register")
