@@ -8,4 +8,8 @@
   color: $meta-color;
   text-align: center;
   padding-bottom: 0px;
+  
+  @media screen and (max-width: $screen-sm) {
+    padding-top: floor($container-gutter / 2);
+  }
 }

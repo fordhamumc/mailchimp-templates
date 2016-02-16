@@ -33,6 +33,13 @@
   padding-bottom: $container-gutter;
   Margin-top: $container-gutter;
   Margin-bottom: $container-gutter;
+  
+  @media screen and (max-width: $screen-sm) {
+    padding-top: floor($container-gutter / 2);
+    padding-bottom: floor($container-gutter / 2);
+    Margin-top: floor($container-gutter / 2);
+    Margin-bottom: floor($container-gutter / 2);
+  }
 }
 
 .color-block--seamless {
