@@ -1,5 +1,6 @@
-mixin btn(size)
+mixin btn(size, text)
   - btn = btn || ""
+  - text = text || "Button"
   - cl = ""
   
   if size === "small" || size === "sm"
@@ -7,4 +8,4 @@ mixin btn(size)
   if size === "large" || size === "lg"
     - cl = "btn-lg"
     
-  a.btn(href='#', target='_blank', class="#{cl}") Button
+  a.btn(href='#', target='_blank', class="#{cl}") #{text}
