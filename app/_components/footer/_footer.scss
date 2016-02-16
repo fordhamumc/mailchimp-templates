@@ -18,12 +18,17 @@
   color: $meta-color;
 }
 
-.footer a {
-  display: inline-block;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 .footer-unsub {
   font-weight: bold;
+  
+  a {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    @media screen and(max-width: $screen-sm) {
+      Margin-top: 10px;
+      Margin-bottom: 10px;
+    }
+  }
 }
