@@ -77,5 +77,10 @@ li {
 //---------------------
 
 .lead {
-  font-size: ceil($font-size-base * 1.5)
+  font-size: ceil($font-size-base * 1.5);
+}
+
+.callout {
+  font-size: ceil($font-size-base * 1.2);
+  font-weight: $font-weight-bold;
 }
