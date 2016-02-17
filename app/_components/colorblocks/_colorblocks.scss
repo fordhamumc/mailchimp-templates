@@ -57,6 +57,11 @@
 .color-block--lead {
   @include color-block($primary-color, #ffffff, #2c8db3);
   
+  @media screen and (max-width: $screen-sm) {
+    padding-top: 0 !important;
+    border-top-width: 0 !important;
+  }
+  
   a {
     color: #ffffff;
   }
