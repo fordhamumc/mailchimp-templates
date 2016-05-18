@@ -1,0 +1,20 @@
+include ../buttons/btn.jade
+
+table.outer
+  tr
+    td.two-column(dir="rtl")  
+      .column
+        table(width='100%')
+          tr
+            td.inner.contents   
+              img(src="http://placehold.it/460x400")
+      .column
+        table(width='100%')
+          tr
+            td.inner.contents
+              h2 
+                a(href="#" target="_blank") Some sort of event title
+              h4 Saturday, February 8
+              h5 Rose Hill Campus, Fordham University
+              div(style="padding-top: 10px;") 
+                +btn("", "Register")
