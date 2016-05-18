@@ -19,7 +19,8 @@
 	font-size: 0;
 	text-align: center;
 	
-	.column {
+	.column,
+	.column-2 {
 		width: 100%;
 		display: inline-block;
 	}
@@ -76,14 +77,26 @@
 	
 	.column {
 		max-width: 200px;
+	
+  	img {
+  		max-width: 200px - $container-padding*2;
+  	}
+	
+  	.contents {
+    	text-align: center;
+  	}
 	}
 	
-	.contents {
-  	text-align: center;
-	}
+	.column-2 {
+  	max-width: 400px;
 	
-	img {
-		max-width: 200px - $container-padding*2;
+  	img {
+  		max-width: 400px - $container-padding*2;
+  	}
+	
+  	.contents {
+    	text-align: left;
+  	}
 	}
 	
 	.text {
@@ -162,6 +175,10 @@
   
 	.three-column .column {
 		max-width: 33% !important;
+	}
+  
+	.three-column .column-2 {
+		max-width: 67% !important;
 	}
 	
 	.two-column .column {
