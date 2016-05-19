@@ -2,6 +2,14 @@
 //  Grid
 //  ---------------------------------
 
+@mixin column-width($width) {
+  max-width: $width;
+  
+  img {
+    max-width: $width - $container-padding * 2
+  }
+}
+
 
 // Multiple column layouts
 //---------------------
@@ -32,21 +40,19 @@
 }
 
 .two-column,
-.three-column {
-	
-	.column {
-		vertical-align: top;
-	}
-}
-
+.three-column,
 .sidebar {
 	
 	.column {
 		vertical-align: top;
 	}
 	
-	img {
-		max-width: 120px - $container-padding*2;
+	.contents {
+  	text-align: left;
+	}
+	
+	.text {
+		padding-top: 10px;
 	}
 }
 
@@ -57,15 +63,7 @@
 .two-column {	
   
 	.column {
-		max-width: 300px;
-	}
-	
-	img {
-		max-width: 300px - $container-padding*2;
-	}
-	
-	.text {
-		padding-top: 10px;
+		@include column-width(300px);
 	}
 }
 
@@ -76,11 +74,7 @@
 .three-column {
 	
 	.column {
-		max-width: 200px;
-	
-  	img {
-  		max-width: 200px - $container-padding*2;
-  	}
+		@include column-width(200px);
 	
   	.contents {
     	text-align: center;
@@ -88,19 +82,7 @@
 	}
 	
 	.column-2 {
-  	max-width: 400px;
-	
-  	img {
-  		max-width: 400px - $container-padding*2;
-  	}
-	
-  	.contents {
-    	text-align: left;
-  	}
-	}
-	
-	.text {
-		padding-top: 10px;
+		@include column-width(400px);
 	}
 }
 
@@ -111,11 +93,11 @@
 .sidebar {
 	
 	.aside {
-		max-width: 120px;
+		@include column-width(120px);
 	}
 	
 	.main {
-		max-width: 480px;
+		@include column-width(480px);
 	}
 }
 
@@ -133,11 +115,13 @@
 
 @media screen and (max-width: $screen-sm) {
   
-	.two-column {
-  	
-		.column {
+	.two-column, .three-column {
+  	.column {
 			max-width: 100% !important;
-		}
+  	}
+	}
+	
+	.two-column {
 		
 		img {
 			max-width: 100% !important;
@@ -145,10 +129,6 @@
 	}
 	
 	.three-column {
-  	
-		.column {
-			max-width: 100% !important;
-		}
 		
 		img {
 			max-width: 50% !important;
@@ -172,16 +152,18 @@
 	}
 }
 @media screen and (min-width: $screen-sm + 1) and (max-width: 600px + $container-padding * 2) {
-  
-	.three-column .column {
-		max-width: 33% !important;
-	}
-  
-	.three-column .column-2 {
-		max-width: 67% !important;
-	}
 	
 	.two-column .column {
 		max-width: 50% !important;
+	}
+  
+	.three-column {
+  	.column {
+		  max-width: 33% !important;
+	  }
+  
+    .column-2 {
+  		max-width: 67% !important;
+  	}
 	}
 }

@@ -11,18 +11,12 @@
     padding-top: 15px;
     padding-bottom: 15px;
     Margin-bottom: 0;
-    font-size: ceil($font-size-base * 1.25);
     
     small {
       display: block;
       color: $text-color;
       font-size: $font-size-base;
     }
-  }
-  
-  a {
-    display: block;
-    color: $text-color;
   }
   
   h4, h5 {

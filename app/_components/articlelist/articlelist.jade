@@ -1,5 +1,7 @@
 - var titles = ["This is an Article Title","This is Another Article Title","This is a Longer Article Title It's Got a Much Longer Name Than the Others","Here is a Fourth Article","Now We Have Lots of Article Titles","This is the Last Article Title"]
 
+- contentShort = ['Lorem ipsum dolor sit amet','Aenean vulputate eleifend tellus.', 'Quisque rutrum. Aenean imperdiet.', 'Nam eget dui. Etiam rhoncus.', 'Sed fringilla mauris sit amet nibh.', 'Aenean vulputate eleifend tellus.', 'Vivamus elementum semper nisi.']
+
 table.outer
   tr
     td.one-column
@@ -11,3 +13,5 @@ table.outer
                 li(class="#{(i === 0) ? 'article-list--first' : ''}#{(i === titles.length - 1) ? 'article-list--last' : ''}")
                   h5
                     a(href='#') #{val}
+                  .article-list--content 
+                    | #{contentShort[Math.floor(Math.random() * contentShort.length)]}
