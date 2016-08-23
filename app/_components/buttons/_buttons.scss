@@ -2,6 +2,27 @@
 //  Buttons
 //  ---------------------------------
 
+.btn-container td {
+  @include border-radius(4px);
+}
+@media screen and(max-width: $screen-sm) {
+  .btn-lg-container {
+    width: 100% !important;
+  }
+}
+.btn-lg-container td {
+  @include border-radius(5px);
+}
+.btn-sm-container td {
+  @include border-radius(3px);
+}
+
+.btn-spacer {
+  font-size: 10px;
+  line-height: 10px;
+  height: 10px;
+}
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -12,9 +33,13 @@
   background: $btn-background;
   color: $btn-color;
   border: 1px solid darken($btn-background, 10%);
-  border-radius: 4px;
-  letter-spacing: .05em;
+  @include border-radius(4px);
   font-weight: $font-weight-bold;
+  transition: background .3s;
+  
+  &:hover {
+    background: darken($btn-background, 5%);
+  }
 }
 .btn-sm {
   font-size:floor($font-size-base * 0.9);
@@ -22,22 +47,21 @@
   padding-bottom: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 3px;
-  letter-spacing: .06em;
-  
+  @include border-radius(3px);
 }
 .btn-lg {
   font-size: floor($font-size-base * 1.35);
-  Margin-top: 10px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 50px;
   padding-right: 50px;
-  border-radius: 5px;
-  letter-spacing: .03em;
+  @include border-radius(5px);
   
   @media screen and(max-width: $screen-sm) {
-    font-size: floor($font-size-base * 1.2);
+    font-size: floor($font-size-base * 1.2) !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 100% !important;
   }
 }
 .btn-block {
@@ -49,4 +73,8 @@
   background: $btn-secondary-background;
   border: 1px solid $btn-secondary-border;
   color: $btn-secondary-color;
+  
+  &:hover {
+    background: darken($btn-secondary-background, 5%);
+  }
 }

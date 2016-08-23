@@ -41,6 +41,7 @@ $btn-secondary-color:         lighten($text-color, 7%) !default;
 // Footer colors
 //---------------------
 
+$footer-background:           $base-background !default;
 $footer-color:                $text-color !default;
 $footer-nav-background:       #5b6f7b !default;
 $footer-nav-color:            #ffffff !default;
@@ -64,6 +65,8 @@ $line-height-offset:          ($line-height-computed - $font-size-base)/2 !defau
 // Spacing
 //---------------------
 
+$outer-maxwidth:              650px !default;
+$outer-padding:               25px !default;
 $container-padding:           15px !default;
 $container-gutter:            25px !default;
 

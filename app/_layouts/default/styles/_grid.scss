@@ -14,6 +14,14 @@
 // Multiple column layouts
 //---------------------
 
+.one-column,
+.two-column,
+.three-column,
+.sidebar {
+  padding-left: $outer-padding;
+  padding-right: $outer-padding;
+}
+
 .one-column {
 	img {
 		max-width: 100%;
@@ -127,17 +135,18 @@
 			max-width: 100% !important;
 		}
 	}
-	
-	.three-column {
-		
-		img {
-			max-width: 50% !important;
-		}
-	}
 }
 
 
-@media screen and (max-width: 600px + $container-padding * 2) {
+@media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  
+  .one-column,
+  .two-column,
+  .three-column,
+  .sidebar {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 	
 	.sidebar .main {
   	max-width: 100% !important;
@@ -151,7 +160,7 @@
   	}
 	}
 }
-@media screen and (min-width: $screen-sm + 1) and (max-width: 600px + $container-padding * 2) {
+@media screen and (min-width: $screen-sm + 1) and (max-width: $outer-maxwidth + $container-padding * 2) {
 	
 	.two-column .column {
 		max-width: 50% !important;

@@ -34,17 +34,9 @@ img {
   display: block;
 }
 
-.full-width-image {
-  padding-top: $container-gutter;
-  
-  @media screen and (max-width: 600px) {
-    padding-top: 0px !important;
-  }
-}
-
 .full-width-image img {
 	width: 100%;
-	max-width: 600px;
+	max-width: $outer-maxwidth;
 	height: auto;
 }
 

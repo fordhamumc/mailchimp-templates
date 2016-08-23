@@ -1,8 +1,9 @@
 // Base style overrides
 //---------------------
 
-$base-background:             #ffffff;
-$content-background:          none;
+$base-background:             #F3F3F5;
+$aside-background:            $base-background;
+$content-background:          #ffffff;
 $content-border-width:        0px;
 $btn-secondary-background:    #ffffff;
 
@@ -16,15 +17,16 @@ $btn-secondary-background:    #ffffff;
 // Components
 //-------------------
 
-@import "masthead.scss";
-@import "preheader.scss";
-@import "colorblocks.scss";
-@import "leadstory.scss";
-@import "buttons.scss";
-@import "sectionheader.scss";
-@import "articlelist.scss";
-@import "column.scss";
-@import "eventlist.scss";
-@import "giving.scss";
-@import "social.scss";
-@import "footer.scss";
+@import "sectionwrappers";
+@import "break";
+@import "masthead";
+@import "preheader";
+@import "colorblocks";
+@import "leadstory";
+@import "buttons";
+@import "sectionheader";
+@import "articlelist";
+@import "column";
+@import "eventlist";
+@import "social";
+@import "footer";

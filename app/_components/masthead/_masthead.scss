@@ -1,7 +1,5 @@
 .masthead {
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 0px;
   
 	img {
 		max-width: 165px;
@@ -9,9 +7,6 @@
 }
 
 @media screen and(max-width: $screen-sm) {
-  .masthead {
-    padding-bottom: 10px !important;
-  }
   .masthead img {
   	max-width: 165px !important;
 	}

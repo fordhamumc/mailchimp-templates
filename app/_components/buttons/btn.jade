@@ -1,11 +1,24 @@
-mixin btn(size, text)
-  - btn = btn || ""
+mixin btn(size, text, background)
   - text = text || "Button"
+  - background = background || "#900028"
   - cl = ""
   
   if size === "small" || size === "sm"
     - cl = "btn-sm"
   if size === "large" || size === "lg"
     - cl = "btn-lg"
-    
-  a.btn(href='#', target='_blank', class="#{cl}") #{text}
+  
+  table(width="100%", border="0", cellspacing="0", cellpadding="0")
+    tbody
+      if cl === "btn-lg"
+        tr
+          td.btn-spacer &nbsp;
+      tr
+        td(align="center")
+          table(border="0", cellspacing="0", cellpadding="0", class="#{cl}-container")
+            tbody
+              tr
+                td(align="center", bgcolor="#{background}")
+                  <!--[if mso]>&nbsp;<![endif]-->
+                  a.btn(href="#", target="_blank", class="#{cl}") #{text}
+                  <!--[if mso]>&nbsp;<![endif]-->

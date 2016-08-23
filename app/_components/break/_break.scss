@@ -1,0 +1,17 @@
+// 
+//  Break
+//  ---------------------------------
+
+.break {
+  line-height: $container-gutter;
+  font-size: $container-gutter;
+  height: $container-gutter;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .break-container .break {
+    line-height: 4px !important;
+    font-size: 4px !important;
+    height: 4px !important;
+  }
+}

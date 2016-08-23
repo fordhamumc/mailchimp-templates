@@ -26,10 +26,15 @@ td {
 	table-layout: fixed;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	
+  
+  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+    background: $content-background !important;
+  }
 }
 
 .webkit {
-	max-width: 600px;
+	max-width: $outer-maxwidth;
 }
 
 .outer {
@@ -39,7 +44,7 @@ td {
   border-width: $content-border-width;
 	Margin: 0 auto;
 	width: 100%;
-	max-width: 600px;
+	max-width: $outer-maxwidth;
 }
 
 .header {

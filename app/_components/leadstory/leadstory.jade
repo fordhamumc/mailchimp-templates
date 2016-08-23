@@ -1,9 +1,5 @@
 include ../buttons/btn.jade
-table.outer.full-width-image
-  tr
-    td
-      a(href='#', target='_blank')
-        img(src='http://placehold.it/900x500', width='600', alt='')
+table.outer
   tr
     td.one-column
       table(width='100%')
@@ -11,5 +7,14 @@ table.outer.full-width-image
           td.inner.contents.leadstory
             h1
               a(href='#', target='_blank') Lorem ipsum dolor sit amet
-            p Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
-            +btn("lg")
+  tr
+    td.full-width-image
+      a(href='#', target='_blank')
+        img(src='http://placehold.it/900x500', width='600', alt='')
+  tr
+    td.one-column
+      table(width='100%')
+        tr
+          td.inner.contents.leadstory(style="padding-bottom: 0;")
+            p.lead Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
+            +btn("lg", "Button Text")

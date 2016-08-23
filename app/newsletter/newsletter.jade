@@ -6,42 +6,50 @@ block style-template
   link(rel='stylesheet', type='text/css', href='styles/newsletter.css')
 
 block body
-  center.wrapper.header
+  center.wrapper.header.color-block.color-block--header
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
-      include ../_components/preheader/preheader.jade
       include ../_components/masthead/masthead.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--lead
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
+      include ../_components/sectionwrappers/sectiontop.jade
       include ../_components/leadstory/leadstory.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
-      include ../_components/columns/twocolumn.jade
+      include ../_components/break/break.jade
+      include ../_components/sectionwrappers/sectionbottom.jade
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper.color-block.color-block--aside.break-container
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
+      include ../_components/break/break.jade
+      include ../_components/break/break.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
+      include ../_components/sectionwrappers/sectiontop.jade
       include ../_components/sectionheader/sectionheader.jade
+      include ../_components/columns/twocolumn.jade
       include ../_components/articlelist/articlelist.jade
+      include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
-      include ../_components/sectionheader/sectionheader.jade
+      include ../_components/break/break.jade
       include ../_components/columns/threecolumn.jade
+      include ../_components/break/break.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
+      include ../_components/sectionwrappers/sectiontop.jade
       include ../_components/sectionheader/sectionheader.jade
       include ../_components/eventlist/eventlist.jade
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.color-block.color-block--seamless.giving-block
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="600" align="center"><tr><td><![endif]-->
-      include ../_components/giving/giving-banner.jade
+      include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

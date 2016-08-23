@@ -1,0 +1,30 @@
+// 
+//  Section wrappers
+//  ---------------------------------
+
+
+.section-top {
+  @include border-radius-top(4px);
+  
+  td {
+    font-size: 10px;
+    line-height: 10px;
+    height: 10px;
+  }
+}
+
+.section-bottom {
+  @include border-radius-bottom(4px);
+  
+  td {
+    font-size: 15px;
+    line-height: 15px;
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  .section-top {
+    display: none !important;
+  }
+}

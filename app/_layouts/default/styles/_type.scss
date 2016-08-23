@@ -57,7 +57,6 @@ h6 { font-size: ceil($font-size-base * 0.85); }
   h1 { font-size: floor($font-size-base * 2.60 * .8) !important; } 
   h2 { font-size: floor($font-size-base * 2.15 * .8) !important; }
   h3 { font-size: ceil($font-size-base * 1.70 * .8) !important; }
-  h4 { font-size: ceil($font-size-base * 1.25 * .8) !important; }
 }
 
 
@@ -77,7 +76,7 @@ li {
 //---------------------
 
 .lead {
-  font-size: ceil($font-size-base * 1.5);
+  font-size: ceil($font-size-base * 1.2);
 }
 
 .callout {

@@ -5,4 +5,13 @@
 
 .leadstory {
   text-align: center;
+  
+  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+    text-align: left !important;
+  }
+}
+
+.leadstory h1 {
+  Margin-bottom: 0;
+  text-align: center;
 }

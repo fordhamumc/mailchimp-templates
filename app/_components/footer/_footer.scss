@@ -4,9 +4,12 @@
 
 
 .footer-wrapper {
-  background: #f5f5f5;
-  border-top: 1px solid darken(#f5f5f5, 10%);
+  background: $footer-background;
   padding-top: floor($container-gutter/2);
+  
+  .outer {
+    background: $footer-background;
+  }
 }
 
 .footer {

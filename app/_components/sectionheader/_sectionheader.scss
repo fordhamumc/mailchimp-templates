@@ -5,9 +5,14 @@
 
 .section-header {
   .contents {
-    text-transform: uppercase;
-    font-weight: $font-weight-bold;
     color: $meta-color;
+    font-weight: $font-weight-bold;
+    text-align: left;
+    text-transform: uppercase;
+    
+    @media screen and (max-width: $screen-sm) {
+      text-align: center !important;
+    }
   }
   
   a {
@@ -15,6 +20,6 @@
   }
   
   .inner {
-    padding-bottom: 0;
+    padding-bottom: 0px;
   }
 }
