@@ -35,7 +35,7 @@
 //---------------------
 
 .color-block--header {
-  @include color-block($primary-color, none, $text-color, #2c8db3);
+  @include color-block($primary-color, none, #ffffff, #2c8db3);
   
   @include bp(sm) {
     padding-top: 0 !important;

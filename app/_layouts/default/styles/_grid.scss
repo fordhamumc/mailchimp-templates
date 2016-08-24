@@ -94,14 +94,14 @@
 	
 	.column {
 		@include column-width(200px);
-	
-  	.contents {
-    	text-align: center;
-  	}
 	}
 	
 	.column-2 {
 		@include column-width(400px);
+	}
+	
+	.contents {
+  	text-align: center;
 	}
 }
 
