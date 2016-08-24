@@ -27,5 +27,10 @@ table.outer
               td.inner
                 +btn("sm", "RSVP", "btn-block btn-secondary", "#ffffff")
         <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-        - if (i < 5)
-          .event-hr
+        .event-hr
+  tr
+    td.one-column
+      table(width='100%')
+        tr
+          td.inner.contents.event-more
+            a(href="#", target="_blank") +20 more events this month. View the calendar.

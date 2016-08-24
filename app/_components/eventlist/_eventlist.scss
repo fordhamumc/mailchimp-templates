@@ -24,6 +24,11 @@
   Margin-right: $container-padding;
 }
 
+.event-more {
+  font-weight: bold;
+  text-align: center;
+}
+
 @include bp(sm) {
   .event-description,
   .event-image {
