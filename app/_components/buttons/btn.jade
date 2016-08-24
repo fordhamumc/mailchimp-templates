@@ -1,12 +1,13 @@
-mixin btn(size, text, background)
+mixin btn(size, text, cl, background)
   - text = text || "Button"
   - background = background || "#900028"
-  - cl = ""
+  - cl = cl || ""
+  - btnsize = ""
   
   if size === "small" || size === "sm"
-    - cl = "btn-sm"
+    - btnsize = "btn-sm"
   if size === "large" || size === "lg"
-    - cl = "btn-lg"
+    - btnsize = "btn-lg"
   
   table(width="100%", border="0", cellspacing="0", cellpadding="0")
     tbody
@@ -15,10 +16,10 @@ mixin btn(size, text, background)
           td.btn-spacer &nbsp;
       tr
         td(align="center")
-          table(border="0", cellspacing="0", cellpadding="0", class="#{cl}-container")
+          table(border="0", cellspacing="0", cellpadding="0", class="#{btnsize}-container")
             tbody
               tr
                 td(align="center", bgcolor="#{background}")
                   <!--[if mso]>&nbsp;<![endif]-->
-                  a.btn(href="#", target="_blank", class="#{cl}") #{text}
+                  a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") #{text}
                   <!--[if mso]>&nbsp;<![endif]-->

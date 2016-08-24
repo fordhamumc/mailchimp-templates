@@ -1,3 +1,4 @@
+include ../buttons/btn.jade
 table.outer
   - for (var i = 0; i < 6; i++)
     tr
@@ -24,7 +25,7 @@ table.outer
           table(width='100%')
             tr
               td.inner
-                a.btn.btn-sm.btn-block.btn-secondary(href="#", target="_blank") RSVP
+                +btn("sm", "RSVP", "btn-secondary", "#ffffff")
         <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
         - if (i < 5)
           .event-hr
