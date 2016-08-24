@@ -76,4 +76,21 @@ $container-gutter:            25px !default;
 
 $screen-sm:                   460px !default;
 $screen-xs:                   375px !default;
+$screen-md:                   $outer-maxwidth + $container-padding * 2 !default;
 
+@mixin bp($point) {
+
+  @if $point == xs {
+    @media screen and (max-width: $screen-xs) { @content; }
+  }
+  @else if $point == sm {
+    @media screen and (max-width: $screen-sm) { @content; }
+  }
+  @else if $point == md {
+    @media screen and (max-width: $screen-md)  { @content; }
+  }
+  @else if $point == sm-md {
+    @media screen and (min-width: $screen-sm + 1) and (max-width: $screen-md)  { @content; }
+  }
+
+}

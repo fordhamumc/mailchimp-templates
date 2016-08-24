@@ -28,7 +28,7 @@ td {
 	-ms-text-size-adjust: 100%;
 	
   
-  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  @include bp(md) {
     background: $content-background !important;
   }
 }

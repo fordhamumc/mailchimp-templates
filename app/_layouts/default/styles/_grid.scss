@@ -9,10 +9,10 @@
     max-width: $width - $container-padding * 2;
   }
     
-  @media screen and (min-width: $screen-sm + 1) and (max-width: $outer-maxwidth + $container-padding * 2) {
+  @include bp(sm-md) {
     max-width: percentage($width / ($outer-maxwidth - $outer-padding * 2)) !important;
   }
-  @media screen and (max-width: $screen-sm) {
+  @include bp(sm) {
 		max-width: 100% !important;
 		
     img {
@@ -129,7 +129,7 @@
 }
 
 
-@media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+@include bp(md) {
   
   .one-column,
   .two-column,

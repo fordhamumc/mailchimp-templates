@@ -9,7 +9,7 @@
   text-align: center;
   padding-bottom: 0px;
   
-  @media screen and (max-width: $screen-sm) {
+  @include bp(sm) {
     padding-top: floor($container-gutter / 2);
   }
 }

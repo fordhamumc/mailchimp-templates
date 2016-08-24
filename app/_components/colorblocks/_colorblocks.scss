@@ -37,12 +37,12 @@
 .color-block--header {
   @include color-block($primary-color, none, $text-color, #2c8db3);
   
-  @media screen and (max-width: $screen-sm) {
+  @include bp(sm) {
     padding-top: 0 !important;
     border-top-width: 0 !important;
   }
   
-  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  @include bp(md) {
     background: $primary-color !important;
   }
 }
@@ -54,7 +54,7 @@
 .color-block--lead {
   @include color-block($primary-color, #ffffff, $text-color, $primary-color);
   
-  @media screen and (max-width: $screen-sm) {
+  @include bp(sm) {
     padding-top: 0 !important;
     border-top-width: 0 !important;
   }
@@ -67,7 +67,7 @@
 .color-block--aside {
   @include color-block($aside-background, transparent, $aside-color, $btn-secondary-background);
   
-  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  @include bp(md) {
     background: $aside-background !important;
   }
 }

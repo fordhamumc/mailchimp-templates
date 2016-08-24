@@ -53,7 +53,7 @@ h4 { font-size: ceil($font-size-base * 1.25); }
 h5 { font-size: $font-size-base; }
 h6 { font-size: ceil($font-size-base * 0.85); }
 
-@media screen and(max-width: $screen-sm) {
+@include bp(sm) {
   h1 { font-size: floor($font-size-base * 2.60 * .8) !important; } 
   h2 { font-size: floor($font-size-base * 2.15 * .8) !important; }
   h3 { font-size: ceil($font-size-base * 1.70 * .8) !important; }

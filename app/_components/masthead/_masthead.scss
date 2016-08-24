@@ -6,7 +6,7 @@
 	}
 }
 
-@media screen and(max-width: $screen-sm) {
+@include bp(sm) {
   .masthead img {
   	max-width: 165px !important;
 	}

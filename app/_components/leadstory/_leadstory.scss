@@ -6,7 +6,7 @@
 .leadstory {
   text-align: center;
   
-  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+  @include bp(md) {
     text-align: left !important;
   }
 }

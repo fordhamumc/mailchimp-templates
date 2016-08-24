@@ -6,7 +6,7 @@
   padding-bottom: 0;
 }
 
-@media screen and(max-width: $screen-sm) {
+@include bp(sm) {
   .column-img {
     padding-left: 0 !important;
     padding-right: 0 !important;

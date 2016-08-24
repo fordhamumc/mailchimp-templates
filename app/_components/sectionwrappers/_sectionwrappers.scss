@@ -23,7 +23,7 @@
   }
 }
 
-@media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+@include bp(md) {
   .section-top {
     display: none !important;
   }

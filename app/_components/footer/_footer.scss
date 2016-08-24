@@ -28,7 +28,7 @@
     padding-left: 10px;
     padding-right: 10px;
     
-    @media screen and(max-width: $screen-sm) {
+    @include bp(sm) {
       Margin-top: 10px;
       Margin-bottom: 10px;
     }

@@ -24,7 +24,7 @@
   Margin-right: $container-padding;
 }
 
-@media screen and (max-width: $screen-sm) {
+@include bp(sm) {
   .event-description,
   .event-image {
     max-width: 100% !important;
@@ -37,5 +37,9 @@
   .event-description .inner {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+  }
+  
+  .event-rsvp {
+    max-width: 130px !important;
   }
 }

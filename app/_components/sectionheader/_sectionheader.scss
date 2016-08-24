@@ -10,7 +10,7 @@
     text-align: left;
     text-transform: uppercase;
     
-    @media screen and (max-width: $screen-sm) {
+    @include bp(sm) {
       text-align: center !important;
     }
   }
