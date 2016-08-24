@@ -16,7 +16,11 @@
 		max-width: 100% !important;
 		
     img {
-      max-width: $width !important;
+  		@if $width <= (($outer-maxwidth - $outer-padding * 2) / 3) {
+        max-width: $width !important;
+      } @else {
+        max-width: 100% !important;
+      }
     }
   }
 }
