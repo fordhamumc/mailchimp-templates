@@ -1,0 +1,57 @@
+// 
+//  Full ad
+//  ---------------------------------
+
+
+.fullad-container {
+  background: $primary-color;
+}
+
+.fullad {
+  padding: $container-gutter ($outer-padding + $container-padding);
+  
+  @media screen and (max-width: $outer-maxwidth + $container-padding * 2) {
+    padding-left: $container-padding !important;
+    padding-right: $container-padding !important;
+  }
+  
+  a {
+    color: #ffffff;
+    display: block;
+  }
+  
+  .column {
+		max-width: 185px;
+	
+  	.contents {
+    	text-align: left;
+  	}
+  	
+  	.inner {
+      padding: 0;
+    	padding-right: $container-padding;
+  	}
+	}
+	
+	.column-2 {
+		max-width: 385px;
+  	
+  	.inner {
+    	padding: $container-padding;
+  	}
+	}
+}
+
+@media screen and (max-width: $screen-sm) {
+  .fullad {
+    .contents {
+      text-align: center !important;
+    }
+    .column, .column-2 {
+      max-width: 100% !important;
+    }
+    .column .inner {
+      padding: $container-gutter $container-padding 0 $container-padding !important;
+    }
+  }
+}
