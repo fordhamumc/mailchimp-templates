@@ -4,10 +4,23 @@
 .social {
   text-align: center;
   padding-top: $container-gutter * 1.5;
+  padding-bottom: 0;
   
   img {
     max-width: 30px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+
+// Tagline
+//---------------------
+
+.tagline {
+  text-align: center;
+  
+  img {
+    max-width: 270px;
   }
 }

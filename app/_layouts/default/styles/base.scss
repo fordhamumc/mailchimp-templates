@@ -8,11 +8,15 @@
 @import "utilities";
 
 // Base Styles
-@import "reset";
-@import "scaffolding";
+@import "reset",
+        "scaffolding";
 
 // Grid
 @import "grid";
 
 // Type
 @import "type";
+
+// Components
+@import "social",
+        "tagline";

@@ -17,17 +17,16 @@ $btn-secondary-background:    #ffffff;
 // Components
 //-------------------
 
-@import "sectionwrappers";
-@import "break";
-@import "masthead";
-@import "preheader";
-@import "colorblocks";
-@import "leadstory";
-@import "buttons";
-@import "sectionheader";
-@import "articlelist";
-@import "column";
-@import "eventlist";
-@import "fullad";
-@import "social";
-@import "footer";
+@import "sectionwrappers",
+        "break",
+        "masthead",
+        "preheader",
+        "colorblocks",
+        "leadstory",
+        "buttons",
+        "sectionheader",
+        "articlelist",
+        "column",
+        "eventlist",
+        "fullad",
+        "footer";
