@@ -38,6 +38,10 @@ img {
 	width: 100%;
 	max-width: $outer-maxwidth;
 	height: auto;
+	
+	@include bp(md) {
+  	max-width: 100% !important;
+	}
 }
 
 

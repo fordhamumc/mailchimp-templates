@@ -11,6 +11,10 @@
     
   @include bp(sm-md) {
     max-width: percentage($width / ($outer-maxwidth - $outer-padding * 2)) !important;
+    
+    img {
+      max-width: $width !important;
+    }
   }
   @include bp(sm) {
 		max-width: 100% !important;
@@ -39,6 +43,7 @@
 
 .one-column {
 	img {
+  	width: 100%;
 		max-width: 100%;
 		height: auto;
 	}

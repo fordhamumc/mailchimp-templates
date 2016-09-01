@@ -46,6 +46,13 @@ td {
 	width: 100%;
 	max-width: $outer-maxwidth;
 }
+	
+@include bp(md) {
+  .webkit, 
+  .outer {
+	  max-width: 100% !important;
+  }
+}
 
 .header {
   background: $base-background;
