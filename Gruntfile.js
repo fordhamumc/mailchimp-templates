@@ -94,11 +94,11 @@ module.exports = function(grunt) {
       dist: {
         options: {
           force: true,
-          cssDir: '<%= paths.dist %>/<%= paths.directory %>/styles',
+          cssDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
           imagesDir: '<%= paths.dist %>/<%= paths.directory %>/<%= paths.images %>',
           noLineComments: true,
           assetCacheBuster: false,
-          outputStyle: "compact"
+          outputStyle: "compressed"
         }
       }
     },
@@ -235,6 +235,26 @@ module.exports = function(grunt) {
         dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
       }
     },
+    processhtml: {
+      dist: {
+        files: [{
+           src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+           dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
+        }]
+      },
+    },
+    uncss: {
+      dist: {
+        options: {
+          ignoreSheets : [/fonts.googleapis/],
+        },
+        files: [{
+          src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+          dest: '<%= paths.tmp %>/<%= paths.directory %>/styles/styles.css'
+        }]
+      }
+    },
+    
 
     /**
      * Replacement Tasks
@@ -356,8 +376,10 @@ module.exports = function(grunt) {
     'compass:dist',
     'jade',
     'imagemin',
-    'premailer:dist',
-    'premailer:plain',
+    //'premailer:dist',
+    //'premailer:plain',
+    'uncss',
+    'processhtml',
     'replace'
   ]);
 
