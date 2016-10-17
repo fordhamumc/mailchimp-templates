@@ -38,9 +38,9 @@ module.exports = function(grunt) {
       dist: 'dist',
       distDomain: '',
       sender: {
-        service: '',
-        user: '',
-        pass: ''
+    		service: 'gmail',
+    		user: '',
+        pass: ' '
       },
       recipients: {
         name: '',

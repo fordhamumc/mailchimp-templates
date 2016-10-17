@@ -10,7 +10,7 @@
   }
     
   @include bp(sm-md) {
-    max-width: percentage($width / ($outer-maxwidth - $outer-padding * 2)) !important;
+    max-width: percentage($width / $content-area) !important;
     
     img {
       max-width: $width !important;
@@ -20,7 +20,7 @@
 		max-width: 100% !important;
 		
     img {
-  		@if $width <= (($outer-maxwidth - $outer-padding * 2) / 3) {
+  		@if $width <= ($content-area / 3) {
         max-width: $width !important;
       } @else {
         max-width: 100% !important;
@@ -91,7 +91,7 @@
 .two-column {	
   
 	.column {
-		@include column-width(300px);
+		@include column-width( $content-area / 2 );
 	}
 }
 
@@ -102,11 +102,11 @@
 .three-column {
 	
 	.column {
-		@include column-width(200px);
+		@include column-width( $content-area / 3 );
 	}
 	
 	.column-2 {
-		@include column-width(400px);
+		@include column-width(  $content-area / 3 * 2);
 	}
 	
 	.contents {
@@ -121,11 +121,11 @@
 .sidebar {
 	
 	.aside {
-		@include column-width(120px);
+		@include column-width( $content-area / 5 );
 	}
 	
 	.main {
-		@include column-width(480px);
+		@include column-width( $content-area / 5 * 4 );
 	}
 }
 

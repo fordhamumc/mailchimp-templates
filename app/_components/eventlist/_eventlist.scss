@@ -3,15 +3,15 @@
 
 
 .event-image {
-  @include column-width(200px);
+  @include column-width($content-area / 3);
 }
 
 .event-description {
-  @include column-width(300px);
+  @include column-width($content-area / 2);
 }
 
 .event-rsvp {
-  @include column-width(100px);
+  @include column-width($content-area / 6);
   
   .btn-sm-container {
     width: 100%;

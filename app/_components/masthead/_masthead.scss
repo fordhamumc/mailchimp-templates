@@ -33,6 +33,10 @@
   
   .masthead--logo {
     padding-left: $container-padding !important;
+    
+    &.contents img {
+      max-width: 165px !important;
+    }
   }
   
   .masthead--cobrand {
@@ -48,6 +52,12 @@
     .column-2 {
       max-width: 55% !important;
     }
+    
+    .contents {
+      img {
+      	max-width: 165px !important;
+    	}
+  	}
   }
 }
 

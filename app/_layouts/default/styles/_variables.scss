@@ -65,8 +65,9 @@ $line-height-offset:          ($line-height-computed - $font-size-base)/2 !defau
 // Spacing
 //---------------------
 
-$outer-maxwidth:              650px !default;
-$outer-padding:               25px !default;
+$content-area:                660px !default;
+$outer-padding:               35px !default;
+$outer-maxwidth:              ($content-area + $outer-padding * 2) !default;
 $container-padding:           15px !default;
 $container-gutter:            25px !default;
 

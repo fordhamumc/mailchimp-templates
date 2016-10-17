@@ -24,8 +24,12 @@
     display: block;
   }
   
+  img {
+    display: block;
+  }
+  
   .column {
-		max-width: 185px;
+		max-width: $content-area / 3 - $container-padding;
 	
   	.contents {
     	text-align: left;
@@ -38,7 +42,7 @@
 	}
 	
 	.column-2 {
-		max-width: 385px;
+		max-width: $content-area / 3 * 2 - $container-padding;
   	
   	.inner {
     	padding: $container-padding;
@@ -51,11 +55,17 @@
     .contents {
       text-align: center !important;
     }
+    
     .column, .column-2 {
       max-width: 100% !important;
     }
+    
     .column .inner {
       padding: $container-gutter $container-padding 0 $container-padding !important;
+    }
+    
+    img {
+      display: inline !important;
     }
   }
 }
