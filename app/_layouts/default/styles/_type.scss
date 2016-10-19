@@ -24,12 +24,20 @@ small   {
 // Headings
 //---------------------
 
-#{headings()} {
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+
+@include headings() {
   Margin-top: 0;
   font-weight: $headings-font-weight;
 }
 
-#{headings(1, 2)} {
+@include headings(1, 2) {
   Margin-bottom: floor($line-height-computed / 2);
   line-height: 1.2;
 }
@@ -42,7 +50,7 @@ h4 {
   line-height: 1.5;
 }
 
-#{headings(3, 6)} {
+@include headings(3, 6) {
   Margin-bottom: floor($line-height-computed / 3);
 }
 

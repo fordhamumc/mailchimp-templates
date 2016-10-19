@@ -78,28 +78,31 @@ module.exports = function(grunt) {
      * SCSS Compilation Tasks
      * ===============================
      */
-    compass: {
-      options: {
-        sassDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
-        httpImagesPath: '<%= paths.src %>/<%= paths.directory %>/<%= paths.images %>'
-      },
+    sass: {
       dev: {
         options: {
-          cssDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
-          imagesDir: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.images %>',
-          outputStyle: 'expanded',
-          noLineComments: false
-        }
+          lineNumbers: true
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: '<%= paths.directory %>/styles/**/*.{scss,sass}',
+          dest: '<%= paths.tmp %>',
+          ext: '.css'
+        }]
       },
       dist: {
         options: {
-          force: true,
-          cssDir: '<%= paths.tmp %>/<%= paths.directory %>/styles',
-          imagesDir: '<%= paths.dist %>/<%= paths.directory %>/<%= paths.images %>',
-          noLineComments: true,
-          assetCacheBuster: false,
-          outputStyle: "compressed"
-        }
+          sourcemap: 'none',
+          style: 'compact'
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: '<%= paths.directory %>/styles/**/*.{scss,sass}',
+          dest: '<%= paths.tmp %>',
+          ext: '.css'
+        }]
       }
     },
 
@@ -130,9 +133,9 @@ module.exports = function(grunt) {
       options: {
         spawn: false
       },
-      compass: {
+      sass: {
         files: ['<%= paths.src %>/{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}'],
-        tasks: ['copy:styles','compass:dev']
+        tasks: ['copy:styles','sass:dev']
       },
       jade: {
         files: [
@@ -190,7 +193,7 @@ module.exports = function(grunt) {
      */
     clean: {
       dev: ['<%= paths.tmp %>'],
-      dist: ['<%= paths.dist %>/<%= paths.directory %>']
+      dist: ['<%= paths.tmp %>', '<%= paths.dist %>/<%= paths.directory %>']
     },
     mkdir: {
       dist: {
@@ -354,7 +357,7 @@ module.exports = function(grunt) {
       'chooseFile',
       'clean:dev',
       'copy',
-      'compass:dev',
+      'sass:dev',
       'jade',
       'browserSync:dev',
       'watch'
@@ -373,7 +376,7 @@ module.exports = function(grunt) {
     'chooseFile',
     'clean:dist',
     'copy',
-    'compass:dist',
+    'sass:dist',
     'jade',
     'imagemin',
     //'premailer:dist',
