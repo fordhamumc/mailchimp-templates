@@ -1,0 +1,46 @@
+mixin column(namespace, count, aspect, padding)
+  - namespace = namespace || "column"
+  - count = count || 2
+  - padding = padding || 15
+  - aspect = aspect || 1.8
+  - container = Math.floor(660/count - padding*2)
+  - imgwidth = Math.floor(container * 1.5)
+  - imgheight = Math.floor(imgwidth/aspect)
+  
+  case count
+    when 1
+      - countText = "one"
+    when 2
+      - countText = "two"
+    default
+      - countText = "three"
+ 
+  table.outer
+    tr
+      td(class="#{countText}-column")
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]--> 
+        - for (i=1; i<=count; i++)  
+          - index = Math.floor(Math.random() * columns.length)
+          
+          <!--[if (gte mso 9)|(IE)]><td width="#{+(100/count).toFixed(2)}%" valign="top"><![endif]-->
+          .column
+            table(width='100%')
+              tr
+                td.inner.contents.column-img
+                  block column-img
+                    img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{container}', alt='', mc:edit="#{namespace}-column#{i}-image", mc:hideable)
+              tr
+                td.inner.contents
+                  if (count < 3)
+                    h4(mc:edit="#{namespace}-column#{i}-title", mc:hideable)
+                      a(href='#', target='_blank') #{columns[index].title}
+                      
+                    div(mc:edit="#{namespace}-column#{i}-desc", mc:hideable) 
+                      a.textlink(href='#', target='_blank') #{columns[index].desc}
+                  else
+                    div(mc:edit="#{namespace}-column#{i}-title", mc:hideable) 
+                      a.textlink(href='#', target='_blank') #{columns[index].title}
+          
+          <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+          
+        <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->

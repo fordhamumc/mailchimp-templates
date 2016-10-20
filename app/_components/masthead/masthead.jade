@@ -1,22 +1,16 @@
-table.outer.header
-  tr
-    td.one-column.masthead.masthead-single
-      table(width='100%')
-        tr
-          td.inner.contents
-              a(href='http://fordham.edu', target='_blank')
-                img.masthead--brand(src='img/fordham-white.png', width='165', alt='Fordham University')
-                //| <br />
-                //img.masthead--brand(src='img/header-line.png', width='165', alt='')
-                //| <br />
-                //img.masthead--gabelli(src='img/gabelli.png', width='232', alt='Gabelli School of Business')
-                //img.masthead--fclc(src='img/fclc.png', width='306', alt='Fordham College at Lincoln Center')
-                //img.masthead--fcrh(src='img/fcrh.png', width='256', alt='Fordham College at Rose Hill')
-                //img.masthead--gre(src='img/gre.png', width='248', alt='Graduate School of Religion')
-                //img.masthead--gre2(src='img/gre2.png', width='218', alt='and Religious Education')
-                //img.masthead--gsas(src='img/gsas.png', width='328', alt='Graduate School of Arts and Sciences')
-                //img.masthead--gse(src='img/gse.png', width='262', alt='Graduate School of Education')
-                //img.masthead--gss(src='img/gss.png', width='295', alt='Graduate School of Social Service')
-                //img.masthead--law(src='img/law.png', width='123', alt='School of Law')
-                //img.masthead--pcs(src='img/pcs.png', width='197', alt='School of Professional')
-                //img.masthead--pcs2(src='img/pcs2.png', width='210', alt='and Continuing Studies')
+- each masthead in mastheads
+  table.outer.header(mc:repeatable="header-branding", mc:variant=masthead.alt)
+    tr
+      td.one-column.masthead.masthead-single
+        table(width='100%')
+          tr
+            td.inner.contents
+                a(href=masthead.url, target='_blank')
+                  img.masthead--brand(src='img/fordham-white.png', width='165', alt='Fordham University')
+                  if masthead.name
+                    | <br />
+                    img.masthead--brand(src='img/header-line.png', width='165', alt='')
+                    | <br />
+                    img(class='masthead--#{masthead.name}', src='img/#{masthead.name}.png', width=masthead.size, alt=masthead.alt)
+                    if masthead.secondary == true
+                      img(class='masthead--#{masthead.name}2', src='img/#{masthead.name}2.png', width=masthead.size2, alt=masthead.alt2)

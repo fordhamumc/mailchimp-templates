@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     },
 
     /**
-     * SCSS Compilation Tasks
+     * CSS Tasks
      * ===============================
      */
     sass: {
@@ -94,7 +94,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           sourcemap: 'none',
-          style: 'compact'
+          style: 'expanded'
         },
         files: [{
           expand: true,
@@ -105,20 +105,68 @@ module.exports = function(grunt) {
         }]
       }
     },
+    uncss: {
+      dist: {
+        options: {
+          ignoreSheets : [/fonts.googleapis/],
+        },
+        files: [{
+          src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+          dest: '<%= paths.tmp %>/<%= paths.directory %>/styles/styles.css'
+        }]
+      }
+    },
+    cmq: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: '<%= paths.directory %>/styles/styles.css',
+          dest: '<%= paths.tmp %>'
+        }]
+      }
+    },
+    processhtml: {
+      dist: {
+        files: [{
+           src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+           dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
+        }]
+      },
+    },
 
     /**
      * Jade Compilation Tasks
      * ===============================
      */
     jade: {
-      dist: {
+      dev: {
         options: {
-          pretty: true
+          pretty: true,
+          data: function(dest, src) {
+            return require('./' + src[0].replace(/(?=[\w-]+\.jade$).+/i,'') + 'data-dev.json');
+          }
         },
         files: [{
           expand: true,
           cwd: '<%= paths.src %>',
-          src: ['<%= paths.directory %>/**/*.jade'],
+          src: ['<%= paths.directory %>/*.jade'],
+          dest: '<%= paths.tmp %>',
+          ext: '.html'
+        }]
+      },
+      dist: {
+        options: {
+          pretty: true,
+          data: function(dest, src) {
+            // Return an object of data to pass to templates
+            return require('./' + src[0].replace(/(?=[\w-]+\.jade$).+/i,'') + 'data-prod.json');
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: '<%= paths.src %>',
+          src: ['<%= paths.directory %>/*.jade'],
           dest: '<%= paths.tmp %>',
           ext: '.html'
         }]
@@ -139,10 +187,11 @@ module.exports = function(grunt) {
       },
       jade: {
         files: [
+          '<%= paths.src %>/<%= paths.directory %>/*.json',
           '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.jade',
           '<%= paths.src %>/{_layouts,_components}/**/*.jade'
         ],
-        tasks: ['jade']
+        tasks: ['jade:dev']
       },
       image: {
         files: [
@@ -214,65 +263,6 @@ module.exports = function(grunt) {
           cwd: '<%= paths.tmp %>',
           src: '<%= paths.directory %>/<%= paths.images %>/{,*/}*.{png,jpg,jpeg,gif}',
           dest: '<%= paths.dist %>'
-        }]
-      }
-    },
-
-    /**
-     * Premailer Parser Tasks
-     * ===============================
-     */
-    premailer: {
-      options: {
-        baseUrl: '<%= paths.distDomain %>'
-      },
-      plain: {
-        options: {
-          mode: 'txt'
-        },
-        src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-        dest: '<%= paths.dist %>/<%= paths.directory %>/index.txt'
-      },
-      dist: {
-        src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-        dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
-      }
-    },
-    processhtml: {
-      dist: {
-        files: [{
-           src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-           dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
-        }]
-      },
-    },
-    uncss: {
-      dist: {
-        options: {
-          ignoreSheets : [/fonts.googleapis/],
-        },
-        files: [{
-          src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-          dest: '<%= paths.tmp %>/<%= paths.directory %>/styles/styles.css'
-        }]
-      }
-    },
-    
-
-    /**
-     * Replacement Tasks
-     * ===============================
-     */
-    replace: {
-      imageDir: {
-        src: '<%= paths.dist %>/<%= paths.directory %>/index.html',
-        dest: '<%= paths.dist %>/<%= paths.directory %>/index.html',
-        replacements: [{
-          from: '/<%= paths.images %>/',
-          to: '/'
-        }, {
-          from: 'margin',
-          to: 'Margin'
         }]
       }
     },
@@ -358,7 +348,7 @@ module.exports = function(grunt) {
       'clean:dev',
       'copy',
       'sass:dev',
-      'jade',
+      'jade:dev',
       'browserSync:dev',
       'watch'
     ]);
@@ -377,13 +367,11 @@ module.exports = function(grunt) {
     'clean:dist',
     'copy',
     'sass:dist',
-    'jade',
+    'jade:dist',
     'imagemin',
-    //'premailer:dist',
-    //'premailer:plain',
     'uncss',
+    'cmq',
     'processhtml',
-    'replace'
   ]);
 
   grunt.registerTask('send', [

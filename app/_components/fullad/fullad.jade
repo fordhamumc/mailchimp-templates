@@ -1,9 +1,9 @@
 table.outer
-  tr
+  tr(mc:repeatable="fullad", mc:variant="Image with Text")
     td.three-column.fullad
       .fullad-container
         <!--[if (gte mso 9)|(IE)]><table width="100%"><![endif]-->
-        <!--[if (gte mso 9)|(IE)]><tr><td width="33%" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><tr><td width="33.33%" valign="top"><![endif]-->
         
         .column
           table(width="100%")
@@ -12,7 +12,7 @@ table.outer
                 a(href="#", target="_blank")
                   img(src='http://placehold.it/285x190', width="190", alt="")
         
-        <!--[if (gte mso 9)|(IE)]></td><td width="67%" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></td><td width="66.67%" valign="top"><![endif]-->
         
         .column-2
           table(width="100%")
@@ -23,3 +23,14 @@ table.outer
         
         <!--[if (gte mso 9)|(IE)]></td></tr><![endif]-->
         <!--[if (gte mso 9)|(IE)]></table><![endif]-->
+  if dev !== true
+    tr(mc:repeatable="fullad", mc:variant="Full-width Image")
+      td.one-column
+        .column
+          table(width="100%")
+            tr
+              td.inner.contents
+                a(href="#", target="_blank")
+                  img(src='http://placehold.it/945x190', width="630", alt="")
+        
+        

@@ -8,7 +8,10 @@
 }
 
 .fullad {
-  padding: $container-gutter ($outer-padding + $container-padding);
+  padding-top: $container-gutter;
+  padding-bottom: $container-gutter;
+  padding-left: ($outer-padding + $container-padding);
+  padding-right: ($outer-padding + $container-padding);
   
   @include bp(md) {
     padding-left: $container-padding !important;

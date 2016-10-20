@@ -1,4 +1,6 @@
 extends ../_layouts/default/default.jade
+include ../_components/columns/columns.jade
+include ../_components/sectionheader/sectionheader.jade
 
 block title
   title Fordham Newsletter
@@ -10,6 +12,7 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/masthead/masthead.jade
+      include ../_components/masthead/masthead-dual.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--lead
     .webkit
@@ -33,8 +36,12 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
-      include ../_components/sectionheader/sectionheader.jade
-      include ../_components/columns/twocolumn.jade
+      +sectionheader("featured")
+      .featured(mc:repeatable="featured", mc:variant="two column")
+        +column("featured")
+      if dev !== true
+        .featured(mc:repeatable="featured", mc:variant="three column")
+          +column("featured", 3, 1.5)
       include ../_components/articlelist/articlelist.jade
       include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -42,14 +49,18 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/break/break.jade
-      include ../_components/columns/threecolumn.jade
+      .ads(mc:repeatable="ads", mc:variant="three column")
+        +column("ads", 3, 1.5)
+      if dev !== true
+        .ads(mc:repeatable="ads", mc:variant="two column")
+          +column("ads")
       include ../_components/break/break.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
-      include ../_components/sectionheader/sectionheader.jade
+      +sectionheader("eventlist")
       include ../_components/eventlist/eventlist.jade
       include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -64,7 +75,13 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
-      include ../_components/sectionheader/sectionheader.jade
-      include ../_components/columns/onecolumn.jade
+      +sectionheader("supplement")
+      .supplement(mc:repeatable="supplement", mc:variant="one column")
+        +column("supplement", 1)
+      if dev !== true
+        .supplement(mc:repeatable="supplement", mc:variant="two column")
+          +column("supplement")
+        .supplement(mc:repeatable="supplement", mc:variant="three column")
+          +column("supplement", 3, 1.5)
       include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

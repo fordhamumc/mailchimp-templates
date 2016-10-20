@@ -3,7 +3,7 @@ table.outer
     td.one-column
       table(width='100%')
         tr
-          td.inner.contents.footer
+          td.inner.contents.footer(mc:edit="footer")
             | *|IFNOT:ARCHIVE_PAGE|* 
             p.footer-sentto This email was sent to *|EMAIL|* by *|LIST:COMPANY|*
             

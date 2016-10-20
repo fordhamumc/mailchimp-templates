@@ -1,7 +1,8 @@
-table.outer.section-header
-  tr
-    td.one-column
-      table(width='100%')
-        tr
-          td.inner.contents
-            a(href="#") Section Header
+mixin sectionheader(namespace)
+  table.outer.section-header(mc:hideable)
+    tr
+      td.one-column
+        table(width='100%')
+          tr
+            td.inner.contents(mc:edit="#{namespace}-sectionheader")
+              | Section Header

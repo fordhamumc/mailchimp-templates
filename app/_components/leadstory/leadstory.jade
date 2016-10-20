@@ -1,20 +1,23 @@
 include ../buttons/btn.jade
 table.outer
-  tr
+  tr(mc:repeatable="leadstory", mc:variant="Title")
     td.one-column
       table(width='100%')
         tr
           td.inner.contents.leadstory
-            h1
+            h1(mc:edit="lead-title")
               a(href='#', target='_blank') Lorem ipsum dolor sit amet
-  tr
+  tr(mc:repeatable="leadstory", mc:variant="Full-width Image")
     td.full-width-image
-      a(href='#', target='_blank')
-        img(src='http://placehold.it/1095x610', width='730', alt='')
-  tr
+      img(src='http://placehold.it/1095x600', width='730', alt='', mc:edit="lead-image")
+  if dev !== true
+    tr(mc:repeatable="leadstory", mc:variant="Image with Padding")
+      td.one-column
+        img(src='http://placehold.it/990x540', width='730', alt='', mc:edit="lead-image")
+  tr(mc:repeatable="leadstory", mc:variant="Content")
     td.one-column
       table(width='100%')
         tr
           td.inner.contents.leadstory(style="padding-bottom: 0;")
-            p.lead Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
-            +btn("lg", "Button Text")
+            p.lead(mc:edit="lead-content") Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
+            +btn("leadstory-btn","lg", "Button Text")

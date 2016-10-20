@@ -1,0 +1,103 @@
+{
+  "dev": false,
+  "mastheads": [
+    {
+      "alt": "Fordham",
+      "url": "http://fordham.edu"
+    },
+    {
+      "name": "gabelli",
+      "alt": "Gabelli School of Business",
+      "size": 232,
+      "url": "http://fordham.edu/gabelli"
+    },
+    {
+      "name": "fclc",
+      "alt": "Fordham College at Lincoln Center",
+      "size": 306,
+      "url": "http://fordham.edu/fclc"
+    },
+    {
+      "name": "fcrh",
+      "alt": "Fordham College at Rose Hill",
+      "size": 256,
+      "url": "http://fordham.edu/fcrh"
+    },
+    {
+      "name": "gre",
+      "alt": "Graduate School of Religion",
+      "size": 248,
+      "secondary": true,
+      "alt2": "and Religious Education",
+      "size2": 218,
+      "url": "http://fordham.edu/gre"
+    },
+    {
+      "name": "gsas",
+      "alt": "Graduate School of Arts and Sciences",
+      "size": 328,
+      "url": "http://fordham.edu/gsas"
+    },
+    {
+      "name": "gse",
+      "alt": "Graduate School of Education",
+      "size": 262,
+      "url": "http://fordham.edu/gse"
+    },
+    {
+      "name": "gss",
+      "alt": "Graduate School of Social Service",
+      "size": 295,
+      "url": "http://fordham.edu/gss"
+    },
+    {
+      "name": "law",
+      "alt": "School of Law",
+      "size": 123,
+      "url": "http://fordham.edu/law"
+    },
+    {
+      "name": "pcs",
+      "alt": "School of Professional",
+      "size": 197,
+      "secondary": true,
+      "alt2": "and Continuing Studies",
+      "size2": 210,
+      "url": "http://fordham.edu/pcs"
+    }
+  ],
+  "articles": [
+    {
+      "title": "This is an Article Title",
+      "desc": "Short teaser description goes here."
+    }
+  ],
+  "columns": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    {
+      "title": "Aenean vulputate eleifend tellus.",
+      "desc": "Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id."
+    },
+    {
+      "title": "Quisque rutrum. Aenean imperdiet.",
+      "desc": "An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an."
+    },
+    {
+      "title": "Nam eget dui. Etiam rhoncus.",
+      "desc": "His agam magna assentior eu, duo ex modo facete alterum. Vel ad suas lorem doming, suavitate adipiscing sit ut, erat iuvaret convenire qui et."
+    },
+    {
+      "title": "Sed fringilla mauris sit amet nibh.",
+      "desc": "Te nec vidisse virtute, vix imperdiet abhorreant dissentiet an. Tota assueverit cu vis."
+    }
+  ],
+  "events": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "October 1 | Lincoln Center Campus"
+    }
+  ]
+}

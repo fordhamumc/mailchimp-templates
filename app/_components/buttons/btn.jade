@@ -1,4 +1,5 @@
-mixin btn(size, text, cl, background)
+mixin btn(namespace, size, text, cl, background)
+  - namespace = namespace || "Button"
   - text = text || "Button"
   - background = background || "#900028"
   - cl = cl || ""
@@ -9,7 +10,7 @@ mixin btn(size, text, cl, background)
   if size === "large" || size === "lg"
     - btnsize = "btn-lg"
   
-  table(width="100%", border="0", cellspacing="0", cellpadding="0")
+  table(width="100%", border="0", cellspacing="0", cellpadding="0", mc:hideable)
     tbody
       if cl === "btn-lg"
         tr
@@ -19,7 +20,7 @@ mixin btn(size, text, cl, background)
           table(border="0", cellspacing="0", cellpadding="0", class="#{btnsize}-container")
             tbody
               tr
-                td(align="center", bgcolor="#{background}")
+                td(align="center", bgcolor="#{background}", mc:edit=namespace)
                   <!--[if mso]>&nbsp;<![endif]-->
                   a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") #{text}
                   <!--[if mso]>&nbsp;<![endif]-->

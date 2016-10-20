@@ -1,36 +1,35 @@
 include ../buttons/btn.jade
 table.outer
-  - for (var i = 0; i < 6; i++)
-    tr
+  each event in events
+    tr(mc:repeatable="eventlist")
       td.event-list.sidebar
         <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="33%"><![endif]-->
         .column.event-image
           table(width='100%')
             tr
               td.inner
-                a(href="#", target="_blank")
-                  img(src="http://placehold.it/285x160", width="190", alt="")
+                img(src="http://placehold.it/285x160", width="190", alt="", mc:edit="event-image")
                   
         <!--[if (gte mso 9)|(IE)]></td><td width="50%"><![endif]-->
         .column.event-description
           table(width='100%')
             tr
               td.inner.contents
-                a(href="#", target="_blank")
-                  h5 Lorem ipsum dolor sit, consectetur adipisicing elit.
-                  span.textlink January 1 | New York City
+                h5(mc:edit="event-title")
+                  a(href="#", target="_blank") #{event.title}
+                a.textlink(mc:edit="event-desc") #{event.desc}
         
         <!--[if (gte mso 9)|(IE)]></td><td width="17%"><![endif]-->  
         .column.event-rsvp
           table(width='100%')
             tr
               td.inner
-                +btn("sm", "RSVP", "btn-block btn-secondary", "#ffffff")
+                +btn("event-btn","sm", "RSVP", "btn-block btn-secondary", "#ffffff")
         <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
         .event-hr
   tr
     td.one-column
       table(width='100%')
         tr
-          td.inner.contents.event-more
-            a(href="#", target="_blank") +20 more events this month. View the calendar.
+          td.inner.contents.event-more(mc:edit="event-more")
+            a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.

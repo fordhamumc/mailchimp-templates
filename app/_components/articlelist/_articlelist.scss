@@ -1,6 +1,10 @@
 // Article list
 //---------------------
 
+.article-list--container {
+  padding-top: 0px;
+}
+
 .article-list {
   list-style: none;
   Margin: 0;
@@ -18,9 +22,6 @@
       font-size: $font-size-base;
     }
     
-    &:first-child {
-      padding-top: 0;
-    }
     &:last-child {
       border-bottom: 0;
       padding-bottom: 0;
