@@ -10,7 +10,7 @@ table.outer
           td.inner.contents
             ul.article-list
               each val, i in titles
-                li(class="#{(i === 0) ? 'article-list--first' : ''}#{(i === titles.length - 1) ? 'article-list--last' : ''}")
+                li
                   h5
                     a(href='#') #{val}
                   .article-list--content 

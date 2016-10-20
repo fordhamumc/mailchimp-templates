@@ -17,16 +17,17 @@
       color: $text-color;
       font-size: $font-size-base;
     }
+    
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
   }
   
   h4, h5 {
     Margin-bottom: 0;
-  }
-  .article-list--first {
-    padding-top: 0;
-  }
-  .article-list--last {
-    border-bottom: 0;
-    padding-bottom: 0;
   }
 }
