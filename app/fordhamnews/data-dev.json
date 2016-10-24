@@ -1,5 +1,6 @@
 {
   "dev": true,
+  "contact": "insidefordh@fordham.edu",
   "columns": [
     {
       "title": "Lorem ipsum dolor sit amet",
@@ -29,27 +30,27 @@
     {
       "name": "Twitter",
       "link": "https://twitter.com/fordhamnotes",
-      "image": "twitter-bg.png"
+      "image": "f3042ca7-0e90-45c7-bd2d-96170749752e.png"
     },
     {
       "name": "Facebook",
       "link": "https://www.facebook.com/FordhamUniversity",
-      "image": "facebook.png"
+      "image": "0d86e2eb-1482-438d-8f9d-943ede8e8ac6.png"
     },
     {
       "name": "LinkedIn",
       "link": "https://www.linkedin.com/edu/fordham-university-18956",
-      "image": "linkedin.png"
+      "image": "e61ba8ae-addd-4297-95bb-8fcf8aa93441.png"
     },
     {
       "name": "YouTube",
       "link": "https://www.youtube.com/user/FordhamUniversity",
-      "image": "youtube.png"
+      "image": "7003bec7-bba2-4008-9d87-cbeb79d31ec3.png"
     },
     {
       "name": "Instagram",
-      "link": "http://instagram.com/fordhamuniversity",
-      "image": "instagram.png"
+      "link": "https://instagram.com/fordhamuniversity",
+      "image": "1a40c78f-86a8-4df4-8258-a7f29704c855.png"
     }
   ]
 }

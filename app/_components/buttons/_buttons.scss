@@ -15,10 +15,21 @@
 @style button
 */
 
+.btn,
+.btn-container td {
+  /*@editable*/ background-color: $btn-background;
+}
+
+/*
+@tab Button
+@section Button
+@tip Set the style for the default button
+@style button
+*/
+
 .btn {
   display: inline-block;
   text-align: center;
-  /*@editable*/ background-color: $btn-background;
   /*@editable*/ border: 1px solid darken($btn-background, 10%);
   /*@editable*/ color: $btn-color;
   /*@editable*/ font-size: $font-size-base;
@@ -103,8 +114,19 @@
 @style button secondary
 */
 
-.btn-secondary {
+.btn,
+.btn-container td {
   /*@editable*/ background-color: $btn-secondary-background;
+}
+
+/*
+@tab Button
+@section Button Secondary
+@tip Set the style for the secondary button
+@style button secondary
+*/
+
+.btn-secondary {
   /*@editable*/ border: 1px solid $btn-secondary-border;
   /*@editable*/ color: $btn-secondary-color;
 }

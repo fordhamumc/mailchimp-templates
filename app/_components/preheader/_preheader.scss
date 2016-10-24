@@ -14,10 +14,12 @@
   /*@editable*/ color: $meta-color;
   /*@editable*/ text-align: center;
   /*@editable*/ padding-top: floor($container-gutter / 2);
-  /*@editable*/ padding-bottom: 0px;
 }
 
-.preheader-hidden,
+.preheader-hidden {
+  padding-bottom: $container-gutter;
+}
+
 .preheader-hidden .preheader {
   display:none !important;
   visibility:hidden;

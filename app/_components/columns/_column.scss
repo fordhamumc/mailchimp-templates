@@ -2,17 +2,24 @@
 //  Column
 //  ---------------------------------
 
-.column-img {
-  padding-bottom: 0;
+.two-column .column-img--solo img,
+.sixty-forty-column .column-img--solo img{
+  padding-top: 7px;
 }
-.column-img--solo {
-  padding-top: 5px;
+
+.three-column .column-img--solo img {
+  padding-top: 4px;
+}
+
+.one-column .column-img {
+  padding-bottom: 0;
 }
 
 @include bp(sm) {
   .column-img {
     padding-left: 0 !important;
     padding-right: 0 !important;
+    padding-bottom: 0 !important;
   }
   .column-img--solo {
     padding-top: 0 !important;

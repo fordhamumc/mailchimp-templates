@@ -4,6 +4,10 @@
     vertical-align: bottom;
   }
 
+  .inner {
+    padding-top: 0;
+  }
+
   .contents {
     .masthead--brand {
       max-width: 165px;
@@ -43,7 +47,7 @@
     }
   }
 
-  .masthead-logo {
+  .column .masthead-logo {
     padding-left: 0;
     text-align: left
   }
@@ -54,7 +58,7 @@
 @tip Set the style for masthead text
 */
 
-.masthead .masthead-cobrand {
+.masthead .column-2 .masthead-cobrand {
   /*@editable*/ font-size: floor($font-size-base * 1.1);
   font-weight: $font-weight-bold;
   line-height: 1.3;

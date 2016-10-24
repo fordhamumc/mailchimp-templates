@@ -1,19 +1,15 @@
+include ../sectionheader/sectionheader.jade
 table.outer
   tr
     td.one-column
       table(width='100%')
         tr
           td.inner.contents.if-logo
-            img(src="img/insidefordham.png", width="400")
+            img(src="57a87033-8db6-46f3-9635-947958e7e838.png", width="400")
 
 .insidefordham(mc:repeatable="insidefordham")
+  +sectionheader("if")
   table.outer
-    tr
-      td.one-column
-        table(width='100%')
-          tr
-            td.inner.contents.if-section-title
-              h4 Section Title
     tr
       td.three-column
         <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -21,8 +17,8 @@ table.outer
         .column
           table(width='100%')
             tr
-              td.inner.contents.column-img
-                img.column-img--solo(src='http://placehold.it/690x394', width='190', alt='', mc:edit="if-column1-image")
+              td.inner.contents.column-img.column-img--solo
+                img(src='http://placehold.it/690x394', width='190', alt='', mc:edit="if-column1-image")
 
 
         <!--[if (gte mso 9)|(IE)]></td><![endif]-->
@@ -30,10 +26,10 @@ table.outer
         .column-2
           table(width='100%')
             tr
-              td.inner.contents
-                ul.if-list
+              td.inner.contents.if-list(mc:edit="if-column1-desc")
+                ul
                   each bullet in bullets
-                    li(mc:repeatable="if-bullets", mc:edit="if-column1-desc")
+                    li
                       a(href="", target="_blank") #{bullet.title}
 
         <!--[if (gte mso 9)|(IE)]></td><![endif]-->

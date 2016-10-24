@@ -28,6 +28,9 @@ block body
           +column("news", 1, 1.75, "h3")
       .news(mc:repeatable="news", mc:variant="additional stories")
         +column-sixtyforty("news")
+      if dev !== true
+        .news(mc:repeatable="news", mc:variant="lead story")
+          +column("news", 1, 1.75, "h3")
       include ../_components/break/break.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
@@ -39,6 +42,6 @@ block body
   center.wrapper.color-block.color-block--aside.pullquote-container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/social-banner/social-banner.jade
+      include ../_components/pullquote/pullquote.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   - social = false

@@ -6,11 +6,11 @@
           tr
             td.inner.contents
                 a(href=masthead.url, target='_blank')
-                  img.masthead--brand(src='img/fordham-white.png', width='165', alt='Fordham University')
+                  img.masthead--brand(src='f4179ad6-585d-436f-a28d-57f714ecbe9e.png', width='165', alt='Fordham University')
                   if masthead.name
                     | <br />
-                    img.masthead--brand(src='img/header-line.png', width='165', alt='')
+                    img.masthead--brand(src='896532b8-f904-4d40-ab0e-66d396a04d7a.png', width='165', alt='')
                     | <br />
-                    img(class='masthead--#{masthead.name}', src='img/#{masthead.name}.png', width=masthead.size, alt=masthead.alt)
+                    img(class='masthead--#{masthead.name}', src=masthead.image, width=masthead.size, alt=masthead.alt)
                     if masthead.secondary == true
-                      img(class='masthead--#{masthead.name}2', src='img/#{masthead.name}2.png', width=masthead.size2, alt=masthead.alt2)
+                      img(class='masthead--#{masthead.name}2', src=masthead.image2, width=masthead.size2, alt=masthead.alt2)

@@ -6,3 +6,24 @@
 .pullquote-container {
   border: 0;
 }
+
+/*
+  @tab Sections
+  @section In the News
+  @tip Set the style for the Rams in the News section
+*/
+
+.pullquote-lead {
+  @extend .lead;
+}
+
+/*
+  @tab Sections
+  @section In the News Author
+  @tip Set the style for the In the News attribution
+*/
+
+.pullquote-author {
+  /*@editable*/ font-size: ceil($font-size-base * .8);
+  /*@editable*/ text-transform: uppercase;
+}

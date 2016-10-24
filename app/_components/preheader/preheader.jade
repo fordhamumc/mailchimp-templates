@@ -5,9 +5,10 @@ table.outer.header(mc:repeatable="preheader", mc:variant="Visible Preheader")
         tr
           td.inner.contents.preheader(mc:edit="preheader") Preheader goes here. Think of it as a second subject.
 
-table.outer.header.preheader-hidden(mc:repeatable="preheader", mc:variant="Hidden Preheader")
-  tr
-    td.one-column
-      table(width='100%')
-        tr
-          td.inner.contents.preheader(mc:edit="preheader") Preheader goes here. Think of it as a second subject.
+if dev !== true
+  table.outer.header.preheader-hidden(mc:repeatable="preheader", mc:variant="Hidden Preheader")
+    tr
+      td.one-column
+        table(width='100%')
+          tr
+            td.inner.contents.preheader(mc:edit="preheader") Preheader goes here. Think of it as a second subject.

@@ -4,9 +4,6 @@ table.outer
       table(width='100%')
         tr
           td.contents.inner.social(mc:edit="social")
-            a(href="https://www.facebook.com/FordhamAlumni", target="_blank")
-              img(src="img/facebook.png", width="30", alt="Facebook")
-            a(href="https://twitter.com/fordhamalumni", target="_blank")
-              img(src="img/twitter.png", width="30", alt="Twitter")
-            a(href="https://www.instagram.com/fordhamalumni/", target="_blank")
-              img(src="img/instagram.png", width="30", alt="Instagram")
+            each network in socialnetworks
+              a(href=network.link, target="_blank")
+                img(src=network.image, width="30", alt=network.name, title=network.name)

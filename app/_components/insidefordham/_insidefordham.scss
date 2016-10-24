@@ -7,15 +7,7 @@
   max-width: 400px;
 }
 
-.if-section-title {
-  padding-bottom: 0;
-
-  h4 {
-    Margin-bottom: 0;
-  }
-}
-
-.if-list {
+.if-list ul {
   Margin: 0;
   padding-left: 25px;
 }
@@ -23,5 +15,47 @@
 @include bp(sm) {
   .insidefordham .column img {
     max-width: 100% !important;
+  }
+}
+
+//
+//  Section header
+//  ---------------------------------
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header .contents {
+  /*@editable*/ font-size: ceil($font-size-base * 1.25);
+  font-weight: $font-weight-bold;
+}
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header .contents,
+.section-header a {
+  /*@editable*/ color: $text-color;
+}
+
+.section-header .inner {
+  padding-bottom: 0px;
+}
+
+@include bp(sm) {
+  .insidefordham .section-header .inner {
+    padding-bottom: $container-gutter;
+  }
+
+  .section-header .inner {
+    text-align: center !important;
   }
 }

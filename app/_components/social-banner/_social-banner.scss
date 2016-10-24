@@ -11,6 +11,10 @@
   text-align: right;
 }
 
+.social-banner-text a {
+  color: $text-color;
+}
+
 .two-column .social-banner,
 .social-banner {
 
@@ -24,22 +28,22 @@
 }
 
 @include bp(md) {
-  .two-column .social-banner img {
+  .two-column .column .social-banner img {
     max-width: 24px !important;
   }
 }
 
 @include bp(sm) {
-  .two-column {
+  .two-column .column {
     .social-banner,
     .social-banner-text {
-      text-align: center;
+      text-align: center !important;
     }
     .social-banner {
-      padding-bottom: 15px;
+      padding-bottom: 15px !important;
     }
     .social-banner-text {
-      padding-bottom: 5px;
+      padding-bottom: 5px !important;
     }
   }
 }

@@ -20,7 +20,7 @@ mixin btn(namespace, size, text, cl, background)
           table(border="0", cellspacing="0", cellpadding="0", class="#{btnsize}-container")
             tbody
               tr
-                td(align="center", bgcolor="#{background}", mc:edit=namespace)
+                td(align="center", mc:edit=namespace)
                   <!--[if mso]>&nbsp;<![endif]-->
                   a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") #{text}
                   <!--[if mso]>&nbsp;<![endif]-->
