@@ -1,0 +1,31 @@
+extends ../_layouts/default/default.jade
+include ../_components/break/break.jade
+include ../_components/columns/columns.jade
+include ../_components/columns/sixtyfortycolumn.jade
+include ../_components/sectionheader/sectionheader.jade
+
+block style-template
+  <!-- build:css inline styles/magazine.css -->
+  link(rel='stylesheet', href='styles/magazine.css')
+  <!-- /build -->
+
+block body
+  center.wrapper.header
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      include ../_components/preheader/preheader.jade
+      include ../_components/masthead/masthead.jade
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      .news(mc:repeatable="news")
+        +column-sixtyforty("news", 1.5, true)
+      +break
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      include ../_components/magazinefooter/magazinefooter.jade
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  - social = false

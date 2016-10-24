@@ -1,31 +1,20 @@
 {
   "dev": false,
-  "contact": "insidefordh@fordham.edu",
+  "contact": "fordhammag@fordham.edu",
   "mastheadtop": {
-    "alt": "Fordham News: The Latest From Fordham University",
-    "size": 630,
-    "image": "44e14c0b-bc00-4b8b-9792-d1cbd34a0c07.png"
+    "alt": "FORDHAM Magazine",
+    "size": 400,
+    "image": "06a3acb7-7d1d-4dff-9bc1-81d4fe6eeae3.png"
   },
   "mastheads": [
     {
-      "url": "http://news.fordham.edu"
+      "url": "http://news.fordham.edu/fordham-magazine-landing/"
     }
   ],
   "columns": [
     {
       "title": "Article Title",
       "desc": "This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed."
-    }
-  ],
-  "bullets": [
-    {
-      "title": "Someday this space will be occupied by real copy that is meant to be read."
-    },
-    {
-      "title": "It is strictly for mock-ups. You may mock it up as strictly as you wish."
-    },
-    {
-      "title": "How many times must you be reminded that it's really not meant to be read?"
     }
   ],
   "socialnetworks": [

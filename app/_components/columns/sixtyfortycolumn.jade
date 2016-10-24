@@ -1,4 +1,9 @@
-mixin column-sixtyforty(namespace)
+mixin column-sixtyforty(namespace, aspect, category, padding)
+  - aspect = aspect || 1.75
+  - category = category || false
+  - padding = padding || 15
+  - imgwidth = Math.floor(460 * 1.5)
+  - imgheight = Math.floor(imgwidth/aspect)
   each column in columns
     table.outer
       tr
@@ -11,14 +16,17 @@ mixin column-sixtyforty(namespace)
               tr
                 td.inner.contents.column-img.column-img--solo
                   block column-img
-                    img(src='http://placehold.it/690x394', width='', alt='', mc:edit="#{namespace}-column1-image")
+                    img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='', alt='', mc:edit="#{namespace}-column1-image")
           <!--[if (gte mso 9)|(IE)]></td><![endif]-->
           <!--[if (gte mso 9)|(IE)]><td width="60%" valign="top"><![endif]-->
           .column-sixty
             table(width='100%')
               tr
                 td.inner.contents
-                  h3(mc:edit="#{namespace}-column1-title")
+                  if category
+                    h6.column-category(mc:edit="#{namespace}-column1-sectionheader", mc:hideable) Category
+
+                  h3(mc:edit="#{namespace}-column1-title", mc:hideable)
                     a(href='#', target='_blank') #{column.title}
 
                   div(mc:edit="#{namespace}-column1-desc", mc:hideable)

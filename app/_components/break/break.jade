@@ -1,3 +1,8 @@
-table.outer
-  tr
-    td.break &nbsp;
+mixin break(line)
+  table.outer
+    tr
+      td.break
+        if line
+          div(class="break-#{line}") &nbsp;
+        else
+          | &nbsp;

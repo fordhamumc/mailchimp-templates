@@ -1,4 +1,5 @@
 extends ../_layouts/default/default.jade
+include ../_components/break/break.jade
 include ../_components/columns/columns.jade
 include ../_components/sectionheader/sectionheader.jade
 
@@ -24,14 +25,14 @@ block body
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/break/break.jade
+      +break
       include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/break/break.jade
-      include ../_components/break/break.jade
+      +break
+      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
@@ -49,13 +50,13 @@ block body
   center.wrapper.color-block.color-block--aside
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/break/break.jade
+      +break
       .ads(mc:repeatable="ads", mc:variant="three column")
         +column("ads", 3, 1.5)
       if dev !== true
         .ads(mc:repeatable="ads", mc:variant="two column")
           +column("ads")
-      include ../_components/break/break.jade
+      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
@@ -68,9 +69,9 @@ block body
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/break/break.jade
+      +break
       include ../_components/fullad/fullad.jade
-      include ../_components/break/break.jade
+      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit

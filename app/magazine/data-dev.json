@@ -1,20 +1,28 @@
 {
-  "dev": false,
-  "contact": "insidefordh@fordham.edu",
+  "dev": true,
+  "contact": "fordhammag@fordham.edu",
   "mastheadtop": {
-    "alt": "Fordham News: The Latest From Fordham University",
-    "size": 630,
-    "image": "44e14c0b-bc00-4b8b-9792-d1cbd34a0c07.png"
+    "alt": "FORDHAM Magazine",
+    "size": 400,
+    "image": "img/fordhammag.png"
   },
   "mastheads": [
     {
-      "url": "http://news.fordham.edu"
+      "url": "http://news.fordham.edu/fordham-magazine-landing/"
     }
   ],
   "columns": [
     {
-      "title": "Article Title",
-      "desc": "This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed."
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    {
+      "title": "Aenean vulputate eleifend tellus.",
+      "desc": "Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id."
+    },
+    {
+      "title": "Quisque rutrum. Aenean imperdiet.",
+      "desc": "An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an."
     }
   ],
   "bullets": [

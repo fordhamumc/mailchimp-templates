@@ -1,4 +1,5 @@
 extends ../_layouts/default/default.jade
+include ../_components/break/break.jade
 include ../_components/columns/columns.jade
 include ../_components/columns/sixtyfortycolumn.jade
 include ../_components/sectionheader/sectionheader.jade
@@ -31,12 +32,12 @@ block body
       if dev !== true
         .news(mc:repeatable="news", mc:variant="lead story")
           +column("news", 1, 1.75, "h3")
-      include ../_components/break/break.jade
+      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/break/break-dashed.jade
+      +break("dashed")
       include ../_components/insidefordham/insidefordham.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.pullquote-container

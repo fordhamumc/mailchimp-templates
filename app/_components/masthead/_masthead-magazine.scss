@@ -1,0 +1,18 @@
+.masthead {
+  .column,
+  .column-2 {
+    vertical-align: bottom;
+  }
+
+  .inner {
+    padding-top: 0;
+  }
+
+  .contents {
+    text-align: center;
+
+    .masthead--brand {
+      max-width: 400px;
+    }
+  }
+}

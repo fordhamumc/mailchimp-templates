@@ -1,0 +1,33 @@
+// 
+//  Magazine
+//  ---------------------------------
+
+
+.magazine-footer--inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+/*
+  @tab Sections
+  @section Publication Message
+  @tip Set the style for the FORDHAM magazine is printed twice a year... section
+*/
+
+.magazine-footer {
+  /*@editable*/ border-top: 1px solid $content-border-color;
+  /*@editable*/ border-bottom: 1px solid $content-border-color;
+  /*@editable*/ padding-top: 25px;
+  /*@editable*/ padding-bottom: 25px;
+  /*@editable*/ padding-left: 30px;
+  /*@editable*/ padding-right: 30px;
+  /*@editable*/ text-align: center;
+  /*@editable*/ font-size: $font-size-base;
+  /*@editable*/ color: $text-color;
+
+  @include bp(md) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

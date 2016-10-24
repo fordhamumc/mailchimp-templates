@@ -15,6 +15,11 @@
   padding-bottom: 0;
 }
 
+.column-category {
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+
 @include bp(sm) {
   .column-img {
     padding-left: 0 !important;

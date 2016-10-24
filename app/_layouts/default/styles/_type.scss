@@ -124,9 +124,9 @@ h5 {
 */
 
 h6 {
-  /*@editable*/ font-size: ceil($font-size-base * 0.85);
+  /*@editable*/ font-size: ceil($font-size-base * 0.9);
   /*@editable*/ Margin-top: 0;
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
+  /*@editable*/ Margin-bottom: 0;
 }
 
 @include bp(sm) {
@@ -158,7 +158,8 @@ h6 {
   */
 
   h3 {
-    /*@editable*/ font-size: floor($font-size-base * 1.70 * .8) !important;
+    /*@editable*/ font-size: floor($font-size-base * 1.70 * .85) !important;
+    line-height: 1.6 !important;
   }
 }
 
