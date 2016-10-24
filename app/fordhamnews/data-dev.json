@@ -1,6 +1,16 @@
 {
   "dev": true,
   "contact": "insidefordh@fordham.edu",
+  "mastheadtop": {
+    "alt": "Fordham News: The Latest From Fordham University",
+    "size": 630,
+    "image": "44e14c0b-bc00-4b8b-9792-d1cbd34a0c07.png"
+  },
+  "mastheads": [
+    {
+      "url": "http://news.fordham.edu"
+    }
+  ],
   "columns": [
     {
       "title": "Lorem ipsum dolor sit amet",

@@ -1,6 +1,11 @@
 {
   "dev": true,
   "contact": "alumnioffice@fordham.edu",
+  "mastheadtop": {
+    "alt": "Fordham University",
+    "size": 165,
+    "image": "f4179ad6-585d-436f-a28d-57f714ecbe9e.png"
+  },
   "mastheads": [],
   "articles": [
     {

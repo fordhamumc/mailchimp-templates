@@ -1,12 +1,21 @@
+mixin mastheadtable
+  if mastheads.length > 1
+    table.outer.header(mc:repeatable="header-branding", mc:variant=variant)
+      block
+  else
+    table.outer.header
+      block
+
 - each masthead in mastheads
-  table.outer.header(mc:repeatable="header-branding", mc:variant=masthead.alt)
+  - variant = masthead.alt || mastheadtop.alt
+  +mastheadtable
     tr
       td.one-column.masthead.masthead-single
         table(width='100%')
           tr
             td.inner.contents
                 a(href=masthead.url, target='_blank')
-                  img.masthead--brand(src='f4179ad6-585d-436f-a28d-57f714ecbe9e.png', width='165', alt='Fordham University')
+                  img.masthead--brand(src=mastheadtop.image, width=mastheadtop.size, alt=mastheadtop.alt)
                   if masthead.name
                     | <br />
                     img.masthead--brand(src='896532b8-f904-4d40-ab0e-66d396a04d7a.png', width='165', alt='')
