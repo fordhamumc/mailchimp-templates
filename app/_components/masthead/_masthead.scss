@@ -3,58 +3,63 @@
   .column-2 {
     vertical-align: bottom;
   }
-  
+
   .contents {
     .masthead--brand {
-  		max-width: 165px;
-  	}
+      max-width: 165px;
+    }
     .masthead--gabelli {
-  		max-width: 232px;
-  	}
-  	.masthead--fclc{
-  		max-width: 306px;
-  	}
-  	.masthead--fcrh{
-  		max-width: 256px;
-  	}
-  	.masthead--gre{
-  		max-width: 248px;
-  	}
-  	.masthead--gre2{
-  		max-width: 218px;
-  	}
-  	.masthead--gsas{
-  		max-width: 328px;
-  	}
-  	.masthead--gse{
-  		max-width: 262px;
-  	}
-  	.masthead--gss{
-  		max-width: 295px;
-  	}
-  	.masthead--law{
-  		max-width: 123px;
-  	}
-  	.masthead--pcs{
-  		max-width: 197px;
-  	}
-  	.masthead--pcs2{
-  		max-width: 210px;
-  	}
-	}
-	
+      max-width: 232px;
+    }
+    .masthead--fclc {
+      max-width: 306px;
+    }
+    .masthead--fcrh {
+      max-width: 256px;
+    }
+    .masthead--gre {
+      max-width: 248px;
+    }
+    .masthead--gre2 {
+      max-width: 218px;
+    }
+    .masthead--gsas {
+      max-width: 328px;
+    }
+    .masthead--gse {
+      max-width: 262px;
+    }
+    .masthead--gss {
+      max-width: 295px;
+    }
+    .masthead--law {
+      max-width: 123px;
+    }
+    .masthead--pcs {
+      max-width: 197px;
+    }
+    .masthead--pcs2 {
+      max-width: 210px;
+    }
+  }
+
   .masthead-logo {
     padding-left: 0;
     text-align: left
   }
-	
-  .masthead-cobrand {
-    /* @editable */ font-size: floor($font-size-base * 1.1);
-    font-weight: $font-weight-bold;
-    line-height: 1.3;
-    text-align: right;
-    padding-right: 0;
-  }
+}
+/*
+@tab Header
+@section Masthead Title
+@tip Set the style for masthead text
+*/
+
+.masthead .masthead-cobrand {
+  /*@editable*/ font-size: floor($font-size-base * 1.1);
+  font-weight: $font-weight-bold;
+  line-height: 1.3;
+  text-align: right;
+  padding-right: 0;
 }
 
 .masthead-single .contents {

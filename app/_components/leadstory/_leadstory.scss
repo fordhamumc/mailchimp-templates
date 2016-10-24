@@ -3,9 +3,17 @@
 //  ---------------------------------
 
 
+/*
+@tab Sections
+@section Lead Block
+@tip Set the style for lead content
+*/
+
+.leadstory,
+.leadstory h1{
+  /*@editable*/ text-align: center;
+}
 .leadstory {
-  text-align: center;
-  
   @include bp(md) {
     text-align: left !important;
   }
@@ -13,5 +21,4 @@
 
 .leadstory h1 {
   Margin-bottom: 0;
-  text-align: center;
 }

@@ -2,15 +2,16 @@ extends ../_layouts/default/default.jade
 include ../_components/columns/columns.jade
 include ../_components/sectionheader/sectionheader.jade
 
-block title
-  title Fordham Newsletter
 block style-template
+  <!-- build:css inline styles/newsletter.css -->
   link(rel='stylesheet', href='styles/newsletter.css')
+  <!-- /build -->
 
 block body
   center.wrapper.header.color-block.color-block--header
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      include ../_components/preheader/preheader.jade
       include ../_components/masthead/masthead.jade
       include ../_components/masthead/masthead-dual.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

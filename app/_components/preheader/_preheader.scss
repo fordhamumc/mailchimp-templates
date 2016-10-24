@@ -3,13 +3,30 @@
 //  ---------------------------------
 
 
+/*
+@tab Header
+@section Preheader
+@tip Set the style for the visible preheader
+*/
+
 .preheader {
-  font-size:11px; 
-  color: $meta-color;
-  text-align: center;
-  padding-bottom: 0px;
-  
-  @include bp(sm) {
-    padding-top: floor($container-gutter / 2);
-  }
+  /*@editable*/ font-size: 11px;
+  /*@editable*/ color: $meta-color;
+  /*@editable*/ text-align: center;
+  /*@editable*/ padding-top: floor($container-gutter / 2);
+  /*@editable*/ padding-bottom: 0px;
+}
+
+.preheader-hidden,
+.preheader-hidden .preheader {
+  display:none !important;
+  visibility:hidden;
+  mso-hide:all;
+  font-size:1px;
+  color:#ffffff;
+  line-height:1px;
+  max-height:0px;
+  max-width:0px;
+  opacity:0;
+  overflow:hidden;
 }

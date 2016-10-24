@@ -1,26 +1,43 @@
 // Giving block
 //-------------------
 
+/*
+@tab Sections
+@section Giving Block
+@tip Set the style for the giving block
+*/
+
 .giving-block {
-  background: #6d9297;
-  border-top: 1px solid darken(#6d9297, 7%);
-  border-bottom: 1px solid darken(#6d9297, 7%);
+  /*@editable*/ background-color: #6d9297;
+  /*@editable*/ border-top: 1px solid darken(#6d9297, 7%);
+  /*@editable*/ border-bottom: 1px solid darken(#6d9297, 7%);
 }
 
 .giving-block .inner {
   padding: 0;
 }
+
+/*
+@tab Sections
+@section Giving Block
+@tip Set the style for the giving block
+*/
   
 .giving-block .contents,
 .giving-block a {
-  color: #ffffff;
+  /*@editable*/ color: #ffffff;
 }
 
+/*
+@tab Sections
+@section Giving Block Button
+@tip Set the style for the giving block button
+*/
+
 .giving-block .btn {
-  background-color: #a4dce3;
-  border-color: darken(#f6ea5d, 10%);
-  border-color: transparent;
-  color: $text-color;
+  /*@editable*/ background-color: #a4dce3;
+  /*@editable*/ border-color: darken(#f6ea5d, 10%);
+  /*@editable*/ color: $text-color;
 }
 
 

@@ -3,8 +3,25 @@
 //  ---------------------------------
 
 
+/*
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
 .fullad-container {
-  background: $primary-color;
+  /*@editable*/ background: $primary-color;
+}
+
+/*
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
+.fullad a {
+  /*@editable*/ color: #ffffff;
+  /*@editable*/ font-size: $font-size-base;
 }
 
 .fullad {
@@ -23,7 +40,6 @@
   }
   
   a {
-    color: #ffffff;
     display: block;
   }
   

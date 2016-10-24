@@ -1,49 +1,67 @@
 // Color Block Mixin
 //---------------------
 
-@mixin color-block($background, $outer, $text, $button) {
-  background: $background;
-  
-  .outer {
-    background: $outer;
+@mixin color-block($background, $outer, $text, $button, $tab, $section) {
+  $section-lc: to-lower-case($section);
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Background
+  @tip Set the style for the #{$section-lc} block
+  */
+  .color-block--#{$section-lc} {
+    /*@editable*/
+    background-color: $background;
   }
-  
-  .contents {
-    color: $text;
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Content
+  @tip Set the style for the #{$section-lc} block
+  */
+
+  .color-block--#{$section-lc} .outer {
+    /*@editable*/ background-color: $outer;
   }
-  
-  .btn {
-    background-color: $button;
-    border-color: darken($button, 10%);
-    
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Content
+  @tip Set the style for the #{$section-lc} block
+  */
+
+  .color-block--#{$section-lc} .contents {
+    /*@editable*/ color: $text;
+  }
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Button
+  @tip Set the style for the #{$section-lc} block button
+  */
+
+  .color-block--#{$section-lc} .btn {
+    /*@editable*/ background-color: $button;
+    /*@editable*/ border: 1px solid darken($button, 10%);
+
     @if lightness($button) < 50% {
-      color: #ffffff;
-    }
-    
-    @else {
-      color: $text-color;
+      /*@editable*/ color: #ffffff;
+    } @else {
+      /*@editable*/ color: $text-color;
     }
   }
+
 }
-
-
-// Color Block
-//---------------------
 
 
 // Header (Primary color)
 //---------------------
 
-.color-block--header {
-  @include color-block($primary-color, transparent, #ffffff, #2c8db3);
+@include color-block($primary-color, $primary-color, #ffffff, #2c8db3, "Header", "Header");
   
-  @include bp(sm) {
+@include bp(sm) {
+  .color-block--header {
     padding-top: 0 !important;
     border-top-width: 0 !important;
-  }
-  
-  @include bp(md) {
-    background: $primary-color !important;
   }
 }
 
@@ -51,10 +69,10 @@
 // Lead (Primary color)
 //---------------------
 
-.color-block--lead {
-  @include color-block($primary-color, #ffffff, $text-color, $primary-color);
-  
-  @include bp(sm) {
+@include color-block($primary-color, #ffffff, $text-color, $primary-color, "Sections", "Lead");
+
+@include bp(sm) {
+  .color-block--lead {
     padding-top: 0 !important;
     border-top-width: 0 !important;
   }
@@ -64,10 +82,4 @@
 // Aside (Aside color)
 //---------------------
 
-.color-block--aside {
-  @include color-block($aside-background, transparent, $aside-color, $btn-secondary-background);
-  
-  @include bp(md) {
-    background: $aside-background !important;
-  }
-}
+@include color-block($aside-background, transparent, $aside-color, $btn-secondary-background, "Sections", "Aside");

@@ -4,14 +4,14 @@
 
 
 body {
-	Margin: 0;
-	padding: 0;
-	min-width: 100%;
-	background-color: #ffffff;
+  Margin: 0;
+  padding: 0;
+  min-width: 100%;
+  background-color: #ffffff;
 }
 
 table {
-	border-spacing: 0;
+  border-spacing: 0;
   color: $text-color;
   font-family: $base-font;
 }
@@ -20,31 +20,33 @@ td {
 	padding: 0;
 }
 
+/*
+@tab Page
+@section background style
+@tip Set the background color for your email.
+*/
 .wrapper {
-  background: $base-background;
-	width: 100%;
-	table-layout: fixed;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	
-  
-  @include bp(md) {
-    background: $content-background !important;
-  }
+  /*@editable*/ background-color: $base-background;
+  width: 100%;
+  table-layout: fixed;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 .webkit {
-	max-width: $outer-maxwidth;
+  max-width: $outer-maxwidth;
 }
-
+/*
+@tab Page
+@section background style
+@tip Content border
+*/
 .outer {
   background: $content-background;
-  border-color: $content-border-color;
-  border-style: solid;
-  border-width: $content-border-width;
-	Margin: 0 auto;
-	width: 100%;
-	max-width: $outer-maxwidth;
+  /*@editable*/ border: $content-border-width solid $content-border-color;
+  Margin: 0 auto;
+  width: 100%;
+  max-width: $outer-maxwidth;
 }
 	
 @include bp(md) {
@@ -55,18 +57,17 @@ td {
 }
 
 .header {
-  background: $base-background;
   border: 0;
 }
 
 .inner {
-	padding: $container-gutter $container-padding;
+  padding: $container-gutter $container-padding;
 }
 
 .contents {
-	width: 100%;
+  width: 100%;
 }
 
 p {
-	Margin: 0;
+  Margin: 0;
 }

@@ -3,24 +3,42 @@
 //  ---------------------------------
 
 
-.footer-wrapper {
-  background: $footer-background;
-  
-  .outer {
-    background: $footer-background;
-  }
+/*
+@tab Footer
+@section Footer Background
+@tip Set the style for the large button
+@style button large
+*/
+
+.footer-wrapper,
+.footer-wrapper .outer{
+  /*@editable*/ background-color: $footer-background;
 }
+
+/*
+@tab Footer
+@section Footer Background
+@tip Set the style for the large button
+@style button large
+*/
 
 .footer {
-  font-size: floor($font-size-base * .85);
-  text-align: center;
+  /*@editable*/ font-size: floor($font-size-base * .85);
+  /*@editable*/ text-align: center;
 }
+
+/*
+@tab Footer
+@section Footer Background
+@tip Set the style for the large button
+@style button large
+*/
 
 .footer, .footer a {
-  color: $meta-color;
+  /*@editable*/ color: $meta-color;
 }
 
-.footer-unsub {
+.footer-links {
   font-weight: $font-weight-bold;
   
   a {

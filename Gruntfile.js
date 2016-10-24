@@ -121,7 +121,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '<%= paths.tmp %>',
-          src: '<%= paths.directory %>/styles/styles.css',
+          src: '<%= paths.directory %>/styles/**/*.css',
           dest: '<%= paths.tmp %>'
         }]
       }
@@ -369,7 +369,7 @@ module.exports = function(grunt) {
     'sass:dist',
     'jade:dist',
     'imagemin',
-    'uncss',
+    //'uncss',
     'cmq',
     'processhtml',
   ]);

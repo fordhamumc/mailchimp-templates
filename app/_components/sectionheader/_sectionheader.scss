@@ -1,25 +1,44 @@
-// 
+//
 //  Section header
 //  ---------------------------------
 
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
 
-.section-header {
-  .contents {
-    color: $meta-color;
-    font-weight: $font-weight-bold;
-    text-align: left;
-    text-transform: uppercase;
-    
-    @include bp(sm) {
-      text-align: center !important;
-    }
+.section-header .contents {
+  font-weight: $font-weight-bold;
+  /*@editable*/ text-align: left;
+  text-transform: uppercase;
+}
+
+@include bp(sm) {
+  /*
+  @tab Sections
+  @section Section Header Mobile
+  @tip Set the small screen style for the section header
+  */
+
+  .section-header .contents {
+    /*@editable*/ text-align: center !important;
   }
-  
-  a {
-    color: $meta-color;
-  }
-  
-  .inner {
-    padding-bottom: 0px;
-  }
+}
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header .contents,
+.section-header a {
+  /*@editable*/ color: $meta-color;
+}
+
+.section-header .inner {
+  padding-bottom: 0px;
 }

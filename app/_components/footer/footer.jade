@@ -4,15 +4,24 @@ table.outer
       table(width='100%')
         tr
           td.inner.contents.footer(mc:edit="footer")
-            | *|IFNOT:ARCHIVE_PAGE|* 
-            p.footer-sentto This email was sent to *|EMAIL|* by *|LIST:COMPANY|*
+            | *|IFNOT:ARCHIVE_PAGE|*
+
+            p.footer-links
+              a(href="*|ARCHIVE|*", target="_blank") View the web version.
+              a(href="http://www.fordham.edu/onlinegiving", target="_blank") Support Fordham students.
+
+            p.footer-sentto This email was sent to
+              a(href="mailto:*|EMAIL|*")  *|EMAIL|*
+              |  by *|LIST:ADDRESS|*
+
+            p.footer-sentto *|LIST:DESCRIPTION|*
             
-            p.footer-contact *|HTML:LIST_ADDRESS_HTML|* <br />
-              | *|LIST:PHONE|*  |  *|ABUSE_EMAIL|*
-            
-            p.footer-unsub 
-              a(href="*|UPDATE_PROFILE|*", target="_blank") Update Subscription Preferences
-              a(href="*|UNSUB|*", target="_blank") Unsubscribe From All Fordham Emails
+            p.footer-links
+              | *|IF:IMCID|*
+              a(href="http://emailprefs.fordham.edu/id=*|IMCID|*", target="_blank") Customize the types of emails you receive from Fordham.
+            p.footer-links
+              | *|END:IF|*
+              a(href="*|UNSUB|*", target="_blank") Unsubscribe from all Fordham University emails.
             
             | *|END:IF|*
             p.footer-copyright Copyright *|CURRENT_YEAR|* *|USER:COMPANY|*. All&nbsp;rights&nbsp;reserved.

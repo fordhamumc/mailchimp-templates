@@ -7,19 +7,22 @@ html(xmlns='http://www.w3.org/1999/xhtml')
     <!--<![endif]-->
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     block title
-      title Fordham University
+      title *|MC:SUBJECT|*
     block typeface
       link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600', rel='stylesheet', type='text/css')
     = "\n"
-    <!-- build:css inline styles/styles.css -->
     block style-template
-    <!-- /build -->
-    
+    = "\n"
     <!--[if (gte mso 9)|(IE)]>
     style.
-      table {border-collapse: collapse;}
+      table {
+        border-collapse: collapse;
+      }
+
       table td,
-      .contents {font-family: arial, sans-serif !important;}
+      .contents {
+        font-family: arial, sans-serif !important;
+      }
     <![endif]-->
   body
     block body
