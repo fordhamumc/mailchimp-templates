@@ -1,6 +1,7 @@
-mixin column(namespace, count, aspect, padding)
+mixin column(namespace, count, aspect, heading, padding)
   - namespace = namespace || "column"
   - count = count || 2
+  - heading = heading || "h4"
   - padding = padding || 15
   - aspect = aspect || 1.8
   - container = Math.floor(660/count - padding*2)
@@ -32,7 +33,7 @@ mixin column(namespace, count, aspect, padding)
               tr
                 td.inner.contents
                   if (count < 3)
-                    h4(mc:edit="#{namespace}-column#{i}-title", mc:hideable)
+                    #{heading}(mc:edit="#{namespace}-column#{i}-title", mc:hideable)
                       a(href='#', target='_blank') #{columns[index].title}
                       
                     div(mc:edit="#{namespace}-column#{i}-desc", mc:hideable) 

@@ -1,0 +1,55 @@
+{
+  "dev": true,
+  "columns": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    },
+    {
+      "title": "Aenean vulputate eleifend tellus.",
+      "desc": "Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id."
+    },
+    {
+      "title": "Quisque rutrum. Aenean imperdiet.",
+      "desc": "An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an."
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Someday this space will be occupied by real copy that is meant to be read."
+    },
+    {
+      "title": "It is strictly for mock-ups. You may mock it up as strictly as you wish."
+    },
+    {
+      "title": "How many times must you be reminded that it's really not meant to be read?"
+    }
+  ],
+  "socialnetworks": [
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/fordhamnotes",
+      "image": "twitter-bg.png"
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/FordhamUniversity",
+      "image": "facebook.png"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/edu/fordham-university-18956",
+      "image": "linkedin.png"
+    },
+    {
+      "name": "YouTube",
+      "link": "https://www.youtube.com/user/FordhamUniversity",
+      "image": "youtube.png"
+    },
+    {
+      "name": "Instagram",
+      "link": "http://instagram.com/fordhamuniversity",
+      "image": "instagram.png"
+    }
+  ]
+}

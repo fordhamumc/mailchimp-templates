@@ -36,6 +36,7 @@
 .one-column,
 .two-column,
 .three-column,
+.sixty-forty-column,
 .sidebar {
   padding-left: $outer-padding;
   padding-right: $outer-padding;
@@ -43,7 +44,7 @@
 
 .one-column {
 	img {
-  	width: 100%;
+		width: 100%;
 		max-width: 100%;
 		height: auto;
 	}
@@ -51,12 +52,15 @@
 
 .two-column,
 .three-column,
+.sixty-forty-column,
 .sidebar {
 	font-size: 0;
 	text-align: center;
 	
 	.column,
-	.column-2 {
+	.column-2,
+	.column-sixty,
+	.column-forty {
 		width: 100%;
 		display: inline-block;
 	}
@@ -69,14 +73,17 @@
 
 .two-column,
 .three-column,
+.sixty-forty-column,
 .sidebar {
 	
-	.column {
+	.column,
+	.column-sixty,
+	.column-forty {
 		vertical-align: top;
 	}
 	
 	.contents {
-  	text-align: left;
+  		text-align: left;
 	}
 	
 	.text {
@@ -103,14 +110,33 @@
 	
 	.column {
 		@include column-width( $content-area / 3 );
+
+		.contents {
+			text-align: center;
+		}
 	}
 	
 	.column-2 {
-		@include column-width(  $content-area / 3 * 2);
+		@include column-width( $content-area / 3 * 2 );
+
+		.contents {
+			text-align: left;
+		}
 	}
-	
-	.contents {
-  	text-align: center;
+}
+
+
+// Three column layout
+//---------------------
+
+.sixty-forty-column {
+
+	.column-sixty {
+		@include column-width( $content-area * .6 );
+	}
+
+	.column-forty {
+		@include column-width( $content-area * .4 );
 	}
 }
 
@@ -143,6 +169,7 @@
   .one-column,
   .two-column,
   .three-column,
+  .sixty-forty-column,
   .sidebar {
     padding-left: 0 !important;
     padding-right: 0 !important;

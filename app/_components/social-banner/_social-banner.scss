@@ -1,0 +1,45 @@
+// Social Icons
+//---------------------
+
+.social-banner,
+.social-banner-text {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.two-column .social-banner-text {
+  text-align: right;
+}
+
+.two-column .social-banner,
+.social-banner {
+
+  img {
+    max-width: 24px;
+    padding-right: 8px;
+  }
+  a:last-child img {
+    padding-right: 0px;
+  }
+}
+
+@include bp(md) {
+  .two-column .social-banner img {
+    max-width: 24px !important;
+  }
+}
+
+@include bp(sm) {
+  .two-column {
+    .social-banner,
+    .social-banner-text {
+      text-align: center;
+    }
+    .social-banner {
+      padding-bottom: 15px;
+    }
+    .social-banner-text {
+      padding-bottom: 5px;
+    }
+  }
+}

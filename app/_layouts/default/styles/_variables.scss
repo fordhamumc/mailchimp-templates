@@ -26,6 +26,8 @@ $content-border-width:        0px 1px !default;
 
 $aside-background:            #ededed !default;
 $aside-color:                 $text-color !default;
+$aside-border-color:          darken($aside-background, 5%) !default;
+$aside-border-width:          0px !default;
 
 
 // Button

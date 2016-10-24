@@ -1,10 +1,13 @@
 // Base style overrides
 //---------------------
 
-$base-background:             #F3F3F5;
-$aside-background:            $base-background;
+$base-background:             #ffffff;
 $content-background:          #ffffff;
+$aside-background:            #eeeeee;
+$aside-border-color:          darken($aside-background, 13%);
+$content-border-color:        #cccccc;
 $content-border-width:        0px;
+$aside-border-width:          2px;
 $btn-secondary-background:    #ffffff;
 
 
@@ -17,16 +20,12 @@ $btn-secondary-background:    #ffffff;
 // Components
 //-------------------
 
-@import "sectionwrappers",
+@import "preheader",
         "break",
-        "preheader",
-        "masthead",
         "colorblocks",
-        "leadstory",
-        "buttons",
-        "sectionheader",
-        "articlelist",
+        "masthead-news",
+        "social-banner",
+        "insidefordham",
+        "pullquote",
         "column",
-        "eventlist",
-        "fullad",
         "footer";

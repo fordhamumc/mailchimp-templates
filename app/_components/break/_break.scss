@@ -6,6 +6,19 @@
   line-height: $container-gutter;
   font-size: $container-gutter;
   height: $container-gutter;
+  padding-left: $container-padding + $outer-padding;
+  padding-right: $container-padding + $outer-padding;
+}
+
+.break-dashed {
+  border-top: 1px dashed $content-border-color;
+}
+
+@include bp(md) {
+  .break {
+    padding-left: $container-padding !important;
+    padding-right: $container-padding !important;
+  }
 }
 
 @include bp(sm) {

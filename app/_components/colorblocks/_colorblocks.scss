@@ -1,7 +1,7 @@
 // Color Block Mixin
 //---------------------
 
-@mixin color-block($background, $outer, $text, $button, $tab, $section) {
+@mixin color-block($background, $outer, $border, $border-width, $text, $button, $tab, $section) {
   $section-lc: to-lower-case($section);
 
   /*
@@ -10,8 +10,9 @@
   @tip Set the style for the #{$section-lc} block
   */
   .color-block--#{$section-lc} {
-    /*@editable*/
-    background-color: $background;
+    /*@editable*/ background-color: $background;
+    /*@editable*/ border-top: $border-width solid $border;
+    /*@editable*/ border-bottom: $border-width solid $border;
   }
   /*
   @tab #{$tab}
@@ -56,7 +57,7 @@
 // Header (Primary color)
 //---------------------
 
-@include color-block($primary-color, $primary-color, #ffffff, #2c8db3, "Header", "Header");
+@include color-block($primary-color, $primary-color, $primary-color, 0px, #ffffff, #2c8db3, "Header", "Header");
   
 @include bp(sm) {
   .color-block--header {
@@ -69,7 +70,7 @@
 // Lead (Primary color)
 //---------------------
 
-@include color-block($primary-color, #ffffff, $text-color, $primary-color, "Sections", "Lead");
+@include color-block($primary-color, #ffffff, #ffffff, 0px, $text-color, $primary-color, "Sections", "Lead");
 
 @include bp(sm) {
   .color-block--lead {
@@ -82,4 +83,4 @@
 // Aside (Aside color)
 //---------------------
 
-@include color-block($aside-background, transparent, $aside-color, $btn-secondary-background, "Sections", "Aside");
+@include color-block($aside-background, $aside-background, $aside-border-color, $aside-border-width, $aside-color, $btn-secondary-background, "Sections", "Aside");

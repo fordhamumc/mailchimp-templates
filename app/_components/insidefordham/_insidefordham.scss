@@ -1,0 +1,27 @@
+// 
+//  Inside Fordham
+//  ---------------------------------
+
+
+.if-logo img {
+  max-width: 400px;
+}
+
+.if-section-title {
+  padding-bottom: 0;
+
+  h4 {
+    Margin-bottom: 0;
+  }
+}
+
+.if-list {
+  Margin: 0;
+  padding-left: 25px;
+}
+
+@include bp(sm) {
+  .insidefordham .column img {
+    max-width: 100% !important;
+  }
+}

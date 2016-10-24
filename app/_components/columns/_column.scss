@@ -5,10 +5,16 @@
 .column-img {
   padding-bottom: 0;
 }
+.column-img--solo {
+  padding-top: 5px;
+}
 
 @include bp(sm) {
   .column-img {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+  .column-img--solo {
+    padding-top: 0 !important;
   }
 }

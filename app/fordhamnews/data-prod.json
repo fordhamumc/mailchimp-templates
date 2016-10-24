@@ -1,0 +1,47 @@
+{
+  "dev": false,
+  "columns": [
+    {
+      "title": "Story Title",
+      "desc": "This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed."
+    }
+  ],
+  "bullets": [
+    {
+      "title": "Someday this space will be occupied by real copy that is meant to be read."
+    },
+    {
+      "title": "It is strictly for mock-ups. You may mock it up as strictly as you wish."
+    },
+    {
+      "title": "How many times must you be reminded that it's really not meant to be read?"
+    }
+  ],
+  "social": [
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/fordhamnotes",
+      "image": "twitter-bg.png"
+    },
+    {
+      "name": "Facebook",
+      "link": "https://www.facebook.com/FordhamUniversity",
+      "image": "facebook.png"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/edu/fordham-university-18956",
+      "image": "linkedin.png"
+    },
+    {
+      "name": "YouTube",
+      "link": "https://www.youtube.com/user/FordhamUniversity",
+      "image": "youtube.png"
+    },
+    {
+      "name": "Instagram",
+      "link": "http://instagram.com/fordhamuniversity",
+      "image": "instagram.png"
+    }
+  ]
+}

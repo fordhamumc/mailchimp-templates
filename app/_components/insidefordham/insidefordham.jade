@@ -1,0 +1,41 @@
+table.outer
+  tr
+    td.one-column
+      table(width='100%')
+        tr
+          td.inner.contents.if-logo
+            img(src="img/insidefordham.png", width="400")
+
+.insidefordham(mc:repeatable="insidefordham")
+  table.outer
+    tr
+      td.one-column
+        table(width='100%')
+          tr
+            td.inner.contents.if-section-title
+              h4 Section Title
+    tr
+      td.three-column
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><td width="33.33%" valign="top"><![endif]-->
+        .column
+          table(width='100%')
+            tr
+              td.inner.contents.column-img
+                img.column-img--solo(src='http://placehold.it/690x394', width='190', alt='', mc:edit="if-column1-image")
+
+
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><td width="66.66%" valign="top"><![endif]-->
+        .column-2
+          table(width='100%')
+            tr
+              td.inner.contents
+                ul.if-list
+                  each bullet in bullets
+                    li(mc:repeatable="if-bullets", mc:edit="if-column1-desc")
+                      a(href="", target="_blank") #{bullet.title}
+
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+
+        <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->

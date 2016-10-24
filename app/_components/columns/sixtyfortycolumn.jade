@@ -1,0 +1,29 @@
+mixin column-sixtyforty(namespace)
+  each column in columns
+    table.outer
+      tr
+        td.sixty-forty-column
+          <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+
+          <!--[if (gte mso 9)|(IE)]><td width="40%" valign="top"><![endif]-->
+          .column-forty
+            table(width='100%')
+              tr
+                td.inner.contents.column-img
+                  block column-img
+                    img.column-img--solo(src='http://placehold.it/690x394', width='', alt='', mc:edit="#{namespace}-column1-image")
+          <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+          <!--[if (gte mso 9)|(IE)]><td width="60%" valign="top"><![endif]-->
+          .column-sixty
+            table(width='100%')
+              tr
+                td.inner.contents
+                  h3(mc:edit="#{namespace}-column1-title")
+                    a(href='#', target='_blank') #{column.title}
+
+                  div(mc:edit="#{namespace}-column1-desc", mc:hideable)
+                    a.textlink(href='#', target='_blank') #{column.desc}
+
+          <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+
+          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->

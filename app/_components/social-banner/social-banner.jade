@@ -1,0 +1,21 @@
+table.outer
+  tr
+    td.two-column(dir="rtl")
+      <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><td width="50%" valign="top"><![endif]-->
+      .column
+        table(width='100%')
+          tr
+            td.contents.inner.social-banner-text(mc:edit="social", dir="ltr")
+              a(href="*|ARCHIVE|*", target="_blank") View in your browser.
+      <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><td width="50%" valign="top"><![endif]-->
+      .column
+        table(width='100%')
+          tr
+            td.contents.inner.social-banner(mc:edit="social", dir="ltr")
+              each network in socialnetworks
+                a(href=network.link, target="_blank")
+                  img(src="img/#{network.image}", width="30", alt=network.name, title="network.name")
+      <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
