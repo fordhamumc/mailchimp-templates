@@ -4,7 +4,8 @@ mixin column(namespace, count, aspect, heading, padding)
   - heading = heading || "h4"
   - padding = padding || 15
   - aspect = aspect || 1.8
-  - container = Math.floor(660/count - padding*2)
+  - container = Math.floor(width/count)
+  - imgcontainer = container - padding*2
   - imgwidth = Math.floor(container * 1.5)
   - imgheight = Math.floor(imgwidth/aspect)
   
@@ -19,17 +20,17 @@ mixin column(namespace, count, aspect, heading, padding)
   table.outer
     tr
       td(class="#{countText}-column")
-        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]--> 
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
         - for (i=1; i<=count; i++)  
           - index = Math.floor(Math.random() * columns.length)
           
-          <!--[if (gte mso 9)|(IE)]><td width="#{+(100/count).toFixed(2)}%" valign="top"><![endif]-->
+          <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
           .column
             table(width='100%')
               tr
                 td.inner.contents.column-img
                   block column-img
-                    img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{container}', alt='', mc:edit="#{namespace}-column#{i}-image", mc:hideable)
+                    img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{imgcontainer}', alt='', mc:edit="#{namespace}-column#{i}-image", mc:hideable)
               tr
                 td.inner.contents
                   if (count < 3)

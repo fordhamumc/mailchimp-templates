@@ -16,7 +16,7 @@ block body
       include ../_components/preheader/preheader.jade
       include ../_components/masthead/masthead.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.color-block.color-block--aside
+  center.wrapper.color-block.color-block--aside.social-banner--container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/social-banner/social-banner.jade
@@ -39,8 +39,9 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       +break("dashed")
       include ../_components/insidefordham/insidefordham.jade
+      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.color-block.color-block--aside.pullquote-container
+  center.wrapper.color-block.color-block--aside
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
       include ../_components/pullquote/pullquote.jade

@@ -1,38 +1,92 @@
 {
-  "dev": true,
+  "dev": false,
   "width": 660,
-  "bgcolor": "#F3F3F5",
   "contact": "alumnioffice@fordham.edu",
   "mastheadtop": {
     "alt": "Fordham University",
     "size": 165,
     "image": "f4179ad6-585d-436f-a28d-57f714ecbe9e.png"
   },
-  "mastheads": [],
+  "mastheads": [
+    {
+      "url": "http://fordham.edu"
+    },
+    {
+      "name": "gabelli",
+      "alt": "Gabelli School of Business",
+      "size": 232,
+      "url": "http://fordham.edu/gabelli",
+      "image": "1a28d3c6-243f-435e-891c-5601f231421a.png"
+    },
+    {
+      "name": "fclc",
+      "alt": "Fordham College at Lincoln Center",
+      "size": 306,
+      "url": "http://fordham.edu/fclc",
+      "image": "0c54a319-69ad-4354-b1c7-daca526e6a66.png"
+    },
+    {
+      "name": "fcrh",
+      "alt": "Fordham College at Rose Hill",
+      "size": 256,
+      "url": "http://fordham.edu/fcrh",
+      "image": "67d1da0e-e3ad-4508-92da-1fcd5c978139.png"
+    },
+    {
+      "name": "gre",
+      "alt": "Graduate School of Religion",
+      "size": 248,
+      "secondary": true,
+      "image": "da584002-d2eb-49fd-918b-873655999172.png",
+      "alt2": "and Religious Education",
+      "size2": 218,
+      "url": "http://fordham.edu/gre",
+      "image2": "7b498b9a-b0a5-44a3-a70b-07f2624d81e9.png"
+    },
+    {
+      "name": "gsas",
+      "alt": "Graduate School of Arts and Sciences",
+      "size": 328,
+      "url": "http://fordham.edu/gsas",
+      "image": "3e0f6ff8-b38a-48b6-acd5-72c919a46fa9.png"
+    },
+    {
+      "name": "gse",
+      "alt": "Graduate School of Education",
+      "size": 262,
+      "url": "http://fordham.edu/gse",
+      "image": "db96e3c3-4418-43bd-aae1-f67d5a39ba9a.png"
+    },
+    {
+      "name": "gss",
+      "alt": "Graduate School of Social Service",
+      "size": 295,
+      "url": "http://fordham.edu/gss",
+      "image": "a847bdd5-90e8-45c9-b658-0278f5e186ce.png"
+    },
+    {
+      "name": "law",
+      "alt": "School of Law",
+      "size": 123,
+      "url": "http://fordham.edu/law",
+      "image": "2fe3d59e-0b12-4661-8912-ab820580a8f0.png"
+    },
+    {
+      "name": "pcs",
+      "alt": "School of Professional",
+      "size": 197,
+      "secondary": true,
+      "image": "b246f01d-a4ac-4db4-aabb-7c2e659defa1.png",
+      "alt2": "and Continuing Studies",
+      "size2": 210,
+      "url": "http://fordham.edu/pcs",
+      "image2": "41ea440d-279a-4fa6-86fd-f96eb0573c6d.png"
+    }
+  ],
   "articles": [
     {
       "title": "This is an Article Title",
-      "desc": "Aenean vulputate eleifend tellus."
-    },
-    {
-      "title": "This is Another Article Title",
-      "desc": "Quisque rutrum. Aenean imperdiet. Nam eget dui. Etiam rhoncus."
-    },
-    {
-      "title": "This is a Longer Article Title It's Got a Much Longer Name Than the Others",
-      "desc": "Sed fringilla mauris sit amet nibh."
-    },
-    {
-      "title": "Here is a Fourth Article",
-      "desc": "Lorem ipsum dolor sit amet. Aenean vulputate eleifend tellus."
-    },
-    {
-      "title": "Now We Have Lots of Article Titles",
-      "desc": "Quisque rutrum. Aenean imperdiet. Sed fringilla mauris sit amet nibh."
-    },
-    {
-      "title": "This is the Last Article Title",
-      "desc": "Sed fringilla mauris sit amet nibh. Vivamus elementum semper nisi."
+      "desc": "Short teaser description goes here."
     }
   ],
   "columns": [
@@ -61,22 +115,6 @@
     {
       "title": "Lorem ipsum dolor sit amet",
       "desc": "October 1 | Lincoln Center Campus"
-    },
-    {
-      "title": "Aenean vulputate eleifend tellus.",
-      "desc": "October 5 | Yankee Stadium"
-    },
-    {
-      "title": "Quisque rutrum. Aenean imperdiet.",
-      "desc": "October 11 | United Center"
-    },
-    {
-      "title": "Nam eget dui. Etiam rhoncus.",
-      "desc": "October 12 | Metropolitan Opera"
-    },
-    {
-      "title": "Sed fringilla mauris sit amet nibh.",
-      "desc": "October 15 | Fordham Law School"
     }
   ],
   "socialnetworks": [

@@ -1,10 +1,18 @@
 // Social Icons
 //---------------------
 
+.social-banner--container {
+  border: 2px solid darken($aside-background, 13%);
+}
+
 .social-banner,
 .social-banner-text {
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.social-banner {
+  line-height: 1;
 }
 
 .two-column .social-banner-text {
@@ -17,17 +25,13 @@
 
 .two-column .social-banner,
 .social-banner {
-
   img {
     max-width: 24px;
-    padding-right: 8px;
-  }
-  a:last-child img {
-    padding-right: 0px;
+    overflow: visible;
   }
 }
 
-@include bp(md) {
+@include bp() {
   .two-column .column .social-banner img {
     max-width: 24px !important;
   }

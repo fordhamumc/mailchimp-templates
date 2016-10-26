@@ -1,5 +1,7 @@
 {
   "dev": false,
+  "width": 660,
+  "bgcolor": "#F3F3F5",
   "contact": "alumnioffice@fordham.edu",
   "mastheadtop": {
     "alt": "Fordham University",

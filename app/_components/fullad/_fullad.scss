@@ -27,9 +27,9 @@
 .fullad {
   padding-top: $container-gutter;
   padding-bottom: $container-gutter;
-  padding-left: ($outer-padding + $container-padding);
-  padding-right: ($outer-padding + $container-padding);
-  
+  padding-left: $outer-padding + $container-padding;
+  padding-right: $outer-padding + $container-padding;
+
   @include bp(md) {
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;
@@ -48,25 +48,28 @@
   }
   
   .column {
-		max-width: $content-area / 3 - $container-padding;
+    max-width: $content-area / 3 - $container-padding;
+    overflow: visible;
+
 	
   	.contents {
-    	text-align: left;
+      text-align: left;
   	}
   	
   	.inner {
       padding: 0;
-    	padding-right: $container-padding;
+      padding-right: $container-padding;
   	}
-	}
+  }
 	
 	.column-2 {
-		max-width: $content-area / 3 * 2 - $container-padding;
+      max-width: $content-area / 3 * 2 - $container-padding;
+      overflow: visible;
   	
   	.inner {
-    	padding: $container-padding;
+      padding: $container-padding;
   	}
-	}
+  }
 }
 
 @include bp(sm) {

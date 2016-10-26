@@ -1,0 +1,33 @@
+extends ../_layouts/blank/blank
+block style-template
+    style.
+        .headerstyle {font-size: 30px; color: red;}
+
+        .col50 {
+            color: #ffffff;
+            background-color: #0d3349;
+            max-width: 49%;
+            overflow: visible;
+            width: 100%;
+            display: inline-block;
+        }
+
+        @media screen and (max-width: 34em) {
+            .headerstyle {
+                color: purple;
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .headerstyle {
+                color: blue;
+            }
+        }
+
+
+block body
+    h1.headerstyle Our Content
+    p This is some content. It uses a paragraph tag. It does not have much to it. Just trying to show what regular text would look like.
+    p I'm trying to see if some responsive code works in gmail. I seem to not be having any luck with our templates and want to see if it's gmail or us.
+    .col50 This is some text that is 50% width
+    .col50 This is also some text this is 50% width

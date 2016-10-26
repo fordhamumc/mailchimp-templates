@@ -5,5 +5,8 @@ table.outer
         tr
           td.contents.inner.social(mc:edit="social")
             each network in socialnetworks
+              = "\n"
               a(href=network.link, target="_blank")
                 img(src=network.image, width="30", alt=network.name, title=network.name)
+              if i + 1 < socialnetworks.length
+                |  &nbsp;

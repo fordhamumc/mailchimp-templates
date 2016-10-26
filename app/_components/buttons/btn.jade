@@ -1,26 +1,21 @@
-mixin btn(namespace, size, text, cl, background)
+mixin btn(namespace, size, text, cl)
   - namespace = namespace || "Button"
   - text = text || "Button"
   - background = background || "#900028"
   - cl = cl || ""
   - btnsize = ""
-  
+
   if size === "small" || size === "sm"
     - btnsize = "btn-sm"
   if size === "large" || size === "lg"
     - btnsize = "btn-lg"
-  
+
   table(width="100%", border="0", cellspacing="0", cellpadding="0", mc:hideable)
     tbody
-      if cl === "btn-lg"
-        tr
-          td.btn-spacer &nbsp;
       tr
         td(align="center")
-          table(border="0", cellspacing="0", cellpadding="0", class="#{btnsize}-container")
+          table(class="#{btnsize}-container")
             tbody
               tr
                 td(align="center", mc:edit=namespace)
-                  <!--[if mso]>&nbsp;<![endif]-->
-                  a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") #{text}
-                  <!--[if mso]>&nbsp;<![endif]-->
+                  a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->#{text}<!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->

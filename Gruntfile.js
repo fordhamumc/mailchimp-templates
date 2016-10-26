@@ -362,17 +362,34 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('build', [
-    'chooseFile',
-    'clean:dist',
-    'copy',
-    'sass:dist',
-    'jade:dist',
-    'imagemin',
-    //'uncss',
-    'cmq',
-    'processhtml',
-  ]);
+  grunt.registerTask('build', function(target) {
+
+    var build = [
+      'chooseFile',
+      'clean:dist',
+      'copy',
+      'sass:dist'
+    ];
+
+    if (target === 'test') {
+      build = build.concat([
+        'jade:dev'
+      ]);
+    } else {
+      build = build.concat([
+        'jade:dist'
+      ]);
+    }
+
+    build = build.concat([
+      'imagemin',
+      //'uncss',
+      'cmq',
+      'processhtml'
+    ]);
+
+    grunt.task.run(build);
+  });
 
   grunt.registerTask('send', [
     'build',

@@ -10,33 +10,37 @@ block style-template
 
 block body
   center.wrapper.header.color-block.color-block--header
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/preheader/preheader.jade
       include ../_components/masthead/masthead.jade
       include ../_components/masthead/masthead-dual.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--lead
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
       include ../_components/leadstory/leadstory.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
       include ../_components/sectionwrappers/sectionbottom.jade
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
       +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
       +sectionheader("featured")
       .featured(mc:repeatable="featured", mc:variant="two column")
@@ -49,7 +53,7 @@ block body
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
       .ads(mc:repeatable="ads", mc:variant="three column")
         +column("ads", 3, 1.5)
@@ -60,7 +64,7 @@ block body
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
       +sectionheader("eventlist")
       include ../_components/eventlist/eventlist.jade
@@ -68,14 +72,14 @@ block body
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
       include ../_components/fullad/fullad.jade
       +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop.jade
       +sectionheader("supplement")
       .supplement(mc:repeatable="supplement", mc:variant="one column")

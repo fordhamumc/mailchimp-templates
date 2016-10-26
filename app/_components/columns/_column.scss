@@ -11,8 +11,12 @@
   padding-top: 4px;
 }
 
-.one-column .column-img {
+.column-img {
   padding-bottom: 0;
+}
+
+.column-img--solo {
+  padding-bottom: $container-gutter;
 }
 
 .column-category {

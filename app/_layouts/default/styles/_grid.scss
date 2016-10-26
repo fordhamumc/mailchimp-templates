@@ -4,16 +4,18 @@
 
 @mixin column-width($width) {
   max-width: $width;
+  overflow: visible;
   
   img {
     max-width: $width - $container-padding * 2;
+    overflow: visible;
   }
-    
+
   @include bp(sm-md) {
     max-width: percentage($width / $content-area) !important;
     
     img {
-      max-width: $width !important;
+      max-width: 100% !important;
     }
   }
   @include bp(sm) {
@@ -47,6 +49,7 @@
 		width: 100%;
 		max-width: 100%;
 		height: auto;
+        overflow: visible;
 	}
 }
 
@@ -165,7 +168,7 @@
 
 
 @include bp(md) {
-  
+
   .one-column,
   .two-column,
   .three-column,
@@ -174,14 +177,14 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
-	
+
 	.sidebar .main {
   	max-width: 100% !important;
-  	
+
   	.contents {
     	text-align: center !important;
   	}
-  	
+
   	.inner {
     	padding-top: 0 !important;
   	}

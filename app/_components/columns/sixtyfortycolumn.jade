@@ -10,7 +10,7 @@ mixin column-sixtyforty(namespace, aspect, category, padding)
         td.sixty-forty-column
           <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
 
-          <!--[if (gte mso 9)|(IE)]><td width="40%" valign="top"><![endif]-->
+          <!--[if (gte mso 9)|(IE)]><td width="#{width * .4}" valign="top"><![endif]-->
           .column-forty
             table(width='100%')
               tr
@@ -18,7 +18,7 @@ mixin column-sixtyforty(namespace, aspect, category, padding)
                   block column-img
                     img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='', alt='', mc:edit="#{namespace}-column1-image")
           <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-          <!--[if (gte mso 9)|(IE)]><td width="60%" valign="top"><![endif]-->
+          <!--[if (gte mso 9)|(IE)]><td width="#{width * .6}" valign="top"><![endif]-->
           .column-sixty
             table(width='100%')
               tr

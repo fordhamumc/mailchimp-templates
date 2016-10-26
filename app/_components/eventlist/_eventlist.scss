@@ -29,6 +29,14 @@
   text-align: center;
 }
 
+.event-description .contents {
+  text-align: center;
+
+  @include bp() {
+    text-align: left !important;
+  }
+}
+
 @include bp(sm) {
   .event-description,
   .event-image {

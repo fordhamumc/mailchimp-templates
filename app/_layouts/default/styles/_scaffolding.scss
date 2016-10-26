@@ -48,13 +48,14 @@ img {
 }
 
 .full-width-image img {
-	width: 100%;
-	max-width: $outer-maxwidth;
-	height: auto;
-	
-	@include bp(md) {
+  width: 100%;
+  max-width: $outer-maxwidth;
+  overflow: visible;
+  height: auto;
+
+  @include bp(md) {
   	max-width: 100% !important;
-	}
+  }
 }
 
 

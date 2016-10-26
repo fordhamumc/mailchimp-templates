@@ -13,7 +13,7 @@ table.outer
     tr
       td.three-column
         <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-        <!--[if (gte mso 9)|(IE)]><td width="33.33%" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><td width="#{width / 3}" valign="top"><![endif]-->
         .column
           table(width='100%')
             tr
@@ -22,7 +22,7 @@ table.outer
 
 
         <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-        <!--[if (gte mso 9)|(IE)]><td width="66.66%" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><td width="#{width / 3 * 2}" valign="top"><![endif]-->
         .column-2
           table(width='100%')
             tr

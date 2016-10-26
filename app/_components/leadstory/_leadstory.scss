@@ -9,16 +9,18 @@
 @tip Set the style for lead content
 */
 
-.leadstory,
+.leadstory {
+  text-align: left;
+}
 .leadstory h1{
-  /*@editable*/ text-align: center;
+  text-align: center;
+  Margin-bottom: 0;
 }
 .leadstory {
+  @include bp() {
+    text-align: center !important;
+  }
   @include bp(md) {
     text-align: left !important;
   }
-}
-
-.leadstory h1 {
-  Margin-bottom: 0;
 }

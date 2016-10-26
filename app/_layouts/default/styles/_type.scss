@@ -192,6 +192,10 @@ li {
   /*@editable*/ Margin-bottom: 7px;
   /*@editable*/ Margin-left: 0;
   /*@editable*/ Margin-right: 0;
+
+  &:last-child {
+    Margin-bottom: 0;
+  }
 }
 
 
