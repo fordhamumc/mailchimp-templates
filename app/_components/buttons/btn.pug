@@ -1,9 +1,8 @@
 mixin btn(namespace, size, text, cl)
   - namespace = namespace || "Button"
   - text = text || "Button"
-  - background = background || "#900028"
   - cl = cl || ""
-  - btnsize = ""
+  - var btnsize = ""
 
   if size === "small" || size === "sm"
     - btnsize = "btn-sm"
@@ -14,8 +13,8 @@ mixin btn(namespace, size, text, cl)
     tbody
       tr
         td(align="center")
-          table(class="#{btnsize}-container")
+          table(class=`${btnsize}-container`)
             tbody
               tr
                 td(align="center", mc:edit=namespace)
-                  a.btn(href="#", target="_blank", class="#{btnsize} #{cl}") <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->#{text}<!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                  a.btn(href="#", target="_blank", class=`${btnsize} ${cl}`) <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->#{text}<!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->

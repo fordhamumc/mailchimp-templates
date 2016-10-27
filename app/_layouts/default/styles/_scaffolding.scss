@@ -37,9 +37,13 @@ img {
   text-decoration: none;
   -ms-interpolation-mode: bicubic;
   border: 0;
+  max-width: 100%;
   
   a & {
     border: 0;
+  }
+  @include bp(md) {
+    width: auto !important;
   }
 }
 

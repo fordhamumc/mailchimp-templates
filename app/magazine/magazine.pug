@@ -1,8 +1,8 @@
-extends ../_layouts/default/default.jade
-include ../_components/break/break.jade
-include ../_components/columns/columns.jade
-include ../_components/columns/sixtyfortycolumn.jade
-include ../_components/sectionheader/sectionheader.jade
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/columns/sixtyfortycolumn
+include ../_components/sectionheader/sectionheader
 
 block style-template
   <!-- build:css inline styles/magazine.css -->
@@ -13,8 +13,8 @@ block body
   center.wrapper.header
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/preheader/preheader.jade
-      include ../_components/masthead/masthead.jade
+      include ../_components/preheader/preheader
+      include ../_components/masthead/masthead
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
@@ -26,6 +26,6 @@ block body
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="790" align="center"><tr><td><![endif]-->
-      include ../_components/magazinefooter/magazinefooter.jade
+      include ../_components/magazinefooter/magazinefooter
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  - social = false
+  - var social = false

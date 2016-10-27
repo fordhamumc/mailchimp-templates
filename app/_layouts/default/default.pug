@@ -1,5 +1,4 @@
-- social = true
-- bgcolor = "#ffffff"
+- var social = true
 doctype transitional
 html(xmlns='http://www.w3.org/1999/xhtml')
   head
@@ -32,17 +31,26 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       .contents {
         font-family: arial, sans-serif !important;
       }
+
+      .masthead-logo {
+        text-align: left !important;
+      }
+
+      .masthead-cobrand {
+        text-align: right !important;
+        vertical-align: bottom !important;
+      }
     = "\n"
     <![endif]-->
 
-  body(bgcolor="#{bgcolor}")
+  body(bgcolor=`${bgcolor}`)
     block body
 
     center.wrapper.footer-wrapper
       .webkit
         <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
         if social == true
-          include ../../_components/social/social.jade
-        include ../../_components/tagline/tagline.jade
-        include ../../_components/footer/footer.jade
+          include ../../_components/social/social
+        include ../../_components/tagline/tagline
+        include ../../_components/footer/footer
         <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

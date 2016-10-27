@@ -94,6 +94,6 @@ $screen-md:                   $outer-maxwidth + $container-padding * 2 !default;
     @media screen and (min-width: $screen-sm + 1)  { @content; }
   }
   @else {
-    @media all { @content; }
+    @media screen { @content; }
   }
 }

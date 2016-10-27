@@ -5,13 +5,13 @@ module.exports = function(grunt) {
   var templates = grunt.file.expand({
     filter: 'isFile',
     cwd: 'app'
-  }, ['**/*.jade', '!_*/**/*.jade']);
+  }, ['**/*.pug', '!_*/**/*.pug']);
 
   // Make actual choices out of them that grunt-prompt can use.
   var choices = templates.map(function(t) {
     return {
-      name: t.substr(t.indexOf('/') + 1).replace('.jade', ''),
-      value: t.replace('.jade', '')
+      name: t.substr(t.indexOf('/') + 1).replace('.pug', ''),
+      value: t.replace('.pug', '')
     };
   });
 
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       images: 'img',
       src: 'app',
       directory: templates[0].substr(0, templates[0].indexOf('/')),
-      file: templates[0].substr(templates[0].indexOf('/') + 1).replace('.jade', ''),
+      file: templates[0].substr(templates[0].indexOf('/') + 1).replace('.pug', ''),
       tmp: '.tmp',
       dist: 'dist',
       distDomain: '',
@@ -136,21 +136,21 @@ module.exports = function(grunt) {
     },
 
     /**
-     * Jade Compilation Tasks
+     * pug Compilation Tasks
      * ===============================
      */
-    jade: {
+    pug: {
       dev: {
         options: {
           pretty: true,
           data: function(dest, src) {
-            return require('./' + src[0].replace(/(?=[\w-]+\.jade$).+/i,'') + 'data-dev.json');
+            return require('./' + src[0].replace(/(?=[\w-]+\.pug$).+/i,'') + 'data-dev.json');
           }
         },
         files: [{
           expand: true,
           cwd: '<%= paths.src %>',
-          src: ['<%= paths.directory %>/*.jade'],
+          src: ['<%= paths.directory %>/*.pug'],
           dest: '<%= paths.tmp %>',
           ext: '.html'
         }]
@@ -160,13 +160,13 @@ module.exports = function(grunt) {
           pretty: true,
           data: function(dest, src) {
             // Return an object of data to pass to templates
-            return require('./' + src[0].replace(/(?=[\w-]+\.jade$).+/i,'') + 'data-prod.json');
+            return require('./' + src[0].replace(/(?=[\w-]+\.pug$).+/i,'') + 'data-prod.json');
           }
         },
         files: [{
           expand: true,
           cwd: '<%= paths.src %>',
-          src: ['<%= paths.directory %>/*.jade'],
+          src: ['<%= paths.directory %>/*.pug'],
           dest: '<%= paths.tmp %>',
           ext: '.html'
         }]
@@ -185,17 +185,17 @@ module.exports = function(grunt) {
         files: ['<%= paths.src %>/{<%= paths.directory %>,_layouts,_components}/**/*.{scss,sass}'],
         tasks: ['copy:styles','sass:dev']
       },
-      jade: {
+      pug: {
         files: [
           '<%= paths.src %>/<%= paths.directory %>/*.json',
-          '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.jade',
-          '<%= paths.src %>/{_layouts,_components}/**/*.jade'
+          '<%= paths.src %>/<%= paths.directory %>/<%= paths.file %>.pug',
+          '<%= paths.src %>/{_layouts,_components}/**/*.pug'
         ],
-        tasks: ['jade:dev']
+        tasks: ['pug:dev']
       },
       image: {
         files: [
-          '<%= paths.src %>/<%= paths.directory %>/<%= paths.images %>/**/*.{png,jpg,jpeg,gif}', 
+          '<%= paths.src %>/<%= paths.directory %>/<%= paths.images %>/**/*.{png,jpg,jpeg,gif}',
           '<%= paths.src %>/_components/**/*.{png,jpg,jpeg,gif}'
         ],
         tasks: ['copy:images']
@@ -206,7 +206,7 @@ module.exports = function(grunt) {
      * Server Tasks
      * ===============================
      */
-    
+
     browserSync: {
       dev: {
         bsFiles: {
@@ -348,7 +348,7 @@ module.exports = function(grunt) {
       'clean:dev',
       'copy',
       'sass:dev',
-      'jade:dev',
+      'pug:dev',
       'browserSync:dev',
       'watch'
     ]);
@@ -373,11 +373,11 @@ module.exports = function(grunt) {
 
     if (target === 'test') {
       build = build.concat([
-        'jade:dev'
+        'pug:dev'
       ]);
     } else {
       build = build.concat([
-        'jade:dist'
+        'pug:dist'
       ]);
     }
 

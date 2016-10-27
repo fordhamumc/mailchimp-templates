@@ -3,7 +3,9 @@ table.outer
     td.three-column.fullad
       .fullad-container
         <!--[if (gte mso 9)|(IE)]><table width="100%" bgcolor="#900028"><![endif]-->
-        <!--[if (gte mso 9)|(IE)]><tr><td width="#{(width-30) / 3}" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><tr>
+        td(width=`${(width-30) / 3}`, valign="top")
+        <![endif]-->
         
         .column
           table(width="100%")
@@ -11,7 +13,9 @@ table.outer
               td.inner.contents
                 img(mc:edit="fullad-image", src='http://placehold.it/285x190', width="190", alt="")
         
-        <!--[if (gte mso 9)|(IE)]></td><td width="#{(width-30) / 3 * 2}" valign="top"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></td>
+        td(width=`${(width-30) / 3 * 2}`, valign="top")
+        <![endif]-->
         
         .column-2
           table(width="100%")

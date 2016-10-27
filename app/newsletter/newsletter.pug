@@ -1,7 +1,7 @@
-extends ../_layouts/default/default.jade
-include ../_components/break/break.jade
-include ../_components/columns/columns.jade
-include ../_components/sectionheader/sectionheader.jade
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/sectionheader/sectionheader
 
 block style-template
   <!-- build:css inline styles/newsletter.css -->
@@ -13,24 +13,24 @@ block body
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/preheader/preheader.jade
-      include ../_components/masthead/masthead.jade
-      include ../_components/masthead/masthead-dual.jade
+      include ../_components/preheader/preheader
+      include ../_components/masthead/masthead
+      include ../_components/masthead/masthead-dual
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--lead
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop.jade
-      include ../_components/leadstory/leadstory.jade
+      include ../_components/sectionwrappers/sectiontop
+      include ../_components/leadstory/leadstory
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
-      include ../_components/sectionwrappers/sectionbottom.jade
+      include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
@@ -41,15 +41,15 @@ block body
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop.jade
+      include ../_components/sectionwrappers/sectiontop
       +sectionheader("featured")
       .featured(mc:repeatable="featured", mc:variant="two column")
         +column("featured")
       if dev !== true
         .featured(mc:repeatable="featured", mc:variant="three column")
           +column("featured", 3, 1.5)
-      include ../_components/articlelist/articlelist.jade
-      include ../_components/sectionwrappers/sectionbottom.jade
+      include ../_components/articlelist/articlelist
+      include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside
     .webkit
@@ -65,22 +65,22 @@ block body
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop.jade
+      include ../_components/sectionwrappers/sectiontop
       +sectionheader("eventlist")
-      include ../_components/eventlist/eventlist.jade
-      include ../_components/sectionwrappers/sectionbottom.jade
+      include ../_components/eventlist/eventlist
+      include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
-      include ../_components/fullad/fullad.jade
+      include ../_components/fullad/fullad
       +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop.jade
+      include ../_components/sectionwrappers/sectiontop
       +sectionheader("supplement")
       .supplement(mc:repeatable="supplement", mc:variant="one column")
         +column("supplement", 1)
@@ -89,5 +89,5 @@ block body
           +column("supplement")
         .supplement(mc:repeatable="supplement", mc:variant="three column")
           +column("supplement", 3, 1.5)
-      include ../_components/sectionwrappers/sectionbottom.jade
+      include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

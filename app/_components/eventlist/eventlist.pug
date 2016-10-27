@@ -1,16 +1,20 @@
-include ../buttons/btn.jade
+include ../buttons/btn
 table.outer
   each event in events
     tr(mc:repeatable="eventlist")
       td.event-list.sidebar
-        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{width * .3333333}"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr>
+        td(width=`${width / 3}`)
+        <![endif]-->
         .column.event-image
           table(width='100%')
             tr
               td.inner
                 img(src="http://placehold.it/285x160", width="190", alt="", mc:edit="event-image")
                   
-        <!--[if (gte mso 9)|(IE)]></td><td width="#{width * .5}"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></td>
+        td(width=`${width * .5}`)
+        <![endif]-->
         .column.event-description
           table(width='100%')
             tr
@@ -20,7 +24,9 @@ table.outer
                 div(mc:edit="event-desc")
                   a(href="#", target="_blank").textlink #{event.desc}
         
-        <!--[if (gte mso 9)|(IE)]></td><td width="#{width * .5 / 3}"><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></td>
+        td(width=`${width * .5 / 3}`)
+        <![endif]-->
         .column.event-rsvp
           table(width='100%')
             tr

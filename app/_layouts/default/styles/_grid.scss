@@ -22,6 +22,7 @@
 		max-width: 100% !important;
 		
     img {
+		width: auto !important;
   		@if $width <= ($content-area / 3) {
         max-width: $width !important;
       } @else {
@@ -179,14 +180,14 @@
   }
 
 	.sidebar .main {
-  	max-width: 100% !important;
+      max-width: 100% !important;
 
   	.contents {
-    	text-align: center !important;
+      text-align: center !important;
   	}
 
   	.inner {
-    	padding-top: 0 !important;
+      padding-top: 0 !important;
   	}
-	}
+  }
 }

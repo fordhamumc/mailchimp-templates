@@ -1,5 +1,6 @@
 table.outer.sidebar-container
-  - for (var i = 0; i < 3; i++)
+  -var i = 0
+  while i < 3
     tr
       td.sidebar
         .column.aside
@@ -12,5 +13,5 @@ table.outer.sidebar-container
             tr
               td.inner.contents 
                 h5 First Last, Director of Something
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-              
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    - i++

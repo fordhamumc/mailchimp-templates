@@ -1,14 +1,15 @@
 mixin column(namespace, count, aspect, heading, padding)
   - namespace = namespace || "column"
   - count = count || 2
+  - aspect = aspect || 1.8
   - heading = heading || "h4"
   - padding = padding || 15
-  - aspect = aspect || 1.8
-  - container = Math.floor(width/count)
-  - imgcontainer = container - padding*2
-  - imgwidth = Math.floor(container * 1.5)
-  - imgheight = Math.floor(imgwidth/aspect)
-  
+  - var container = Math.floor(width/count)
+  - var imgcontainer = container - padding*2
+  - var imgwidth = Math.floor(container * 1.5)
+  - var imgheight = Math.floor(imgwidth/aspect)
+  - var countText
+
   case count
     when 1
       - countText = "one"
@@ -19,30 +20,32 @@ mixin column(namespace, count, aspect, heading, padding)
  
   table.outer
     tr
-      td(class="#{countText}-column")
+      td(class=`${countText}-column`)
         <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-        - for (i=1; i<=count; i++)  
-          - index = Math.floor(Math.random() * columns.length)
-          
-          <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
+        - var i = 1
+        while i<= count
+          - var index = Math.floor(Math.random() * columns.length)
+          <!--[if (gte mso 9)|(IE)]>
+          td(width=container, valign="top")
+          <![endif]-->
           .column
             table(width='100%')
               tr
                 td.inner.contents.column-img
                   block column-img
-                    img(src='http://placehold.it/#{imgwidth}x#{imgheight}', width='#{imgcontainer}', alt='', mc:edit="#{namespace}-column#{i}-image", mc:hideable)
+                    img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}-column${i}-image`, mc:hideable)
               tr
                 td.inner.contents
                   if (count < 3)
-                    #{heading}(mc:edit="#{namespace}-column#{i}-title", mc:hideable)
+                    #{heading}(mc:edit=`${namespace}-column${i}-title`, mc:hideable)
                       a(href='#', target='_blank') #{columns[index].title}
                       
-                    div(mc:edit="#{namespace}-column#{i}-desc", mc:hideable) 
+                    div(mc:edit=`${namespace}-column${i}-desc`, mc:hideable)
                       a.textlink(href='#', target='_blank') #{columns[index].desc}
                   else
-                    div(mc:edit="#{namespace}-column#{i}-title", mc:hideable) 
+                    div(mc:edit=`${namespace}-column${i}-title`, mc:hideable)
                       a.textlink(href='#', target='_blank') #{columns[index].title}
-          
+          - i++
           <!--[if (gte mso 9)|(IE)]></td><![endif]-->
           
         <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->

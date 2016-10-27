@@ -4,5 +4,5 @@ mixin sectionheader(namespace)
       td.one-column
         table(width='100%')
           tr
-            td.inner.contents(mc:edit="#{namespace}-sectionheader")
+            td.inner.contents(mc:edit=`${namespace}-sectionheader`)
               | Section Header
