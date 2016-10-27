@@ -30,10 +30,9 @@ mixin column(namespace, count, aspect, heading, padding)
           <![endif]-->
           .column
             table(width='100%')
-              tr
+              tr(mc:hideable)
                 td.inner.contents.column-img
-                  block column-img
-                    img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}-column${i}-image`, mc:hideable)
+                    img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}-column${i}-image`)
               tr
                 td.inner.contents
                   if (count < 3)

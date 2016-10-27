@@ -1,6 +1,7 @@
 {
   "dev": false,
   "width": 660,
+  "bgcolor": "#F3F3F5",
   "contact": "alumnioffice@fordham.edu",
   "mastheadtop": {
     "alt": "Fordham University",
@@ -93,22 +94,6 @@
     {
       "title": "Lorem ipsum dolor sit amet",
       "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    },
-    {
-      "title": "Aenean vulputate eleifend tellus.",
-      "desc": "Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id."
-    },
-    {
-      "title": "Quisque rutrum. Aenean imperdiet.",
-      "desc": "An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an."
-    },
-    {
-      "title": "Nam eget dui. Etiam rhoncus.",
-      "desc": "His agam magna assentior eu, duo ex modo facete alterum. Vel ad suas lorem doming, suavitate adipiscing sit ut, erat iuvaret convenire qui et."
-    },
-    {
-      "title": "Sed fringilla mauris sit amet nibh.",
-      "desc": "Te nec vidisse virtute, vix imperdiet abhorreant dissentiet an. Tota assueverit cu vis."
     }
   ],
   "events": [

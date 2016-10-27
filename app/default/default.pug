@@ -1,33 +1,68 @@
-extends ../_layouts/blank/blank
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/columns/sixtyfortycolumn
+include ../_components/columns/twothirdscolumn
+include ../_components/eventlist/eventlist
+include ../_components/sectionheader/sectionheader
+
 block style-template
-    style.
-        .headerstyle {font-size: 30px; color: red;}
-
-        .col50 {
-            color: #ffffff;
-            background-color: #0d3349;
-            max-width: 49%;
-            overflow: visible;
-            width: 100%;
-            display: inline-block;
-        }
-
-        @media screen and (max-width: 34em) {
-            .headerstyle {
-                color: purple;
-            }
-        }
-
-        @media screen and (max-width: 420px) {
-            .headerstyle {
-                color: blue;
-            }
-        }
-
+  <!-- build:css inline styles/default.css -->
+  link(rel='stylesheet', href='styles/default.css')
+  <!-- /build -->
 
 block body
-    h1.headerstyle Our Content
-    p This is some content. It uses a paragraph tag. It does not have much to it. Just trying to show what regular text would look like.
-    p I'm trying to see if some responsive code works in gmail. I seem to not be having any luck with our templates and want to see if it's gmail or us.
-    .col50 This is some text that is 50% width
-    .col50 This is also some text this is 50% width
+  center.wrapper.header.color-block.color-block--header
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      include ../_components/preheader/preheader
+      include ../_components/masthead/masthead
+      include ../_components/masthead/masthead-dual
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper.color-block.color-block--lead
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      include ../_components/sectionwrappers/sectiontop
+      include ../_components/leadstory/leadstory
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      +break
+      include ../_components/sectionwrappers/sectionbottom
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper.color-block.color-block--aside.break-container
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      +break
+      +break
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      include ../_components/sectionwrappers/sectiontop
+      +sectionheader("featured")
+      .featured(mc:repeatable="featured", mc:variant="one column")
+        +column("featured", 1, 2)
+      .featured(mc:repeatable="featured", mc:variant="two columns")
+        +column("featured")
+      .featured(mc:repeatable="featured", mc:variant="three columns")
+        +column("featured", 3, 1.5)
+      .featured(mc:repeatable="featured", mc:variant="two thirds (left image)")
+        +column-twothirds("featured")
+      .featured(mc:repeatable="featured", mc:variant="two thirds (right image)")
+        +column-twothirds("featured", "rtl")
+      .featured(mc:repeatable="featured", mc:variant="40/60 columns")
+        +column-sixtyforty("featured")
+      .featured(mc:repeatable="featured", mc:variant="60/40 columns")
+        +column-sixtyforty("featured", "rtl")
+      .featured(mc:repeatable="featured", mc:variant="list")
+        include ../_components/articlelist/articlelist
+      .featured(mc:repeatable="featured", mc:variant="eventlist")
+        +eventlist()
+      include ../_components/sectionwrappers/sectionbottom
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

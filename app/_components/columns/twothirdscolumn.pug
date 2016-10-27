@@ -1,4 +1,4 @@
-mixin column-sixtyforty(namespace, dir, aspect, category, padding)
+mixin column-twothirds(namespace, dir, aspect, category, padding)
   - dir = dir || "ltr"
   - aspect = aspect || 1.75
   - category = category || false
@@ -9,21 +9,21 @@ mixin column-sixtyforty(namespace, dir, aspect, category, padding)
   each column in columns
     table.outer
       tr
-        td.sixty-forty-column(dir=dir)
+        td.three-column(dir=dir)
           <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
           <!--[if (gte mso 9)|(IE)]>
-          td(width=`${width * .4}`, valign="top")
+          td(width=`${width / 3}`, valign="top")
           <![endif]-->
-          .column-forty
+          .column.image-full
             table(width='100%')
               tr
                 td.inner.contents.column-img.column-img--solo
                   img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width='', alt='', mc:edit=`${namespace}-column1-image`)
           <!--[if (gte mso 9)|(IE)]></td><![endif]-->
           <!--[if (gte mso 9)|(IE)]>
-          td(width=`${width * .6}` valign="top")
+          td(width=`${width / 3 * 2}` valign="top")
           <![endif]-->
-          .column-sixty
+          .column-2
             table(width='100%')
               tr
                 td.inner.contents

@@ -1,6 +1,7 @@
 extends ../_layouts/default/default
 include ../_components/break/break
 include ../_components/columns/columns
+include ../_components/eventlist/eventlist
 include ../_components/sectionheader/sectionheader
 
 block style-template
@@ -67,7 +68,7 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop
       +sectionheader("eventlist")
-      include ../_components/eventlist/eventlist
+      +eventlist(true)
       include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.color-block.color-block--aside.break-container
