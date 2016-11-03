@@ -8,5 +8,9 @@
   img {
     max-width: 270px;
     overflow: visible;
+    @include bp() {
+      width: 100% !important;
+      max-width: 270px !important;
+    }
   }
 }

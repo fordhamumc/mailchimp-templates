@@ -1,8 +1,8 @@
 mixin sectionheader(namespace)
-  table.outer.section-header(mc:hideable)
+  table.outer(mc:hideable)
     tr
       td.one-column
         table(width='100%')
           tr
-            td.inner.contents(mc:edit=`${namespace}-sectionheader`)
+            td.inner.contents.section-header(mc:edit=`${namespace}-sectionheader`)
               | Section Header

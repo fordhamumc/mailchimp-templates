@@ -21,7 +21,7 @@ block body
       include ../_components/masthead/masthead-dual
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.color-block.color-block--lead
+  center.wrapper.main.color-block.color-block--lead
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
@@ -29,25 +29,13 @@ block body
       include ../_components/leadstory/leadstory
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper
+  center.wrapper.main
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      +break
-      include ../_components/sectionwrappers/sectionbottom
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.color-block.color-block--aside.break-container
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      +break
-      +break
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop
-      +sectionheader("featured")
       .featured(mc:repeatable="featured", mc:variant="one column")
         +column("featured", 1, 2)
+      .featured(mc:repeatable="featured", mc:variant="one column (no image)")
+        +column("featured", 1, -1)
       .featured(mc:repeatable="featured", mc:variant="two columns")
         +column("featured")
       .featured(mc:repeatable="featured", mc:variant="three columns")
@@ -63,6 +51,12 @@ block body
       .featured(mc:repeatable="featured", mc:variant="list")
         include ../_components/articlelist/articlelist
       .featured(mc:repeatable="featured", mc:variant="eventlist")
-        +eventlist()
+        +eventlist("featured")
+      .featured(mc:repeatable="featured", mc:variant="break")
+        +break(false)
+      .featured(mc:repeatable="featured", mc:variant="break with dashed line")
+        +break("dashed")
+      .featured(mc:repeatable="featured", mc:variant="break with small line")
+        +break("small")
       include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

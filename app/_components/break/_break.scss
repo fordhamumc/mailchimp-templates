@@ -8,6 +8,7 @@
   height: $container-gutter;
   padding-left: $container-padding + $outer-padding;
   padding-right: $container-padding + $outer-padding;
+  text-align: center;
 }
 
 .break-dashed {
@@ -16,6 +17,11 @@
 
 .break-solid {
   border-top: 1px solid $content-border-color;
+}
+.break-small {
+  border-top: 2px solid darken($content-border-color, 10%);
+  display: inline-block;
+  width: 100px;
 }
 
 @include bp(md) {

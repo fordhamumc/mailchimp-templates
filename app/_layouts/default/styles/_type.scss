@@ -27,6 +27,10 @@ small   {
   font-size: 85%;
 }
 
+strong {
+  font-weight: $font-weight-bold;
+}
+
 
 // Headings
 //---------------------
@@ -58,7 +62,7 @@ small   {
 */
 
 h1 {
-  /*@editable*/ font-size: floor($font-size-base * 2.60);
+  /*@editable*/ font-size: floor($font-size-base * 2.50);
   /*@editable*/ Margin-top: 0;
   /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
 }
@@ -138,7 +142,7 @@ h6 {
   */
 
   h1 {
-    /*@editable*/ font-size: floor($font-size-base * 2.60 * .8) !important;
+    /*@editable*/ font-size: floor($font-size-base * 2.50 * .8) !important;
   }
 
   /*
@@ -211,6 +215,10 @@ li {
 
 .lead {
   /*@editable*/ font-size: ceil($font-size-base * 1.2);
+
+  @include bp(sm) {
+    font-size: ceil($font-size-base * 1.1) !important;
+  }
 }
 
 /*

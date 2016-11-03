@@ -30,17 +30,22 @@ mixin column(namespace, count, aspect, heading, padding)
           <![endif]-->
           .column
             table(width='100%')
-              tr(mc:hideable)
-                td.inner.contents.column-img
-                    img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}-column${i}-image`)
+              if (aspect > 0)
+                tr(mc:hideable)
+                  td.inner.contents.column-img
+                      img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}-column${i}-image`)
               tr
-                td.inner.contents
+                td.inner.contents(class=`${(aspect > 0) ? "" : "column-textonly"}`)
                   if (count < 3)
-                    #{heading}(mc:edit=`${namespace}-column${i}-title`, mc:hideable)
-                      a(href='#', target='_blank') #{columns[index].title}
+                    if (aspect > 0)
+                      #{heading}(mc:edit=`${namespace}-column${i}-title`, mc:hideable)
+                        a(href='#', target='_blank') #{columns[index].title}
                       
                     div(mc:edit=`${namespace}-column${i}-desc`, mc:hideable)
-                      a.textlink(href='#', target='_blank') #{columns[index].desc}
+                      if (count == 1)
+                        | #{columns[index].desc}
+                      else
+                        a.textlink(href='#', target='_blank') #{columns[index].desc}
                   else
                     div(mc:edit=`${namespace}-column${i}-title`, mc:hideable)
                       a.textlink(href='#', target='_blank') #{columns[index].title}

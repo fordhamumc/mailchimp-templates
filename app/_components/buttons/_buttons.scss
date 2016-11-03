@@ -52,6 +52,19 @@
   /*@editable*/ border-color: darken($btn-border, 5%);
 }
 
+
+/*
+@tab Button
+@section Small Button
+@tip Set the style for the small button
+@style button small
+*/
+
+.btn-sm,
+.btn-sm-container td {
+  /*@editable*/ background-color: $btn-background;
+}
+
 /*
 @tab Button
 @section Small Button
@@ -60,11 +73,30 @@
 */
 
 .btn-sm {
+  display: inline-block;
+  text-align: center;
+  /*@editable*/ color: $btn-color;
+  /*@editable*/ border: 1px solid $btn-border;
   /*@editable*/ font-size: floor($font-size-base * 0.9);
   /*@editable*/ padding-top: 5px;
   /*@editable*/ padding-bottom: 5px;
   /*@editable*/ padding-left: 20px;
   /*@editable*/ padding-right: 20px;
+  font-weight: $font-weight-bold;
+  transition: background .3s;
+}
+
+
+/*
+@tab Button
+@section Small Button
+@tip Set the style for the small button
+@style button large
+*/
+
+.btn-lg,
+.btn-lg-container td {
+  /*@editable*/ background-color: $btn-background;
 }
 
 /*
@@ -75,12 +107,19 @@
 */
 
 .btn-lg {
+  display: inline-block;
+  text-align: center;
+  /*@editable*/ color: $btn-color;
+  /*@editable*/ border: 1px solid $btn-border;
   /*@editable*/ font-size: floor($font-size-base * 1.35);
   /*@editable*/ padding-top: 8px;
   /*@editable*/ padding-bottom: 8px;
   /*@editable*/ padding-left: 50px;
   /*@editable*/ padding-right: 50px;
+  font-weight: $font-weight-bold;
+  transition: background .3s;
 }
+
 
 @include bp(sm) {
 
@@ -112,11 +151,10 @@
 @tab Button
 @section Button Secondary
 @tip Set the style for the secondary button
-@style button secondary
 */
 
-.btn,
-.btn-container td {
+.btn-secondary,
+.btn-secondary-container td {
   /*@editable*/ background-color: $btn-secondary-background;
 }
 
@@ -124,7 +162,6 @@
 @tab Button
 @section Button Secondary
 @tip Set the style for the secondary button
-@style button secondary
 */
 
 .btn-secondary {

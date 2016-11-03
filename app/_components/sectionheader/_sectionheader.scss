@@ -9,7 +9,7 @@
   @style section header
 */
 
-.section-header .contents {
+.section-header {
   font-weight: $font-weight-bold;
   /*@editable*/ text-align: left;
   text-transform: uppercase;
@@ -22,7 +22,7 @@
   @tip Set the small screen style for the section header
   */
 
-  .section-header .contents {
+  .section-header {
     /*@editable*/ text-align: center !important;
   }
 }
@@ -34,11 +34,11 @@
   @style section header
 */
 
-.section-header .contents,
+.section-header,
 .section-header a {
   /*@editable*/ color: $meta-color;
 }
 
-.section-header .inner {
+.section-header {
   padding-bottom: 0px;
 }

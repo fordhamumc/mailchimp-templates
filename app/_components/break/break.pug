@@ -1,5 +1,13 @@
-mixin break(line)
-  table.outer
+mixin breaktable(hideable)
+  if hideable
+    table.outer(mc:hideable)
+      block
+  else
+    table.outer
+      block
+
+mixin break(line, hideable)
+  +breaktable(hideable)
     tr
       td.break
         if line

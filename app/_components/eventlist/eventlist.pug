@@ -1,9 +1,10 @@
 include ../buttons/btn
-mixin eventlist(more)
+mixin eventlist(namespace, more)
+  - namespace = namespace || "default"
   - more = more || false
   table.outer
     each event in events
-      tr(mc:repeatable="eventlist")
+      tr(mc:repeatable=`${namespace}-eventlist`)
         td.event-list.sidebar
           <!--[if (gte mso 9)|(IE)]><table width="100%"><tr>
           td(width=`${width / 3}`)
@@ -12,7 +13,7 @@ mixin eventlist(more)
             table(width='100%')
               tr
                 td.inner
-                  img(src="http://placehold.it/285x160", width="190", alt="", mc:edit="event-image")
+                  img(src="http://placehold.it/285x160", width="190", alt="", mc:edit=`${namespace}-event-image`)
 
           <!--[if (gte mso 9)|(IE)]></td>
           td(width=`${width * .5}`)
@@ -21,9 +22,9 @@ mixin eventlist(more)
             table(width='100%')
               tr
                 td.inner.contents
-                  h5(mc:edit="event-title")
+                  h5(mc:edit=`${namespace}-event-title`)
                     a(href="#", target="_blank") #{event.title}
-                  div(mc:edit="event-desc")
+                  div(mc:edit=`${namespace}-event-desc`)
                     a(href="#", target="_blank").textlink #{event.desc}
 
           <!--[if (gte mso 9)|(IE)]></td>
@@ -41,5 +42,5 @@ mixin eventlist(more)
         td.one-column
           table(width='100%')
             tr
-              td.inner.contents.event-more(mc:edit="event-more")
+              td.inner.contents.event-more(mc:edit=`${namespace}-event-more`)
                 a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.

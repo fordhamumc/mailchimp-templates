@@ -42,8 +42,12 @@ img {
   a & {
     border: 0;
   }
-  @include bp(md) {
+}
+
+@include bp(md) {
+  .main img {
     width: auto !important;
+    max-width: 100% !important;
   }
 }
 
@@ -52,6 +56,7 @@ img {
 }
 
 .full-width-image img {
+  display: block;
   width: 100%;
   max-width: $outer-maxwidth;
   overflow: visible;

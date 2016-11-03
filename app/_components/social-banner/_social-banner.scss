@@ -2,7 +2,8 @@
 //---------------------
 
 .social-banner--container {
-  border: 2px solid darken($aside-background, 13%);
+  border-top: 2px solid darken($aside-background, 13%);
+  border-bottom: 2px solid darken($aside-background, 13%);
 }
 
 .social-banner,

@@ -1,12 +1,29 @@
 include ../buttons/btn
-table.outer
-  tr(mc:repeatable="leadstory", mc:variant="Title")
+include ../break/break
+table.outer.leadstory--container
+  if dev !== true
+    tr(mc:repeatable="leadstory", mc:variant="Title")
+      td.one-column
+        table(width='100%')
+          tr
+            td.inner.contents.leadstory
+              h1(mc:edit="lead-title")
+                a(href='#', target='_blank') Lorem ipsum dolor sit amet
+              h3(mc:edit="lead-subtitle", mc:hideable)
+                a(href='#', target='_blank' class="textlink") Lorem ipsum dolor sit amet
+              +break(false, true)
+  tr(mc:repeatable="leadstory", mc:variant="Event Info")
     td.one-column
       table(width='100%')
         tr
-          td.inner.contents.leadstory
+          td.inner.contents.leadstory.leadevent
             h1(mc:edit="lead-title")
-              a(href='#', target='_blank') Lorem ipsum dolor sit amet
+              a(href='#', target='_blank') Houston Chapter Kickoff Event
+            h3(mc:edit="lead-subtitle", mc:hideable) Tuesday, November 29
+            .lead(mc:edit="lead-content", mc:hideable)
+              p
+                strong Brooklyn Athletic Club<br />
+                | 601 Richmond Ave., Houston, TX
   tr(mc:repeatable="leadstory", mc:variant="Full-width Image")
     td.full-width-image
       img(src='http://placehold.it/1095x600', width='730', alt='', mc:edit="lead-image")
@@ -18,6 +35,56 @@ table.outer
     td.one-column
       table(width='100%')
         tr
-          td.inner.contents.leadstory(style="padding-bottom: 0;")
-            p.lead(mc:edit="lead-content") Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
+          td.inner.contents.leadstory
+            .lead(mc:edit="lead-content")
+              p Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
             +btn("leadstory-btn","lg", "Button Text")
+  if dev !== true
+    tr(mc:repeatable="leadstory", mc:variant="Content Two-Thirds (image left)")
+      td.three-column
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        td(width=`${width / 3}`, valign="top")
+        <![endif]-->
+        .column
+          table(width='100%')
+            tr
+              td.inner.contents.column-img.column-img--solo
+                img(src="http://placehold.it/330x190", width='', alt='', mc:edit=`lead-image`)
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        td(width=`${width / 3 * 2}` valign="top")
+        <![endif]-->
+        .column-2
+          table(width='100%')
+            tr
+              td.inner.contents
+                .lead(mc:edit="lead-content")
+                  | Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
+
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+    tr(mc:repeatable="leadstory", mc:variant="Content Two-Thirds (image right)")
+      td.three-column(dir="rtl")
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        td(width=`${width / 3}`, valign="top")
+        <![endif]-->
+        .column
+          table(width='100%')
+            tr
+              td.inner.contents.column-img.column-img--solo
+                img(src="http://placehold.it/330x190", width='', alt='', mc:edit=`lead-image`)
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        td(width=`${width / 3 * 2}` valign="top")
+        <![endif]-->
+        .column-2
+          table(width='100%')
+            tr
+              td.inner.contents(dir="ltr")
+                .lead(mc:edit="lead-content")
+                  | Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent laoreet malesuada cursus. Maecenas scelerisque congue eros eu posuere. Praesent in felis ut velit pretium lobortis rhoncus ut erat.
+
+        <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+        <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->

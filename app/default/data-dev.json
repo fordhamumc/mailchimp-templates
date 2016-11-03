@@ -8,7 +8,11 @@
     "size": 165,
     "image": "f4179ad6-585d-436f-a28d-57f714ecbe9e.png"
   },
-  "mastheads": [],
+  "mastheads": [
+    {
+      "url": "http://fordham.edu"
+    }
+  ],
   "articles": [
     {
       "title": "This is an Article Title",

@@ -3,24 +3,38 @@
 //  ---------------------------------
 
 
-/*
-@tab Sections
-@section Lead Block
-@tip Set the style for lead content
-*/
+.leadstory {
+  padding-bottom: 0;
+}
 
-.leadstory {
-  text-align: left;
-}
-.leadstory h1{
-  text-align: center;
+.leadstory h1 {
   Margin-bottom: 0;
+  color: $link-color;
 }
-.leadstory {
-  @include bp() {
-    text-align: center !important;
-  }
-  @include bp(md) {
+
+.leadstory h3 {
+  font-size: floor($font-size-base * 1.60);
+  Margin-top: floor($line-height-computed / 3);
+}
+
+.leadevent,
+.leadstory h1,
+.leadstory h3 {
+  text-align: center;
+}
+
+@include bp(sm) {
+  .leadstory,
+  .leadstory h1,
+  .leadstory h3 {
     text-align: left !important;
+  }
+}
+
+@include bp(sm) {
+  .leadstory h3 {
+    font-size: ceil($font-size-base * 1.1) !important;
+    font-weight: $font-weight-bold !important;
+    Margin-bottom: 0 !important;
   }
 }
