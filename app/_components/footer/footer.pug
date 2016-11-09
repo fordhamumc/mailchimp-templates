@@ -17,16 +17,17 @@ table.outer
 
             p.footer-sentto This email was sent to
               a(href="mailto:*|EMAIL|*")  *|EMAIL|*
-              |  by *|LIST:ADDRESS|*
+              |  by <br />*|LIST:ADDRESS|*
 
             p.footer-sentto *|LIST:DESCRIPTION|*
-            
+
+            | *|IF:IMCID|*
             p.footer-links
-              | *|IF:IMCID|*
-              a(href="http://emailprefs.fordham.edu/id=*|IMCID|*", target="_blank") Customize the types of emails you receive from Fordham.
+              a(href="http://emailprefs.fordham.edu/?id=*|IMCID|*", target="_blank") Customize the types of emails you receive from Fordham.
+            | *|END:IF|*
+
             p.footer-links
-              | *|END:IF|*
-              a(href="*|UNSUB|*", target="_blank") Unsubscribe from all Fordham University emails.
+              a(href="*|UNSUB|*", target="_blank") Unsubscribe from all*|INTERESTED:Master:EmployeeStudent|* non-mandatory*|END:INTERESTED|* Fordham University emails.
             
             | *|END:IF|*
             p.footer-copyright Copyright *|CURRENT_YEAR|* *|USER:COMPANY|*. All&nbsp;rights&nbsp;reserved.
