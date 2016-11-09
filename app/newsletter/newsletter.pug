@@ -68,27 +68,56 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/sectionwrappers/sectiontop
       +sectionheader("eventlist")
-      +eventlist(true)
+      +eventlist(null, true)
       include ../_components/sectionwrappers/sectionbottom
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
   center.wrapper.color-block.color-block--aside.break-container
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       +break
       include ../_components/fullad/fullad
-      +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      include ../_components/sectionwrappers/sectiontop
-      +sectionheader("supplement")
-      .supplement(mc:repeatable="supplement", mc:variant="one column")
+  .supplement(mc:repeatable="supplement", mc:variant="one column")
+    center.wrapper.color-block.color-block--aside.break-container
+      .webkit
+        <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+        +break
+        <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    center.wrapper
+      .webkit
+        <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+        include ../_components/sectionwrappers/sectiontop
+        +sectionheader("supplement")
         +column("supplement", 1)
-      if dev !== true
-        .supplement(mc:repeatable="supplement", mc:variant="two column")
+        include ../_components/sectionwrappers/sectionbottom
+        <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  if dev !== true
+    .supplement(mc:repeatable="supplement", mc:variant="two column")
+      center.wrapper.color-block.color-block--aside.break-container
+        .webkit
+          <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+          +break
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+      center.wrapper
+        .webkit
+          <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+          include ../_components/sectionwrappers/sectiontop
+          +sectionheader("supplement")
           +column("supplement")
-        .supplement(mc:repeatable="supplement", mc:variant="three column")
+          include ../_components/sectionwrappers/sectionbottom
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    .supplement(mc:repeatable="supplement", mc:variant="three column")
+      center.wrapper.color-block.color-block--aside.break-container
+        .webkit
+          <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+          +break
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+      center.wrapper
+        .webkit
+          <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+          include ../_components/sectionwrappers/sectiontop
+          +sectionheader("supplement")
           +column("supplement", 3, 1.5)
-      include ../_components/sectionwrappers/sectionbottom
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+          include ../_components/sectionwrappers/sectionbottom
+          <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
