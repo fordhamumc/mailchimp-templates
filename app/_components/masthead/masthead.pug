@@ -15,11 +15,20 @@ each masthead in mastheads
           tr
             td.inner.contents
                 a(href=masthead.url, target='_blank')
-                  img.masthead--brand(src=mastheadtop.image, width=mastheadtop.size, alt=mastheadtop.alt)
+                  img.masthead--brand(src=mastheadtop.image, width=mastheadtop.size, alt=`| ${mastheadtop.alt}`)
                   if masthead.name
                     | <br />
-                    img.masthead--brand(src='896532b8-f904-4d40-ab0e-66d396a04d7a.png', width='165', alt='')
+                    img.masthead--brand(src='2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width='168', alt='')
                     | <br />
                     img(class=`masthead--${masthead.name}`, src=masthead.image, width=masthead.size, alt=masthead.alt)
                     if masthead.secondary == true
                       img(class=`masthead--${masthead.name}2`, src=masthead.image2, width=masthead.size2, alt=masthead.alt2)
+if mastheads.length > 1
+  table.outer.header(mc:repeatable="header-branding", mc:variant="Marymount")
+    tr
+      td.one-column.masthead.masthead-single
+        table(width='100%')
+          tr
+            td.inner.contents
+              a(href="http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&gid=1&pgid=359", target="_blank")
+                img.masthead--marymountbrand(src="becedd2f-38f5-49bb-be70-d931fd4952f2.png", width="321", alt="| Marymount College of Fordham University")

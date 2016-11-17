@@ -7,8 +7,8 @@ include ../_components/eventlist/eventlist
 include ../_components/sectionheader/sectionheader
 
 block style-template
-  <!-- build:css inline styles/default.css -->
-  link(rel='stylesheet', href='styles/default.css')
+  <!-- build:css inline styles/default2.css -->
+  link(rel='stylesheet', href='styles/default2.css')
   <!-- /build -->
 
 block body
@@ -18,7 +18,7 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       include ../_components/preheader/preheader
       include ../_components/masthead/masthead
-      include ../_components/masthead/masthead-dual
+      //include ../_components/masthead/masthead-dual
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.main.color-block.color-block--lead
@@ -29,9 +29,22 @@ block body
       include ../_components/leadstory/leadstory
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      +break
+      include ../_components/sectionwrappers/sectionbottom
+      .break-container.break-container--clear
+        +break
+        +break
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.main
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      .featured(mc:repeatable="featured", mc:variant="section top")
+        include ../_components/sectionwrappers/sectiontop
+      .featured(mc:repeatable="featured", mc:variant="section header")
+        +sectionheader("featured")
       .featured(mc:repeatable="featured", mc:variant="one column")
         +column("featured", 1, 2)
       .featured(mc:repeatable="featured", mc:variant="one column (no image)")
@@ -48,8 +61,6 @@ block body
         +column-sixtyforty("featured")
       .featured(mc:repeatable="featured", mc:variant="60/40 columns")
         +column-sixtyforty("featured", "rtl")
-      .featured(mc:repeatable="featured", mc:variant="list")
-        include ../_components/articlelist/articlelist
       .featured(mc:repeatable="featured", mc:variant="eventlist")
         +eventlist("featured")
       .featured(mc:repeatable="featured", mc:variant="break")
@@ -58,8 +69,9 @@ block body
         +break("dashed")
       .featured(mc:repeatable="featured", mc:variant="break with small line")
         +break("small")
-      include ../_components/sectionwrappers/sectionbottom
-      .break-container--clear
-        +break
-        +break
+      .featured(mc:repeatable="featured", mc:variant="section break")
+        include ../_components/sectionwrappers/sectionbottom
+        .break-container--clear
+          +break
+          +break
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

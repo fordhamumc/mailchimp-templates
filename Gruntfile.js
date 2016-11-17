@@ -35,18 +35,7 @@ module.exports = function(grunt) {
       directory: templates[0].substr(0, templates[0].indexOf('/')),
       file: templates[0].substr(templates[0].indexOf('/') + 1).replace('.pug', ''),
       tmp: '.tmp',
-      dist: 'dist',
-      distDomain: '',
-      sender: {
-    		service: 'gmail',
-    		user: '',
-        pass: ' '
-      },
-      recipients: {
-        name: '',
-        email: '',
-        subject: ''
-      }
+      dist: 'dist'
     },
 
     /**
@@ -314,20 +303,30 @@ module.exports = function(grunt) {
       target: {
         options: {
           questions: [{
+            config: 'paths.sender.service',
+            type: 'input',
+            message: 'What service should we use to send this email?',
+            default: 'gmail'
+          }, {
+            config: 'paths.sender.user',
+            type: 'input',
+            message: 'What account should we send it from?'
+          }, {
+            config: 'paths.sender.pass',
+            type: 'input',
+            message: 'Account password?'
+          }, {
             config: 'paths.recipients.name',
             type: 'input',
-            message: 'Who should we send this to (name)?',
-            default: '<%= paths.recipients.name  %>'
+            message: 'Who should we send this to (name)?'
           }, {
             config: 'paths.recipients.email',
             type: 'input',
-            message: 'Who should we send this to (email)?',
-            default: '<%= paths.recipients.email  %>'
+            message: 'Who should we send this to (email)?'
           }, {
             config: 'paths.recipients.subject',
             type: 'input',
-            message: 'What is the subject?',
-            default: '<%= paths.recipients.subject  %>'
+            message: 'What is the subject?'
           }]
         }
       }

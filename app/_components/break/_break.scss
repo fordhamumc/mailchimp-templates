@@ -2,6 +2,10 @@
 //  Break
 //  ---------------------------------
 
+.break-container--clear .outer {
+  background: $aside-background;
+}
+
 .break {
   line-height: $container-gutter;
   font-size: $container-gutter;

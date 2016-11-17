@@ -4,8 +4,13 @@
     vertical-align: bottom;
   }
 
+  .contents {
+    line-height: 1;
+  }
+
   img {
     overflow: visible;
+    display: inline-block;
   }
 
   .inner {
@@ -14,7 +19,7 @@
 
   .contents {
     .masthead--brand {
-      max-width: 165px;
+      max-width: 168px;
     }
     .masthead--gabelli {
       max-width: 232px;
@@ -49,6 +54,12 @@
     .masthead--pcs2 {
       max-width: 210px;
     }
+    .masthead--marymount {
+      max-width: 177px;
+    }
+    .masthead--marymountbrand {
+      max-width: 321px;
+    }
   }
 
   .column .masthead-logo {
@@ -74,7 +85,7 @@
     text-align: left !important;
   }
   .masthead .masthead-logo .masthead--brand {
-    max-width: 165px !important;
+    max-width: 168px !important;
   }
   .masthead-cobrand {
     text-align: right !important;

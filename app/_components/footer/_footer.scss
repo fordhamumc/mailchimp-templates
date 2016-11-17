@@ -7,16 +7,11 @@
 @tab Footer
 @section Footer Background
 @tip Set the style for the large button
-@style button large
 */
 
 .footer-wrapper,
 .footer-wrapper .outer{
   /*@editable*/ background-color: $footer-background;
-}
-
-.footer-wrapper {
-  padding-top: $container-gutter * .5;
 }
 
 /*

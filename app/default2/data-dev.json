@@ -8,7 +8,18 @@
     "size": 168,
     "image": "d13bad7e-ca10-42ab-9563-b0ec8843403f.png"
   },
-  "mastheads": [],
+  "mastheads": [
+    {
+      "url": "http://fordham.edu"
+    },
+    {
+      "name": "gabelli",
+      "alt": "Gabelli School of Business",
+      "size": 232,
+      "url": "http://fordham.edu/gabelli",
+      "image": "1a28d3c6-243f-435e-891c-5601f231421a.png"
+    }
+  ],
   "articles": [
     {
       "title": "This is an Article Title",
@@ -39,22 +50,6 @@
     {
       "title": "Lorem ipsum dolor sit amet",
       "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    },
-    {
-      "title": "Aenean vulputate eleifend tellus.",
-      "desc": "Ei partem delicata qualisque eum. Eu persius probatus accusamus est, aeterno mediocrem adversarium eam id."
-    },
-    {
-      "title": "Quisque rutrum. Aenean imperdiet.",
-      "desc": "An nec quando ignota, populo meliore. Simul aeterno definitiones ut vix. Et ius ferri lobortis, delenit dolores pri an."
-    },
-    {
-      "title": "Nam eget dui. Etiam rhoncus.",
-      "desc": "His agam magna assentior eu, duo ex modo facete alterum. Vel ad suas lorem doming, suavitate adipiscing sit ut, erat iuvaret convenire qui et."
-    },
-    {
-      "title": "Sed fringilla mauris sit amet nibh.",
-      "desc": "Te nec vidisse virtute, vix imperdiet abhorreant dissentiet an. Tota assueverit cu vis."
     }
   ],
   "events": [

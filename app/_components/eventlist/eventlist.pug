@@ -1,10 +1,18 @@
 include ../buttons/btn
-mixin eventlist(namespace, more)
+mixin eventrow(repeatable, namespace)
+  if repeatable
+    tr(mc:repeatable=`${namespace}eventlist`)
+      block
+  else
+    tr
+      block
+mixin eventlist(namespace, more, repeatable)
   - more = more || false
+  - repeatable = repeatable || false
   - namespace = (namespace) ? namespace + '-' : '';
   table.outer
     each event in events
-      tr(mc:repeatable=`${namespace}eventlist`)
+      +eventrow(repeatable, namespace)
         td.event-list.sidebar
           <!--[if (gte mso 9)|(IE)]><table width="100%"><tr>
           td(width=`${width / 3}`)

@@ -1,5 +1,12 @@
-mixin sectionheader(namespace)
-  table.outer(mc:hideable)
+mixin sectionheader-container(hideable)
+  if hideable
+    table.outer(mc:hideable)
+      block
+  else
+    table.outer
+      block
+mixin sectionheader(namespace, hideable)
+  +sectionheader-container(hideable)
     tr
       td.one-column
         table(width='100%')
