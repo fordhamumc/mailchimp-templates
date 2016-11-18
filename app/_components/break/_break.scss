@@ -1,0 +1,30 @@
+// 
+//  Break
+//  ---------------------------------
+
+.break {
+  line-height: $container-gutter;
+  height: $container-gutter;
+  padding: 0 $container-padding;
+  text-align: center;
+}
+
+.break-dashed {
+  border-top: 1px dashed $content-border-color;
+}
+
+.break-solid {
+  border-top: 1px solid $content-border-color;
+}
+.break-small {
+  border-top: 2px solid darken($content-border-color, 10%);
+  display: inline-block;
+  width: 100px;
+}
+
+@include bp(sm) {
+  .break-container .break {
+    line-height: 4px !important;
+    height: 4px !important;
+  }
+}

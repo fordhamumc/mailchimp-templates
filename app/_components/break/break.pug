@@ -1,0 +1,15 @@
+mixin breakrow(hideable)
+  if hideable
+    tr(mc:hideable)
+      block
+  else
+    tr
+      block
+
+mixin break(line, hideable)
+  +breakrow(hideable)
+    td.break
+      if line
+        div(class=`break-${line}`) &nbsp;
+      else
+        | &nbsp;
