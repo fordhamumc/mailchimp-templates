@@ -1,0 +1,50 @@
+// Color Block Mixin
+//---------------------
+
+@mixin color-block($background, $outer, $text, $tab, $section) {
+  $section-lc: to-lower-case($section);
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Background
+  @tip Set the style for the #{$section-lc} block
+  */
+  .color-block--#{$section-lc} {
+    /*@editable*/ background-color: $background;
+  }
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Content
+  @tip Set the style for the #{$section-lc} block
+  */
+
+  .color-block--#{$section-lc} .webkit {
+    /*@editable*/ background-color: $outer;
+  }
+
+  /*
+  @tab #{$tab}
+  @section #{$section} Block Content
+  @tip Set the style for the #{$section-lc} block
+  */
+
+  .color-block--#{$section-lc} .contents {
+    /*@editable*/ color: $text;
+  }
+
+}
+
+
+// Lead (Primary color)
+//---------------------
+
+@include color-block($base-background, $content-background, $text-color, "Sections", "Default");
+@include color-block($primary-color, $content-background, $text-color, "Sections", "Lead");
+
+@include bp(sm) {
+  .color-block--lead {
+    padding-top: 0 !important;
+    border-top-width: 0 !important;
+  }
+}
