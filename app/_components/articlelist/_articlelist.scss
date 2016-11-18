@@ -1,0 +1,28 @@
+// Article list
+//---------------------
+
+.article-list--container {
+  padding-top: 0px;
+}
+
+.article-list {
+  list-style: none;
+  Margin: 0;
+  padding: 0;
+  
+  li {
+    border-bottom: 1px solid $aside-background;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    Margin-bottom: 0;
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  
+  h4, h5 {
+    Margin-bottom: 0;
+  }
+}

@@ -1,0 +1,15 @@
+mixin article-list--container
+  tr
+    td.one-column
+      table(width='100%')
+        tr
+          td.inner.contents.article-list--container
+            ul.article-list
+              block
+
+mixin article-list--item
+  li(mc:repeatable="article-list")
+    .callout(mc:edit="article-title")
+      a(href="#", target="_blank") This is a default title.
+    .article-list--desc(mc:edit="article-desc")
+      a.textlink(href="#", target="_blank") This is some default content. It's not meant to be very long. It's just a preview of the article.
