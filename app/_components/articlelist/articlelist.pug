@@ -7,8 +7,10 @@ mixin article-list--container
             ul.article-list
               block
 
-mixin article-list--item
-  li(mc:repeatable="article-list")
+mixin article-list--item(namespace)
+  - namespace = (namespace) ? namespace + '-' : ''
+
+  li(mc:repeatable=`${namespace}article-list`)
     .callout(mc:edit="article-title")
       a(href="#", target="_blank") This is a default title.
     .article-list--desc(mc:edit="article-desc")
