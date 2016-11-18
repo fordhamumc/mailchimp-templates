@@ -1,13 +1,15 @@
-mixin breakrow(hideable)
+mixin breakrow(hideable, reduce)
+  -var cl = (reduce) ? 'break-reduce' : ''
+
   if hideable
-    tr(mc:hideable)
+    tr(mc:hideable, class=cl)
       block
   else
-    tr
+    tr(class=cl)
       block
 
-mixin break(line, hideable)
-  +breakrow(hideable)
+mixin break(line, hideable, reduce)
+  +breakrow(hideable, reduce)
     td.break
       if line
         div(class=`break-${line}`) &nbsp;

@@ -23,7 +23,7 @@
 }
 
 @include bp(sm) {
-  .break-container .break {
+  .break-reduce .break {
     line-height: 4px !important;
     height: 4px !important;
   }
