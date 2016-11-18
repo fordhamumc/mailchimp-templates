@@ -1,0 +1,25 @@
+mixin btn(namespace, size, text, secondary)
+  - namespace = namespace || "button"
+  - text = text || "Button"
+  - var btnclass = "btn"
+  - var btncontainer = "btn-container"
+
+  if size === "small" || size === "sm"
+    - btnclass = "btn-sm"
+    - btncontainer = "btn-sm-container"
+  if size === "large" || size === "lg"
+    - btnclass = "btn-lg"
+    - btncontainer = "btn-lg-container"
+  if secondary
+    - btnclass = btnclass + " btn-secondary"
+    - btncontainer = btncontainer + " btn-secondary-container"
+
+  table(width="100%", border="0", cellspacing="0", cellpadding="0", mc:hideable)
+    tbody
+      tr
+        td(align="center")
+          table(class=btncontainer)
+            tbody
+              tr
+                td(align="center", mc:edit=namespace)
+                  a(href="#", target="_blank", class=btnclass) <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->#{text}<!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
