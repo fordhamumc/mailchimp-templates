@@ -1,0 +1,78 @@
+// 
+//  Reset Client-specific Styles 
+//  ---------------------------------
+
+html,
+body {
+  Margin: 0 !important;
+  padding: 0;
+  min-width: 100%;
+}
+
+table {
+  border-spacing: 0 !important;
+  border-collapse: collapse !important;
+  color: $text-color;
+  font-family: $base-font;
+}
+
+td {
+	padding: 0;
+}
+
+div[style*="margin: 16px 0"] {
+  margin:0 !important;
+}
+
+table,
+td {
+  mso-table-lspace: 0pt !important;
+  mso-table-rspace: 0pt !important;
+}
+
+/*
+@tab Page
+@section background style
+@tip Set the background color for your email.
+*/
+body {
+  background-color: $base-background;
+}
+
+.wrapper {
+  width: 100%;
+  table-layout: fixed !important;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.webkit {
+  max-width: $outer-maxwidth;
+  overflow: visible;
+}
+/*
+@tab Page
+@section background style
+@tip Content border
+*/
+.outer {
+  Margin: 0 auto;
+  width: 100%;
+  max-width: $content-area;
+  overflow: visible;
+}
+	
+@include bp(md) {
+  .webkit,
+  .outer {
+	  max-width: 100% !important;
+  }
+}
+
+.inner {
+  padding: $container-gutter $container-padding;
+}
+
+.contents {
+  width: 100%;
+}

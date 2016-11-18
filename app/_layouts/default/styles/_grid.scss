@@ -1,0 +1,117 @@
+// 
+//  Grid
+//  ---------------------------------
+
+@mixin column-width($width) {
+	max-width: $width;
+
+	@include bp(md) {
+		max-width: percentage($width / $content-area) !important;
+	}
+
+	@if $width <= ($content-area / 3) {
+		@include bp(sm) {
+			img {
+				max-width: $width !important;
+			}
+		}
+	}
+}
+
+
+// Multiple column layouts
+//---------------------
+
+
+.container {
+	font-size: 0;
+	text-align: center;
+}
+
+.column,
+.column-2 {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	overflow: visible;
+}
+
+.column-img {
+	padding-bottom: 0;
+}
+
+@include bp(md) {
+	.column img,
+	.column-2 img {
+		width: auto !important;
+		max-width: 100% !important;
+	}
+}
+
+// Two column layout
+//---------------------
+
+.two-column {
+
+	.column {
+		@include column-width( $content-area / 2 );
+	}
+}
+
+
+// Three column layout
+//---------------------
+
+.three-column {
+
+	.column {
+		@include column-width( $content-area / 3 );
+
+		.contents {
+			text-align: center;
+		}
+	}
+
+	.column-2 {
+		@include column-width( $content-area / 3 * 2 );
+	}
+}
+
+
+// Three column layout
+//---------------------
+
+.sixty-forty-column {
+
+	.column {
+		@include column-width( $content-area * .4 );
+	}
+
+	.column-2 {
+		@include column-width( $content-area * .6 );
+	}
+}
+
+@include bp(sm) {
+	.container {
+
+		.column,
+		.column-2 {
+			max-width: 100% !important;
+		}
+
+		.column-img,
+		.column-img--solo {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.column-img--solo {
+			padding-bottom: 0;
+
+			img {
+				max-width: 100% !important;
+			}
+		}
+	}
+}

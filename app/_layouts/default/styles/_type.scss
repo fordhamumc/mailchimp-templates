@@ -1,0 +1,201 @@
+// 
+//  Type
+//  ---------------------------------
+
+
+// Paragraphs
+//---------------------
+
+p {
+  padding: 0;
+  Margin: 0 0 1.2em 0;
+}
+
+
+// Emphasis
+//---------------------
+
+/*
+@tab Page
+@section small text style
+@tip Set the style for the <small> tag
+@style small
+*/
+
+small   {
+  /*@editable*/ color: lighten($text-color, 20%);
+  font-size: 85%;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+
+// Headings
+//---------------------
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $headings-font-weight;
+}
+
+h1, h2 {
+  line-height: 1.2;
+}
+
+h4, h5, h6 {
+  line-height: 1.5;
+}
+
+/*
+@tab Page
+@section heading 1
+@tip Set the style for the <h1> tag
+@style heading 1
+*/
+
+h1 {
+  /*@editable*/ font-size: floor($font-size-base * 2.50);
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
+}
+
+/*
+@tab Page
+@section heading 2
+@tip Set the style for the <h2> tag
+@style heading 2
+*/
+
+h2 {
+  /*@editable*/ font-size: floor($font-size-base * 2.15);
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
+}
+
+/*
+@tab Page
+@section heading 3
+@tip Set the style for the <h3> tag
+@style heading 3
+*/
+
+h3 {
+  /*@editable*/ font-size: ceil($font-size-base * 1.70);
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
+  line-height: 1.4;
+}
+
+/*
+@tab Page
+@section heading 4
+@tip Set the style for the <h4> tag
+@style heading 4
+*/
+
+h4 {
+  /*@editable*/ font-size: ceil($font-size-base * 1.25);
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
+}
+
+@include bp(sm) {
+
+  /*
+  @tab Page
+  @section mobile heading 1
+  @tip Set the small screen style for the <h1> tag
+  */
+
+  h1 {
+    /*@editable*/ font-size: floor($font-size-base * 2.50 * .8) !important;
+  }
+
+  /*
+  @tab Page
+  @section mobile heading 2
+  @tip Set the small screen style for the <h2> tag
+  */
+
+  h2 {
+    /*@editable*/ font-size: floor($font-size-base * 2.15 * .8) !important;
+  }
+
+  /*
+  @tab Page
+  @section mobile heading 3
+  @tip Set the small screen style for the <h3> tag
+  */
+
+  h3 {
+    /*@editable*/ font-size: floor($font-size-base * 1.70 * .85) !important;
+    line-height: 1.6 !important;
+  }
+}
+
+
+// Lists
+//---------------------
+
+/*
+@tab Page
+@section list style
+@tip Set the default style for the <ul>, <li> containers
+*/
+
+ul, ol {
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: ($line-height-computed - 7);
+  /*@editable*/ Margin-left: 0;
+  /*@editable*/ Margin-right: 0;
+}
+
+/*
+@tab Page
+@section list item style
+@tip Set the default style for the <li> tag
+*/
+
+li {
+  /*@editable*/ font-size: $font-size-base;
+  /*@editable*/ Margin-top: 0;
+  /*@editable*/ Margin-bottom: 7px;
+  /*@editable*/ Margin-left: 0;
+  /*@editable*/ Margin-right: 0;
+
+  &:last-child {
+    Margin-bottom: 0;
+  }
+}
+
+
+// Body Text
+//---------------------
+
+/*
+@tab Sections
+@section Lead Block
+@tip Set the style for lead content
+@style lead
+*/
+
+.lead {
+  /*@editable*/ font-size: ceil($font-size-base * 1.2);
+
+  @include bp(sm) {
+    font-size: ceil($font-size-base * 1.1) !important;
+  }
+}
+
+/*
+@tab Sections
+@section Callout style
+@tip Set the style for callout content
+@style callout
+*/
+
+.callout {
+  /*@editable*/ font-size: ceil($font-size-base * 1.2);
+  font-weight: $font-weight-bold;
+}

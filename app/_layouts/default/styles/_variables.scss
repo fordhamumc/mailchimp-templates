@@ -1,0 +1,99 @@
+// 
+//  Variables
+//  ---------------------------------
+
+
+// Base colors
+//---------------------
+
+$text-color:                  #444444 !default;
+$primary-color:               #900028 !default;
+$meta-color:                  lighten($text-color, 18%) !default;
+$link-color:                  $primary-color !default;
+
+
+// Containers
+//---------------------
+
+$base-background:             #f9f9f9 !default;     
+$content-background:          #ffffff !default;
+$content-border-color:        darken($base-background, 5%) !default;
+
+
+// Aside
+//---------------------
+
+$aside-background:            #ededed !default;
+$aside-color:                 $text-color !default;
+
+
+// Button
+//---------------------
+
+$btn-background:              $primary-color !default;
+$btn-border:                  darken($btn-background, 10%);
+$btn-color:                   #ffffff !default;
+$btn-secondary-background:    $aside-background !default;
+$btn-secondary-border:        darken($btn-secondary-background, 30%);
+$btn-secondary-color:         lighten($text-color, 7%) !default;
+
+
+// Footer colors
+//---------------------
+
+$footer-background:           $base-background !default;
+$footer-color:                $text-color !default;
+$footer-nav-background:       #5b6f7b !default;
+$footer-nav-color:            #ffffff !default;
+$footer-nav-link-color:       $footer-nav-color !default;
+
+
+// Type
+//---------------------
+
+$base-font:                   'Open Sans', Arial, sans-serif !default;
+$font-weight-base:            normal !default;
+$font-weight-bold:            600 !default;
+$font-size-base:              15px !default;
+$headings-font-weight:        $font-weight-bold;
+$line-height-base:            1.6 !default;
+$line-height-large:           1.2 !default;
+$line-height-computed:        floor($font-size-base * $line-height-base) !default;
+$line-height-offset:          ($line-height-computed - $font-size-base)/2 !default;
+
+
+// Spacing
+//---------------------
+
+$content-area:                660px !default;
+$outer-padding:               35px !default;
+$outer-maxwidth:              ($content-area + $outer-padding * 2) !default;
+$container-padding:           15px !default;
+$container-gutter:            25px !default;
+
+
+// Media Queries
+//---------------------
+
+$screen-sm:                   460px !default;
+$screen-xs:                   375px !default;
+$screen-md:                   $outer-maxwidth + $container-padding * 2 !default;
+
+@mixin bp($point:'') {
+
+  @if $point == xs {
+    @media screen and (max-width: $screen-xs) { @content; }
+  }
+  @else if $point == sm {
+    @media screen and (max-width: $screen-sm) { @content; }
+  }
+  @else if $point == md {
+    @media screen and (max-width: $screen-md)  { @content; }
+  }
+  @else if $point == sm-md {
+    @media screen and (min-width: $screen-sm + 1)  { @content; }
+  }
+  @else {
+    @media screen { @content; }
+  }
+}

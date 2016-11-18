@@ -1,0 +1,135 @@
+extends ../_layouts/default/default
+
+block style-template
+  <!-- build:css inline styles/default.css -->
+  link(rel='stylesheet', href='styles/default.css')
+  <!-- /build -->
+
+block body
+  center.wrapper.color-block--default
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          td.container.two-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+              <!--[if (gte mso 9)|(IE)]>
+              td(width="330", valign="top")
+              <![endif]-->
+              .column
+                table(width='100%')
+                  tr
+                    td.inner.contents.column-img
+                      img(src="http://placehold.it/690x430", width="300", alt='')
+                  tr
+                    td.inner.contents
+                      h3
+                        a(href="#", target="_blank") This is the title
+                      div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+              <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+              <!--[if (gte mso 9)|(IE)]>
+              td(width="330", valign="top")
+              <![endif]-->
+              .column
+                table(width='100%')
+                  tr
+                    td.inner.contents.column-img
+                      img(src="http://placehold.it/690x430", width="300", alt='')
+                  tr
+                    td.inner.contents
+                      h3
+                        a(href="#", target="_blank") This is the title
+                      div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+              <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.three-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="330", valign="top")
+            <![endif]-->
+            .column
+              table(width='100%')
+                tr
+                  td.inner.contents.column-img
+                    img(src="http://placehold.it/330x220", width="190", alt='')
+                tr
+                  td.inner.contents
+                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="330", valign="top")
+            <![endif]-->
+            .column
+              table(width='100%')
+                tr
+                  td.inner.contents.column-img
+                    img(src="http://placehold.it/330x220", width="190", alt='')
+                tr
+                  td.inner.contents
+                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="330", valign="top")
+            <![endif]-->
+            .column
+              table(width='100%')
+                tr
+                  td.inner.contents.column-img
+                    img(src="http://placehold.it/330x220", width="190", alt='')
+                tr
+                  td.inner.contents
+                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.sixty-forty-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="220", valign="top")
+            <![endif]-->
+            .column
+              table(width='100%')
+                tr
+                  td.inner.contents.column-img--solo
+                    img(src="http://placehold.it/690x430", width="264", alt='')
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="440", valign="top")
+            <![endif]-->
+            .column-2
+              table(width='100%')
+                tr
+                  td.inner.contents
+                    h3
+                      a(href="#", target="_blank") This is the title
+                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.three-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="220", valign="top")
+            <![endif]-->
+            .column
+              table(width='100%')
+                tr
+                  td.inner.contents.column-img--solo
+                    img(src="http://placehold.it/690x430", width="190", alt='')
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            <!--[if (gte mso 9)|(IE)]>
+            td(width="440", valign="top")
+            <![endif]-->
+            .column-2
+              table(width='100%')
+                tr
+                  td.inner.contents
+                    h3
+                      a(href="#", target="_blank") This is the title
+                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

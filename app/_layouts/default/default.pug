@@ -1,0 +1,45 @@
+- var social = true
+doctype transitional
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    = "\n"
+    <!--[if !mso]><!-->
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    = "\n"
+    <!--<![endif]-->
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='x-apple-disable-message-reformatting')
+    = "\n"
+    <!--[if !mso]><!-->
+    block typeface
+      link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i', rel='stylesheet', type='text/css')
+    = "\n"
+    <!--<![endif]-->
+    = "\n"
+    block style-template
+    = "\n"
+    <!--[if (gte mso 9)|(IE)]>
+    style.
+      table {
+        border-collapse: collapse;
+      }
+
+      table td,
+      .contents {
+        font-family: arial, sans-serif !important;
+      }
+
+      .masthead-logo {
+        text-align: left !important;
+      }
+
+      .masthead-cobrand {
+        text-align: right !important;
+        vertical-align: bottom !important;
+      }
+    = "\n"
+    <![endif]-->
+
+  body.body(bgcolor=`${bgcolor}`)
+    block body
