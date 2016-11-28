@@ -36,10 +36,6 @@
 	overflow: visible;
 }
 
-.column-img {
-	padding-bottom: 0;
-}
-
 @include bp(md) {
 	.column img,
 	.column-2 img {
@@ -66,10 +62,6 @@
 
 	.column {
 		@include column-width( $content-area / 3 );
-
-		.contents {
-			text-align: center;
-		}
 	}
 
 	.column-2 {
@@ -94,24 +86,9 @@
 
 @include bp(sm) {
 	.container {
-
 		.column,
 		.column-2 {
 			max-width: 100% !important;
-		}
-
-		.column-img,
-		.column-img--solo {
-			padding-left: 0;
-			padding-right: 0;
-		}
-
-		.column-img--solo {
-			padding-bottom: 0;
-
-			img {
-				max-width: 100% !important;
-			}
 		}
 	}
 }

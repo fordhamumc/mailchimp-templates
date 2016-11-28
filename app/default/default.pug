@@ -1,4 +1,5 @@
 extends ../_layouts/default/default
+include ../_components/columns/columns
 
 block style-template
   <!-- build:css inline styles/default.css -->
@@ -12,124 +13,44 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
         tr
+          td.inner.contents
+            +column("featured", {size: 1, heading: "h3"})
+        tr
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-              <!--[if (gte mso 9)|(IE)]>
-              td(width="330", valign="top")
-              <![endif]-->
-              .column
-                table(width='100%')
-                  tr
-                    td.inner.contents.column-img
-                      img(src="http://placehold.it/690x430", width="300", alt='')
-                  tr
-                    td.inner.contents
-                      h3
-                        a(href="#", target="_blank") This is the title
-                      div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-              <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-              <!--[if (gte mso 9)|(IE)]>
-              td(width="330", valign="top")
-              <![endif]-->
-              .column
-                table(width='100%')
-                  tr
-                    td.inner.contents.column-img
-                      img(src="http://placehold.it/690x430", width="300", alt='')
-                  tr
-                    td.inner.contents
-                      h3
-                        a(href="#", target="_blank") This is the title
-                      div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-              <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            +column("featured", {fullimage: true})
+            +column("featured", {fullimage: true})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
           td.container.three-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="330", valign="top")
-            <![endif]-->
-            .column
-              table(width='100%')
-                tr
-                  td.inner.contents.column-img
-                    img(src="http://placehold.it/330x220", width="190", alt='')
-                tr
-                  td.inner.contents
-                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="330", valign="top")
-            <![endif]-->
-            .column
-              table(width='100%')
-                tr
-                  td.inner.contents.column-img
-                    img(src="http://placehold.it/330x220", width="190", alt='')
-                tr
-                  td.inner.contents
-                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="330", valign="top")
-            <![endif]-->
-            .column
-              table(width='100%')
-                tr
-                  td.inner.contents.column-img
-                    img(src="http://placehold.it/330x220", width="190", alt='')
-                tr
-                  td.inner.contents
-                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
+            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
+            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
           td.container.sixty-forty-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="220", valign="top")
-            <![endif]-->
-            .column
-              table(width='100%')
-                tr
-                  td.inner.contents.column-img--solo
-                    img(src="http://placehold.it/690x430", width="264", alt='')
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="440", valign="top")
-            <![endif]-->
-            .column-2
-              table(width='100%')
-                tr
-                  td.inner.contents
-                    h3
-                      a(href="#", target="_blank") This is the title
-                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            +column("featured", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("featured", {size: 6, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
-          td.container.three-column
+          td.container.three-column.column-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="220", valign="top")
-            <![endif]-->
-            .column
-              table(width='100%')
-                tr
-                  td.inner.contents.column-img--solo
-                    img(src="http://placehold.it/690x430", width="190", alt='')
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-            <!--[if (gte mso 9)|(IE)]>
-            td(width="440", valign="top")
-            <![endif]-->
-            .column-2
-              table(width='100%')
-                tr
-                  td.inner.contents
-                    h3
-                      a(href="#", target="_blank") This is the title
-                    div This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
-            <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("featured", {size: 23, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.sixty-forty-column(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("featured", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("featured", {size: 6, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.three-column.column-img-full(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("featured", {size: 23, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

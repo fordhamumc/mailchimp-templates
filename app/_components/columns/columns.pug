@@ -1,0 +1,51 @@
+mixin column-container(size, container)
+  - var cl = (size === 23 || size === 6) ? "column-2" : "column"
+  if size > 1
+    <!--[if (gte mso 9)|(IE)]>
+    td(width=container, valign="top")
+    <![endif]-->
+    div(class=cl)
+      table(width='100%')
+        block
+    <!--[if (gte mso 9)|(IE)]></td><![endif]-->
+  else
+    block
+
+mixin column(namespace, options)
+  - namespace = (namespace) ? namespace + '-' : ''
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title"}, options)
+
+  - var padding = 15
+  - var container
+  case settings.size
+    when 23
+      - container = Math.floor(width/1.5)
+    when 4
+      - container = Math.floor(width * .4)
+    when 6
+      - container = Math.floor(width * .6)
+    default
+      - container = Math.floor(width/settings.size)
+
+  +column-container(settings.size, container)
+    if (settings.aspect > 0)
+      - var imgcontainer = container - (padding * 2)
+      - var imgwidth = Math.floor(imgcontainer * 1.5)
+      if (settings.fullimage)
+        - imgwidth = Math.floor(460 * 1.5)
+      - var imgheight = Math.floor(imgwidth / settings.aspect)
+
+      tr(mc:hideable)
+        td.inner.contents.column-img
+          img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}column-image`)
+    if (settings.title || block)
+      tr
+        td.inner.contents
+          if (settings.title)
+            #{settings.heading}(class="column-title", mc:edit=`${namespace}column-title`, mc:hideable) #{settings.title}
+          div.column-desc(mc:edit=`${namespace}column-desc`, mc:hideable) #{settings.body}
+            if block
+              block
+            else
+              | This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+
