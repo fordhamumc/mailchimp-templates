@@ -15,7 +15,7 @@
   color: $primary-color;
 }
 
-.column-desc a {
+.column-desc a:not(.btn, .btn-sm, .btn-lg) {
   color: $text-color;
 }
 

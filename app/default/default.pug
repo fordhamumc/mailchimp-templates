@@ -1,5 +1,6 @@
 extends ../_layouts/default/default
 include ../_components/columns/columns
+include ../_components/buttons/btn
 
 block style-template
   <!-- build:css inline styles/default.css -->
@@ -15,6 +16,8 @@ block body
         tr
           td.inner.contents
             +column("featured", {size: 1, heading: "h3"})
+              p This is some lead copy. It's not much but I want to test some typeset text.
+              +btn("featured", {size: "lg"}) Sign Up
         tr
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
