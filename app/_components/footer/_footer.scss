@@ -1,0 +1,40 @@
+// 
+//  Footer
+//  ---------------------------------
+
+
+/*
+@tab Footer
+@section Footer Style
+@tip Set the style for the footer text
+*/
+
+.footer {
+  /*@editable*/ font-size: floor($font-size-base * .85);
+  /*@editable*/ text-align: center;
+}
+
+/*
+@tab Footer
+@section Footer Style
+@tip Set the color for the footer text
+*/
+
+.footer, .footer a {
+  /*@editable*/ color: $meta-color;
+}
+
+.footer-links {
+  font-weight: $font-weight-bold;
+  
+  a {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    @include bp(sm) {
+      Margin-top: 10px;
+      Margin-bottom: 10px;
+    }
+  }
+}
