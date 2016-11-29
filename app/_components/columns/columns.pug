@@ -43,7 +43,7 @@ mixin column(namespace, options)
         td.inner.contents
           if (settings.title)
             #{settings.heading}(class="column-title", mc:edit=`${namespace}column-title`, mc:hideable) #{settings.title}
-          div.column-desc(mc:edit=`${namespace}column-desc`, mc:hideable) #{settings.body}
+          div.textlink(mc:edit=`${namespace}column-desc`, mc:hideable) #{settings.body}
             if block
               block
             else

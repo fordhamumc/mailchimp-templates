@@ -1,6 +1,7 @@
 extends ../_layouts/default/default
-include ../_components/columns/columns
 include ../_components/buttons/btn
+include ../_components/columns/columns
+include ../_components/eventlist/eventlist
 
 block style-template
   <!-- build:css inline styles/default.css -->
@@ -55,5 +56,16 @@ block body
             +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("featured", {size: 23, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          td.container.event-list
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +eventlist
+            +eventlist
+            +eventlist
+            +eventlist
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          +eventmore
+
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

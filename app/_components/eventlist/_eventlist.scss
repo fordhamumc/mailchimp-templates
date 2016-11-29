@@ -1,0 +1,46 @@
+// Event list
+//---------------------
+
+
+.event-image {
+  @include column-width($content-area / 3);
+}
+
+.event-description {
+  @include column-width($content-area / 2);
+}
+
+.event-rsvp {
+  @include column-width($content-area / 6);
+}
+
+.event-hr {
+  border-bottom: 1px solid $aside-background;
+  Margin-left: $container-padding;
+  Margin-right: $container-padding;
+}
+
+.event-list--nomore .event:last-child .event-hr {
+  border: 0;
+}
+
+.event-more {
+  font-weight: $font-weight-bold;
+  text-align: center;
+}
+
+@include bp(sm) {
+  
+  .event-description .contents {
+    text-align: center !important;
+  }  
+  
+  .event-description .inner {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  
+  .container .event-rsvp {
+    max-width: 130px !important;
+  }
+}

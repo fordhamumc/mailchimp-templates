@@ -43,7 +43,8 @@ a {
 @style textlink
 */
 
-.textlink {
+.textlink,
+.textlink a:not(.btn):not(.btn-sm):not(.btn-lg) {
   /*@editable*/ color: $text-color;
   /*@editable*/ text-decoration: none;
 }

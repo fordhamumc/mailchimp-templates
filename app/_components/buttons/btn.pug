@@ -1,6 +1,6 @@
 mixin btn(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: '', secondary: false}, options)
+  - var settings = Object.assign({size: '', secondary: false, block: false, url: "#"}, options)
 
   - var btnclass = "btn"
   - var btncontainer = "btn-container"
@@ -14,6 +14,9 @@ mixin btn(namespace, options)
   if settings.secondary
     - btnclass = btnclass + " btn-secondary"
     - btncontainer = btncontainer + " btn-secondary-container"
+  if settings.block
+    - btnclass = btnclass + " btn-block"
+    - btncontainer = btncontainer + " btn-block-container"
 
   table(width="100%", border="0", cellspacing="0", cellpadding="0", mc:hideable)
     tbody
@@ -23,7 +26,7 @@ mixin btn(namespace, options)
             tbody
               tr
                 td(align="center", mc:edit=`${namespace}button`)
-                  a(href="#", target="_blank", class=btnclass)
+                  a(href=settings.url, target="_blank", class=btnclass)
                     <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                     if block
                       block
