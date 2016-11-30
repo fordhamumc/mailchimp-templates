@@ -42,9 +42,9 @@
 @include color-block($base-background, $content-background, $text-color, "Sections", "Default");
 @include color-block($primary-color, $content-background, $text-color, "Sections", "Lead");
 
-@include bp(sm) {
-  .color-block--lead {
-    padding-top: 0 !important;
-    border-top-width: 0 !important;
+.color-block--lead {
+  .webkit {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 }

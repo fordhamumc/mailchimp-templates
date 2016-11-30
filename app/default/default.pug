@@ -1,6 +1,8 @@
 extends ../_layouts/default/default
 include ../_components/buttons/btn
+include ../_components/break/break
 include ../_components/columns/columns
+include ../_components/sectionbottom/sectionbottom
 include ../_components/footer/footer
 include ../_components/eventlist/eventlist
 include ../_components/fullad/fullad
@@ -11,14 +13,24 @@ block style-template
   <!-- /build -->
 
 block body
+  center.wrapper.color-block--lead
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +column("featured", {size: 1, heading: "h3"})
+            p This is some lead copy. It's not much but I want to test some typeset text.
+            +btn("featured", {size: "lg"}) Sign Up
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  +sectionbottom
+
   center.wrapper.color-block--default
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        +column("featured", {size: 1, heading: "h3"})
-          p This is some lead copy. It's not much but I want to test some typeset text.
-          +btn("featured", {size: "lg"}) Sign Up
         tr
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->

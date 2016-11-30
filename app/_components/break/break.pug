@@ -8,10 +8,11 @@ mixin breakrow(hideable, reduce)
     tr(class=cl)
       block
 
-mixin break(line, hideable, reduce)
-  +breakrow(hideable, reduce)
+mixin break(options)
+  - var settings = Object.assign({line: false, hideable: false, reduce: false}, options)
+  +breakrow(settings.hideable, settings.reduce)
     td.break
-      if line
-        div(class=`break-${line}`) &nbsp;
+      if settings.line
+        div(class=`break-${settings.line}`) &nbsp;
       else
         | &nbsp;
