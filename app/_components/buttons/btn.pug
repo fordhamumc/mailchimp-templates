@@ -25,7 +25,7 @@ mixin btn(namespace, options)
           table(class=btncontainer)
             tbody
               tr
-                td(align="center", mc:edit=`${namespace}button`)
+                td.contents(align="center", mc:edit=`${namespace}button`)
                   a(href=settings.url, target="_blank", class=btnclass)
                     <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
                     if block

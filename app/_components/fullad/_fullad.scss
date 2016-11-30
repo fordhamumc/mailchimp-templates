@@ -1,0 +1,64 @@
+// 
+//  Full ad
+//  ---------------------------------
+
+
+/*
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
+.fullad-container {
+  /*@editable*/ background: $primary-color;
+}
+
+/*
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
+.fullad,
+.fullad a {
+  /*@editable*/ color: #ffffff;
+}
+
+.fullad {
+  padding: $container-gutter $container-padding;
+  
+  a {
+    display: block;
+  }
+
+  .column {
+    max-width: $content-area / 3 - $container-padding;
+
+  	.inner {
+      padding: 0;
+  	}
+  }
+
+	.column-2 {
+      max-width: $content-area / 3 * 2 - $container-padding;
+
+  	.inner {
+      padding: $container-padding;
+      padding-left: $container-padding * 2;
+  	}
+  }
+}
+
+@include bp(sm) {
+  .fullad {
+    padding: 0 !important;
+
+    .contents {
+      text-align: center !important;
+    }
+
+    .column .inner {
+      padding-top: $container-gutter !important;
+    }
+  }
+}

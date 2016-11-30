@@ -3,6 +3,7 @@ include ../_components/buttons/btn
 include ../_components/columns/columns
 include ../_components/footer/footer
 include ../_components/eventlist/eventlist
+include ../_components/fullad/fullad
 
 block style-template
   <!-- build:css inline styles/default.css -->
@@ -65,6 +66,17 @@ block body
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
           +eventmore
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +fullad
+        tr
+          +fullad(true)
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
