@@ -15,11 +15,9 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        tr
-          td.inner.contents
-            +column("featured", {size: 1, heading: "h3"})
-              p This is some lead copy. It's not much but I want to test some typeset text.
-              +btn("featured", {size: "lg"}) Sign Up
+        +column("featured", {size: 1, heading: "h3"})
+          p This is some lead copy. It's not much but I want to test some typeset text.
+          +btn("featured", {size: "lg"}) Sign Up
         tr
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->

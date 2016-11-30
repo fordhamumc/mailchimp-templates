@@ -49,6 +49,9 @@ body {
 .webkit {
   max-width: $outer-maxwidth;
   overflow: visible;
+  border-radius: 4px;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 /*
 @tab Page
