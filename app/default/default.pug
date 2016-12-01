@@ -2,6 +2,7 @@ extends ../_layouts/default/default
 include ../_components/buttons/btn
 include ../_components/break/break
 include ../_components/columns/columns
+include ../_components/preheader/preheader
 include ../_components/fullimage/fullimage
 include ../_components/footer/footer
 include ../_components/eventlist/eventlist
@@ -17,6 +18,9 @@ block body
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer(style="background-color: #900028;")
+        tr
+          +preheader
       table.outer
         +fullimage
         +column("featured", {size: 1, heading: "h3", aspect: 0})

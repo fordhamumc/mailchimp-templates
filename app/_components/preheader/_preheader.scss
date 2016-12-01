@@ -1,0 +1,33 @@
+// 
+//  Preheader
+//  ---------------------------------
+
+
+/*
+@tab Header
+@section Preheader
+@tip Set the style for the visible preheader
+*/
+
+.preheader {
+  /*@editable*/ font-size: 11px;
+  /*@editable*/ color: $meta-color;
+  /*@editable*/ text-align: center;
+  /*@editable*/ padding-top: floor($container-gutter / 2);
+}
+
+.preheader-hidden {
+  padding-bottom: $container-gutter;
+}
+
+.preheader-hidden .preheader {
+  display:none !important;
+  visibility:hidden;
+  mso-hide:all;
+  font-size:1px;
+  line-height:1px;
+  max-height:0px;
+  max-width:0px;
+  opacity:0;
+  overflow:hidden;
+}

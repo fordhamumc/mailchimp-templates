@@ -8,7 +8,7 @@
 
 $text-color:                  #444444 !default;
 $primary-color:               #900028 !default;
-$meta-color:                  lighten($text-color, 18%) !default;
+$meta-color:                  #ffffff !default;
 $link-color:                  $primary-color !default;
 
 
@@ -42,7 +42,7 @@ $btn-secondary-color:         lighten($text-color, 7%) !default;
 //---------------------
 
 $footer-background:           $base-background !default;
-$footer-color:                $text-color !default;
+$footer-color:                lighten($text-color, 18%) !default;
 $footer-nav-background:       #5b6f7b !default;
 $footer-nav-color:            #ffffff !default;
 $footer-nav-link-color:       $footer-nav-color !default;

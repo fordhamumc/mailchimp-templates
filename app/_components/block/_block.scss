@@ -19,31 +19,33 @@
   @tip Set the style for the #{$section-lc} block
   */
 
-  .color-block--#{$section-lc} .webkit {
+  .color-block--#{$section-lc} .outer {
     /*@editable*/ background-color: $outer;
   }
 
-  /*
-  @tab #{$tab}
-  @section #{$section} Block Content
-  @tip Set the style for the #{$section-lc} block
-  */
+  @if $text {
+    /*
+    @tab #{$tab}
+    @section #{$section} Block Content
+    @tip Set the style for the #{$section-lc} block
+    */
 
-  .color-block--#{$section-lc} .contents {
-    /*@editable*/ color: $text;
+    .color-block--#{$section-lc} .contents {
+      /*@editable*/
+      color: $text;
+    }
   }
-
 }
 
 
 // Lead (Primary color)
 //---------------------
 
-@include color-block($base-background, $content-background, $text-color, "Sections", "Default");
-@include color-block($primary-color, $content-background, $text-color, "Sections", "Lead");
+@include color-block($base-background, $content-background, false, "Sections", "Default");
+@include color-block($primary-color, $content-background, false, "Sections", "Lead");
 
 .color-block--lead {
-  .webkit {
+  .outer {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
