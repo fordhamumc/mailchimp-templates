@@ -49,6 +49,12 @@
   }
 }
 
+@include bp(md) {
+  .fullad-image {
+    width: 100% !important;
+  }
+}
+
 @include bp(sm) {
   .fullad {
     padding: 0 !important;

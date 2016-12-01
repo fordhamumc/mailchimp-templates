@@ -46,10 +46,8 @@ body {
 
 .webkit {
   max-width: $outer-maxwidth;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 4px;
-  padding-top: 10px;
-  padding-bottom: 15px;
 
   @include bp(md) {
     border-radius: 0;

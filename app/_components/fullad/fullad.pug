@@ -1,7 +1,7 @@
 mixin fullad(imageonly)
   if (imageonly)
     td.inner.contents(mc:edit="fullad-image")
-      img(src='http://placehold.it/945x190', width="630", alt="")
+      img.fullad-image(src='http://placehold.it/945x190', width="630", alt="")
 
   else
     td.container.three-column.fullad
