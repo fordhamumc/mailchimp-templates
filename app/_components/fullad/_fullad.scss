@@ -19,13 +19,18 @@
 @tip Set the style for the full-width ad block
 */
 
-.fullad,
+.fullad .contents,
 .fullad a {
   /*@editable*/ color: #ffffff;
 }
 
+.fullad,
+.fullad-image {
+  background-color: $base-background;
+}
+
 .fullad {
-  padding: $container-gutter $container-padding;
+  padding: $container-gutter ($outer-padding + $container-padding);
   
   a {
     display: block;
@@ -50,7 +55,11 @@
 }
 
 @include bp(md) {
-  .fullad-image {
+  .fullad {
+    padding-left: $container-padding;
+    padding-right: $container-padding;
+  }
+  .fullad-image img {
     width: 100% !important;
   }
 }
@@ -66,5 +75,9 @@
     .column .inner {
       padding-top: $container-gutter !important;
     }
+  }
+  .fullad-image {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

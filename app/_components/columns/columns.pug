@@ -36,7 +36,7 @@ mixin column(namespace, options)
       - var imgheight = Math.floor(imgwidth / settings.aspect)
 
       tr(mc:hideable)
-        td.inner.contents.column-img
+        td.inner.contents(class=`${(settings.fullimage) ? "column-img--solo" :"column-img"}`)
           img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}column-image`)
     if (settings.title || block)
       tr
@@ -44,8 +44,7 @@ mixin column(namespace, options)
           if (settings.title)
             #{settings.heading}(class="column-title", mc:edit=`${namespace}column-title`, mc:hideable) #{settings.title}
           div.textlink(mc:edit=`${namespace}column-desc`, mc:hideable) #{settings.body}
-            if block
-              block
-            else
+            block
+            if (!block)
               | This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
 

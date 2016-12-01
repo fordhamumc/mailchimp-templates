@@ -3,7 +3,6 @@ include ../_components/buttons/btn
 include ../_components/break/break
 include ../_components/columns/columns
 include ../_components/fullimage/fullimage
-include ../_components/sectionbottom/sectionbottom
 include ../_components/footer/footer
 include ../_components/eventlist/eventlist
 include ../_components/fullad/fullad
@@ -18,25 +17,24 @@ block body
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      +fullimage
       table.outer
-        tr
-          +column("featured", {size: 1, heading: "h3", aspect: 0})
-            p This is some lead copy. It's not much but I want to test some typeset text.
-            +btn("featured", {size: "lg"}) Sign Up
+        +fullimage
+        +column("featured", {size: 1, heading: "h3", aspect: 0})
+          p This is some lead copy. It's not much but I want to test some typeset text.
+          +btn("featured", {size: "lg"}) Sign Up
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  +sectionbottom
 
   center.wrapper.color-block--default
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        tr
-          +column("featured", {size: 1, heading: "h3"})
-            p This is some lead copy. It's not much but I want to test some typeset text.
-            +btn("featured", {size: "lg"}) Sign Up
+        +breaksection(bgcolor)
+
+        +column("featured", {size: 1, heading: "h3"})
+          p This is some lead copy. It's not much but I want to test some typeset text.
+          +btn("featured", {size: "lg"}) Sign Up
         tr
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -56,6 +54,8 @@ block body
             +column("featured", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("featured", {size: 6, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        +breaksection(bgcolor)
+          +fullad(true)
         tr
           td.container.three-column.column-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -74,6 +74,8 @@ block body
             +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("featured", {size: 23, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        +breaksection(bgcolor)
+          +fullad
         tr
           td.container.event-list
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -84,17 +86,6 @@ block body
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
           +eventmore
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper
-    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      table.outer
-        tr
-          +fullad
-        tr
-          +fullad(true)
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper

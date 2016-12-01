@@ -18,13 +18,16 @@
 .column-img {
   text-align: center;
   padding-bottom: 0;
+  img {
+    width: 100%;
+  }
 }
 
 @include bp(sm) {
   .column-img,
   .column-img--solo {
     padding-left: 0 !important;
-    padding-right: 0 !important;;
+    padding-right: 0 !important;
   }
 
   .column-img--solo {

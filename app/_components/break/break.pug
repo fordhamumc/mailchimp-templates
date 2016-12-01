@@ -9,10 +9,21 @@ mixin breakrow(hideable, reduce)
       block
 
 mixin break(options)
-  - var settings = Object.assign({line: false, hideable: false, reduce: false}, options)
+  - var settings = Object.assign({line: false, hideable: false, reduce: false, bg: false}, options)
   +breakrow(settings.hideable, settings.reduce)
-    td.break
+    td.break(style=`${(settings.bg) ? 'background-color:' + settings.bg : ''}`)
       if settings.line
         div(class=`break-${settings.line}`) &nbsp;
       else
         | &nbsp;
+
+mixin breaksection(bg)
+  tr
+    td(style=`${(bg) ? 'background-color:' + bg : ''}`)
+      .section-bottom &nbsp;
+  +break({reduce: true, bg: bg})
+  block
+  +break({reduce: true, bg: bg})
+  tr
+    td(style=`${(bg) ? 'background-color:' + bg : ''}`)
+      .section-top &nbsp;

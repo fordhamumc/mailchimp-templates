@@ -61,19 +61,12 @@ body {
 .outer {
   Margin: 0 auto;
   width: 100%;
-  max-width: $content-area;
-  overflow: visible;
 }
 	
 @include bp(md) {
-  .webkit,
-  .outer {
+  .webkit {
 	  max-width: 100% !important;
   }
-}
-
-.inner {
-  padding: $container-gutter $container-padding;
 }
 
 .contents {

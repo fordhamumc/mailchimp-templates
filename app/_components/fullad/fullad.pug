@@ -1,7 +1,7 @@
 mixin fullad(imageonly)
   if (imageonly)
-    td.inner.contents(mc:edit="fullad-image")
-      img.fullad-image(src='http://placehold.it/945x190', width="630", alt="")
+    td.inner.contents.fullad-image(mc:edit="fullad-image")
+      img(src='http://placehold.it/945x190', width="630", alt="")
 
   else
     td.container.three-column.fullad
@@ -25,9 +25,8 @@ mixin fullad(imageonly)
           table(width="100%")
             tr
               td.inner.contents(mc:edit="fullad-content")
-                if block
-                  block
-                else
+                block
+                if (!block)
                   | This is the text of the column. It's not very long, but it's long enough to show typeset text.
 
         <!--[if (gte mso 9)|(IE)]></td></tr><![endif]-->

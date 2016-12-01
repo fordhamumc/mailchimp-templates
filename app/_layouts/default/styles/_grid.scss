@@ -23,9 +23,19 @@
 //---------------------
 
 
+.inner {
+	padding: $container-gutter $outer-padding+$container-padding;
+}
+
 .container {
 	font-size: 0;
 	text-align: center;
+	padding: 0 $outer-padding;
+
+	.inner {
+		padding-left: $container-padding;
+		padding-right: $container-padding;
+	}
 }
 
 .column,
@@ -37,6 +47,14 @@
 }
 
 @include bp(md) {
+	.container {
+		padding: 0;
+	}
+	.inner {
+		padding-left: $container-padding;
+		padding-right: $container-padding;
+	}
+
 	.column img,
 	.column-2 img {
 		width: auto !important;
