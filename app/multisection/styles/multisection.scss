@@ -1,0 +1,31 @@
+// Base style overrides
+//---------------------
+
+$base-background:             #F3F3F5;
+$aside-background:            $base-background;
+$content-background:          #ffffff;
+$content-border-width:        0px;
+$btn-secondary-background:    #ffffff;
+
+
+// Default styles
+//-------------------
+
+@import "base";
+
+
+// Components
+//-------------------
+
+@import "sectionwrappers",
+        "break",
+        "preheader",
+        "masthead",
+        "colorblocks",
+        "leadstory",
+        "buttons",
+        "sectionheader",
+        "articlelist",
+        "column",
+        "eventlist",
+        "footer";

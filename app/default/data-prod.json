@@ -4,84 +4,113 @@
   "bgcolor": "#F3F3F5",
   "contact": "alumnioffice@fordham.edu",
   "mastheadtop": {
-    "alt": "Fordham University",
+    "alt": "Fordham",
     "size": 168,
-    "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d13bad7e-ca10-42ab-9563-b0ec8843403f.png"
+    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d13bad7e-ca10-42ab-9563-b0ec8843403f.png"
   },
   "mastheads": [
+
     {
       "url": "http://fordham.edu"
     },
     {
-      "name": "gabelli",
-      "alt": "Gabelli School of Business",
-      "size": 232,
       "url": "http://fordham.edu/gabelli",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a881c0d9-4f79-4292-8cfe-8308d194926c.png"
+      "images": [{
+        "alt": "Gabelli School of Business",
+        "size": 232,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a881c0d9-4f79-4292-8cfe-8308d194926c.png"
+      }]
     },
     {
-      "name": "fclc",
-      "alt": "Fordham College at Lincoln Center",
-      "size": 306,
       "url": "http://fordham.edu/fclc",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/8e4cd736-9276-4bc9-a556-6d30585645d5.png"
+      "images": [{
+        "alt": "College at Lincoln Center",
+        "size": 306,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/8e4cd736-9276-4bc9-a556-6d30585645d5.png"
+      }]
     },
     {
-      "name": "fcrh",
-      "alt": "Fordham College at Rose Hill",
-      "size": 256,
       "url": "http://fordham.edu/fcrh",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d1b9bf30-71bf-458a-9eab-c3dbbe555eff.png"
+      "images": [{
+        "alt": "College at Rose Hill",
+        "size": 256,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d1b9bf30-71bf-458a-9eab-c3dbbe555eff.png"
+      }]
     },
     {
-      "name": "gre",
-      "alt": "Graduate School of Religion",
-      "size": 248,
-      "secondary": true,
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/4452296e-6f84-4785-877d-74cd395a1116.png",
-      "alt2": "and Religious Education",
-      "size2": 218,
       "url": "http://fordham.edu/gre",
-      "image2": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/735bf126-9d93-4df6-ae3b-25ff8147cfe5.png"
+      "images": [
+        {
+          "alt": "Graduate School of Religion",
+          "size": 248,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/4452296e-6f84-4785-877d-74cd395a1116.png"
+        },
+        {
+          "alt": "and Religious Education",
+          "size": 218,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/735bf126-9d93-4df6-ae3b-25ff8147cfe5.png"
+        }
+      ]
     },
     {
-      "name": "gsas",
-      "alt": "Graduate School of Arts and Sciences",
-      "size": 328,
       "url": "http://fordham.edu/gsas",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e8824f6b-4949-4b16-9e22-04475b81b46b.png"
+      "images": [{
+        "alt": "Graduate School of Arts and Sciences",
+        "size": 328,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e8824f6b-4949-4b16-9e22-04475b81b46b.png"
+      }]
     },
     {
-      "name": "gse",
-      "alt": "Graduate School of Education",
-      "size": 262,
       "url": "http://fordham.edu/gse",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/578ff293-b124-44a4-b9f6-0bf78e1022a6.png"
+      "images": [{
+        "alt": "Graduate School of Education",
+        "size": 262,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/578ff293-b124-44a4-b9f6-0bf78e1022a6.png"
+      }]
     },
     {
-      "name": "gss",
-      "alt": "Graduate School of Social Service",
-      "size": 295,
       "url": "http://fordham.edu/gss",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/04cdd187-b30c-4288-95a0-a46f1097945b.png"
+      "images": [{
+        "alt": "Graduate School of Social Service",
+        "size": 295,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/04cdd187-b30c-4288-95a0-a46f1097945b.png"
+      }]
     },
     {
-      "name": "law",
-      "alt": "School of Law",
-      "size": 123,
       "url": "http://fordham.edu/law",
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9ca5b613-a465-458c-8413-f2655b40ec68.png"
+      "images": [{
+        "alt": "School of Law",
+        "size": 123,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9ca5b613-a465-458c-8413-f2655b40ec68.png"
+      }]
     },
     {
-      "name": "pcs",
-      "alt": "School of Professional",
-      "size": 197,
-      "secondary": true,
-      "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1239ea35-46d4-4081-ab30-916074945258.png",
-      "alt2": "and Continuing Studies",
-      "size2": 210,
       "url": "http://fordham.edu/pcs",
-      "image2": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/f64bfc6b-a94f-411b-8047-b3bf6e767a39.png"
+      "images": [
+        {
+          "alt": "School of Professional",
+          "size": 197,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1239ea35-46d4-4081-ab30-916074945258.png"
+        },
+        {
+          "alt": "and Continuing Studies",
+          "size": 210,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/f64bfc6b-a94f-411b-8047-b3bf6e767a39.png"
+        }
+      ]
+    },
+    {
+      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
+      "top": {
+        "alt": "Marymount College of Fordham University",
+        "size": 321,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/becedd2f-38f5-49bb-be70-d931fd4952f2.png"
+      }
+    },
+    {
+      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
+      "dual": "Alumni News: October 2016"
+
     }
   ],
   "articles": [

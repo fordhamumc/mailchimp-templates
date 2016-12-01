@@ -1,0 +1,31 @@
+include ../columns/columns
+
+mixin mastheadimage(options)
+  - var top = Object.assign({}, mastheadtop, options.top)
+  a(href=options.url, target="_blank")
+    img(src=top.src, width=top.size, alt=`| ${top.alt}`, style=`max-width:  ${top.size}px`)
+    if options.images
+      br
+      img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width=top.size, alt='', style=`max-width:  ${top.size}px`)
+      br
+      each image in options.images
+        img(src=image.src, width=image.size, alt=`| ${image.alt}`, style=`max-width:  ${image.size}px`)
+
+mixin masthead(options)
+  if (options.dual)
+    tr
+      td.container.sixty-forty-column.masthead-dual
+        <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+        +column("masthead", {size: 4, aspect: 0, title: false})
+          +mastheadimage(options)
+        +column("masthead", {size: 6, aspect: 0, title: false}) #{options.dual}
+
+        <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+  else
+    tr
+      td.inner.contents.masthead
+        +mastheadimage(options)
+
+
+
+

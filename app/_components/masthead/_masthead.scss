@@ -1,0 +1,46 @@
+//
+//  Masthead
+//  ---------------------------------
+
+
+.masthead {
+  text-align: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.masthead-dual {
+  .column, .column-2 {
+    vertical-align: bottom;
+  }
+  .column-2 .contents {
+    line-height: 1;
+    text-align: right;
+  }
+
+  .textlink {
+    color: #ffffff;
+  }
+}
+
+@include bp(md) {
+  .masthead-dual .column img {
+    max-width: 168px !important;
+  }
+}
+
+@include bp(sm) {
+  .masthead-dual {
+    .column .inner {
+      padding-bottom: 0 !important;
+    }
+    .column-2 .inner {
+      padding-top: 15px !important;
+    }
+    .contents {
+      text-align: center !important;
+    }
+  }
+}
