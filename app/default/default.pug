@@ -4,6 +4,7 @@ include ../_components/break/break
 include ../_components/columns/columns
 include ../_components/preheader/preheader
 include ../_components/articlelist/articlelist
+include ../_components/sectionheader/sectionheader
 include ../_components/fullimage/fullimage
 include ../_components/masthead/masthead
 include ../_components/footer/footer
@@ -39,7 +40,8 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
         +breaksection(bgcolor)
-
+        tr
+          +sectionheader
         +column("featured", {size: 1, heading: "h3"})
           p This is some lead copy. It's not much but I want to test some typeset text.
           +btn("featured", {size: "lg"}) Sign Up

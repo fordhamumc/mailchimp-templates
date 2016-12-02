@@ -1,0 +1,6 @@
+mixin sectionheader(namespace)
+  - namespace = (namespace) ? namespace + '-' : ''
+  td.inner.contents.section-header(mc:edit=`${namespace}sectionheader`)
+    block
+    if (!block)
+      | Section Header

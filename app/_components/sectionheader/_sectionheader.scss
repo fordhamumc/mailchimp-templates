@@ -1,0 +1,30 @@
+//
+//  Section header
+//  ---------------------------------
+
+
+.section-header {
+  font-weight: $font-weight-bold;
+  text-align: left;
+  text-transform: uppercase;
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header,
+.section-header a {
+  /*@editable*/ color: $meta-color;
+}
+
+@include bp(sm) {
+  .section-header {
+    text-align: center !important;
+  }
+}
