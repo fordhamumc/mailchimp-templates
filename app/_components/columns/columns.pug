@@ -1,9 +1,7 @@
 mixin column-container(size, container)
   - var cl = (size === 23 || size === 6) ? "column-2" : "column"
   if size > 1
-    <!--[if (gte mso 9)|(IE)]>
-    td(width=container, valign="top")
-    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
     div(class=cl)
       table(width='100%')
         block

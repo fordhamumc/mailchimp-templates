@@ -14,20 +14,14 @@ mixin mastheadimage(options)
 mixin masthead(options)
   if (options.dual)
     td.container.sixty-forty-column.masthead-dual
-      <!--[if (gte mso 9)|(IE)]><table width="100%"><tr>
-      <!--[if (gte mso 9)|(IE)]>
-      td(width=Math.floor(width * .4), valign="bottom")
-      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{Math.floor(width * .4)}" valign="bottom"><![endif]-->
       .column
         table(width='100%')
           tr
             td.inner.contents
               +mastheadimage(options)
 
-      <!--[if (gte mso 9)|(IE)]></td><![endif]-->
-      <!--[if (gte mso 9)|(IE)]>
-      td(width=Math.floor(width * .6), valign="bottom")
-      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]></td><td width="#{Math.floor(width * .6)}" valign="bottom"><![endif]-->
       .column-2
         table(width='100%')
           tr

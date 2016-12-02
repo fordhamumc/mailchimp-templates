@@ -5,9 +5,7 @@ mixin eventlist(namespace, options)
   - settings.rsvp = settings.rsvp || settings.url
 
   .event
-    <!--[if (gte mso 9)|(IE)]><table width="100%"><tr>
-    td(width=`${width / 3}`)
-    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{width / 3}" valign="top"><![endif]-->
     .column.event-image
       table(width='100%')
         tr
@@ -15,9 +13,7 @@ mixin eventlist(namespace, options)
             a(href=settings.url, target="_blank")
               img(src=settings.img, width="190", alt="", mc:edit=`${namespace}event-image`)
 
-    <!--[if (gte mso 9)|(IE)]></td>
-    td(width=`${width / 2}`)
-    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 2}" valign="top"><![endif]-->
     .column.event-description
       table(width='100%')
         tr
@@ -29,9 +25,7 @@ mixin eventlist(namespace, options)
               if (!block)
                 a(href=settings.url, target="_blank") October 1 | Lincoln Center Campus
 
-    <!--[if (gte mso 9)|(IE)]></td>
-    td(width=`${width / 6}`)
-    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 6}" valign="top"><![endif]-->
     .column.event-rsvp
       table(width='100%')
         tr
