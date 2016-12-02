@@ -3,6 +3,7 @@ include ../_components/buttons/btn
 include ../_components/break/break
 include ../_components/columns/columns
 include ../_components/preheader/preheader
+include ../_components/articlelist/articlelist
 include ../_components/fullimage/fullimage
 include ../_components/masthead/masthead
 include ../_components/footer/footer
@@ -48,6 +49,11 @@ block body
             +column("featured", {fullimage: true})
             +column("featured", {fullimage: true})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          +article-list--container
+            +article-list--item
+            +article-list--item
+            +article-list--item
         tr
           td.container.three-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
