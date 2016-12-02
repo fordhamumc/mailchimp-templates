@@ -1,33 +1,38 @@
+include ../break/break
+
 mixin fullad(imageonly)
-  if (imageonly)
-    td.inner.contents.fullad-image(mc:edit="fullad-image")
-      img(src='http://placehold.it/945x190', width="630", alt="")
+  +breaksection(bgcolor)
+    table(width="100%")
+      tr
+        if (imageonly)
+          td.inner.contents.fullad-image(mc:edit="fullad-image")
+            img(src='http://placehold.it/945x190', width="630", alt="")
 
-  else
-    td.container.three-column.fullad
-      .fullad-container
-        <!--[if (gte mso 9)|(IE)]><table width="100%" bgcolor="#900028"><![endif]-->
-        <!--[if (gte mso 9)|(IE)]><tr>
-        td(width=`${(width-30) / 3}`, valign="top")
-        <![endif]-->
+        else
+          td.container.three-column.fullad
+            .fullad-container
+              <!--[if (gte mso 9)|(IE)]><table width="100%" bgcolor="#900028"><![endif]-->
+              <!--[if (gte mso 9)|(IE)]><tr>
+              td(width=`${(width-30) / 3}`, valign="top")
+              <![endif]-->
 
-        .column
-          table(width="100%")
-            tr
-              td.inner.contents
-                img(mc:edit="fullad-image", src='http://placehold.it/285x190', width="205", alt="")
+              .column
+                table(width="100%")
+                  tr
+                    td.inner.contents
+                      img(mc:edit="fullad-image", src='http://placehold.it/285x190', width="205", alt="")
 
-        <!--[if (gte mso 9)|(IE)]></td>
-        td(width=`${(width-30) / 3 * 2}`, valign="top")
-        <![endif]-->
+              <!--[if (gte mso 9)|(IE)]></td>
+              td(width=`${(width-30) / 3 * 2}`, valign="top")
+              <![endif]-->
 
-        .column-2
-          table(width="100%")
-            tr
-              td.inner.contents(mc:edit="fullad-content")
-                block
-                if (!block)
-                  | This is the text of the column. It's not very long, but it's long enough to show typeset text.
+              .column-2
+                table(width="100%")
+                  tr
+                    td.inner.contents(mc:edit="fullad-content")
+                      block
+                      if (!block)
+                        | This is the text of the column. It's not very long, but it's long enough to show typeset text.
 
-        <!--[if (gte mso 9)|(IE)]></td></tr><![endif]-->
-        <!--[if (gte mso 9)|(IE)]></table><![endif]-->
+              <!--[if (gte mso 9)|(IE)]></td></tr><![endif]-->
+              <!--[if (gte mso 9)|(IE)]></table><![endif]-->

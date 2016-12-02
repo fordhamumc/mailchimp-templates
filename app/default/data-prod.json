@@ -11,9 +11,17 @@
   "mastheads": [
 
     {
+      "variant": "Fordham",
       "url": "http://fordham.edu"
     },
     {
+      "variant": "Fordham with Title",
+      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
+      "dual": "Alumni News: October 2016"
+
+    },
+    {
+      "variant": "Gabelli",
       "url": "http://fordham.edu/gabelli",
       "images": [{
         "alt": "Gabelli School of Business",
@@ -22,6 +30,7 @@
       }]
     },
     {
+      "variant": "FCLC",
       "url": "http://fordham.edu/fclc",
       "images": [{
         "alt": "College at Lincoln Center",
@@ -30,6 +39,7 @@
       }]
     },
     {
+      "variant": "FCRH",
       "url": "http://fordham.edu/fcrh",
       "images": [{
         "alt": "College at Rose Hill",
@@ -38,6 +48,7 @@
       }]
     },
     {
+      "variant": "GRE",
       "url": "http://fordham.edu/gre",
       "images": [
         {
@@ -53,6 +64,7 @@
       ]
     },
     {
+      "variant": "GSAS",
       "url": "http://fordham.edu/gsas",
       "images": [{
         "alt": "Graduate School of Arts and Sciences",
@@ -61,6 +73,7 @@
       }]
     },
     {
+      "variant": "GSE",
       "url": "http://fordham.edu/gse",
       "images": [{
         "alt": "Graduate School of Education",
@@ -69,6 +82,7 @@
       }]
     },
     {
+      "variant": "GSS",
       "url": "http://fordham.edu/gss",
       "images": [{
         "alt": "Graduate School of Social Service",
@@ -77,6 +91,7 @@
       }]
     },
     {
+      "variant": "LAW",
       "url": "http://fordham.edu/law",
       "images": [{
         "alt": "School of Law",
@@ -85,6 +100,7 @@
       }]
     },
     {
+      "variant": "PCS",
       "url": "http://fordham.edu/pcs",
       "images": [
         {
@@ -100,17 +116,13 @@
       ]
     },
     {
+      "variant": "MC",
       "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
       "top": {
         "alt": "Marymount College of Fordham University",
         "size": 321,
         "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/becedd2f-38f5-49bb-be70-d931fd4952f2.png"
       }
-    },
-    {
-      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
-      "dual": "Alumni News: October 2016"
-
     }
   ],
   "articles": [

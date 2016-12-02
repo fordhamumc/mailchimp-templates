@@ -1,0 +1,23 @@
+// 
+//  Lead Story
+//  ---------------------------------
+
+
+.leadstory .inner {
+  padding-bottom: 0;
+  text-align: center;
+
+  @include bp(sm) {
+    text-align: left !important;
+  }
+}
+
+.leadstory h1 {
+  Margin-bottom: 0;
+  color: $link-color;
+}
+
+.leadstory h3 {
+  font-size: floor($font-size-base * 1.60);
+  Margin-top: floor($line-height-computed / 3);
+}

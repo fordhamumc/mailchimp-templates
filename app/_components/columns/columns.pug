@@ -11,9 +11,21 @@ mixin column-container(size, container)
   else
     block
 
+mixin column-row(size, hideable)
+  if size > 1
+    if hideable
+      tr(mc:hideable)
+        block
+    else
+      tr
+        block
+  else
+    block
+
+
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title"}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, button: false, buttontext: "Sign Up", editable: true}, options)
 
   - var padding = 15
   - var container
@@ -35,16 +47,19 @@ mixin column(namespace, options)
         - imgwidth = Math.floor(460 * 1.5)
       - var imgheight = Math.floor(imgwidth / settings.aspect)
 
-      tr(mc:hideable)
-        td.inner.contents(class=`${(settings.fullimage) ? "column-img--solo" :"column-img"}`)
-          img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}column-image`)
-    if (settings.title || block)
-      tr
-        td.inner.contents
+      +column-row(settings.size, true)
+        td.inner.contents(class=`${(!settings.title && !settings.body) ? "column-img--solo" :"column-img"}`)
+          img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
+    if (settings.title || settings.body)
+      +column-row(settings.size)
+        td.inner.contents(dir="ltr")
           if (settings.title)
-            #{settings.heading}(class="column-title", mc:edit=`${namespace}column-title`, mc:hideable) #{settings.title}
-          div.textlink(mc:edit=`${namespace}column-desc`, mc:hideable) #{settings.body}
+            #{settings.heading}(class="column-title", mc:edit=`${namespace}title`, mc:hideable) #{settings.title}
+          div.textlink(mc:edit=`${namespace}desc`, mc:hideable)
             block
             if (!block)
-              | This is the text of the column. It's not very long, but it's long enough to show typeset text. Eventually I'll do longer text, but this is just a test.
+              | This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
+          if (settings.button)
+            br
+            +btn("lead", {size: settings.button}) #{settings.buttontext}
 

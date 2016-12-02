@@ -27,12 +27,49 @@ block body
         tr
           +preheader
         each masthead in mastheads
-          +masthead(masthead)
+          tr(mc:repeatable="masthead", mc:variant=masthead.variant)
+            +masthead(masthead)
       table.outer
-        +fullimage
-        +column("featured", {size: 1, heading: "h3", aspect: 0})
-          p This is some lead copy. It's not much but I want to test some typeset text.
-          +btn("featured", {size: "lg"}) Sign Up
+        tr.leadstory(mc:repeatable="lead", mc:variant="Title")
+          +column("lead", {size: 1, heading: "h1", aspect: 0})
+            h3 Tuesday, November 29
+            .lead
+              strong Fordham Law School
+              br
+              | 150 West 62nd Street, New York, N.Y.
+        tr(mc:repeatable="lead", mc:variant="Break")
+          +break
+        tr(mc:repeatable="lead", mc:variant="Full-width Image")
+          +fullimage("lead")
+        tr(mc:repeatable="lead", mc:variant="Image")
+          +column("lead", {size: 1, title: false, body: false})
+        tr(mc:repeatable="lead", mc:variant="Content")
+          +column("lead", {size: 1, title: false, aspect: 0, button: 'lg'})
+            .lead This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
+        tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (left image)")
+          td.container.sixty-forty-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 6, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (right image)")
+          td.container.sixty-forty-column(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 6, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (left image)")
+          td.container.three-column.column-img-full
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 23, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (right image)")
+          td.container.three-column.column-img-full(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 23, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 
@@ -41,68 +78,73 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        +breaksection(bgcolor)
         tr
-          +sectionheader
-        +column("featured", {size: 1, heading: "h3"})
-          p This is some lead copy. It's not much but I want to test some typeset text.
-          +btn("featured", {size: "lg"}) Sign Up
-        tr
+          +breaksection(bgcolor)
+        tr(mc:repeatable="body", mc:variant="One Column Image")
+          +column("column", {size: 1, title: false, body: false})
+        tr.column-textonly(mc:repeatable="body", mc:variant="One Column Content")
+          +column("column", {size: 1, title: false, aspect: 0})
+        tr(mc:repeatable="body", mc:variant="Two Columns")
           td.container.two-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {fullimage: true})
-            +column("featured", {fullimage: true})
+            +column("column", {fullimage: true})
+            +column("column-2", {fullimage: true})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr
-          +article-list--container
-            +article-list--item
-            +article-list--item
-            +article-list--item
-        tr
+        tr(mc:repeatable="body", mc:variant="Three Columns")
           td.container.three-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
-            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
-            +column("featured", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
+            +column("column", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
+            +column("column-2", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
+            +column("column-3", {size: 3, aspect: 1.5, title: false}) This is a short bit of copy for the three-column layout.
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (left image)")
           td.container.sixty-forty-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("featured", {size: 6, aspect: false, heading: "h3"})
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 6, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        +breaksection(bgcolor)
-          +fullad(true)
-        tr
-          td.container.three-column.column-img-full
-            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("featured", {size: 23, aspect: false, heading: "h3"})
-            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (right image)")
           td.container.sixty-forty-column(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("featured", {size: 6, aspect: false, heading: "h3"})
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 6, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
+          td.container.three-column.column-img-full
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, heading: "h3"})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
           td.container.three-column.column-img-full(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("featured", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("featured", {size: 23, aspect: false, heading: "h3"})
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, heading: "h3"})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        +breaksection(bgcolor)
-          +fullad
-        tr
+        tr(mc:repeatable="body", mc:variant="Section Header")
+          +sectionheader("column")
+        tr(mc:repeatable="body", mc:variant="Article List")
+          +article-list--container
+            +article-list--item("body")
+        tr(mc:repeatable="body", mc:variant="Event List")
           td.container.event-list
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +eventlist
-            +eventlist
-            +eventlist
-            +eventlist
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr
+        tr(mc:repeatable="body", mc:variant="Event More Link")
           +eventmore
+        tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
+          +fullad
+        tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
+          +fullad(true)
+        tr(mc:repeatable="body", mc:variant="Section Break")
+          +breaksection
+        tr(mc:repeatable="body", mc:variant="Break")
+          +break
+        tr(mc:repeatable="body", mc:variant="Break (dashed line)")
+          +break({line: "dashed"})
+        tr(mc:repeatable="body", mc:variant="Break (small solid line)")
+          +break({line: "small"})
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
@@ -110,7 +152,8 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        +break
+        tr
+          +break
         tr
           +social(socialnetworks)
         tr
