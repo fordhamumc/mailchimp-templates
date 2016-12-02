@@ -1,0 +1,16 @@
+// Tagline
+//---------------------
+
+.tagline {
+  text-align: center;
+  padding-bottom: 0;
+  
+  img {
+    max-width: 270px;
+    overflow: visible;
+    @include bp() {
+      width: 100% !important;
+      max-width: 270px !important;
+    }
+  }
+}

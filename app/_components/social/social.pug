@@ -1,0 +1,8 @@
+mixin social(networks)
+  td.contents.inner.social(mc:edit="social")
+    each network in networks
+      = "\n"
+      |  &nbsp;
+      a(href=network.link, target="_blank")
+        img(src=network.image, width="30", alt=network.name, title=network.name)
+      |  &nbsp;
