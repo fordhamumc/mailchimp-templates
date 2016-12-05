@@ -48,11 +48,11 @@
 
 @include bp(md) {
 	.container {
-		padding: 0;
+		padding: 0 !important;
 	}
 	.inner {
-		padding-left: $container-padding;
-		padding-right: $container-padding;
+		padding-left: $container-padding !important;
+		padding-right: $container-padding !important;
 	}
 
 	.column img,

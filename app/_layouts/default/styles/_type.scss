@@ -39,12 +39,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: $headings-font-weight;
 }
 
-h1, h2 {
-  line-height: 1.2;
-}
-
-h4, h5, h6 {
-  line-height: 1.5;
+h1, h2, h3 {
+  line-height: 1.4;
 }
 
 /*
@@ -84,7 +80,6 @@ h3 {
   /*@editable*/ font-size: ceil($font-size-base * 1.70);
   /*@editable*/ Margin-top: 0;
   /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
-  line-height: 1.4;
 }
 
 /*
@@ -98,6 +93,7 @@ h4 {
   /*@editable*/ font-size: ceil($font-size-base * 1.25);
   /*@editable*/ Margin-top: 0;
   /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
+  line-height: 1.5;
 }
 
 /*

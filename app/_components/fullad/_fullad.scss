@@ -24,11 +24,6 @@
   /*@editable*/ color: #ffffff;
 }
 
-.fullad,
-.fullad-image {
-  background-color: $base-background;
-}
-
 .fullad {
   padding: $container-gutter ($outer-padding + $container-padding);
   
@@ -56,8 +51,8 @@
 
 @include bp(md) {
   .fullad {
-    padding-left: $container-padding;
-    padding-right: $container-padding;
+    padding-left: $container-padding !important;
+    padding-right: $container-padding !important;
   }
   .fullad-image img {
     width: 100% !important;

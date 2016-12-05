@@ -1,5 +1,6 @@
-mixin preheader
-  td.inner.contents.preheader(mc:edit="preheader")
-    block
-    if (!block)
-      | Preheader goes here. Think of it as a second subject.
+mixin preheader(hidden)
+  td.inner.contents.preheader-container(mc:edit="preheader", class=`${(hidden) ? "preheader-hidden" : ""}`)
+    .preheader
+      block
+      if (!block)
+        | Preheader goes here. Think of it as a second subject.

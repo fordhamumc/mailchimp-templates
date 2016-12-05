@@ -24,8 +24,10 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer(style="background-color: #900028;")
-        tr
+        tr(mc:repeatable="preheader", mc:variant="Visible Preheader")
           +preheader
+        tr(mc:repeatable="preheader", mc:variant="Hidden Preheader")
+          +preheader(true)
         each masthead in mastheads
           tr(mc:repeatable="masthead", mc:variant=masthead.variant)
             +masthead(masthead)
@@ -78,8 +80,6 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        tr
-          +breaksection(bgcolor)
         tr(mc:repeatable="body", mc:variant="One Column Image")
           +column("column", {size: 1, title: false, body: false})
         tr.column-textonly(mc:repeatable="body", mc:variant="One Column Content")
@@ -126,6 +126,8 @@ block body
         tr(mc:repeatable="body", mc:variant="Article List")
           +article-list--container
             +article-list--item("body")
+            +article-list--more("body")
+
         tr(mc:repeatable="body", mc:variant="Event List")
           td.container.event-list
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -133,18 +135,20 @@ block body
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Event More Link")
           +eventmore
-        tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
+        tr(mc:repeatable="body", mc:variant="Ad (with text)")
           +fullad
         tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
           +fullad(true)
         tr(mc:repeatable="body", mc:variant="Section Break")
-          +breaksection
+          +breaksection(bgcolor)
         tr(mc:repeatable="body", mc:variant="Break")
           +break
         tr(mc:repeatable="body", mc:variant="Break (dashed line)")
           +break({line: "dashed"})
         tr(mc:repeatable="body", mc:variant="Break (small solid line)")
           +break({line: "small"})
+        tr
+          td &nbsp;
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper

@@ -44,6 +44,12 @@
 @include color-block($base-background, $content-background, false, "Sections", "Default");
 @include color-block($primary-color, $content-background, false, "Sections", "Lead");
 
+.color-block--default {
+  .outer {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+}
 .color-block--lead {
   .outer {
     border-bottom-left-radius: 0px;

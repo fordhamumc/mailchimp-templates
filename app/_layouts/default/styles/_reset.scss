@@ -60,7 +60,7 @@ body {
   overflow: hidden;
 
   @include bp(md) {
-    border-radius: 0;
+    border-radius: 0 !important;
   }
 }
 	

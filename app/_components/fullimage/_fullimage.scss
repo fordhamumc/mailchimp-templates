@@ -6,10 +6,13 @@
 .fullimage {
   max-width: 100%;
   padding: 0;
-  padding-right: 0;
 
   img {
     display: block;
     width: 100%;
+  }
+
+  @include bp(md) {
+    padding: 0 !important;
   }
 }

@@ -3,6 +3,10 @@
 //  ---------------------------------
 
 
+.preheader-container {
+  padding-top: floor($container-gutter / 2);
+  padding-bottom: 0;
+}
 /*
 @tab Header
 @section Preheader
@@ -13,12 +17,6 @@
   /*@editable*/ font-size: 11px;
   /*@editable*/ color: $preheader-color;
   /*@editable*/ text-align: center;
-  /*@editable*/ padding-top: floor($container-gutter / 2);
-  padding-bottom: 0;
-}
-
-.preheader-hidden {
-  padding-bottom: $container-gutter;
 }
 
 .preheader-hidden .preheader {

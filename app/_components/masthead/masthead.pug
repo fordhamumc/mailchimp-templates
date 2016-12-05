@@ -25,7 +25,7 @@ mixin masthead(options)
       .column-2
         table(width='100%')
           tr
-            td.inner.contents #{options.dual}
+            td.inner.contents(mc:edit="masthead-content") #{options.dual}
 
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   else
