@@ -10,8 +10,7 @@ mixin eventlist(namespace, options)
       table(width='100%')
         tr
           td.inner
-            a(href=settings.url, target="_blank")
-              img(src=settings.img, width="190", alt="", mc:edit=`${namespace}event-image`)
+            img(src=settings.img, width="190", alt="", mc:edit=`${namespace}event-image`)
 
     <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 2}" valign="top"><![endif]-->
     .column.event-description
@@ -32,6 +31,7 @@ mixin eventlist(namespace, options)
           td.inner
             +btn(`${namespace}event-btn`, {size: "sm", secondary: true, block: true, url: settings.rsvp}) RSVP
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    .break &nbsp;
     .event-hr
 
 mixin eventmore(namespace)
@@ -40,3 +40,4 @@ mixin eventmore(namespace)
     block
     if (!block)
       a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.
+      .break &nbsp;

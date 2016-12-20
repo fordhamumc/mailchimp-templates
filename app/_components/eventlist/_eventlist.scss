@@ -14,27 +14,14 @@
   @include column-width($content-area / 6);
 }
 
-.event-image,
-.event-description,
-.event-rsvp {
-  .inner {
-    padding-bottom: $container-gutter;
-  }
-}
-
 .event-list--nomore .event:last-child .event-hr {
-  border: 0;
+  border: 0 !important;
 }
 
 @include bp(sm) {
   
   .event-description .contents {
     text-align: center !important;
-  }  
-  
-  .event-description .inner {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
   }
   
   .container .event-rsvp {

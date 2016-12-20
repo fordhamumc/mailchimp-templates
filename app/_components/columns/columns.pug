@@ -23,7 +23,7 @@ mixin column-row(size, hideable)
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, button: false, buttontext: "Sign Up", editable: true, textlink: false}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, button: false, buttontext: "Sign Up", editable: true, textlink: false, break: true}, options)
 
   - var padding = 15
   - var container
@@ -48,6 +48,8 @@ mixin column(namespace, options)
       +column-row(settings.size, true)
         td.inner.contents(class=`${(!settings.title && !settings.body) ? "column-img--solo" :"column-img"}`)
           img(src=`http://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
+          if (!settings.title && !settings.body && settings.size === 4)
+            small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
     if (settings.title || settings.body)
       +column-row(settings.size)
         td.inner.contents(dir="ltr")
@@ -60,4 +62,6 @@ mixin column(namespace, options)
           if (settings.button)
             br
             +btn("lead", {size: settings.button}) #{settings.buttontext}
+          if (settings.break)
+            .break(mc:hideable) &nbsp;
 

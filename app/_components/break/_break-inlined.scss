@@ -2,9 +2,18 @@
 //  Break
 //  ---------------------------------
 
-.break {
+.break,
+.break-container {
   line-height: $container-gutter;
   height: $container-gutter;
+}
+
+.break {
+  width: 90px;
+  margin: 0 auto;
+}
+
+.break-container {
   padding: 0 $container-padding;
   text-align: center;
 }
@@ -16,12 +25,12 @@
 .break-solid {
   border-top: 1px solid $content-border-color;
 }
+
 .break-small {
   border-top: 2px solid darken($content-border-color, 10%);
   display: inline-block;
   width: 100px;
 }
-
 
 
 //

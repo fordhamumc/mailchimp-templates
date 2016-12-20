@@ -28,7 +28,7 @@
 @tip Set the link color and style
 */
 
-a {
+a, .link {
   /*@editable*/ color: $link-color;
   /*@editable*/ text-decoration: none;
 }

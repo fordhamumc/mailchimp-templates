@@ -45,36 +45,40 @@ block body
         tr(mc:repeatable="lead", mc:variant="Full-width Image")
           +fullimage("lead")
         tr(mc:repeatable="lead", mc:variant="Image")
-          +column("lead", {size: 1, title: false, body: false})
+          +column("lead", {size: 1, title: false, body: false, break: false})
         tr(mc:repeatable="lead", mc:variant="Content")
           +column("lead", {size: 1, title: false, aspect: 0})
             .lead This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
         tr(mc:repeatable="lead", mc:variant="Call to Action")
-          td.inner.contents
+          td.inner.contents(style="padding-top: 0")
             +btn("lead", {size: 'lg'})
         tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (left image)")
           td.container.sixty-forty-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("lead", {size: 6, aspect: false, heading: "h3"})
+            +column("lead", {size: 6, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (right image)")
           td.container.sixty-forty-column(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("lead", {size: 6, aspect: false, heading: "h3"})
+            +column("lead", {size: 6, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (left image)")
           td.container.three-column.column-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("lead", {size: 23, aspect: false, heading: "h3"})
+            +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (right image)")
           td.container.three-column.column-img-full(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("lead", {size: 23, aspect: false, heading: "h3"})
+            +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -105,25 +109,29 @@ block body
           td.container.sixty-forty-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("column-2", {size: 6, aspect: false, heading: "h3"})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (right image)")
           td.container.sixty-forty-column(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("column-2", {size: 6, aspect: false, heading: "h3"})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
           td.container.three-column.column-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("column-2", {size: 23, aspect: false, heading: "h3"})
+            +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
           td.container.three-column.column-img-full(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
-            +column("column-2", {size: 23, aspect: false, heading: "h3"})
+            +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Section Header")
           +sectionheader("column")
