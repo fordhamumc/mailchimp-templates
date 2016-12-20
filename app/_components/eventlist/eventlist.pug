@@ -31,6 +31,7 @@ mixin eventlist(namespace, options)
         tr
           td.inner
             +btn(`${namespace}event-btn`, {size: "sm", secondary: true, block: true, url: settings.rsvp}) RSVP
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     .event-hr
 
 mixin eventmore(namespace)

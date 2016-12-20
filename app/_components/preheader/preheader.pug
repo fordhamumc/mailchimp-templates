@@ -1,6 +1,6 @@
 mixin preheader(hidden)
-  td.inner.contents.preheader-container(mc:edit="preheader", class=`${(hidden) ? "preheader-hidden" : ""}`)
-    .preheader
+  td.inner.contents.preheader-container(class=`${(hidden) ? "preheader-hidden" : "preheader-visible"}`)
+    .preheader(mc:edit="preheader")
       block
       if (!block)
         | Preheader goes here. Think of it as a second subject.

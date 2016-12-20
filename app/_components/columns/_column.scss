@@ -2,26 +2,6 @@
 //  Column
 //  ---------------------------------
 
-.column-textonly .inner {
-  padding-top: 0;
-}
-
-.column-category {
-  padding-top: 5px;
-  text-transform: uppercase;
-}
-
-.column-title {
-  color: $primary-color;
-}
-
-.column-img {
-  text-align: center;
-  padding-bottom: 0;
-  img {
-    width: 100%;
-  }
-}
 
 @include bp(sm) {
   .column-img,
@@ -30,14 +10,7 @@
     padding-right: 0 !important;
   }
 
-  .column-img--solo {
-    padding-bottom: 0 !important;;
-
-    img {
-      max-width: 100% !important;
-    }
-  }
-
+  .column-img--solo img,
   .column-img-full .column img {
     max-width: 100% !important;
   }

@@ -6,7 +6,7 @@
 // Default content
 //---------------------
 
-/*
+/**
 @tab Page
 @section default text style
 @tip Set the default size color font family and weight
@@ -14,18 +14,15 @@
 */
 
 .contents {
-  font-family: $base-font;
-  line-height: $line-height-base;
-  font-weight: $font-weight-base;
+  /*@editable*/ color: $text-color;
   /*@editable*/ font-size: $font-size-base;
-  text-align: left;
 }
 
 
 // Links
 //---------------------
 
-/*
+/**
 @tab Page
 @section default links
 @tip Set the link color and style
@@ -36,7 +33,7 @@ a {
   /*@editable*/ text-decoration: none;
 }
 
-/*
+/**
 @tab Page
 @section text link
 @tip Should be the same color as the text

@@ -1,0 +1,52 @@
+// 
+//  Reset Client-specific Styles 
+//  ---------------------------------
+
+html,
+body {
+  Margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+body {
+  background-color: $base-background;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0;
+}
+
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
+
+.wrapper {
+  width: 100%;
+  table-layout: fixed;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+.webkit {
+  max-width: $outer-maxwidth;
+  overflow: visible;
+}
+
+.outer {
+  Margin: 0 auto;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contents {
+  width: 100%;
+}

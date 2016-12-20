@@ -4,9 +4,6 @@
 
 
 .leadstory .inner {
-  padding-bottom: 0;
-  text-align: center;
-
   @include bp(sm) {
     text-align: left !important;
   }

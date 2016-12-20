@@ -3,57 +3,42 @@
 //  ---------------------------------
 
 
-/*
+/**
 @tab Sections
 @section Full-width Ad
 @tip Set the style for the full-width ad block
 */
 
 .fullad-container {
-  /*@editable*/ background: $primary-color;
+  /*@editable*/ background-color: $primary-color;
 }
 
-/*
+/**
 @tab Sections
 @section Full-width Ad
 @tip Set the style for the full-width ad block
 */
 
-.fullad,
+.fullad .contents,
 .fullad a {
   /*@editable*/ color: #ffffff;
 }
 
-.fullad {
-  padding: $container-gutter ($outer-padding + $container-padding);
-  
-  a {
-    display: block;
-  }
-
-  .column {
-    max-width: $content-area / 3 - $container-padding;
-
-  	.inner {
-      padding: 0;
-  	}
-  }
-
-	.column-2 {
-      max-width: $content-area / 3 * 2 - $container-padding;
-
-  	.inner {
-      padding: $container-padding;
-      padding-left: $container-padding * 2;
-  	}
-  }
+.fullad a {
+  display: block;
 }
 
 @include bp(md) {
   .fullad {
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;
+
+    .column .inner {
+      padding-left: 0 !important;
+      padding-right: $container-padding !important;
+    }
   }
+
   .fullad-image img {
     width: 100% !important;
   }
@@ -69,6 +54,7 @@
 
     .column .inner {
       padding-top: $container-gutter !important;
+      padding-left: $container-padding !important;
     }
   }
   .fullad-image {

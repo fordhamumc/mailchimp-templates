@@ -3,25 +3,8 @@
 //  ---------------------------------
 
 
-/*
-@tab Footer
-@section Footer Style
-@tip Set the style for the footer text
-*/
-
-.footer {
-  /*@editable*/ font-size: floor($font-size-base * .85);
-  /*@editable*/ text-align: center;
-}
-
-/*
-@tab Footer
-@section Footer Style
-@tip Set the color for the footer text
-*/
-
 .footer, .footer a {
-  /*@editable*/ color: $footer-color;
+  color: $footer-color;
 }
 
 .footer-links {

@@ -4,18 +4,9 @@
 @mixin color-block($background, $outer, $text, $tab, $section) {
   $section-lc: to-lower-case($section);
 
-  /*
+  /**
   @tab #{$tab}
-  @section #{$section} Block Background
-  @tip Set the style for the #{$section-lc} block
-  */
-  .color-block--#{$section-lc} {
-    /*@editable*/ background-color: $background;
-  }
-
-  /*
-  @tab #{$tab}
-  @section #{$section} Block Content
+  @section #{$section} Block Contents
   @tip Set the style for the #{$section-lc} block
   */
 
@@ -23,10 +14,20 @@
     /*@editable*/ background-color: $outer;
   }
 
+  /**
+  @tab #{$tab}
+  @section #{$section} Block
+  @tip Set the style for the #{$section-lc} block
+  */
+  .color-block--#{$section-lc},
+  .color-block--#{$section-lc} .outer-alt {
+    /*@editable*/ background-color: $background;
+  }
+
   @if $text {
-    /*
+    /**
     @tab #{$tab}
-    @section #{$section} Block Content
+    @section #{$section} Block Contents
     @tip Set the style for the #{$section-lc} block
     */
 
@@ -38,21 +39,5 @@
 }
 
 
-// Lead (Primary color)
-//---------------------
-
 @include color-block($base-background, $content-background, false, "Sections", "Default");
 @include color-block($primary-color, $content-background, false, "Sections", "Lead");
-
-.color-block--default {
-  .outer {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-}
-.color-block--lead {
-  .outer {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-}

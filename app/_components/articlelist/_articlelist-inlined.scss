@@ -1,0 +1,22 @@
+// Article list
+//---------------------
+
+
+.article-list--container {
+  padding-top: 10px;
+}
+
+.article-list {
+  list-style: none;
+  Margin: 0;
+  padding: 0;
+
+  li {
+    padding-top: 15px;
+    Margin-bottom: 0;
+  }
+}
+
+.article-list--more {
+  text-align: center;
+}

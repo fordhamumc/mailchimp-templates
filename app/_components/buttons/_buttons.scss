@@ -2,66 +2,96 @@
 //  Buttons
 //  ---------------------------------
 
-/*
+
+/**
 @tab Button
-@section Button
-@tip Set the style for the default button
-@style button
+@section Buttons
+@tip Set the style for the default buttons
 */
 
 .btn,
-.btn-container td {
+.btn-container td,
+.btn-sm,
+.btn-sm-container td,
+.btn-lg,
+.btn-lg-container td{
   /*@editable*/ background-color: $btn-background;
+  /*@editable*/ color: $btn-color;
+  font-weight: $font-weight-bold;
+  transition: background .3s;
+  display: inline-block;
+  text-align: center;
+}
+
+/**
+@tab Button
+@section Buttons
+@tip Set the style for the default buttons
+*/
+
+.btn,
+.btn-sm,
+.btn-lg {
+  /*@editable*/ border: 1px solid $btn-border;
+}
+
+/**
+@tab Button
+@section Buttons Hover
+@tip Set the hover style for the default button
+*/
+
+.btn,
+.btn-container td,
+.btn-sm,
+.btn-sm-container td,
+.btn-lg,
+.btn-lg-container td {
+  &:hover {
+    /*@editable*/ background-color: darken($btn-background, 5%) !important;
+  }
+}
+
+/**
+@tab Button
+@section Buttons Hover
+@tip Set the hover style for the default button
+*/
+
+.btn,
+.btn-sm,
+.btn-lg {
+  &:hover {
+    /*@editable*/ border-color: darken($btn-border, 5%) !important;
+  }
+}
+
+.btn,
+.btn-container td {
   border-radius: 4px;
 }
 
-/*
+/**
 @tab Button
-@section Button
+@section Regular Button
 @tip Set the style for the default button
 @style button
 */
 
 .btn {
-  display: inline-block;
-  text-align: center;
-  /*@editable*/ border: 1px solid $btn-border;
-  /*@editable*/ color: $btn-color;
   /*@editable*/ font-size: $font-size-base;
   /*@editable*/ padding-top: 7px;
   /*@editable*/ padding-bottom: 7px;
   /*@editable*/ padding-left: 40px;
   /*@editable*/ padding-right: 40px;
-  font-weight: $font-weight-bold;
-  transition: background .3s;
 }
-
-/*
-@tab Button
-@section Button Hover
-@tip Set the hover style for the default button
-*/
-
-.btn:hover {
-  /*@editable*/ background-color: darken($btn-background, 5%) !important;
-  /*@editable*/ border-color: darken($btn-border, 5%) !important;
-}
-
-
-/*
-@tab Button
-@section Small Button
-@tip Set the style for the small button
-@style button small
-*/
 
 .btn-sm,
 .btn-sm-container td {
-  /*@editable*/ background-color: $btn-background;
   border-radius: 3px;
 }
 
-/*
+/**
 @tab Button
 @section Small Button
 @tip Set the style for the small button
@@ -69,34 +99,19 @@
 */
 
 .btn-sm {
-  display: inline-block;
-  text-align: center;
-  /*@editable*/ color: $btn-color;
-  /*@editable*/ border: 1px solid $btn-border;
   /*@editable*/ font-size: floor($font-size-base * 0.9);
   /*@editable*/ padding-top: 5px;
   /*@editable*/ padding-bottom: 5px;
   /*@editable*/ padding-left: 20px;
   /*@editable*/ padding-right: 20px;
-  font-weight: $font-weight-bold;
-  transition: background .3s;
 }
-
-
-/*
-@tab Button
-@section Small Button
-@tip Set the style for the small button
-@style button large
-*/
 
 .btn-lg,
 .btn-lg-container td {
-  /*@editable*/ background-color: $btn-background;
   border-radius: 5px;
 }
 
-/*
+/**
 @tab Button
 @section Large Button
 @tip Set the style for the large button
@@ -104,25 +119,19 @@
 */
 
 .btn-lg {
-  display: inline-block;
-  text-align: center;
-  /*@editable*/ color: $btn-color;
-  /*@editable*/ border: 1px solid $btn-border;
   /*@editable*/ font-size: floor($font-size-base * 1.35);
   /*@editable*/ padding-top: 8px;
   /*@editable*/ padding-bottom: 8px;
   /*@editable*/ padding-left: 50px;
   /*@editable*/ padding-right: 50px;
-  font-weight: $font-weight-bold;
-  transition: background .3s;
 }
 
 
 @include bp(sm) {
 
-  /*
+  /**
   @tab Button
-  @section Button Large Mobile
+  @section Large Button Mobile
   @tip Set the small screen font-size for the large button
   */
 
@@ -138,7 +147,9 @@
   }
 }
 
-/*
+/**
+@tab Button
+@section Button Block
 @style button block
 */
 
@@ -152,9 +163,9 @@
   width: 100%;
 }
 
-/*
+/**
 @tab Button
-@section Button Secondary
+@section Secondary Button
 @tip Set the style for the secondary button
 */
 
@@ -163,9 +174,9 @@
   /*@editable*/ background-color: $btn-secondary-background;
 }
 
-/*
+/**
 @tab Button
-@section Button Secondary
+@section Secondary Button
 @tip Set the style for the secondary button
 */
 
@@ -174,13 +185,13 @@
   /*@editable*/ color: $btn-secondary-color;
 }
 
-/*
+/**
 @tab Button
-@section Button Secondary Hover
+@section Secondary Button Hover
 @tip Set the hover style for the secondary button
 */
 
 .btn-secondary:hover {
-  /*@editable*/ background-color: darken($btn-secondary-background, 5%);
-  /*@editable*/ border-color:  darken($btn-secondary-border, 5%);
+  /*@editable*/ background-color: darken($btn-secondary-background, 5%) !important;
+  /*@editable*/ border-color:  darken($btn-secondary-border, 5%) !important;
 }

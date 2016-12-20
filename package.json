@@ -24,6 +24,7 @@
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-nodemailer": "^0.2.0",
+    "grunt-premailer": "^1.0.0",
     "grunt-processhtml": "^0.4.1",
     "grunt-prompt": "^1.1.0",
     "grunt-search": "^0.1.6",

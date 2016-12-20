@@ -3,11 +3,7 @@
 //  ---------------------------------
 
 
-.preheader-container {
-  padding-top: floor($container-gutter / 2);
-  padding-bottom: 0;
-}
-/*
+/**
 @tab Header
 @section Preheader
 @tip Set the style for the visible preheader
@@ -17,16 +13,4 @@
   /*@editable*/ font-size: 11px;
   /*@editable*/ color: $preheader-color;
   /*@editable*/ text-align: center;
-}
-
-.preheader-hidden .preheader {
-  display:none !important;
-  visibility:hidden;
-  mso-hide:all;
-  font-size:1px;
-  line-height:1px;
-  max-height:0px;
-  max-width:0px;
-  opacity:0;
-  overflow:hidden;
 }

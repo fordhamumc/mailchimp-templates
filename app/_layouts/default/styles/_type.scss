@@ -15,7 +15,7 @@ p {
 // Emphasis
 //---------------------
 
-/*
+/**
 @tab Page
 @section small text style
 @tip Set the style for the <small> tag
@@ -43,7 +43,7 @@ h1, h2, h3 {
   line-height: 1.4;
 }
 
-/*
+/**
 @tab Page
 @section heading 1
 @tip Set the style for the <h1> tag
@@ -56,7 +56,7 @@ h1 {
   /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
 }
 
-/*
+/**
 @tab Page
 @section heading 2
 @tip Set the style for the <h2> tag
@@ -69,7 +69,7 @@ h2 {
   /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
 }
 
-/*
+/**
 @tab Page
 @section heading 3
 @tip Set the style for the <h3> tag
@@ -82,7 +82,7 @@ h3 {
   /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
 }
 
-/*
+/**
 @tab Page
 @section heading 4
 @tip Set the style for the <h4> tag
@@ -96,7 +96,7 @@ h4 {
   line-height: 1.5;
 }
 
-/*
+/**
 @tab Page
 @section heading 5
 @tip Set the style for the <h5> tag
@@ -111,7 +111,7 @@ h5 {
 
 @include bp(sm) {
 
-  /*
+  /**
   @tab Page
   @section mobile heading 1
   @tip Set the small screen style for the <h1> tag
@@ -121,7 +121,7 @@ h5 {
     /*@editable*/ font-size: floor($font-size-base * 2.50 * .8) !important;
   }
 
-  /*
+  /**
   @tab Page
   @section mobile heading 2
   @tip Set the small screen style for the <h2> tag
@@ -131,7 +131,7 @@ h5 {
     /*@editable*/ font-size: floor($font-size-base * 2.15 * .8) !important;
   }
 
-  /*
+  /**
   @tab Page
   @section mobile heading 3
   @tip Set the small screen style for the <h3> tag
@@ -147,7 +147,7 @@ h5 {
 // Lists
 //---------------------
 
-/*
+/**
 @tab Page
 @section list style
 @tip Set the default style for the <ul>, <li> containers
@@ -160,7 +160,7 @@ ul, ol {
   /*@editable*/ Margin-right: 0;
 }
 
-/*
+/**
 @tab Page
 @section list item style
 @tip Set the default style for the <li> tag
@@ -182,7 +182,7 @@ li {
 // Body Text
 //---------------------
 
-/*
+/**
 @tab Sections
 @section Lead Block
 @tip Set the style for lead content
@@ -197,7 +197,7 @@ li {
   }
 }
 
-/*
+/**
 @tab Sections
 @section Callout style
 @tip Set the style for callout content

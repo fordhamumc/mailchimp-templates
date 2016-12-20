@@ -118,14 +118,25 @@ module.exports = function(grunt) {
     processhtml: {
       dist: {
         files: [{
-           src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
-           dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
+          src: '<%= paths.tmp %>/<%= paths.directory %>/<%= paths.file %>.html',
+          dest: '<%= paths.dist %>/<%= paths.directory %>/index.html'
         }]
-      },
+      }
+    },
+
+    premailer: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: '<%= paths.directory %>/<%= paths.file %>.html',
+          dest: '<%= paths.tmp %>'
+        }]
+      }
     },
 
     /**
-     * pug Compilation Tasks
+     * Pug Compilation Tasks
      * ===============================
      */
     pug: {
@@ -383,6 +394,7 @@ module.exports = function(grunt) {
     build = build.concat([
       'imagemin',
       //'uncss',
+      'premailer',
       'cmq',
       'processhtml'
     ]);

@@ -1,0 +1,26 @@
+// Multiple column layouts
+//---------------------
+
+
+.inner {
+	padding: $container-gutter $outer-padding+$container-padding 0;
+}
+
+.container {
+	font-size: 0;
+	text-align: center;
+	padding: 0 $outer-padding;
+
+	.inner {
+		padding-left: $container-padding;
+		padding-right: $container-padding;
+	}
+}
+
+.column,
+.column-2 {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	overflow: visible;
+}

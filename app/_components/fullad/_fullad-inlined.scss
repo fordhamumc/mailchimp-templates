@@ -1,0 +1,25 @@
+// 
+//  Full ad
+//  ---------------------------------
+
+
+.fullad {
+  padding: $container-gutter ($outer-padding + $container-padding);
+
+  .column {
+    max-width: $content-area / 3 - $container-padding;
+
+  	.inner {
+      padding: 0;
+  	}
+  }
+
+	.column-2 {
+      max-width: $content-area / 3 * 2 - $container-padding;
+
+  	.inner {
+      padding: $container-padding;
+      padding-left: $container-padding * 2;
+  	}
+  }
+}

@@ -1,0 +1,23 @@
+// 
+//  Column
+//  ---------------------------------
+
+.column-category {
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+
+.column-title {
+  color: $primary-color;
+}
+
+.column-img,
+.column-img--solo {
+  text-align: center;
+}
+
+.column-img {
+  img {
+    width: 100%;
+  }
+}

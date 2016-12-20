@@ -14,19 +14,16 @@
   @include column-width($content-area / 6);
 }
 
-.event-hr {
-  border-bottom: 1px solid $aside-background;
-  Margin-left: $container-padding;
-  Margin-right: $container-padding;
+.event-image,
+.event-description,
+.event-rsvp {
+  .inner {
+    padding-bottom: $container-gutter;
+  }
 }
 
 .event-list--nomore .event:last-child .event-hr {
   border: 0;
-}
-
-.event-more {
-  font-weight: $font-weight-bold;
-  text-align: center;
 }
 
 @include bp(sm) {

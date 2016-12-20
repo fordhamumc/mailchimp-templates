@@ -1,0 +1,25 @@
+//
+//  Masthead
+//  ---------------------------------
+
+
+.masthead {
+  text-align: center;
+}
+
+.masthead,
+.masthead-dual .inner {
+  padding-top: $container-gutter - 10px;
+  padding-bottom: $container-gutter;
+}
+
+.masthead-dual {
+  .column, .column-2 {
+    vertical-align: bottom;
+  }
+  .column-2 .contents {
+    line-height: 1;
+    text-align: right;
+    font-weight: $font-weight-bold;
+  }
+}

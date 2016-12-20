@@ -1,0 +1,24 @@
+// 
+//  Preheader
+//  ---------------------------------
+
+
+.preheader-container {
+  padding-top: 10px;
+}
+
+.preheader-visible {
+  padding-bottom: 10px;
+}
+
+.preheader-hidden .preheader {
+  display:none !important;
+  visibility:hidden;
+  mso-hide:all;
+  font-size:1px;
+  line-height:1px;
+  max-height:0px;
+  max-width:0px;
+  opacity:0;
+  overflow:hidden;
+}
