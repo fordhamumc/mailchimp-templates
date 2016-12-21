@@ -4,7 +4,7 @@
 
 
 @include bp(sm) {
-  .break-reduce .break {
+  .break-reduce .break-container {
     line-height: 4px !important;
     height: 4px !important;
   }

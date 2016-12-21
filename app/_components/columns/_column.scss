@@ -14,4 +14,8 @@
   .column-img-full .column img {
     max-width: 100% !important;
   }
+  .column-img--solo small {
+    padding-left: $container-padding !important;
+    padding-right: $container-padding !important;
+  }
 }
