@@ -80,6 +80,13 @@ block body
             +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="lead", mc:variant="Two Columns")
+          td.container.two-column
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {fullimage: true, textlink: true})
+            +column("column-2", {fullimage: true, textlink: true})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 
