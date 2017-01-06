@@ -7,7 +7,7 @@
   padding: $container-gutter ($outer-padding + $container-padding);
 
   .column {
-    max-width: $content-area / 3 - $container-padding;
+    max-width: $content-area / 3 - $container-padding * 2;
 
   	.inner {
       padding: 0;
@@ -15,11 +15,10 @@
   }
 
 	.column-2 {
-      max-width: $content-area / 3 * 2 - $container-padding;
+      max-width: $content-area / 3 * 2;
 
   	.inner {
-      padding: $container-padding;
-      padding-left: $container-padding * 2;
+      padding: $container-padding ($container-padding * 1.5);
   	}
   }
 }

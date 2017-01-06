@@ -153,9 +153,15 @@ block body
         tr(mc:repeatable="body", mc:variant="Event More Link")
           +eventmore
         tr(mc:repeatable="body", mc:variant="Ad (with text)")
-          +fullad
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad
         tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
-          +fullad(true)
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad(true)
         tr(mc:repeatable="body", mc:variant="Section Break")
           +breaksection(bgcolor)
         tr(mc:repeatable="body", mc:variant="Break")
@@ -175,8 +181,14 @@ block body
       table.outer
         tr
           +break
-        tr
-          +social(socialnetworks)
+        tr(mc:repeatable="footer", mc:variant="Social Networks (Alumni)")
+          +social(socialalumni)
+        tr(mc:repeatable="footer", mc:variant="Social Networks (University)")
+          +social(socialuniversity)
+        tr(mc:repeatable="footer", mc:variant="Ad (with text)")
+          +fullad
+        tr(mc:repeatable="footer", mc:variant="Ad (full-width image)")
+          +fullad(true)
         tr
           +tagline
         tr

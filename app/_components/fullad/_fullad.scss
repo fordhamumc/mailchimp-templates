@@ -33,9 +33,10 @@
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;
 
-    .column .inner {
+    .column .inner,
+    .column-2 .inner {
       padding-left: 0 !important;
-      padding-right: $container-padding !important;
+      padding-right: $container-padding * 1.5 !important;
     }
   }
 
@@ -52,9 +53,12 @@
       text-align: center !important;
     }
 
-    .column .inner {
-      padding-top: $container-gutter !important;
-      padding-left: $container-padding !important;
+    .column .inner, {
+      padding: $container-gutter $container-padding 0 $container-padding !important;
+    }
+
+    .column-2 .inner {
+      padding: $container-gutter $container-padding !important;
     }
   }
   .fullad-image {
