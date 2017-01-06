@@ -28,6 +28,11 @@
   display: block;
 }
 
+.fullad img,
+.fullad-image img {
+  display: block;
+}
+
 @include bp(md) {
   .fullad {
     padding-left: $container-padding !important;
