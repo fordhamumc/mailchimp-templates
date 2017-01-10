@@ -1,34 +1,22 @@
 mixin btn(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: '', secondary: false, block: false, url: "#"}, options)
+  - var settings = Object.assign({size: '', secondary: false, block: false, url: "#", center: false}, options)
 
   - var btnclass = "btn"
-  - var btncontainer = "btn-container"
 
   if settings.size === "small" || settings.size === "sm"
     - btnclass = "btn-sm"
-    - btncontainer = "btn-sm-container"
   if settings.size === "large" || settings.size === "lg"
     - btnclass = "btn-lg"
-    - btncontainer = "btn-lg-container"
   if settings.secondary
     - btnclass = btnclass + " btn-secondary"
-    - btncontainer = btncontainer + " btn-secondary-container"
   if settings.block
     - btnclass = btnclass + " btn-block"
-    - btncontainer = btncontainer + " btn-block-container"
 
-  table(width="100%", border="0", cellspacing="0", cellpadding="0")
-    tbody
-      tr
-        td(align="center")
-          table(class=btncontainer)
-            tbody
-              tr
-                td.contents(align="center", mc:edit=`${namespace}button`)
-                  a(href=settings.url, target="_blank", class=btnclass)
-                    <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
-                    block
-                    if (!block)
-                      | Button
-                    <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+  .contents(mc:edit=`${namespace}button`, style=`${(settings.center) ? "text-align: center;" : ""}`)
+    a(href=settings.url, target="_blank", class=btnclass)
+      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+      block
+      if (!block)
+        | Button
+      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->

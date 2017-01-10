@@ -10,29 +10,17 @@
 */
 
 .btn,
-.btn-container td,
 .btn-sm,
-.btn-sm-container td,
-.btn-lg,
-.btn-lg-container td{
+.btn-lg{
   /*@editable*/ background-color: $btn-background;
+  /*@editable*/ border-color: $btn-background;
+  border-style: solid;
+  /*@editable*/ box-shadow: 0 0 0 1px $btn-border;
   /*@editable*/ color: $btn-color;
-  font-weight: $font-weight-bold;
-  transition: background .3s;
   display: inline-block;
+  font-weight: $font-weight-bold;
   text-align: center;
-}
-
-/**
-@tab Button
-@section Buttons
-@tip Set the style for the default buttons
-*/
-
-.btn,
-.btn-sm,
-.btn-lg {
-  /*@editable*/ border: 1px solid $btn-border;
+  transition: all .3s;
 }
 
 /**
@@ -42,33 +30,14 @@
 */
 
 .btn,
-.btn-container td,
 .btn-sm,
-.btn-sm-container td,
-.btn-lg,
-.btn-lg-container td {
+.btn-lg {
   &:hover {
     /*@editable*/ background-color: darken($btn-background, 5%) !important;
+    /*@editable*/ border-color: darken($btn-background, 5%) !important;
+    /*@editable*/ box-shadow:0 0 0 1px darken($btn-border, 5%) !important;
+
   }
-}
-
-/**
-@tab Button
-@section Buttons Hover
-@tip Set the hover style for the default button
-*/
-
-.btn,
-.btn-sm,
-.btn-lg {
-  &:hover {
-    /*@editable*/ border-color: darken($btn-border, 5%) !important;
-  }
-}
-
-.btn,
-.btn-container td {
-  border-radius: 4px;
 }
 
 /**
@@ -79,16 +48,9 @@
 */
 
 .btn {
+  /*@editable*/ border-width: 7px 40px;
+  border-radius: 4px;
   /*@editable*/ font-size: $font-size-base;
-  /*@editable*/ padding-top: 7px;
-  /*@editable*/ padding-bottom: 7px;
-  /*@editable*/ padding-left: 40px;
-  /*@editable*/ padding-right: 40px;
-}
-
-.btn-sm,
-.btn-sm-container td {
-  border-radius: 3px;
 }
 
 /**
@@ -99,16 +61,9 @@
 */
 
 .btn-sm {
+  /*@editable*/ border-width: 5px 20px;
+  border-radius: 3px;
   /*@editable*/ font-size: floor($font-size-base * 0.9);
-  /*@editable*/ padding-top: 5px;
-  /*@editable*/ padding-bottom: 5px;
-  /*@editable*/ padding-left: 20px;
-  /*@editable*/ padding-right: 20px;
-}
-
-.btn-lg,
-.btn-lg-container td {
-  border-radius: 5px;
 }
 
 /**
@@ -119,11 +74,9 @@
 */
 
 .btn-lg {
+  /*@editable*/ border-width: 8px 50px;
+  border-radius: 5px;
   /*@editable*/ font-size: floor($font-size-base * 1.35);
-  /*@editable*/ padding-top: 8px;
-  /*@editable*/ padding-bottom: 8px;
-  /*@editable*/ padding-left: 50px;
-  /*@editable*/ padding-right: 50px;
 }
 
 
@@ -137,13 +90,7 @@
 
   .btn-lg {
     /*@editable*/ font-size: floor($font-size-base * 1.2) !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-
-  .btn-lg,
-  .btn-lg-container {
-    width: 100% !important;
+    display: block !important;
   }
 }
 
@@ -154,24 +101,9 @@
 */
 
 .btn-block {
-  padding-left: 5px;
-  padding-right: 5px;
+  border-left-width: 5px;
+  border-right-width: 5px;
   display: block;
-}
-
-.btn-block-container {
-  width: 100%;
-}
-
-/**
-@tab Button
-@section Secondary Button
-@tip Set the style for the secondary button
-*/
-
-.btn-secondary,
-.btn-secondary-container td {
-  /*@editable*/ background-color: $btn-secondary-background;
 }
 
 /**
@@ -181,7 +113,9 @@
 */
 
 .btn-secondary {
-  /*@editable*/ border: 1px solid $btn-secondary-border;
+  /*@editable*/ background-color: $btn-secondary-background;
+  /*@editable*/ border-color: $btn-secondary-background;
+  /*@editable*/ box-shadow: 0 0 0 1px $btn-secondary-border;
   /*@editable*/ color: $btn-secondary-color;
 }
 
@@ -193,5 +127,6 @@
 
 .btn-secondary:hover {
   /*@editable*/ background-color: darken($btn-secondary-background, 5%) !important;
-  /*@editable*/ border-color:  darken($btn-secondary-border, 5%) !important;
+  /*@editable*/ border-color: darken($btn-secondary-background, 5%) !important;
+  /*@editable*/ box-shadow: 0 0 0 1px darken($btn-secondary-border, 5%) !important;
 }

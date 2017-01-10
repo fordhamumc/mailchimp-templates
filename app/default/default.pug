@@ -51,7 +51,7 @@ block body
             .lead This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
         tr(mc:repeatable="lead", mc:variant="Call to Action")
           td.inner.contents(style="padding-top: 0")
-            +btn("lead", {size: 'lg'})
+            +btn("lead", {size: 'lg', center: true})
         tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (left image)")
           td.container.sixty-forty-column
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -170,6 +170,9 @@ block body
           +break({line: "dashed"})
         tr(mc:repeatable="body", mc:variant="Break (small solid line)")
           +break({line: "small"})
+        tr(mc:repeatable="body", mc:variant="Call to Action")
+          td.inner.contents(style="padding-top: 0")
+            +btn("body")
         tr
           td &nbsp;
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
