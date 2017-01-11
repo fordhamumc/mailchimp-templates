@@ -24,6 +24,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    settings: grunt.file.readJSON('gruntsettings.json'),
 
     /**
      * Project Paths Configuration
@@ -295,7 +296,6 @@ module.exports = function(grunt) {
         src: ['<%= paths.dist %>/<%= paths.directory %>/index.html']
       }
     },
-
     prompt: {
       chooseFile: {
         options: {
@@ -317,27 +317,32 @@ module.exports = function(grunt) {
             config: 'paths.sender.service',
             type: 'input',
             message: 'What service should we use to send this email?',
-            default: 'gmail'
+            default: '<%= settings.mail.service %>'
           }, {
             config: 'paths.sender.user',
             type: 'input',
-            message: 'What account should we send it from?'
+            message: 'What account should we send it from?',
+            default: '<%= settings.mail.user %>'
           }, {
             config: 'paths.sender.pass',
             type: 'input',
-            message: 'Account password?'
+            message: 'Account password?',
+            default: '<%= settings.mail.pass %>'
           }, {
             config: 'paths.recipients.name',
             type: 'input',
-            message: 'Who should we send this to (name)?'
+            message: 'Who should we send this to (name)?',
+            default: '<%= settings.mail.name %>'
           }, {
             config: 'paths.recipients.email',
             type: 'input',
-            message: 'Who should we send this to (email)?'
+            message: 'Who should we send this to (email)?',
+            default: '<%= settings.mail.email %>'
           }, {
             config: 'paths.recipients.subject',
             type: 'input',
-            message: 'What is the subject?'
+            message: 'What is the subject?',
+            default: '<%= settings.mail.subject %>'
           }]
         }
       }
