@@ -7,3 +7,13 @@
   font-size: floor($font-size-base * .85);
   text-align: center;
 }
+
+.footer-links {
+  font-weight: $font-weight-bold;
+  Margin-bottom: 0;
+
+  a {
+    display: inline-block;
+    padding: 0 10px 20px 10px;
+  }
+}

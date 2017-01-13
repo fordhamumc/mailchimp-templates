@@ -9,7 +9,7 @@
 @tip Set the style for the full-width ad block
 */
 
-.fullad-container {
+.fullad-cont {
   /*@editable*/ background-color: $primary-color;
 }
 
@@ -28,24 +28,18 @@
   display: block;
 }
 
-.fullad img,
-.fullad-image img {
-  display: block;
-}
-
 @include bp(md) {
   .fullad {
-    padding-left: $container-padding !important;
-    padding-right: $container-padding !important;
+    padding: $container-gutter $container-padding !important;
 
-    .column .inner,
-    .column-2 .inner {
+    .col .inner,
+    .col-2 .inner {
       padding-left: 0 !important;
-      padding-right: $container-padding * 1.5 !important;
+      padding-right: floor($container-padding * 1.5) !important;
     }
   }
 
-  .fullad-image img {
+  .fullad-img img {
     width: 100% !important;
   }
 }
@@ -58,15 +52,19 @@
       text-align: center !important;
     }
 
-    .column .inner, {
+    .col .inner, {
       padding: $container-gutter $container-padding 0 $container-padding !important;
     }
 
-    .column-2 .inner {
+    .col-2 .inner {
       padding: $container-gutter $container-padding !important;
     }
+
+    img {
+      display: inline-block !important;
+    }
   }
-  .fullad-image {
+  .fullad-img {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }

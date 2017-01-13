@@ -4,17 +4,17 @@
 
 
 @include bp(sm) {
-  .column-img,
-  .column-img--solo {
+  .col-img,
+  .col-img--solo {
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  .column-img--solo img,
-  .column-img-full .column img {
+  .col-img--solo img,
+  .col-img-full .col img {
     max-width: 100% !important;
   }
-  .column-img--solo small {
+  .col-img--solo small {
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;
   }

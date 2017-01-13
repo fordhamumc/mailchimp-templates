@@ -83,16 +83,16 @@ $screen-md:                   $outer-maxwidth + $container-padding * 2 !default;
 @mixin bp($point:'') {
 
   @if $point == xs {
-    @media screen and (max-width: $screen-xs) { @content; }
+    @media (max-width: $screen-xs) { @content; }
   }
   @else if $point == sm {
-    @media screen and (max-width: $screen-sm) { @content; }
+    @media (max-width: $screen-sm) { @content; }
   }
   @else if $point == md {
-    @media screen and (max-width: $screen-md)  { @content; }
+    @media (max-width: $screen-md)  { @content; }
   }
   @else if $point == sm-md {
-    @media screen and (min-width: $screen-sm + 1)  { @content; }
+    @media (min-width: $screen-sm + 1)  { @content; }
   }
   @else {
     @media screen { @content; }

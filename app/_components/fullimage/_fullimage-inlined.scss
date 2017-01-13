@@ -1,9 +1,18 @@
 //
-//  Full ad
+//  Full-width image
 //  ---------------------------------
 
 
 .fullimage {
   max-width: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.fullimage,
+.cont .fullimage {
   padding: 0;
 }

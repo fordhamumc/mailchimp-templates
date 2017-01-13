@@ -14,9 +14,3 @@
 .section-header a {
   /*@editable*/ color: $meta-color;
 }
-
-@include bp(sm) {
-  .section-header {
-    text-align: center !important;
-  }
-}

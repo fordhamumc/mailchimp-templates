@@ -1,14 +1,14 @@
 mixin fullad(imageonly)
   if (imageonly)
-    td.inner.contents.fullad-image
+    td.inner.contents.fullad-img
       img(src='http://quickimage.it/945x190', width="630", alt="", mc:edit="fullad-image")
 
   else
-    td.container.three-column.fullad
-      .fullad-container
+    td.cont.cont-3.fullad
+      .fullad-cont
         <!--[if (gte mso 9)|(IE)]><table width="100%" bgcolor="#900028"><tr><td width="#{width / 3 - 30}" valign="top"><![endif]-->
 
-        .column
+        .col
           table(width="100%")
             tr
               td.inner.contents
@@ -16,7 +16,7 @@ mixin fullad(imageonly)
 
         <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 1.5 - 30}" valign="top"><![endif]-->
 
-        .column-2
+        .col-2
           table(width="100%")
             tr
               td.inner.contents(mc:edit="fullad-content")

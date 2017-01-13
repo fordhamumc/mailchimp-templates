@@ -6,8 +6,9 @@
 	padding: $container-gutter $outer-padding+$container-padding 0;
 }
 
-.container {
-	font-size: 0;
+.cont {
+	font-size: 1px;
+	word-spacing: -1em;
 	text-align: center;
 	padding: 0 $outer-padding;
 
@@ -17,8 +18,8 @@
 	}
 }
 
-.column,
-.column-2 {
+.col,
+.col-2 {
 	width: 100%;
 	display: inline-block;
 	vertical-align: top;

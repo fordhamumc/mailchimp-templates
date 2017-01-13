@@ -399,8 +399,8 @@ module.exports = function(grunt) {
     build = build.concat([
       'imagemin',
       //'uncss',
-      'premailer',
       'cmq',
+      'premailer',
       'processhtml'
     ]);
 

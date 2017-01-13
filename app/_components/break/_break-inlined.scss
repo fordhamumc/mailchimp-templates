@@ -3,7 +3,7 @@
 //  ---------------------------------
 
 .break,
-.break-container {
+.break-cont {
   line-height: $container-gutter;
   height: $container-gutter;
 }
@@ -13,21 +13,23 @@
   margin: 0 auto;
 }
 
-.break-container {
-  padding: 0 $container-padding;
+.break-cont {
   text-align: center;
+}
+.break-cont--line {
+  padding: 0 $container-padding;
 }
 
 .break-dashed {
-  border-top: 1px dashed $content-border-color;
+  border-bottom: 1px dashed $content-border-color;
 }
 
 .break-solid {
-  border-top: 1px solid $content-border-color;
+  border-bottom: 1px solid $content-border-color;
 }
 
 .break-small {
-  border-top: 2px solid darken($content-border-color, 10%);
+  border-bottom: 2px solid darken($content-border-color, 10%);
   display: inline-block;
   width: 100px;
 }

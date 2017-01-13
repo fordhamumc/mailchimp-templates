@@ -2,26 +2,26 @@
 //  Column
 //  ---------------------------------
 
-.column-category {
+.col-category {
   padding-top: 5px;
   text-transform: uppercase;
 }
 
-.column-title {
+.col-title {
   color: $primary-color;
 }
 
-.column-img,
-.column-img--solo {
+.col-img,
+.col-img--solo {
   text-align: center;
 }
 
-.column-img--solo small {
+.col-img--solo small {
   display: block;
   padding-top: 5px;
 }
 
-.column-img {
+.col-img {
   img {
     width: 100%;
   }

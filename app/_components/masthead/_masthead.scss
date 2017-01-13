@@ -3,12 +3,6 @@
 //  ---------------------------------
 
 
-.masthead {
-  img {
-    width: 100%;
-  }
-}
-
 .masthead-dual {
   .contents, a {
     color: #ffffff;
@@ -16,17 +10,17 @@
 }
 
 @include bp(md) {
-  .masthead-dual .column img {
+  .masthead-dual .col img {
     max-width: 168px !important;
   }
 }
 
 @include bp(sm) {
   .masthead-dual {
-    .column .inner {
+    .col .inner {
       padding-bottom: 0 !important;
     }
-    .column-2 .inner {
+    .col-2 .inner {
       padding-top: 15px !important;
     }
     .contents {

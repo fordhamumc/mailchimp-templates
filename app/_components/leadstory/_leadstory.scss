@@ -3,8 +3,9 @@
 //  ---------------------------------
 
 
-.leadstory .inner {
-  @include bp(sm) {
+
+@include bp(sm) {
+  .leadstory .inner {
     text-align: left !important;
   }
 }
@@ -15,6 +16,5 @@
 }
 
 .leadstory h3 {
-  font-size: floor($font-size-base * 1.60);
   Margin-top: floor($line-height-computed / 3);
 }

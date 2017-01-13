@@ -3,4 +3,8 @@
 
 .social {
   text-align: center;
+  img {
+    max-width: 30px;
+    overflow: visible;
+  }
 }

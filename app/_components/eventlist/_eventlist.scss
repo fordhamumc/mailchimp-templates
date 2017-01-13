@@ -2,29 +2,13 @@
 //---------------------
 
 
-.event-image {
-  @include column-width($content-area / 3);
-}
-
-.event-description {
-  @include column-width($content-area / 2);
-}
-
-.event-rsvp {
-  @include column-width($content-area / 6);
-}
-
-.event-list--nomore .event:last-child .event-hr {
-  border: 0 !important;
-}
-
 @include bp(sm) {
-  
-  .event-description .contents {
+
+  .event-desc .contents {
     text-align: center !important;
   }
-  
-  .container .event-rsvp {
+
+  .cont .event-rsvp {
     max-width: 130px !important;
   }
 }

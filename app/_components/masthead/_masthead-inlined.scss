@@ -5,6 +5,10 @@
 
 .masthead {
   text-align: center;
+
+  img {
+    width: 100%;
+  }
 }
 
 .masthead,
@@ -14,10 +18,10 @@
 }
 
 .masthead-dual {
-  .column, .column-2 {
+  .col, .col-2 {
     vertical-align: bottom;
   }
-  .column-2 .contents {
+  .col-2 .contents {
     line-height: 1;
     text-align: right;
     font-weight: $font-weight-bold;

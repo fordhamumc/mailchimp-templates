@@ -6,14 +6,14 @@ mixin eventlist(namespace, options)
 
   .event
     <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{width / 3}" valign="top"><![endif]-->
-    .column.event-image
+    .col.event-img
       table(width='100%')
         tr
           td.inner
             img(src=settings.img, width="190", alt="", mc:edit=`${namespace}event-image`)
 
     <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 2}" valign="top"><![endif]-->
-    .column.event-description
+    .col.event-desc
       table(width='100%')
         tr
           td.inner.contents
@@ -25,7 +25,7 @@ mixin eventlist(namespace, options)
                 a(href=settings.url, target="_blank") October 1 | Lincoln Center Campus
 
     <!--[if (gte mso 9)|(IE)]></td><td width="#{width / 6}" valign="top"><![endif]-->
-    .column.event-rsvp
+    .col.event-rsvp
       table(width='100%')
         tr
           td.inner

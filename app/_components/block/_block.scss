@@ -10,7 +10,7 @@
   @tip Set the style for the #{$section-lc} block
   */
 
-  .color-block--#{$section-lc} .outer {
+  .cb-#{$section-lc} .outer {
     /*@editable*/ background-color: $outer;
   }
 
@@ -19,8 +19,8 @@
   @section #{$section} Block
   @tip Set the style for the #{$section-lc} block
   */
-  .color-block--#{$section-lc},
-  .color-block--#{$section-lc} .outer-alt {
+  .cb-#{$section-lc},
+  .cb-#{$section-lc} .outer-alt {
     /*@editable*/ background-color: $background;
   }
 
@@ -31,7 +31,7 @@
     @tip Set the style for the #{$section-lc} block
     */
 
-    .color-block--#{$section-lc} .contents {
+    .cb-#{$section-lc} .contents {
       /*@editable*/
       color: $text;
     }

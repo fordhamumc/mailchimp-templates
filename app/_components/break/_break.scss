@@ -3,8 +3,16 @@
 //  ---------------------------------
 
 
+@include bp(md) {
+  .outer,
+  .section-bottom,
+  .section-top {
+    border-radius: 0 !important;
+  }
+}
+
 @include bp(sm) {
-  .break-reduce .break-container {
+  .break-reduce .break-cont {
     line-height: 4px !important;
     height: 4px !important;
   }

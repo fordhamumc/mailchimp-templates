@@ -1,13 +1,13 @@
 // Color Block Mixin
 //---------------------
 
-.color-block--default {
+.cb-default {
   .outer {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
 }
-.color-block--lead {
+.cb-lead {
   .outer {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;

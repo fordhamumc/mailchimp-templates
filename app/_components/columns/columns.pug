@@ -1,5 +1,5 @@
 mixin column-container(size, container)
-  - var cl = (size === 23 || size === 6) ? "column-2" : "column"
+  - var cl = (size === 23 || size === 6) ? "col-2" : "col"
   if size > 1
     <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
     div(class=cl)
@@ -23,7 +23,7 @@ mixin column-row(size, hideable)
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, button: false, buttontext: "Sign Up", editable: true, textlink: false, break: true}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, editable: true, textlink: false, break: true}, options)
 
   - var padding = 15
   - var container
@@ -46,7 +46,7 @@ mixin column(namespace, options)
       - var imgheight = Math.floor(imgwidth / settings.aspect)
 
       +column-row(settings.size, true)
-        td.inner.contents(class=`${(!settings.title && !settings.body) ? "column-img--solo" :"column-img"}`)
+        td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
           img(src=`http://quickimage.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
           if (!settings.title && !settings.body && settings.size === 4)
             small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
@@ -54,14 +54,12 @@ mixin column(namespace, options)
       +column-row(settings.size)
         td.inner.contents(dir="ltr")
           if (settings.title)
-            #{settings.heading}(class="column-title", mc:edit=`${namespace}title`, mc:hideable) #{settings.title}
-          div(mc:edit=`${namespace}desc`, mc:hideable, class=`${(settings.textlink) ? "textlink" : ""}`)
-            block
-            if (!block)
-              | This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
-          if (settings.button)
-            br
-            +btn("lead", {size: settings.button}) #{settings.buttontext}
+            #{settings.heading}(class="col-title", mc:edit=`${namespace}title`, mc:hideable) #{settings.title}
+          if (settings.body)
+            div(mc:edit=`${namespace}desc`, mc:hideable, class=`${(settings.textlink) ? "textlink" : ""}`)
+              block
+              if (!block)
+                | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
           if (settings.break)
             .break(mc:hideable) &nbsp;
 

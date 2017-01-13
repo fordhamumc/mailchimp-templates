@@ -3,7 +3,13 @@
 //  ---------------------------------
 
 
-.preheader-container {
+.preheader {
+  font-size: 11px;
+  color: $preheader-color;
+  text-align: center;
+}
+
+.preheader-cont {
   padding-top: 10px;
 }
 

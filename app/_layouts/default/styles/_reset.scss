@@ -2,20 +2,38 @@
 //  Reset Client-specific Styles 
 //  ---------------------------------
 
+html,
+body {
+  Margin: 0;
+  padding: 0;
+  min-width: 100%;
+}
+
+body {
+  background-color: $base-background;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0;
+}
+
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
 
 div[style*="margin: 16px 0"] {
-  margin:0;
+  margin:0 !important;
 }
 
-.outer {
-
-  @include bp(md) {
-    border-radius: 0 !important;
-  }
-}
-	
 @include bp(md) {
   .webkit {
-	  max-width: 100% !important;
+    max-width: 100% !important;
   }
 }

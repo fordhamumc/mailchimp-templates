@@ -3,10 +3,15 @@
 //  ---------------------------------
 
 
+.fullad img,
+.fullad-img img {
+  display: block;
+}
+
 .fullad {
   padding: $container-gutter ($outer-padding + $container-padding);
 
-  .column {
+  .col {
     max-width: $content-area / 3 - $container-padding * 2;
 
   	.inner {
@@ -14,15 +19,15 @@
   	}
   }
 
-	.column-2 {
-      max-width: $content-area / 3 * 2;
+	.col-2 {
+      max-width: $content-area / 1.5;
 
   	.inner {
-      padding: $container-padding ($container-padding * 1.5);
+      padding: $container-padding floor($container-padding * 1.5);
   	}
   }
 }
 
-.fullad-image {
+.fullad-img {
   padding-bottom: $container-gutter;
 }

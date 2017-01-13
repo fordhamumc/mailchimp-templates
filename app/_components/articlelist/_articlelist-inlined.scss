@@ -2,20 +2,22 @@
 //---------------------
 
 
-.article-list--container {
+.article-cont {
   padding-top: 10px;
 }
 
-.article-list {
+.article {
   list-style: none;
   padding: 0;
 
   li {
-    padding-top: 15px;
+    border-bottom: 1px solid $aside-background;
     Margin-bottom: 0;
+    padding: 15px 0;
   }
 }
 
-.article-list--more {
+.article-more {
   text-align: center;
 }
+

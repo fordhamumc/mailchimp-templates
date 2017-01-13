@@ -1,4 +1,4 @@
-// 
+//
 //  Grid
 //  ---------------------------------
 
@@ -24,7 +24,7 @@
 
 
 @include bp(md) {
-	.container {
+	.cont {
 		padding: 0 !important;
 	}
 	.inner {
@@ -32,8 +32,8 @@
 		padding-right: $container-padding !important;
 	}
 
-	.column img,
-	.column-2 img {
+	.col img,
+	.col-2 img {
 		width: auto !important;
 		max-width: 100% !important;
 	}
@@ -42,47 +42,50 @@
 // Two column layout
 //---------------------
 
-.two-column {
-
-	.column {
-		@include column-width( $content-area / 2 );
-	}
+.cont-2 .col,
+.event-desc {
+	@include column-width( $content-area / 2 );
 }
 
 
 // Three column layout
 //---------------------
 
-.three-column {
+.cont-3 .col,
+.event-img {
+	@include column-width( $content-area / 3 );
+}
 
-	.column {
-		@include column-width( $content-area / 3 );
-	}
-
-	.column-2 {
-		@include column-width( $content-area / 3 * 2 );
-	}
+.cont-3 .col-2 {
+	@include column-width( $content-area / 3 * 2 );
 }
 
 
 // Three column layout
 //---------------------
 
-.sixty-forty-column {
+.cont-64 {
 
-	.column {
+	.col {
 		@include column-width( $content-area * .4 );
 	}
 
-	.column-2 {
+	.col-2 {
 		@include column-width( $content-area * .6 );
 	}
 }
 
+// Six column layout
+//---------------------
+
+.event-rsvp {
+	@include column-width($content-area / 6);
+}
+
 @include bp(sm) {
-	.container {
-		.column,
-		.column-2 {
+	.cont {
+		.col,
+		.col-2 {
 			max-width: 100% !important;
 		}
 	}

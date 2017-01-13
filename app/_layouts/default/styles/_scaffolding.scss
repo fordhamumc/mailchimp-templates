@@ -58,3 +58,13 @@ img {
   height: auto;
   overflow: visible;
 }
+
+
+// Utilities
+//---------------------
+
+@include bp(sm) {
+  .cntr-sm .contents {
+    text-align: center !important;
+  }
+}

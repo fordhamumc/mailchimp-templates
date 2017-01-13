@@ -1,10 +1,11 @@
 mixin break(options)
   - var settings = Object.assign({line: false, bg: false}, options)
-  td.break-container(style=`${(settings.bg) ? 'background-color:' + settings.bg : ''}`)
+  td.break-cont(style=`${(settings.bg) ? 'background-color:' + settings.bg : ''}`, class=`${(settings.line) ? 'break-cont--line' : ''}`)
     if settings.line
       div(class=`break-${settings.line}`) &nbsp;
     else
       | &nbsp;
+    block
 
 mixin breaksection(bg)
   td(style=`${(bg) ? 'background-color:' + bg : ''}`)

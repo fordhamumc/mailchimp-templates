@@ -1,15 +1,10 @@
 //
-//  Full ad
+//  Full-width image
 //  ---------------------------------
 
 
-.fullimage {
-  img {
-    display: block;
-    width: 100%;
-  }
-
-  @include bp(md) {
+@include bp(md) {
+  .fullimage {
     padding: 0 !important;
   }
 }

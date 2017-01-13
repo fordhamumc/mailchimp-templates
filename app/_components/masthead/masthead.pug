@@ -13,16 +13,16 @@ mixin mastheadimage(options)
 
 mixin masthead(options)
   if (options.dual)
-    td.container.sixty-forty-column.masthead-dual
+    td.cont.cont-64.masthead-dual
       <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{Math.floor(width * .4)}" valign="bottom"><![endif]-->
-      .column
+      .col
         table(width='100%')
           tr
             td.inner.contents
               +mastheadimage(options)
 
       <!--[if (gte mso 9)|(IE)]></td><td width="#{Math.floor(width * .6)}" valign="bottom"><![endif]-->
-      .column-2
+      .col-2
         table(width='100%')
           tr
             td.inner.contents(mc:edit="masthead-content") #{options.dual}
