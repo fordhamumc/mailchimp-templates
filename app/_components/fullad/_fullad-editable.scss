@@ -1,0 +1,25 @@
+// 
+//  Full ad
+//  ---------------------------------
+
+
+/**
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
+.fullad-cont {
+  /*@editable*/ background-color: $primary-color;
+}
+
+/**
+@tab Sections
+@section Full-width Ad
+@tip Set the style for the full-width ad block
+*/
+
+.fullad .contents,
+.fullad a {
+  /*@editable*/ color: #ffffff;
+}

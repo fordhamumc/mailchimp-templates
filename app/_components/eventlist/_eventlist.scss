@@ -4,8 +4,10 @@
 
 @include bp(sm) {
 
-  .event-desc .contents {
-    text-align: center !important;
+  .event-desc {
+    .contents {
+      text-align: center !important;
+    }
   }
 
   .cont .event-rsvp {

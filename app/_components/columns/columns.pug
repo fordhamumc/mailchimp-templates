@@ -23,7 +23,7 @@ mixin column-row(size, hideable)
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, editable: true, textlink: false, break: true}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, editable: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidebreak: true}, options)
 
   - var padding = 15
   - var container
@@ -54,12 +54,12 @@ mixin column(namespace, options)
       +column-row(settings.size)
         td.inner.contents(dir="ltr")
           if (settings.title)
-            #{settings.heading}(class="col-title", mc:edit=`${namespace}title`, mc:hideable) #{settings.title}
+            #{settings.heading}(class="col-title", mc:edit=`${namespace}title`, mc:hideable=settings.hidetitle) #{settings.title}
           if (settings.body)
-            div(mc:edit=`${namespace}desc`, mc:hideable, class=`${(settings.textlink) ? "textlink" : ""}`)
+            div(mc:edit=`${namespace}desc`, mc:hideable=settings.hidecontent, class=`${(settings.textlink) ? "textlink" : ""}`)
               block
               if (!block)
                 | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
           if (settings.break)
-            .break(mc:hideable) &nbsp;
+            .break(mc:hideable=settings.hidebreak) &nbsp;
 

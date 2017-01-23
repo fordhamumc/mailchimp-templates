@@ -15,18 +15,6 @@ p {
 // Emphasis
 //---------------------
 
-/**
-@tab Page
-@section small text style
-@tip Set the style for the <small> tag
-@style small
-*/
-
-small   {
-  /*@editable*/ color: lighten($text-color, 20%);
-  font-size: 85%;
-}
-
 strong {
   font-weight: $font-weight-bold;
 }
@@ -40,103 +28,8 @@ h1, h2, h3, h4, h5, h6 {
   Margin-top: 0;
 }
 
-h1, h2, h3 {
+h1, h2 {
   line-height: 1.4;
-}
-
-/**
-@tab Headings
-@section heading 1
-@tip Set the style for the <h1> tag
-@style heading 1
-*/
-
-h1 {
-  /*@editable*/ font-size: floor($font-size-base * 2.50);
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
-}
-
-/**
-@tab Headings
-@section heading 2
-@tip Set the style for the <h2> tag
-@style heading 2
-*/
-
-h2 {
-  /*@editable*/ font-size: floor($font-size-base * 2.15);
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 2);
-}
-
-/**
-@tab Headings
-@section heading 3
-@tip Set the style for the <h3> tag
-@style heading 3
-*/
-
-h3 {
-  /*@editable*/ font-size: floor($font-size-base * 1.70);
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
-}
-
-/**
-@tab Headings
-@section heading 4
-@tip Set the style for the <h4> tag
-@style heading 4
-*/
-
-h4 {
-  /*@editable*/ font-size: floor($font-size-base * 1.25);
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
-  line-height: 1.5;
-}
-
-/**
-@tab Headings
-@section heading 5
-@tip Set the style for the <h5> tag
-@style heading 5
-*/
-
-h5 {
-  /*@editable*/ font-size: $font-size-base;
-  /*@editable*/ Margin-bottom: floor($line-height-computed / 3);
-}
-
-@include bp(sm) {
-
-  /**
-  @tab Headings
-  @section mobile heading 1
-  @tip Set the small screen style for the <h1> tag
-  */
-
-  h1 {
-    /*@editable*/ font-size: floor($font-size-base * 2.50 * .8) !important;
-  }
-
-  /**
-  @tab Headings
-  @section mobile heading 2
-  @tip Set the small screen style for the <h2> tag
-  */
-
-  h2 {
-    /*@editable*/ font-size: floor($font-size-base * 2.15 * .8) !important;
-  }
-
-  /**
-  @tab Headings
-  @section mobile heading 3
-  @tip Set the small screen style for the <h3> tag
-  */
-
-  h3 {
-    /*@editable*/ font-size: floor($font-size-base * 1.70 * .85) !important;
-    line-height: 1.6 !important;
-  }
 }
 
 
@@ -159,17 +52,8 @@ li {
 // Body Text
 //---------------------
 
-/**
-@tab Page
-@section Lead
-@tip Set the style for lead class
-@style lead
-*/
-
-.lead {
-  /*@editable*/ font-size: ceil($font-size-base * 1.2);
-
-  @include bp(sm) {
+@include bp(sm) {
+  .lead {
     font-size: ceil($font-size-base * 1.1) !important;
   }
 }

@@ -13,8 +13,9 @@ include ../_components/tagline/tagline
 include ../_components/fullad/fullad
 
 block style-template
-  <!-- build:css inline styles/default-nolead.css -->
+  <!-- build:css inline styles/style.css -->
   link(rel='stylesheet', href='styles/default-nolead.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/default-nolead-editable.css', data-premailer='ignore')
   <!-- /build -->
   link(rel='stylesheet', href='styles/default-nolead-inlined.css')
 
@@ -32,9 +33,9 @@ block body
           tr(mc:repeatable="masthead", mc:variant=masthead.variant)
             +masthead(masthead)
         tr.intro(mc:hideable)
-          +column("column", {size: 1, title: false, aspect: 0, break: false})
+          +column("column", {size: 1, title: false, aspect: 0, hidecontent:false, hidebreak:false})
         tr
-          +break
+          td
             .section-top &nbsp;
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

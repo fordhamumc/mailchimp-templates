@@ -28,12 +28,8 @@ td {
   mso-table-rspace: 0pt;
 }
 
-div[style*="margin: 16px 0"] {
-  margin:0 !important;
-}
-
 @include bp(md) {
   .webkit {
-    max-width: 100% !important;
+    max-width: 100%   !important;
   }
 }

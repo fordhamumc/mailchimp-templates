@@ -1,0 +1,16 @@
+//
+//  Section header
+//  ---------------------------------
+
+
+/**
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header,
+.section-header a {
+  /*@editable*/ color: $meta-color;
+}

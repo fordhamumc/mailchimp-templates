@@ -3,50 +3,6 @@
 //  ---------------------------------
 
 
-// Default content
-//---------------------
-
-/**
-@tab Page
-@section default text style
-@tip Set the default size color font family and weight
-@style default text
-*/
-
-.contents {
-  /*@editable*/ color: $text-color;
-  /*@editable*/ font-size: $font-size-base;
-}
-
-
-// Links
-//---------------------
-
-/**
-@tab Page
-@section default links
-@tip Set the link color and style
-*/
-
-a, .link {
-  /*@editable*/ color: $link-color;
-  /*@editable*/ text-decoration: none;
-}
-
-/**
-@tab Page
-@section text link
-@tip Should be the same color as the text
-@style textlink
-*/
-
-.textlink,
-.textlink a:not(.btn):not(.btn-sm):not(.btn-lg) {
-  /*@editable*/ color: $text-color;
-  /*@editable*/ text-decoration: none;
-}
-
-
 // Image defaults
 //---------------------
 

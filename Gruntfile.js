@@ -95,6 +95,20 @@ module.exports = function(grunt) {
         }]
       }
     },
+    cssmin: {
+      options: {
+        keepBreaks: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: ['<%= paths.directory %>/styles/<%= paths.file %>.css'],
+          dest: '<%= paths.tmp %>',
+          ext: '.css'
+        }]
+      }
+    },
     uncss: {
       dist: {
         options: {
@@ -106,12 +120,27 @@ module.exports = function(grunt) {
         }]
       }
     },
-    cmq: {
+    concat_css: {
       dist: {
+        files: {
+          '<%= paths.tmp %>/<%= paths.directory %>/styles/style.css': ['<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>.css', '<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>-editable.css']
+        }
+      }
+    },
+    cmq: {
+      parts: {
         files: [{
           expand: true,
           cwd: '<%= paths.tmp %>',
           src: '<%= paths.directory %>/styles/**/*.css',
+          dest: '<%= paths.tmp %>'
+        }]
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.tmp %>',
+          src: '<%= paths.directory %>/styles/style.css',
           dest: '<%= paths.tmp %>'
         }]
       }
@@ -383,7 +412,9 @@ module.exports = function(grunt) {
       'chooseFile',
       'clean:dist',
       'copy',
-      'sass:dist'
+      'sass:dist',
+      'cmq:parts',
+      'cssmin'
     ];
 
     if (target === 'test') {
@@ -398,8 +429,8 @@ module.exports = function(grunt) {
 
     build = build.concat([
       'imagemin',
-      //'uncss',
-      'cmq',
+      'concat_css',
+      'cmq:dist',
       'premailer',
       'processhtml'
     ]);

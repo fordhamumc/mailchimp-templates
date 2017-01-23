@@ -3,27 +3,6 @@
 //  ---------------------------------
 
 
-/**
-@tab Sections
-@section Full-width Ad
-@tip Set the style for the full-width ad block
-*/
-
-.fullad-cont {
-  /*@editable*/ background-color: $primary-color;
-}
-
-/**
-@tab Sections
-@section Full-width Ad
-@tip Set the style for the full-width ad block
-*/
-
-.fullad .contents,
-.fullad a {
-  /*@editable*/ color: #ffffff;
-}
-
 .fullad a {
   display: block;
 }
@@ -52,7 +31,7 @@
       text-align: center !important;
     }
 
-    .col .inner, {
+    .col .inner {
       padding: $container-gutter $container-padding 0 $container-padding !important;
     }
 
