@@ -9,7 +9,7 @@ mixin mastheadimage(options)
       img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width=top.size, alt='', style=`max-width:  ${top.size}px`)
       br
       each image in options.images
-        img(src=image.src, width=image.size, alt=`| ${image.alt}`, style=`max-width:  ${image.size}px`)
+        img(src=image.src, width=image.size, alt=`${image.alt} |`, style=`max-width:  ${image.size}px`)
 
 mixin masthead(options)
   if (options.dual)
