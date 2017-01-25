@@ -4,10 +4,12 @@
 
 
 @include bp(md) {
-  .outer,
   .section-bottom,
   .section-top {
     border-radius: 0 !important;
+  }
+  .break-cont--line {
+    padding: 0 $container-padding !important;
   }
 }
 

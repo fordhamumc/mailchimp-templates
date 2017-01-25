@@ -17,7 +17,7 @@
   text-align: center;
 }
 .break-cont--line {
-  padding: 0 $container-padding;
+  padding: 0 ($container-padding + $outer-padding);
 }
 
 .break-dashed {

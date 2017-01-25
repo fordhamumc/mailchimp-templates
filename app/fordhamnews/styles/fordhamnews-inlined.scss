@@ -1,0 +1,56 @@
+// Default styles
+//-------------------
+
+@import "fordhamnews-overrides",
+        "base-inlined";
+
+
+// Components
+//-------------------
+
+@import "block-inlined",
+        "break-inlined",
+        "column-inlined",
+        "preheader-inlined",
+        "masthead-inlined",
+        "social-inlined",
+        "tagline-inlined",
+        "footer-inlined";
+
+
+//
+//  Inside Fordham
+//  ---------------------------------
+
+.if-logo img {
+  width: 100%;
+  max-width: 400px;
+  overflow: visible;
+}
+
+
+//
+//  Section header
+//  ---------------------------------
+
+.section-header {
+        font-weight: $font-weight-bold;
+}
+
+
+//
+//  Pullquote
+//  ---------------------------------
+
+.pq-cont {
+  background-color: $aside-background;
+
+  .contents {
+    color: #aside-color;
+  }
+}
+
+.pq-author {
+  font-size: ceil($font-size-base * .8);
+  text-transform: uppercase;
+}

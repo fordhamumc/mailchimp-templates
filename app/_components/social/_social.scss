@@ -1,4 +1,14 @@
 // Social Icons
 //---------------------
 
+@include bp(md) {
+  .social-bnr img {
+    max-width: 24px !important;
+  }
+}
 
+@include bp(sm) {
+  .social-bnr--cont .contents {
+    text-align: center !important;
+  }
+}

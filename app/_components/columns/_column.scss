@@ -2,6 +2,21 @@
 //  Column
 //  ---------------------------------
 
+.cont-3 .col-img--solo img {
+  padding-top: 3px;
+}
+
+.cont-64 .col-img--solo img {
+  padding-top: 5px;
+}
+
+@include bp(md) {
+  .col-img img,
+  .col-img--solo img {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+}
 
 @include bp(sm) {
   .col-img,
@@ -13,7 +28,9 @@
   .col-img--solo img,
   .col-img-full .col img {
     max-width: 100% !important;
+    padding-top: 0px !important;
   }
+
   .col-img--solo small {
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;

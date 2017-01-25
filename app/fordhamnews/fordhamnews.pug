@@ -1,0 +1,120 @@
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/sectionheader/sectionheader
+include ../_components/masthead/masthead
+include ../_components/footer/footer
+include ../_components/social/social
+include ../_components/tagline/tagline
+
+block style-template
+  <!-- build:css inline styles/style.css -->
+  link(rel='stylesheet', href='styles/fordhamnews.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/fordhamnews-editable.css', data-premailer='ignore')
+  <!-- /build -->
+  link(rel='stylesheet', href='styles/fordhamnews-inlined.css')
+
+
+block body
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +preheader
+        each masthead in mastheads
+          tr
+            +masthead(masthead)
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper.social-bnr--cont
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr(dir="rtl")
+          td.cont.cont-2
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("viewlink", {aspect: 0, textlink: true, title: false, break: false})
+              a(href="*|ARCHIVE|*", target="_blank") View in your browser.
+            +column("social", {blank: true})
+              +social(socialuniversity, "social-bnr")
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr(mc:repeatable="news", mc:variant="additional stories")
+          td.cont.cont-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.75, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", title: "Article Title", break: false, textlink: true})
+            .break &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="news", mc:variant="lead story")
+          td
+            table(width="100%")
+              +column("column", {size: 1, aspect: 1.75, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
+        tr
+          +break({line: "dashed"})
+        tr
+          +break()
+        tr
+          td.inner.contents.if-logo
+            img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/57a87033-8db6-46f3-9635-947958e7e838.png", width="400")
+        tr.break-reduce
+          +break()
+      table.outer(mc:repeatable="insidefordham")
+        tr.cntr-sm
+          +sectionheader("column")
+        tr
+          td.cont.cont-3.col-img-full.if-list
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.75, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, title: false, break: false, hidecontent: false})
+              ul
+                li Someday this space will be occupied by real copy that is meant to be read.
+                li It is strictly for mock-ups. You may mock it up as strictly as you wish.
+            .break &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+      table.outer
+        tr
+          +break()
+
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+  center.wrapper.pq-cont
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr.cntr-sm
+          +sectionheader("column")
+        tr
+          td.inner.contents
+            p.lead(mc:edit="pullquote") This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+            p.pq-author(mc:edit="pullquote-author") Name, position at Fordham, what they are talking about. Publication, Date
+            p(mc:edit="pullquote-link")
+              a(href="", target="_blank") Read more highlighted faculty and staff who have recently provided commentary in the news media.
+            .break &nbsp;
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +break
+        tr
+          +tagline
+        tr
+          +footer
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

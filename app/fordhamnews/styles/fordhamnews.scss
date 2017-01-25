@@ -1,0 +1,26 @@
+// Default styles
+//-------------------
+
+@import "fordhamnews-overrides",
+        "base";
+
+
+// Components
+//-------------------
+
+@import "break",
+        "column",
+        "preheader",
+        "masthead",
+        "social",
+        "tagline",
+        "footer";
+
+//
+//  Inside Fordham
+//  ---------------------------------
+
+.if-list ul {
+  Margin: 0;
+  padding-left: 25px;
+}

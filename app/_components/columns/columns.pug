@@ -9,22 +9,19 @@ mixin column-container(size, container)
   else
     block
 
-mixin column-row(size, hideable)
-  if size > 1
-    if hideable
-      tr(mc:hideable)
-        block
-    else
-      tr
-        block
+mixin column-row(row, hideable)
+  if row
+    tr(mc:hideable=hideable)
+      block
   else
     block
 
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, editable: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidebreak: true}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, editable: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidebreak: true, blank: false, caption: false}, options)
 
+  - var row = (settings.size > 1 || (settings.aspect > 0 && (settings.title || settings.body)))
   - var padding = 15
   - var container
   case settings.size
@@ -38,28 +35,32 @@ mixin column(namespace, options)
       - container = Math.floor(width/settings.size)
 
   +column-container(settings.size, container)
-    if (settings.aspect > 0)
-      - var imgcontainer = container - (padding * 2)
-      - var imgwidth = Math.floor(imgcontainer * 1.5)
-      if (settings.fullimage)
-        - imgwidth = Math.floor(460 * 1.5)
-      - var imgheight = Math.floor(imgwidth / settings.aspect)
-
-      +column-row(settings.size, true)
-        td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
-          img(src=`http://quickimage.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
-          if (!settings.title && !settings.body && settings.size === 4)
-            small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
-    if (settings.title || settings.body)
+    if settings.blank
       +column-row(settings.size)
-        td.inner.contents(dir="ltr")
-          if (settings.title)
-            #{settings.heading}(class="col-title", mc:edit=`${namespace}title`, mc:hideable=settings.hidetitle) #{settings.title}
-          if (settings.body)
-            div(mc:edit=`${namespace}desc`, mc:hideable=settings.hidecontent, class=`${(settings.textlink) ? "textlink" : ""}`)
-              block
-              if (!block)
-                | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
-          if (settings.break)
-            .break(mc:hideable=settings.hidebreak) &nbsp;
+        block
+    else
+      if (settings.aspect > 0)
+        - var imgcontainer = container - (padding * 2)
+        - var imgwidth = Math.floor(imgcontainer * 1.5)
+        if (settings.fullimage)
+          - imgwidth = Math.floor(460 * 1.5)
+        - var imgheight = Math.floor(imgwidth / settings.aspect)
+
+        +column-row(row, true)
+          td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
+            img(src=`http://quickimage.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
+            if (settings.caption)
+              small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
+      if (settings.title || settings.body)
+        +column-row(row)
+          td.inner.contents(dir="ltr")
+            if (settings.title)
+              #{settings.heading}(class="col-title", mc:edit=`${namespace}title`, mc:hideable=settings.hidetitle) #{settings.title}
+            if (settings.body)
+              div(mc:edit=`${namespace}desc`, mc:hideable=settings.hidecontent, class=`${(settings.textlink) ? "textlink" : ""}`)
+                block
+                if (!block)
+                  | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+            if (settings.break)
+              .break(mc:hideable=settings.hidebreak) &nbsp;
 

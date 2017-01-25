@@ -8,3 +8,30 @@
     overflow: visible;
   }
 }
+
+
+// Social Icons
+//---------------------
+
+.social-bnr--cont {
+  background-color: $aside-background;
+  border-top: 2px solid darken($aside-background, 13%);
+  border-bottom: 2px solid darken($aside-background, 13%);
+
+  .inner {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contents {
+    text-align: right;
+  }
+
+  .social-bnr {
+    text-align: left;
+    line-height: 1;
+    img {
+      max-width: 24px;
+    }
+  }
+}
