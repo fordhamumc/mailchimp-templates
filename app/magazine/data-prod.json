@@ -1,0 +1,17 @@
+{
+  "dev": true,
+  "width": 660,
+  "container": 730,
+  "bgcolor": "#FFFFFF",
+  "contact": "insidefordh@fordham.edu",
+  "mastheadtop": {
+    "alt": "Fordham News: The Latest From Fordham University",
+    "size": 400,
+    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/06a3acb7-7d1d-4dff-9bc1-81d4fe6eeae3.png"
+  },
+  "mastheads": [
+    {
+      "url": "http://fordham.edu/magazine"
+    }
+  ]
+}

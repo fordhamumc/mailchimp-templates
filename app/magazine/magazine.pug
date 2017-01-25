@@ -1,0 +1,56 @@
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/masthead/masthead
+include ../_components/footer/footer
+include ../_components/tagline/tagline
+
+block style-template
+  <!-- build:css inline styles/style.css -->
+  link(rel='stylesheet', href='styles/magazine.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/magazine-editable.css', data-premailer='ignore')
+  <!-- /build -->
+  link(rel='stylesheet', href='styles/magazine-inlined.css')
+
+block body
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +preheader
+        each masthead in mastheads
+          tr
+            +masthead(masthead)
+
+        tr(mc:repeatable="news")
+          td.cont.cont-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", title: "Article Title", break: false, textlink: true, category: true})
+            .break &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          +break({line:"solid"})
+        tr
+          td.inner.contents
+            .magazine-footer(mc:edit="magazine-footer") #[em FORDHAM] magazine is printed twice a year, in fall and spring, and updated regularly online. Our monthly email includes stories from the print edition plus timely news and features found only at #[a.textlink(href="http://fordham.edu/magazine", target="_blank") fordham.edu/magazine.]
+        tr
+          +break({line: "solid"})
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +break
+        tr
+          +tagline
+        tr
+          +footer
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

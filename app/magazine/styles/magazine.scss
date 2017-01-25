@@ -1,0 +1,24 @@
+// Default styles
+//-------------------
+@import "magazine-overrides",
+        "base";
+
+
+// Components
+//-------------------
+@import "break",
+        "column",
+        "preheader",
+        "masthead",
+        "tagline",
+        "footer";
+
+
+// Magazine Footer
+//-------------------
+
+@include bp(sm) {
+  .magazine-footer {
+    padding: 0 15px !important;
+  }
+}

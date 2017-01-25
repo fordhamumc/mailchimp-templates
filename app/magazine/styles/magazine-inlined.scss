@@ -1,0 +1,27 @@
+// Default styles
+//-------------------
+
+@import "magazine-overrides",
+        "base-inlined";
+
+
+// Components
+//-------------------
+
+@import "block-inlined",
+        "break-inlined",
+        "column-inlined",
+        "preheader-inlined",
+        "masthead-inlined",
+        "tagline-inlined",
+        "footer-inlined";
+
+
+
+// Magazine Footer
+//-------------------
+
+.magazine-footer {
+  padding: 0 25px;
+  text-align: center;
+}
