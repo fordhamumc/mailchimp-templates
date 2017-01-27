@@ -2,16 +2,16 @@
   "name": "fordham-mailchimp",
   "description": "Fordham Mailchimp Templates",
   "version": "1.0.0",
-  "authors": [
-    "Michael Foley <michaeldfoley@gmail.com>"
-  ],
+  "author": {
+    "name": "Michael Foley",
+    "email": "mifoley@fordham.edu",
+    "url": "https://michaeldfoley.com"
+  },
   "license": "MIT",
-  "repository": [
-    {
+  "repository": {
       "type": "git",
-      "url": "git@github.com:michaeldfoley/fordham-mailchimp.git"
-    }
-  ],
+      "url": "git@github.com:fordhamumc/mailchimp-templates.git"
+  },
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.1",
