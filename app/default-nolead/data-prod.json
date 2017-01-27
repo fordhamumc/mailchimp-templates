@@ -17,7 +17,7 @@
     },
     {
       "variant": "Fordham with Title",
-      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
+      "url": "http://forever.fordham.edu/s/1362/rd/start.aspx",
       "dual": "Alumni News: October 2016"
 
     },
@@ -118,7 +118,7 @@
     },
     {
       "variant": "MC",
-      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&amp;gid=1&amp;pgid=359",
+      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&gid=1&pgid=359",
       "top": {
         "alt": "Marymount College of Fordham University",
         "size": 321,

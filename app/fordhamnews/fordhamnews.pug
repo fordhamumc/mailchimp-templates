@@ -59,7 +59,10 @@ block body
         tr(mc:repeatable="news", mc:variant="lead story")
           td
             table(width="100%")
-              +column("column", {size: 1, aspect: 1.75, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
+              tr
+                +column("column", {size: 1, aspect: 1.75, fullimage: true, title: false, body: false})
+              tr
+                +column("column-2", {size: 1, aspect: false, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
         tr
           +break({line: "dashed"})
         tr
