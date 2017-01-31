@@ -2,7 +2,7 @@ mixin footer
   td.inner.contents.footer(mc:edit="footer")
     | *|IFNOT:ARCHIVE_PAGE|*
 
-    p.footer-links
+    .footer-links
       a(href="*|ARCHIVE|*", target="_blank") Web Version
       |  &nbsp;
       a(href="*|FORWARD|*", target="_blank") Forward to a Friend
@@ -16,11 +16,11 @@ mixin footer
     p.footer-sentto *|LIST:DESCRIPTION|*
 
     | *|IF:IMCID|*
-    p.footer-links
+    .footer-links
       a(href="http://emailprefs.fordham.edu/?id=*|IMCID|*", target="_blank") Customize the types of emails you receive from Fordham.
     | *|END:IF|*
 
-    p.footer-links
+    .footer-links
       a(href="*|UNSUB|*", target="_blank") Unsubscribe from all*|INTERESTED:Master:EmployeeStudent|* non-mandatory*|END:INTERESTED|* Fordham University emails.
 
     | *|END:IF|*

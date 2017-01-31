@@ -1,0 +1,47 @@
+// 
+//  Column
+//  ---------------------------------
+
+
+@include bp(sm) {
+
+  /**
+    @tab Images
+    @section lead 60/40 column mobile image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .lead-64 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section lead two-thirds column mobile image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .lead-3 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section body 60/40 column mobile image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .body-64 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section body two-thirds column mobile image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .body-3 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+}
