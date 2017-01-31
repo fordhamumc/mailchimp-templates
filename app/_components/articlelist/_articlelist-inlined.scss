@@ -11,13 +11,16 @@
   padding: 0;
 
   li {
-    border-bottom: 1px solid $aside-background;
     Margin-bottom: 0;
     padding: 15px 0;
   }
 }
 
-.article-more {
+.article-item {
+  border-bottom: 1px solid $aside-background;
+}
+
+li.article-more {
   text-align: center;
 }
 

@@ -6,7 +6,7 @@ mixin article-container
 mixin article-item(namespace)
   - namespace = (namespace) ? namespace + '-' : ''
 
-  li(mc:repeatable=`${namespace}article`)
+  li.article-item(mc:repeatable=`${namespace}article`)
     h4(mc:edit="article-title", mc:hideable) This is a default title.
     .textlink(mc:edit="article-desc", mc:hideable)
       block
