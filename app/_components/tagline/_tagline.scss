@@ -3,8 +3,7 @@
 
 
 @include bp(md) {
-  .tagline {
+  .tagline img {
     width: 100% !important;
-    max-width: 270px !important;
   }
 }
