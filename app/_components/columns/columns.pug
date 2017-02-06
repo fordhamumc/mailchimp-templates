@@ -1,5 +1,5 @@
 mixin column-container(size, container)
-  - var cl = (size === 23 || size === 6) ? "col-2" : "col"
+  - var cl = (size === 23 || size === 6 || size === 34) ? "col-2" : "col"
   if size > 1
     <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
     div(class=cl)
@@ -31,6 +31,10 @@ mixin column(namespace, options)
       - container = Math.floor(width * .4)
     when 6
       - container = Math.floor(width * .6)
+    when 14
+      - container = Math.floor(width * .25)
+    when 34
+      - container = Math.floor(width * .75)
     default
       - container = Math.floor(width/settings.size)
 

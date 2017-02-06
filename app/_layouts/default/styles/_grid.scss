@@ -75,12 +75,32 @@
 	}
 }
 
-// Six column layout
+// Icon layout
+//---------------------
+
+.cont-icon {
+
+	.col {
+		@include column-width( $content-area * .25 );
+	}
+
+	.col-2 {
+		@include column-width( $content-area * .75 );
+	}
+}
+
+
+// Event layout
 //---------------------
 
 .event-rsvp {
 	@include column-width($content-area / 6);
 }
+
+
+
+// Multiple column layouts
+//---------------------
 
 @include bp(sm) {
 	.cont {
