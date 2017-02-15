@@ -1,6 +1,27 @@
-mixin tagline
+mixin taglineurl(url)
+  if (url)
+    a(href=url, target="_blank")
+      block
+  else
+    block
+
+mixin tagline(type)
+
+  - var img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9644af7b-0155-4fb5-a113-e08181fc40ce.png"
+  - var width = 270
+  - var alt = "Fordham: 175 Years of Service in New York"
+  - var url = "http://www.fordham.edu/175"
+
+  if (type == 'hope')
+    - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d1a55d5-40fe-4324-89a0-639e719f4726.png"
+    - alt = "Faith and Hope | The Campaign for Financial Aid"
+    - url = null
+  else if (type == 'seal')
+    - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/93157cc4-fdff-4dc5-b6ae-e37a093f3f04.png"
+    - width = 330
+
   td.contents.inner.tagline
-    a(href="http://www.fordham.edu/175", target="_blank")
+    +taglineurl(url)
       block
       if (!block)
-        img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9644af7b-0155-4fb5-a113-e08181fc40ce.png", width="270", alt="Fordham: 175 Years of Service in New York", mc:edit="tagline")
+        img(src=img, width=width, alt=alt, style=`max-width: ${width}px`, mc:edit="tagline")
