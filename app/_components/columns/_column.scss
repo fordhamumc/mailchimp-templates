@@ -44,4 +44,11 @@
     padding-left: $container-padding !important;
     padding-right: $container-padding !important;
   }
+
+  .lead-64, .lead-3,
+  .body-64, .body-3 {
+    .col-img--solo img {
+      display: inline !important;
+    }
+  }
 }
