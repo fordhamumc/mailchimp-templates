@@ -22,8 +22,13 @@
   .col, .col-2 {
     vertical-align: bottom;
   }
-  .col-2 .contents {
+
+  .col .contents {
     line-height: 1;
+  }
+
+  .col-2 .contents {
+    line-height: 1.3;
     text-align: right;
     font-weight: $font-weight-bold;
   }

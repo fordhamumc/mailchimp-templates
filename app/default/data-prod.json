@@ -26,26 +26,31 @@
       "url": "http://fordham.edu/gabelli",
       "images": [{
         "alt": "Gabelli School of Business",
-        "size": 232,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a881c0d9-4f79-4292-8cfe-8308d194926c.png"
+        "size": 263,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/73198bab-5300-473b-a263-f3c685a716dc.png"
       }]
     },
     {
       "variant": "FCLC",
       "url": "http://fordham.edu/fclc",
       "images": [{
-        "alt": "College at Lincoln Center",
-        "size": 306,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/8e4cd736-9276-4bc9-a556-6d30585645d5.png"
-      }]
+        "alt": "College at ",
+        "size": 200,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/ffee7dc8-bb13-4647-ac1d-b79cb16386c6.png"
+      },
+        {
+          "alt": "Lincoln Center",
+          "size": 154,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a097c6f6-acbf-4678-b67a-cf15116a2e44.png"
+        }]
     },
     {
       "variant": "FCRH",
       "url": "http://fordham.edu/fcrh",
       "images": [{
         "alt": "College at Rose Hill",
-        "size": 256,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d1b9bf30-71bf-458a-9eab-c3dbbe555eff.png"
+        "size": 295,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1d92c38f-9b87-4bb2-921d-00a2c59fe24f.png"
       }]
     },
     {
@@ -53,14 +58,14 @@
       "url": "http://fordham.edu/gre",
       "images": [
         {
-          "alt": "Graduate School of Religion",
-          "size": 248,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/4452296e-6f84-4785-877d-74cd395a1116.png"
+          "alt": "Graduate School of Religion ",
+          "size": 282,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a7771e56-24f8-4706-9f4b-04b18bf1036b.png"
         },
         {
           "alt": "and Religious Education",
-          "size": 218,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/735bf126-9d93-4df6-ae3b-25ff8147cfe5.png"
+          "size": 246,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/85a34bfb-210e-4137-8e9a-ff9b1d2f51b8.png"
         }
       ]
     },
@@ -68,36 +73,46 @@
       "variant": "GSAS",
       "url": "http://fordham.edu/gsas",
       "images": [{
-        "alt": "Graduate School of Arts and Sciences",
-        "size": 328,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e8824f6b-4949-4b16-9e22-04475b81b46b.png"
-      }]
+        "alt": "Graduate School of ",
+        "size": 196,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/c0e1f69b-9563-405a-9417-0161ba11608b.png"
+      },
+        {
+          "alt": "Arts and Sciences",
+          "size": 178,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/207861d9-731c-40d4-b4a5-dc80ded9e012.png"
+        }]
     },
     {
       "variant": "GSE",
       "url": "http://fordham.edu/gse",
       "images": [{
         "alt": "Graduate School of Education",
-        "size": 262,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/578ff293-b124-44a4-b9f6-0bf78e1022a6.png"
+        "size": 300,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/3cff7958-5502-46ae-9bcb-7acbf572a517.png"
       }]
     },
     {
       "variant": "GSS",
       "url": "http://fordham.edu/gss",
       "images": [{
-        "alt": "Graduate School of Social Service",
-        "size": 295,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/04cdd187-b30c-4288-95a0-a46f1097945b.png"
-      }]
+        "alt": "Graduate School of ",
+        "size": 196,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/409a9915-3787-46a4-9c1d-6b6d69cc1163.png"
+      },
+        {
+          "alt": "Social Service",
+          "size": 140,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/444c5d47-6d30-46cb-9ccb-2b9150aa0372.png"
+        }]
     },
     {
       "variant": "LAW",
       "url": "http://fordham.edu/law",
       "images": [{
         "alt": "School of Law",
-        "size": 123,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9ca5b613-a465-458c-8413-f2655b40ec68.png"
+        "size": 141,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1803a970-494f-4bd3-9fad-075fa8e2c33f.png"
       }]
     },
     {
@@ -106,13 +121,13 @@
       "images": [
         {
           "alt": "School of Professional",
-          "size": 197,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1239ea35-46d4-4081-ab30-916074945258.png"
+          "size": 224,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/fdea88f5-6f90-45a8-a632-4815a9f9e1b7.png"
         },
         {
           "alt": "and Continuing Studies",
-          "size": 210,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/f64bfc6b-a94f-411b-8047-b3bf6e767a39.png"
+          "size": 238,
+          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/b77fe7ce-9ab2-48e0-84e9-64b85e6458f2.png"
         }
       ]
     },
