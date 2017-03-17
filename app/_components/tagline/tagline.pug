@@ -19,6 +19,11 @@ mixin tagline(type)
   else if (type == 'seal')
     - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/93157cc4-fdff-4dc5-b6ae-e37a093f3f04.png"
     - width = 330
+  else if (type == 'giveday')
+    - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/b2f3a6fb-d9ca-49b3-bb7c-e858517e8dc9.png"
+    - width = 150
+    - alt = "Fordham Giving Day: April 5, 2017"
+    - url = "https://www.fordham.edu/givingday"
 
   td.contents.inner.tagline
     +taglineurl(url)

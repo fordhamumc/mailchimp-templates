@@ -45,10 +45,13 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
-        tr(mc:repeatable="body", mc:variant="One Column Image")
-          +column("column", {size: 1, title: false, body: false})
-        tr(mc:repeatable="body", mc:variant="One Column Content")
+        tr(mc:repeatable="body", mc:variant="Content")
           +column("column", {size: 1, title: false, aspect: 0})
+        tr(mc:repeatable="body", mc:variant="Image")
+          +column("column", {size: 1, title: false, body: false})
+        tr(mc:repeatable="body", mc:variant="Call to Action")
+          td.inner.contents(style="padding-top: 0")
+            +btn("body")
         tr(mc:repeatable="body", mc:variant="Two Columns")
           td.cont.cont-2
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
@@ -63,55 +66,50 @@ block body
             +column("column-3", {size: 3, aspect: 1.5, title: false}) A Short Title
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (left image)")
-          td.cont.cont-64
+          td.cont.cont-64.body-64
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
             +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (right image)")
-          td.cont.cont-64(dir="rtl")
+          td.cont.cont-64.body-64(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
             +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
-          td.cont.cont-3.col-img-full
+          td.cont.cont-3.body-3.col-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
-          td.cont.cont-3.col-img-full(dir="rtl")
+          td.cont.cont-3.body-3.col-img-full(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
-          +sectionheader("column")
+        tr(mc:repeatable="body", mc:variant="Icons")
+          td.cont.cont-icon
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 14, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 34, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Article List")
           +article-container
             +article-item("body")
             +article-more("body")
-
         tr(mc:repeatable="body", mc:variant="Event List")
           td.cont.event-list
             +eventlist
-        tr(mc:repeatable="body", mc:variant="Event More Link")
-          +eventmore
-        tr(mc:repeatable="body", mc:variant="Ad (with text)")
-          +breaksection(bgcolor)
-            table(width="100%")
-              tr
-                +fullad
-        tr(mc:repeatable="body", mc:variant="Ad (full-width image)")
-          +breaksection(bgcolor)
-            table(width="100%")
-              tr
-                +fullad(true)
+            +eventmore
+        tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
+          +sectionheader("column")
         tr(mc:repeatable="body", mc:variant="Section Break")
           +breaksection(bgcolor)
         tr(mc:repeatable="body", mc:variant="Break")
@@ -120,9 +118,35 @@ block body
           +break({line: "dashed"})
         tr(mc:repeatable="body", mc:variant="Break (small solid line)")
           +break({line: "small"})
-        tr(mc:repeatable="body", mc:variant="Call to Action")
-          td.inner.contents(style="padding-top: 0")
-            +btn("body")
+        tr(mc:repeatable="body", mc:variant="Ad with text")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad
+        tr(mc:repeatable="body", mc:variant="Ad full-width image")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad(true)
+        tr(mc:repeatable="body", mc:variant="Ad 2-column")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                td.cont.cont-2
+                  <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+                  +column("column", {fullimage: true, textlink: true, title: false}) A Short Title
+                  +column("column-2", {fullimage: true, textlink: true, title: false}) A Short Title
+                  <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Ad 3-column")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                td.cont.cont-3.cntr-sm
+                  <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+                  +column("column", {size: 3, aspect: 1.5, title: false}) A Short Title
+                  +column("column-2", {size: 3, aspect: 1.5, title: false}) A Short Title
+                  +column("column-3", {size: 3, aspect: 1.5, title: false}) A Short Title
+                  <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr
           td &nbsp;
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -142,8 +166,14 @@ block body
           +fullad
         tr(mc:repeatable="footer", mc:variant="Ad (full-width image)")
           +fullad(true)
-        tr
+        tr(mc:repeatable="tagline", mc:variant="Tagline Default")
           +tagline
+        tr(mc:repeatable="tagline", mc:variant="Tagline 175 Seal")
+          +tagline("seal")
+        tr(mc:repeatable="tagline", mc:variant="Tagline Faith and Hope")
+          +tagline("hope")
+        tr(mc:repeatable="tagline", mc:variant="Tagline Giving Day")
+          +tagline("giveday")
         tr
           +footer
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
