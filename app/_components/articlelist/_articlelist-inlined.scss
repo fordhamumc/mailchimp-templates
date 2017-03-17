@@ -6,21 +6,17 @@
   padding-top: 10px;
 }
 
-.article {
-  list-style: none;
-  padding: 0;
+.article-item {
+  padding: 15px 0 7px;
+  border-bottom: 1px solid $aside-background;
 
-  li {
-    Margin-bottom: 0;
-    padding: 15px 0;
+  .textlink {
+    Margin-bottom: 8px;
   }
 }
 
-.article-item {
-  border-bottom: 1px solid $aside-background;
-}
-
-li.article-more {
+.article-more {
+  padding: 25px 0;
   text-align: center;
 }
 

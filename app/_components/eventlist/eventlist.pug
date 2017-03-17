@@ -4,7 +4,7 @@ mixin eventlist(namespace, options)
   - var settings = Object.assign({title: 'This is an event title', img: "http://quickimage.it/285x160", url: "#"}, options)
   - settings.rsvp = settings.rsvp || settings.url
 
-  .event
+  .event(mc:repeatable=`${namespace}article`)
     <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{width / 3}" valign="top"><![endif]-->
     .col.event-img
       table(width='100%')
@@ -36,8 +36,11 @@ mixin eventlist(namespace, options)
 
 mixin eventmore(namespace)
   - namespace = (namespace) ? namespace + '-' : '';
-  td.inner.contents.event-more(mc:edit=`${namespace}event-more`)
-    block
-    if (!block)
-      a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.
-      .break &nbsp;
+  table(width="100%")
+    tr
+      td.inner.contents
+        .event-more(mc:edit=`${namespace}event-more`)
+          block
+          if (!block)
+            a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.
+        .break(mc:hideable) &nbsp;

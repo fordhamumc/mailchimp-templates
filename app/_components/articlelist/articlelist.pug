@@ -1,21 +1,22 @@
 mixin article-container
   td.inner.contents.article-cont
-    ul.article
+    table(width='100%')
       block
 
 mixin article-item(namespace)
   - namespace = (namespace) ? namespace + '-' : ''
 
-  li.article-item(mc:repeatable=`${namespace}article`)
-    h4(mc:edit="article-title", mc:hideable) This is a default title.
-    .textlink(mc:edit="article-desc", mc:hideable)
+  tr(mc:repeatable=`${namespace}article`)
+    td.article-item(mc:edit="article-desc")
       block
       if (!block)
-        | This is some default content. It's not meant to be very long. It's just a preview of the article.
+        h4 This is a default title.
+        .textlink This is some default content. It's not meant to be very long. It's just a preview of the article.
 
 mixin article-more(namespace)
   - namespace = (namespace) ? namespace + '-' : ''
-  li.article-more(mc:edit="article-more", mc:hideable)
-    block
-    if (!block)
-      | View more.
+  tr
+    td.article-more(mc:edit="article-more", mc:hideable)
+      block
+      if (!block)
+        | View more.
