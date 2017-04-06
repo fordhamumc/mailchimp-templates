@@ -36,11 +36,11 @@ mixin eventlist(namespace, options)
 
 mixin eventmore(namespace)
   - namespace = (namespace) ? namespace + '-' : '';
-  table(width="100%")
+  table(width="100%", mc:hideable)
     tr
       td.inner.contents
         .event-more(mc:edit=`${namespace}event-more`)
           block
           if (!block)
             a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.
-        .break(mc:hideable) &nbsp;
+        .break &nbsp;
