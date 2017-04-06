@@ -7,18 +7,19 @@ mixin taglineurl(url)
 
 mixin tagline(type)
 
-  - var img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9644af7b-0155-4fb5-a113-e08181fc40ce.png"
+  - var img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d1a55d5-40fe-4324-89a0-639e719f4726.png"
   - var width = 270
-  - var alt = "Fordham: 175 Years of Service in New York"
-  - var url = "http://www.fordham.edu/175"
+  - var alt = "Faith and Hope | The Campaign for Financial Aid"
+  - var url = "https://www.fordham.edu/faithandhope"
 
-  if (type == 'hope')
-    - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d1a55d5-40fe-4324-89a0-639e719f4726.png"
-    - alt = "Faith and Hope | The Campaign for Financial Aid"
-    - url = null
+  if (type == '175')
+    - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/9644af7b-0155-4fb5-a113-e08181fc40ce.png"
+    - alt = "Fordham: 175 Years of Service in New York"
+    - url = "http://www.fordham.edu/175"
   else if (type == 'seal')
     - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/93157cc4-fdff-4dc5-b6ae-e37a093f3f04.png"
     - width = 330
+    - url = "http://www.fordham.edu/175"
   else if (type == 'giveday')
     - img = "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/b2f3a6fb-d9ca-49b3-bb7c-e858517e8dc9.png"
     - width = 150
