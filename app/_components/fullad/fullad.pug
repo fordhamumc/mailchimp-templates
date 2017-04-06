@@ -1,7 +1,7 @@
 mixin fullad(imageonly)
   if (imageonly)
-    td.inner.contents.fullad-img
-      img(src='http://quickimage.it/945x190', width="630", alt="", mc:edit="fullad-image")
+    td.inner.contents.fullad-img(mc:edit="fullad-content")
+      img(src='http://quickimage.it/945x190', width="630", alt="")
 
   else
     td.cont.cont-3.fullad
