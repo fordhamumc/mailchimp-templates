@@ -18,7 +18,7 @@ mixin masthead(options)
       .col
         table(width='100%')
           tr
-            td.inner.contents
+            td.inner.contents(mc:edit="masthead-image")
               +mastheadimage(options)
 
       <!--[if (gte mso 9)|(IE)]></td><td width="#{Math.floor(width * .6)}" valign="bottom"><![endif]-->
