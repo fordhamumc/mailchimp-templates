@@ -52,7 +52,7 @@ mixin column(namespace, options)
 
         +column-row(row, true)
           td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
-            img(src=`http://quickimage.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
+            img(src=`https://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
             if (settings.caption)
               small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
       if (settings.title || settings.body)

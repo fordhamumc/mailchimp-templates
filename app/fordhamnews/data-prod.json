@@ -1,201 +1,26 @@
 {
-  "dev": false,
+  "dev": true,
   "width": 660,
   "container": 730,
-  "bgcolor": "#F3F3F5",
-  "contact": "alumnioffice@fordham.edu",
+  "bgcolor": "#FFFFFF",
+  "contact": "insidefordh@fordham.edu",
   "mastheadtop": {
-    "alt": "Fordham",
-    "size": 168,
-    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d13bad7e-ca10-42ab-9563-b0ec8843403f.png"
+    "alt": "Fordham News: The Latest From Fordham University",
+    "size": 630,
+    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/44e14c0b-bc00-4b8b-9792-d1cbd34a0c07.png"
   },
   "mastheads": [
-
     {
-      "variant": "Fordham",
-      "url": "http://fordham.edu"
-    },
-    {
-      "variant": "Fordham with Title",
-      "url": "http://forever.fordham.edu/s/1362/rd/start.aspx",
-      "dual": "Alumni News: October 2016"
-
-    },
-    {
-      "variant": "Gabelli",
-      "url": "http://fordham.edu/gabelli",
-      "images": [{
-        "alt": "Gabelli School of Business",
-        "size": 263,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/73198bab-5300-473b-a263-f3c685a716dc.png"
-      }]
-    },
-    {
-      "variant": "FCLC",
-      "url": "http://fordham.edu/fclc",
-      "images": [{
-        "alt": "College at ",
-        "size": 200,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/ffee7dc8-bb13-4647-ac1d-b79cb16386c6.png"
-      },
-        {
-          "alt": "Lincoln Center",
-          "size": 154,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a097c6f6-acbf-4678-b67a-cf15116a2e44.png"
-        }]
-    },
-    {
-      "variant": "FCRH",
-      "url": "http://fordham.edu/fcrh",
-      "images": [{
-        "alt": "College at Rose Hill",
-        "size": 295,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1d92c38f-9b87-4bb2-921d-00a2c59fe24f.png"
-      }]
-    },
-    {
-      "variant": "GRE",
-      "url": "http://fordham.edu/gre",
-      "images": [
-        {
-          "alt": "Graduate School of Religion ",
-          "size": 282,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/a7771e56-24f8-4706-9f4b-04b18bf1036b.png"
-        },
-        {
-          "alt": "and Religious Education",
-          "size": 246,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/85a34bfb-210e-4137-8e9a-ff9b1d2f51b8.png"
-        }
-      ]
-    },
-    {
-      "variant": "GSAS",
-      "url": "http://fordham.edu/gsas",
-      "images": [{
-        "alt": "Graduate School of ",
-        "size": 196,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/c0e1f69b-9563-405a-9417-0161ba11608b.png"
-      },
-        {
-          "alt": "Arts and Sciences",
-          "size": 178,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/207861d9-731c-40d4-b4a5-dc80ded9e012.png"
-        }]
-    },
-    {
-      "variant": "GSE",
-      "url": "http://fordham.edu/gse",
-      "images": [{
-        "alt": "Graduate School of Education",
-        "size": 300,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/3cff7958-5502-46ae-9bcb-7acbf572a517.png"
-      }]
-    },
-    {
-      "variant": "GSS",
-      "url": "http://fordham.edu/gss",
-      "images": [{
-        "alt": "Graduate School of ",
-        "size": 196,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/409a9915-3787-46a4-9c1d-6b6d69cc1163.png"
-      },
-        {
-          "alt": "Social Service",
-          "size": 140,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/444c5d47-6d30-46cb-9ccb-2b9150aa0372.png"
-        }]
-    },
-    {
-      "variant": "LAW",
-      "url": "http://fordham.edu/law",
-      "images": [{
-        "alt": "School of Law",
-        "size": 141,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1803a970-494f-4bd3-9fad-075fa8e2c33f.png"
-      }]
-    },
-    {
-      "variant": "PCS",
-      "url": "http://fordham.edu/pcs",
-      "images": [
-        {
-          "alt": "School of Professional",
-          "size": 224,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/fdea88f5-6f90-45a8-a632-4815a9f9e1b7.png"
-        },
-        {
-          "alt": "and Continuing Studies",
-          "size": 238,
-          "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/b77fe7ce-9ab2-48e0-84e9-64b85e6458f2.png"
-        }
-      ]
-    },
-    {
-      "variant": "MC",
-      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&gid=1&pgid=359",
-      "top": {
-        "alt": "Marymount College of Fordham University",
-        "size": 321,
-        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/becedd2f-38f5-49bb-be70-d931fd4952f2.png"
-      }
+      "url": "http://news.fordham.edu"
     }
   ],
-  "articles": [
-    {
-      "title": "This is an Article Title",
-      "desc": "Short teaser description goes here."
-    }
-  ],
-  "columns": [
-    {
-      "title": "Lorem ipsum dolor sit amet",
-      "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-    }
-  ],
-  "events": [
-    {
-      "title": "Lorem ipsum dolor sit amet",
-      "desc": "October 1 | Lincoln Center Campus"
-    }
-  ],
-  "socialalumni": {
-    "size": 30,
-    "networks": [
-      {
-        "name": "Twitter",
-        "link": "https://twitter.com/fordhamalumni",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/036bc93d-b5d2-48ae-a6f3-f4d3a1a1441f.png"
-      },
-      {
-        "name": "Facebook",
-        "link": "https://www.facebook.com/FordhamAlumni",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d86e2eb-1482-438d-8f9d-943ede8e8ac6.png"
-      },
-      {
-        "name": "LinkedIn",
-        "link": "https://www.linkedin.com/edu/fordham-university-18956",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e61ba8ae-addd-4297-95bb-8fcf8aa93441.png"
-      },
-      {
-        "name": "YouTube",
-        "link": "https://www.youtube.com/user/FordhamUniversity",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/7003bec7-bba2-4008-9d87-cbeb79d31ec3.png"
-      },
-      {
-        "name": "Instagram",
-        "link": "https://www.instagram.com/fordhamalumni/",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1a40c78f-86a8-4df4-8258-a7f29704c855.png"
-      }
-    ]
-  },
   "socialuniversity": {
-    "size": 30,
+    "size": 24,
     "networks": [
       {
         "name": "Twitter",
         "link": "https://twitter.com/fordhamnyc",
-        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/036bc93d-b5d2-48ae-a6f3-f4d3a1a1441f.png"
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/f3042ca7-0e90-45c7-bd2d-96170749752e.png"
       },
       {
         "name": "Facebook",
