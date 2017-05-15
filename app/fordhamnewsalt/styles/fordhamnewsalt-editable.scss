@@ -1,0 +1,39 @@
+// Default styles
+//-------------------
+
+@import "fordhamnews-overrides",
+        "base-editable";
+
+
+// Components
+//-------------------
+
+@import "block-editable";
+
+
+//
+//  Section header
+//  ---------------------------------
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header {
+  /*@editable*/ font-size: ceil($font-size-base * 1.25);
+}
+
+/*
+  @tab Sections
+  @section Section Header
+  @tip Set the style for the section header
+  @style section header
+*/
+
+.section-header,
+.section-header a {
+  /*@editable*/ color: $text-color;
+}

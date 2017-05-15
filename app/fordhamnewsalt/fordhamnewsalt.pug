@@ -1,0 +1,81 @@
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/sectionheader/sectionheader
+include ../_components/masthead/masthead
+include ../_components/footer/footer
+include ../_components/social/social
+include ../_components/tagline/tagline
+
+block style-template
+  <!-- build:css inline styles/style.css -->
+  link(rel='stylesheet', href='styles/fordhamnewsalt.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/fordhamnewsalt-editable.css', data-premailer='ignore')
+  <!-- /build -->
+  link(rel='stylesheet', href='styles/fordhamnewsalt-inlined.css')
+
+
+block body
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +preheader
+        each masthead in mastheads
+          tr
+            +masthead(masthead)
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper.social-bnr--cont
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr(dir="rtl")
+          td.cont.cont-2
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("viewlink", {aspect: 0, textlink: true, title: false, break: false})
+              a(href="*|ARCHIVE|*", target="_blank") View in your browser.
+            +column("social", {blank: true})
+              +social(socialuniversity, "social-bnr")
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          td
+            table(width="100%")
+              tr
+                +column("lead", {size: 1,aspect: false,heading: "h3",title: false,hidebreak: false,textlink: false})
+                  .lead This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+
+        tr(mc:repeatable="news")
+          td.cont.cont-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.75, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", break: false, textlink: true})
+            .break &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +break
+        tr
+          +tagline
+        tr
+          +footer
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
