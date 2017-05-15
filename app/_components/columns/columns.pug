@@ -19,7 +19,7 @@ mixin column-row(row, hideable)
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidebreak: true, blank: false, caption: false, category: false}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidecontentrow: false, hidebreak: true, blank: false, caption: false, category: false}, options)
 
   - var row = (settings.size > 1 || (settings.aspect > 0 && (settings.title || settings.body)))
   - var padding = 15
@@ -56,7 +56,7 @@ mixin column(namespace, options)
             if (settings.caption)
               small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
       if (settings.title || settings.body)
-        +column-row(row)
+        +column-row(row, settings.hidecontentrow)
           td.inner.contents(dir="ltr")
             if (settings.category)
               h5.col-cat(mc:edit=`${namespace}cat`, mc:hideable)

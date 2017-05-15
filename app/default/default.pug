@@ -144,8 +144,15 @@ block body
             +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-        tr(mc:repeatable="body", mc:variant="Icons")
+        tr(mc:repeatable="body", mc:variant="Icons (left image)")
           td.cont.cont-icon
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 14, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 34, aspect: false, heading: "h3", break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Icons (right image)")
+          td.cont.cont-icon(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 14, aspect: 1.5, title: false, body: false})
             +column("column-2", {size: 34, aspect: false, heading: "h3", break: false})
@@ -185,19 +192,21 @@ block body
               tr
                 td.cont.cont-2
                   <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-                  +column("column", {fullimage: true, textlink: true, title: false}) A Short Title
-                  +column("column-2", {fullimage: true, textlink: true, title: false}) A Short Title
+                  +column("column", {fullimage: true, textlink: true, title: false, hidecontent:false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-2", {fullimage: true, textlink: true, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
                   <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break() &nbsp;
         tr(mc:repeatable="body", mc:variant="Ad 3-column")
           +breaksection(bgcolor)
             table(width="100%")
               tr
                 td.cont.cont-3.cntr-sm
                   <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-                  +column("column", {size: 3, aspect: 1.5, title: false}) A Short Title
-                  +column("column-2", {size: 3, aspect: 1.5, title: false}) A Short Title
-                  +column("column-3", {size: 3, aspect: 1.5, title: false}) A Short Title
+                  +column("column", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-2", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-3", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
                   <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break() &nbsp;
         tr
           td &nbsp;
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
