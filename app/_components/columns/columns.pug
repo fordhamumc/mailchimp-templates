@@ -54,7 +54,8 @@ mixin column(namespace, options)
           td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
             img(src=`https://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
             if (settings.caption)
-              small(mc:edit=`${namespace}caption`, mc:hideable) Optional Caption
+              .col-caption(mc:edit=`${namespace}caption`, mc:hideable)
+                small Optional Caption
       if (settings.title || settings.body)
         +column-row(row, settings.hidecontentrow)
           td.inner.contents(dir="ltr")
