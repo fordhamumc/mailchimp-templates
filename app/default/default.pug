@@ -73,14 +73,14 @@ block body
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (left image)")
-          td.cont.cont-3.col-img-full.lead-3
+          td.cont.cont-3.col-img-full.lead-23
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (right image)")
-          td.cont.cont-3.col-img-full.lead-3(dir="rtl")
+          td.cont.cont-3.col-img-full.lead-23(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
@@ -110,7 +110,7 @@ block body
             +column("column-2", {fullimage: true, textlink: true})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Three Columns")
-          td.cont.cont-3.cntr-sm
+          td.cont.cont-3.body-3.cntr-sm
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, title: false}) A Short Title
             +column("column-2", {size: 3, aspect: 1.5, title: false}) A Short Title
@@ -131,14 +131,14 @@ block body
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
-          td.cont.cont-3.body-3.col-img-full
+          td.cont.cont-3.body-23.col-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
             .break(mc:hideable) &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
-          td.cont.cont-3.body-3.col-img-full(dir="rtl")
+          td.cont.cont-3.body-23.col-img-full(dir="rtl")
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
             +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})

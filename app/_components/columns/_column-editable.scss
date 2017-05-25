@@ -3,11 +3,61 @@
 //  ---------------------------------
 
 
+/**
+  @tab Images
+  @section lead 60/40 column image size
+  @tip Set the size of the image
+  */
+
+.lead-64 .col-img--solo img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
+  @section lead two-thirds column image size
+  @tip Set the size of the image
+  */
+
+.lead-23 .col-img--solo img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
+  @section body 60/40 column image size
+  @tip Set the size of the image
+  */
+
+.body-64 .col-img--solo img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
+  @section body two-thirds column image size
+  @tip Set the size of the image
+  */
+
+.body-23 .col-img--solo img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
+  @section body 3 column image size
+  @tip Set the size of the image
+  */
+
+.body-3 .col-img img {
+  /*@editable*/ max-width: 100%;
+}
+
 @include bp(sm) {
 
   /**
     @tab Images
-    @section lead 60/40 column mobile image size
+    @section mobile lead 60/40 column image size
     @tip Set the size of the image at the small screen breakpoint
     */
 
@@ -17,17 +67,17 @@
 
   /**
     @tab Images
-    @section lead two-thirds column mobile image size
+    @section mobile lead two-thirds column image size
     @tip Set the size of the image at the small screen breakpoint
     */
 
-  .lead-3 .col-img--solo img {
+  .lead-23 .col-img--solo img {
     /*@editable*/ max-width: 100% !important;
   }
 
   /**
     @tab Images
-    @section body 60/40 column mobile image size
+    @section mobile body 60/40 column image size
     @tip Set the size of the image at the small screen breakpoint
     */
 
@@ -37,11 +87,21 @@
 
   /**
     @tab Images
-    @section body two-thirds column mobile image size
+    @section mobile body two-thirds column image size
     @tip Set the size of the image at the small screen breakpoint
     */
 
-  .body-3 .col-img--solo img {
+  .body-23 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section mobile body 3 column image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .body-3 .col-img img {
     /*@editable*/ max-width: 100% !important;
   }
 }
