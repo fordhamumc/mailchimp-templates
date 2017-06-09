@@ -15,8 +15,8 @@ mixin btn(namespace, options)
 
   .contents(mc:edit=`${namespace}button`, style=`${(settings.center) ? "text-align: center;" : ""}`)
     a(href=settings.url, target="_blank", class=btnclass)
-      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+      <!--[if (mso)]><pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre><![endif]-->
       block
       if (!block)
         | Button
-      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+      <!--[if (mso)]><pre>&nbsp;&nbsp;&nbsp;&nbsp;</pre><![endif]-->
