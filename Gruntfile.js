@@ -278,8 +278,27 @@ module.exports = function(grunt) {
       dist: {
         options: {
           create: ['<%= paths.tmp %>']
+        }
+      }
+    },
+    replace: {
+      dist: {
+        options: {
+          patterns: [
+            {
+              match: /&amp;/g,
+              replacement: '&'
+            }
+          ]
         },
-      },
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: '<%= paths.dist %>/<%= paths.directory %>',
+          src: ['index.html'],
+          dest: '<%= paths.dist %>/<%= paths.directory %>'
+        }]
+      }
     },
 
     /**
@@ -432,7 +451,8 @@ module.exports = function(grunt) {
       'concat_css',
       'cmq:dist',
       'premailer',
-      'processhtml'
+      'processhtml',
+      'replace'
     ]);
 
     grunt.task.run(build);

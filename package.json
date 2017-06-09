@@ -9,8 +9,8 @@
   },
   "license": "MIT",
   "repository": {
-      "type": "git",
-      "url": "git@github.com:fordhamumc/mailchimp-templates.git"
+    "type": "git",
+    "url": "git@github.com:fordhamumc/mailchimp-templates.git"
   },
   "dependencies": {},
   "devDependencies": {
@@ -29,6 +29,7 @@
     "grunt-premailer": "^1.0.0",
     "grunt-processhtml": "^0.4.1",
     "grunt-prompt": "^1.1.0",
+    "grunt-replace": "^1.0.1",
     "grunt-search": "^0.1.6",
     "grunt-uncss": "^0.6.1",
     "load-grunt-tasks": "^3.4.0",
