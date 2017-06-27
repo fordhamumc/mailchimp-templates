@@ -63,6 +63,11 @@ block body
                 +column("column", {size: 1, aspect: 1.75, fullimage: true, title: false, body: false})
               tr
                 +column("column-2", {size: 1, aspect: false, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
+        tr(mc:repeatable="news", mc:variant="plain content")
+          td
+            table(width="100%")
+              tr
+                +column("column-2", {size: 1, aspect: false, title: false, hidebreak: false, hidecontent: false })
         tr
           +break({line: "dashed"})
         tr
