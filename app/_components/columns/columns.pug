@@ -51,7 +51,7 @@ mixin column(namespace, options)
         - var imgheight = Math.floor(imgwidth / settings.aspect)
 
         +column-row(row, true)
-          td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`)
+          td.inner.contents(class=`${(!settings.title && !settings.body) ? "col-img--solo" :"col-img"}`, dir="ltr")
             img(src=`https://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
             if (settings.caption)
               .col-caption(mc:edit=`${namespace}caption`, mc:hideable)
