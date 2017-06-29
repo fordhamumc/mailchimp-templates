@@ -2,14 +2,16 @@ include ../columns/columns
 
 mixin mastheadimage(options)
   - var top = Object.assign({}, mastheadtop, options.top)
+  - var nimg = (options.images) ? options.images.length : 0
   a(href=options.url, target="_blank")
-    img(src=top.src, width=top.size, alt=`| ${top.alt}`, style=`max-width:  ${top.size}px`)
+    img(src=top.src, width=top.size, alt=`${top.alt}`, style=`max-width:  ${top.size}px`)
     if options.images
       br
       img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width=top.size, alt='', style=`max-width:  ${top.size}px; margin-top: 3px`)
       br
-      each image in options.images
-        img(src=image.src, width=image.size, alt=`${image.alt} |`, style=`max-width:  ${image.size}px`)
+      each image, i in options.images
+        - var spacer = (i === nimg - 1) ? '|' : ''
+        img(src=image.src, width=image.size, alt=`${image.alt} ${spacer}`, style=`max-width:  ${image.size}px`)
 
 mixin masthead(options)
   if (options.dual)
