@@ -53,7 +53,7 @@ block body
           td.cont.cont-64
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 4, aspect: 1.75, fullimage: true, title: false, body: false})
-            +column("column-2", {size: 6, aspect: false, heading: "h3", title: "Article Title", break: false, textlink: true})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", title: "Article Title", break: false, textlink: true })
             .break &nbsp;
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
         tr(mc:repeatable="news", mc:variant="lead story")
@@ -63,11 +63,11 @@ block body
                 +column("column", {size: 1, aspect: 1.75, fullimage: true, title: false, body: false})
               tr
                 +column("column-2", {size: 1, aspect: false, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
-        tr(mc:repeatable="news", mc:variant="plain content")
-          td
+        tr(mc:repeatable="news", mc:variant="alert")
+          td.inner.contents
             table(width="100%")
               tr
-                +column("column-2", {size: 1, aspect: false, title: false, hidebreak: false, hidecontent: false })
+                td(mc:edit="column-2-desc", style="padding: 12px 25px; background-color: #fcfcfb; border: 1px solid #c7c2b6;") This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
         tr
           +break({line: "dashed"})
         tr
