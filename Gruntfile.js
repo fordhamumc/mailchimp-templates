@@ -125,6 +125,14 @@ module.exports = function(grunt) {
         files: {
           '<%= paths.tmp %>/<%= paths.directory %>/styles/style.css': ['<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>.css', '<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>-editable.css']
         }
+      },
+      clean: {
+        files: {
+          '<%= paths.tmp %>/<%= paths.directory %>/styles/style.css': [
+            '<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>.css',
+            '<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>-editable.css',
+            '<%= paths.tmp %>/<%= paths.directory %>/styles/<%= paths.file %>-inlined.css']
+        }
       }
     },
     cmq: {
@@ -282,12 +290,37 @@ module.exports = function(grunt) {
       }
     },
     replace: {
-      dist: {
+      amp: {
         options: {
           patterns: [
             {
               match: /&amp;/g,
               replacement: '&'
+            }
+          ]
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          cwd: '<%= paths.dist %>/<%= paths.directory %>',
+          src: ['index.html'],
+          dest: '<%= paths.dist %>/<%= paths.directory %>'
+        }]
+      },
+      mailchimp: {
+        options: {
+          patterns: [
+            {
+              match: / mc:(.+?)="(.+?)"/gi,
+              replacement: ''
+            },
+            {
+              match: / \/\*@editable\*\//g,
+              replacement: ''
+            },
+            {
+              match: /\/\*\*[^]*?\*\//g,
+              replacement: ''
             }
           ]
         },
@@ -406,7 +439,7 @@ module.exports = function(grunt) {
       return grunt.task.run(['build', 'browserSync:dist']);
     }
 
-    grunt.task.run([
+    var tasks = [
       'chooseFile',
       'clean:dev',
       'copy',
@@ -414,7 +447,9 @@ module.exports = function(grunt) {
       'pug:dev',
       'browserSync:dev',
       'watch'
-    ]);
+    ];
+
+    grunt.task.run(tasks);
   });
 
 
@@ -427,7 +462,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build', function(target) {
 
-    var build = [
+    var tasks = [
       'chooseFile',
       'clean:dist',
       'copy',
@@ -437,25 +472,36 @@ module.exports = function(grunt) {
     ];
 
     if (target === 'test') {
-      build = build.concat([
+      tasks = tasks.concat([
         'pug:dev'
       ]);
     } else {
-      build = build.concat([
+      tasks = tasks.concat([
         'pug:dist'
       ]);
     }
 
-    build = build.concat([
+    tasks = tasks.concat([
       'imagemin',
-      'concat_css',
+      'concat_css:dist',
       'cmq:dist',
       'premailer',
       'processhtml',
-      'replace'
+      'replace:amp'
     ]);
 
-    grunt.task.run(build);
+    if (target === 'clean'){
+      tasks = tasks.concat([
+        'replace:mailchimp'
+      ]);
+
+      var concat_i = tasks.indexOf('concat_css:dist');
+      if (concat_i !== -1) {
+        tasks[concat_i] = 'concat_css:clean';
+      }
+    }
+
+    grunt.task.run(tasks);
   });
 
   grunt.registerTask('send', [
