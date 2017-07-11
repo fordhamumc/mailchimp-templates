@@ -29,6 +29,10 @@ img {
   opacity: 0;
   overflow: hidden;
 }
+.tbl td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 @include bp(sm) {
   .show-sm {
