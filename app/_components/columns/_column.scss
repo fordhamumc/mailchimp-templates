@@ -20,6 +20,10 @@
 }
 
 @include bp(md) {
+  .col-empty {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .col-img img,
   .col-img--solo img {
     width: auto !important;
