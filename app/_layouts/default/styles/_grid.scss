@@ -81,11 +81,11 @@
 .cont-icon {
 
 	.col {
-		@include column-width( $content-area * .25 );
+		@include column-width( $content-area * .2 );
 	}
 
 	.col-2 {
-		@include column-width( $content-area * .75 );
+		@include column-width( $content-area * .8 );
 	}
 }
 

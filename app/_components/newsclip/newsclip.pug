@@ -1,0 +1,24 @@
+mixin newsclip(namespace, options, repeat, variant)
+  - namespace = (namespace) ? namespace + '-' : ''
+  - var settings = Object.assign({aspect: 1.8, heading: "h4"}, options)
+  - var imgcontainer = 630
+  - var imgwidth = ( imgcontainer * 1.5 )
+
+  if (settings.aspect > 0)
+    - var imgheight = ( imgwidth / settings.aspect )
+
+  div(mc:repeatable=repeat, mc:variant=variant)
+    if (settings.aspect > 0)
+      div.news-img
+        img(src=`https://placehold.it/${imgwidth}x${imgheight}`, width=imgcontainer, alt='', mc:edit=`${namespace}image`)
+      .break &nbsp;
+    .news-meta
+      h5.news-cat(mc:edit=`${namespace}cat`, mc:hideable) Faculty Name
+      #{settings.heading}(class="news-title link", mc:edit=`${namespace}title`) Article Title
+      div(mc:edit=`${namespace}source`, class="textlink") Source
+    div(mc:edit=`${namespace}desc`, class="textlink")
+      block
+      if (!block)
+        | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+    .break &nbsp;
+

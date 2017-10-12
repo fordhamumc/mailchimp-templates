@@ -1,0 +1,47 @@
+{
+  "dev": true,
+  "width": 660,
+  "container": 730,
+  "bgcolor": "#FFFFFF",
+  "contact": "insidefordh@fordham.edu",
+  "mastheadtop": {
+    "alt": "Fordham News: Media Mentions",
+    "size": 630,
+    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/6acbd07d-7d78-4820-9e5e-94217dfb8f43.jpg"
+  },
+  "mastheads": [
+    {
+      "url": "http://news.fordham.edu"
+    }
+  ],
+  "socialuniversity": {
+    "size": 30,
+    "networks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/fordhamnyc",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/036bc93d-b5d2-48ae-a6f3-f4d3a1a1441f.png"
+      },
+      {
+        "name": "Facebook",
+        "link": "https://www.facebook.com/FordhamUniversity",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d86e2eb-1482-438d-8f9d-943ede8e8ac6.png"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/edu/fordham-university-18956",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e61ba8ae-addd-4297-95bb-8fcf8aa93441.png"
+      },
+      {
+        "name": "YouTube",
+        "link": "https://www.youtube.com/user/FordhamUniversity",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/7003bec7-bba2-4008-9d87-cbeb79d31ec3.png"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/fordhamuniversity/",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1a40c78f-86a8-4df4-8258-a7f29704c855.png"
+      }
+    ]
+  }
+}

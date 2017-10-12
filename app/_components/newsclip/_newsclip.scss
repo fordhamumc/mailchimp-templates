@@ -1,0 +1,14 @@
+// 
+//  Column
+//  ---------------------------------
+
+.news-cat a {
+  color: $text-color;
+}
+
+@include bp(md) {
+  .news-img img {
+    width: auto !important;
+    max-width: 100% !important;
+  }
+}

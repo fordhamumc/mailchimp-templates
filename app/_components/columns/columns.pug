@@ -1,5 +1,5 @@
 mixin column-container(size, container)
-  - var cl = (size === 23 || size === 6 || size === 34) ? "col-2" : "col"
+  - var cl = (size === 23 || size === 6 || size === 34 || size === 45) ? "col-2" : "col"
   if size > 1
     <!--[if (gte mso 9)|(IE)]><td width="#{container}" valign="top"><![endif]-->
     div(class=cl)
@@ -19,7 +19,7 @@ mixin column-row(row, hideable)
 
 mixin column(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
-  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidecontentrow: false, hidebreak: true, blank: false, caption: false, category: false}, options)
+  - var settings = Object.assign({size: 2, aspect: 1.8, fullimage: false, heading: "h4", title: "This is the title", body: true, textlink: false, break: true, hidetitle: true, hidecontent: true, hidecontentrow: false, hidebreak: true, blank: false, caption: false, category: false, source: false}, options)
 
   - var row = (settings.size > 1 || (settings.aspect > 0 && (settings.title || settings.body)))
   - var padding = 15
@@ -35,6 +35,10 @@ mixin column(namespace, options)
       - container = Math.floor(width * .25)
     when 34
       - container = Math.floor(width * .75)
+    when 15
+      - container = Math.floor(width * .2)
+    when 45
+      - container = Math.floor(width * .8)
     default
       - container = Math.floor(width/settings.size)
 

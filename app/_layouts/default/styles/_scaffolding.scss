@@ -33,6 +33,25 @@ img {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+@include bp(md) {
+  .hide-md {
+    display: none !important;
+  }
+}
+@include bp(730px) {
+  .pattern {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 340px;
+
+    img {
+      max-width: none !important;
+      position: absolute !important;
+      width: 730px !important;
+    }
+  }
+}
 
 @include bp(sm) {
   .show-sm {
@@ -51,5 +70,8 @@ img {
   }
   .cntr-sm .contents {
     text-align: center !important;
+  }
+  .block-sm {
+    display: block !important;
   }
 }

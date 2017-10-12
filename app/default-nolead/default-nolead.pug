@@ -96,8 +96,8 @@ block body
         tr(mc:repeatable="body", mc:variant="Icons")
           td.cont.cont-icon
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("column", {size: 14, aspect: 1.5, title: false, body: false})
-            +column("column-2", {size: 34, aspect: false, heading: "h3", break: false})
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, heading: "h3", break: false})
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
             .break(mc:hideable) &nbsp;
         tr(mc:repeatable="body", mc:variant="Article List")
@@ -162,6 +162,8 @@ block body
           +social(socialalumni)
         tr(mc:repeatable="footer", mc:variant="Social Networks (University)")
           +social(socialuniversity)
+        tr(mc:repeatable="footer", mc:variant="Social Networks (Athletics)")
+          +social(socialathletics)
         tr(mc:repeatable="footer", mc:variant="Ad (with text)")
           +fullad
         tr(mc:repeatable="footer", mc:variant="Ad (full-width image)")

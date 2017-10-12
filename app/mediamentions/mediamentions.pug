@@ -1,0 +1,57 @@
+extends ../_layouts/default/default
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/sectionheader/sectionheader
+include ../_components/fullimage/fullimage
+include ../_components/footer/footer
+include ../_components/social/social
+include ../_components/tagline/tagline
+include ../_components/newsclip/newsclip
+
+block style-template
+  <!-- build:css inline styles/style.css -->
+  link(rel='stylesheet', href='styles/mediamentions.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/mediamentions-editable.css', data-premailer='ignore')
+  <!-- /build -->
+  link(rel='stylesheet', href='styles/mediamentions-inlined.css')
+
+
+block body
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +preheader(true) Rams In the News is a weekly glance of top media mentions of Fordham University and members of the university community.
+      table.outer
+        tr
+          +fullimage
+            img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/6acbd07d-7d78-4820-9e5e-94217dfb8f43.jpg", width="730", alt="Rams In the News")
+        tr
+          td.inner.contents.subhead
+            .c(mc:edit="header-desc") Rams In the News is a weekly digest of top media mentions of <br class="hide-sm">Fordham and members of the University community.
+        tr
+          td.inner.contents.main
+            .break &nbsp;
+            +newsclip("column", {aspect: false}, "news", "News Clip")
+            .section-header(mc:repeatable="news", mc:variant="Section Header")
+              .break &nbsp;
+              .c(mc:edit=`column-sectionheader`) Section Header
+              .break &nbsp;
+            .break &nbsp;
+            .cntr-lg(mc:edit="readmore")
+              strong Read the full list of Rams in the News for this week.
+            .break &nbsp;
+            .break &nbsp;
+      table.outer
+        tr
+          .break &nbsp;
+          +social(socialuniversity)
+        tr
+          +tagline
+        tr
+          +footer
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

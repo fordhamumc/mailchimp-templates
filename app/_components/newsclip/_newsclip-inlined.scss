@@ -1,0 +1,32 @@
+//
+//  Column
+//  ---------------------------------
+
+.news-cat {
+  font-size: ($font-size-base - 1);
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.news-img {
+  text-align: center;
+  line-height: 1px;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+
+//
+//  News Meta
+//  ---------------------------------
+
+.news-meta {
+  margin-bottom: 8px;
+}
+
+.news-title {
+  margin-bottom: 0;
+}

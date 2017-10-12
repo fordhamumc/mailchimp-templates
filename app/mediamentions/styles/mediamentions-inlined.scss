@@ -1,0 +1,73 @@
+// Default styles
+//-------------------
+
+@import "mediamentions-overrides",
+        "base-inlined",
+        "type-editable";
+
+
+// Components
+//-------------------
+
+@import "preheader-inlined",
+        "break-inlined",
+        "fullimage-inlined",
+        "newsclip-inlined",
+        "social-inlined",
+        "tagline-inlined",
+        "footer-inlined";
+
+
+//
+//  Break
+//  ---------------------------------
+
+.break {
+  line-height: $container-gutter;
+  height: $container-gutter;
+}
+
+.section-top,
+.section-bottom {
+  font-size: 4px;
+  height: 4px;
+  line-height: 4px;
+}
+
+
+//
+//  Main Section
+//  ---------------------------------
+
+.main {
+  background-color: #ffffff;
+}
+
+
+//
+//  Section header
+//  ---------------------------------
+
+.section-header {
+  font-weight: $font-weight-bold;
+}
+
+.section-header .c {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-style: solid;
+}
+
+
+//
+//  Subhead
+//  ---------------------------------
+
+.subhead {
+  background-color: #2f4145;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+

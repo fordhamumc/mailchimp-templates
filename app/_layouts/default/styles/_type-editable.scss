@@ -126,3 +126,17 @@ h5 {
 .lead {
   /*@editable*/ font-size: ceil($font-size-base * 1.2);
 }
+
+
+// Lists
+//---------------------
+
+/**
+@tab Page
+@section List Item
+@tip Set the bottom margin for the list.
+*/
+
+li {
+  /*@editable*/ Margin-bottom: 15px;
+}

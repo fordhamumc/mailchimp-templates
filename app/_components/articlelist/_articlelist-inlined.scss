@@ -4,19 +4,16 @@
 
 .article-cont {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .article-item {
-  padding: 15px 0 7px;
+  padding: 15px 0;
   border-bottom: 1px solid $aside-background;
-
-  .textlink {
-    Margin-bottom: 8px;
-  }
 }
 
 .article-more {
-  padding: 25px 0;
+  padding: 15px 0;
   text-align: center;
 }
 

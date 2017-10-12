@@ -94,7 +94,10 @@ $screen-md:                   $outer-maxwidth + $container-padding * 2 !default;
   @else if $point == sm-md {
     @media (min-width: $screen-sm + 1)  { @content; }
   }
+  @else if $point == '' {
+    @media screen  { @content; }
+  }
   @else {
-    @media screen { @content; }
+    @media (max-width: $point) { @content; }
   }
 }

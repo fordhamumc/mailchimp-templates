@@ -25,6 +25,16 @@
 
 /**
   @tab Images
+  @section lead 2 column image size
+  @tip Set the size of the image
+  */
+
+.lead-2 .col-img img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
   @section body 60/40 column image size
   @tip Set the size of the image
   */
@@ -40,6 +50,16 @@
   */
 
 .body-23 .col-img--solo img {
+  /*@editable*/ max-width: 100%;
+}
+
+/**
+  @tab Images
+  @section body 2 column image size
+  @tip Set the size of the image
+  */
+
+.body-2 .col-img img {
   /*@editable*/ max-width: 100%;
 }
 
@@ -77,6 +97,26 @@
 
   /**
     @tab Images
+    @section mobile lead 2 column image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .lead-2 .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section mobile icon column image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .lead-icon .col-img--solo img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
     @section mobile body 60/40 column image size
     @tip Set the size of the image at the small screen breakpoint
     */
@@ -97,11 +137,31 @@
 
   /**
     @tab Images
+    @section mobile body 2 column image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .body-2 .col-img img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
     @section mobile body 3 column image size
     @tip Set the size of the image at the small screen breakpoint
     */
 
   .body-3 .col-img img {
+    /*@editable*/ max-width: 100% !important;
+  }
+
+  /**
+    @tab Images
+    @section mobile body icon column image size
+    @tip Set the size of the image at the small screen breakpoint
+    */
+
+  .body-icon .col-img img {
     /*@editable*/ max-width: 100% !important;
   }
 }
