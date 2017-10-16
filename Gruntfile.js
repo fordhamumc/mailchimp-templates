@@ -296,6 +296,12 @@ module.exports = function(grunt) {
             {
               match: /&amp;/g,
               replacement: '&'
+            },{
+              match: /\u00A0/g,
+              replacement: '&nbsp;'
+            },{
+              match: /\u200C/g,
+              replacement: '&zwnj;'
             }
           ]
         },

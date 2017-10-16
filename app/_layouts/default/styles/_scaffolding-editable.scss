@@ -28,7 +28,7 @@
 @tip Set the link color and style
 */
 
-a, .link {
+a, .link, .link a {
   /*@editable*/ color: $link-color;
   /*@editable*/ text-decoration: none;
 }
@@ -41,7 +41,7 @@ a, .link {
 */
 
 .textlink,
-.textlink a:not(.btn):not(.btn-sm):not(.btn-lg) {
+.textlink a {
   /*@editable*/ color: $text-color;
   /*@editable*/ text-decoration: none;
 }
