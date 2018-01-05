@@ -77,7 +77,7 @@ block body
             img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/57a87033-8db6-46f3-9635-947958e7e838.png", width="400")
         tr.break-reduce
           +break()
-      table.outer(mc:repeatable="insidefordham")
+      table.outer(mc:repeatable="insidefordham" mc:variant="with image")
         tr.cntr-sm
           +sectionheader("column")
         tr
@@ -90,6 +90,16 @@ block body
                 li It is strictly for mock-ups. You may mock it up as strictly as you wish.
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
             .break &nbsp;
+      table.outer(mc:repeatable="insidefordham" mc:variant="no image")
+        tr.cntr-sm
+          +sectionheader("column")
+        tr
+          td.inner.contents.if-list(mc:edit="column-2-desc")
+            ul
+              li Someday this space will be occupied by real copy that is meant to be read.
+              li It is strictly for mock-ups. You may mock it up as strictly as you wish.
+        tr
+          +break()
       table.outer
         tr
           +break()

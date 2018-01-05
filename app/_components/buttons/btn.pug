@@ -1,13 +1,15 @@
 mixin btn(namespace, options)
   - namespace = (namespace) ? namespace + '-' : ''
   - var settings = Object.assign({size: '', secondary: false, block: false, url: "#", center: false}, options)
-
+  - var msospacing = "&#8195;&#8287;"
   - var btnclass = "btn"
 
   if settings.size === "small" || settings.size === "sm"
     - btnclass = "btn-sm"
+    - msospacing = "&#8287;"
   if settings.size === "large" || settings.size === "lg"
     - btnclass = "btn-lg"
+    - msospacing = "&#8195;&#8195;&#8287;"
   if settings.secondary
     - btnclass = btnclass + " btn-secondary"
   if settings.block
@@ -15,8 +17,8 @@ mixin btn(namespace, options)
 
   .contents(mc:edit=`${namespace}button`, style=`${(settings.center) ? "text-align: center;" : ""}`)
     a(href=settings.url, target="_blank", class=btnclass)
-      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+      <!--[if mso]>!{msospacing}<![endif]-->
       block
       if (!block)
         | Button
-      <!--[if (mso)]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+      <!--[if mso]>!{msospacing}<![endif]-->
