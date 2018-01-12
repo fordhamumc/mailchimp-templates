@@ -1,0 +1,12 @@
+// Social Card
+//---------------------
+
+.handle a {
+  color: lighten($text-color, 20%);
+}
+
+@include bp(md) {
+  .cont-2 .social-card {
+    max-width: $content-area / 2 !important;
+  }
+}

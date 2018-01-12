@@ -13,6 +13,11 @@
   margin: 0 auto;
 }
 
+.break2 {
+  line-height: $container-gutter * 2;
+  height: $container-gutter * 2;
+}
+
 .break-cont {
   text-align: center;
 }

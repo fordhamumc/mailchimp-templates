@@ -297,6 +297,9 @@ module.exports = function(grunt) {
               match: /&amp;/g,
               replacement: '&'
             },{
+              match: /&quot;/g,
+              replacement: "'"
+            },{
               match: /\u00A0/g,
               replacement: '&nbsp;'
             },{

@@ -1,0 +1,27 @@
+mixin socialcard(namespace)
+  - namespace = (namespace) ? namespace + '-' : ''
+
+  <!--[if (gte mso 9)|(IE)]><td width="300" valign="top"><![endif]-->
+  .col.social-card
+    table(width='100%')
+      tr
+        td.inner.contents
+          .sc-wrap
+            img(src='http://placehold.it/645x373', width='300', mc:edit=`${namespace}image`, style='display: block')
+            table(width='100%',bgcolor='#ffffff')
+              tr
+                td.sc-cont
+                  table(width='100%')
+                    tr
+                      td(width='50', valign='top')
+                        img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/8b7c0c60-3fa4-492f-87fa-7d028887c576.png', width='50', mc:edit=`${namespace}avatar`)
+                      td(width='10') &nbsp;
+                      td(valign='top')
+                        .textlink(mc:edit=`${namespace}name`) Fordham University
+                        .handle(mc:edit=`${namespace}handle`) @fordhamnyc
+                      td(width='10') &nbsp;
+                      td.sc-img(width='25', valign='top')
+                        img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/036bc93d-b5d2-48ae-a6f3-f4d3a1a1441f.png', width='25', mc:edit=`${namespace}icon`)
+                  div(style="line-height: 1") &nbsp;
+                  .textlink(mc:edit=`${namespace}desc`) Someday this space will be occupied by real copy that is meant to be read. It is strictly for mock-ups. You may mock it up as strictly as you wish.
+  <!--[if (gte mso 9)|(IE)]></td><![endif]-->

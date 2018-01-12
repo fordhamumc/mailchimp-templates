@@ -6,6 +6,7 @@ include ../_components/sectionheader/sectionheader
 include ../_components/masthead/masthead
 include ../_components/footer/footer
 include ../_components/social/social
+include ../_components/socialcard/socialcard
 include ../_components/tagline/tagline
 
 block style-template
@@ -30,7 +31,7 @@ block body
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper.social-bnr--cont
-    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#eeeeee"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
@@ -60,7 +61,7 @@ block body
           td
             table(width="100%")
               tr
-                +column("column", {size: 1, aspect: 1.75, fullimage: true, title: false, body: false})
+                +column("column", {size: 1, aspect: 1.75, title: false, body: false})
               tr
                 +column("column-2", {size: 1, aspect: false, heading: "h3", title: "Article Title", hidebreak: false, textlink: true})
         tr(mc:repeatable="news", mc:variant="alert")
@@ -77,6 +78,16 @@ block body
             img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/57a87033-8db6-46f3-9635-947958e7e838.png", width="400")
         tr.break-reduce
           +break()
+      table.outer(mc:repeatable="insidefordham" mc:variant="no image")
+        tr.cntr-sm
+          +sectionheader("column")
+        tr
+          td.inner.contents.if-list(mc:edit="column-2-desc")
+            ul
+              li Someday this space will be occupied by real copy that is meant to be read.
+              li It is strictly for mock-ups. You may mock it up as strictly as you wish.
+        tr
+          +break()
       table.outer(mc:repeatable="insidefordham" mc:variant="with image")
         tr.cntr-sm
           +sectionheader("column")
@@ -89,39 +100,29 @@ block body
                 li Someday this space will be occupied by real copy that is meant to be read.
                 li It is strictly for mock-ups. You may mock it up as strictly as you wish.
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
-            .break &nbsp;
-      table.outer(mc:repeatable="insidefordham" mc:variant="no image")
-        tr.cntr-sm
-          +sectionheader("column")
-        tr
-          td.inner.contents.if-list(mc:edit="column-2-desc")
-            ul
-              li Someday this space will be occupied by real copy that is meant to be read.
-              li It is strictly for mock-ups. You may mock it up as strictly as you wish.
-        tr
-          +break()
-      table.outer
-        tr
-          +break()
+            .break-cont &nbsp;
+      .break-cont &nbsp;
 
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
 
   center.wrapper.pq-cont
-    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#eeeeee"><tr><td><![endif]-->
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
         tr.cntr-sm
-          +sectionheader("column")
-        tr
-          td.inner.contents
-            p.lead(mc:edit="pullquote") This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
-            p.pq-author(mc:edit="pullquote-author") Name, position at Fordham, what they are talking about. Publication, Date
-            p(mc:edit="pullquote-link")
-              a(href="", target="_blank") Read more highlighted faculty and staff who have recently provided commentary in the news media.
-            .break &nbsp;
+          +sectionheader("column") This Week on Social Media
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    table.outer
+      tr
+        td.cont.cont-2
+          <!--[if (gte mso 9)|(IE)]><table><tr><![endif]-->
+          <!--[if !mso]><!--><div style="display:inline-block" mc:repeatable="socialcard"><!--<![endif]-->
+          +socialcard("column")
+          <!--[if !mso]><!--></div><!--<![endif]-->
+          <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+          .break2 &nbsp;
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->

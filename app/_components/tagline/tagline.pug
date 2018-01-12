@@ -26,8 +26,8 @@ mixin tagline(type)
     - alt = "Fordham Giving Day: April 5, 2017"
     - url = "https://www.fordham.edu/givingday"
 
-  td.contents.inner.tagline
+  td.contents.inner.tagline(mc:edit="tagline")
     +taglineurl(url)
       block
       if (!block)
-        img(src=img, width=width, alt=alt, style=`max-width: ${width}px`, mc:edit="tagline")
+        img(src=img, width=width, alt=alt, style=`width: ${width}px`)
