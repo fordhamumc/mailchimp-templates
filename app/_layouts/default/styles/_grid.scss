@@ -5,6 +5,10 @@
 @mixin column-width($width) {
 	max-width: $width;
 
+	img {
+		width: $width;
+	}
+
 	@include bp(md) {
 		max-width: percentage($width / $content-area) !important;
 	}
