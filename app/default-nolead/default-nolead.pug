@@ -25,10 +25,8 @@ block body
     .webkit
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer.outer-alt
-        tr(mc:repeatable="preheader", mc:variant="Visible Preheader")
+        tr
           +preheader
-        tr(mc:repeatable="preheader", mc:variant="Hidden Preheader")
-          +preheader(true)
         each masthead in mastheads
           tr(mc:repeatable="masthead", mc:variant=masthead.variant)
             +masthead(masthead)
