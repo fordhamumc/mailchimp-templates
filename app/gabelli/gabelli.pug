@@ -1,0 +1,157 @@
+extends ../_layouts/default/default
+include ../_components/buttons/btn
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/articlelist/articlelist
+include ../_components/sectionheader/sectionheader
+include ../_components/fullimage/fullimage
+include ../_components/masthead/masthead
+include ../_components/footer/footer
+include ../_components/eventlist/eventlist
+include ../_components/social/social
+include ../_components/tagline/tagline
+include ../_components/fullad/fullad
+
+block style-template
+  link(rel='stylesheet', href='styles/gabelli.css')
+  link(rel='stylesheet', href='styles/gabelli-editable.css')
+  link(rel='stylesheet', href='styles/gabelli-inlined.css')
+
+block body
+  center.wrapper.cb-lead
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer.outer-alt
+        tr(mc:repeatable="preheader", mc:variant="Hidden Preheader")
+          +preheader(true) :::::This is the preheader text. It is the text that shows in the inbox after the subject.:::::
+        each masthead in mastheads
+          tr(mc:repeatable="masthead", mc:variant=masthead.variant)
+            +masthead(masthead)
+      table.outer
+        tr(mc:repeatable="lead", mc:variant="Content")
+          +column("lead", {size: 1, title: false, aspect: 0})
+        tr(mc:repeatable="lead", mc:variant="Full-width Image")
+          +fullimage("lead")
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+  center.wrapper.cb-default
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr(mc:repeatable="body", mc:variant="Content")
+          +column("column", {size: 1, title: false, aspect: 0}) This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+            br
+            br
+            +btn("body")
+            br
+            +btn("body", {size: 'small'})
+            br
+            +btn("body", {size: 'large'})
+            h1 This is dummy h1 copy.
+            h2 This is dummy h2 copy.
+            h3 This is dummy h3 copy.
+            h4 This is dummy h4 copy.
+            h5 This is dummy h5 copy.
+            .lead This is dummy lead content. It's larger than the default copy.
+        tr(mc:repeatable="body", mc:variant="Image")
+          +column("column", {size: 1, title: false, body: false})
+        tr(mc:repeatable="body", mc:variant="Two Columns")
+          td.cont.cont-2
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {fullimage: true, textlink: true})
+            +column("column-2", {fullimage: true, textlink: true})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Three Columns")
+          td.cont.cont-3.body-3.cntr-sm
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, title: false}) A Short Title
+            +column("column-2", {size: 3, aspect: 1.5, title: false}) A Short Title
+            +column("column-3", {size: 3, aspect: 1.5, title: false}) A Short Title
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (left image)")
+          td.cont.cont-64.body-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: false})
+            +column("column-2", {size: 6, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (right image)")
+          td.cont.cont-64.body-64(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: false})
+            +column("column-2", {size: 6, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
+          td.cont.cont-3.body-23.col-img-full
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
+          td.cont.cont-3.body-23.col-img-full(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Icons (left image)")
+          td.cont.cont-icon
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Icons (right image)")
+          td.cont.cont-icon(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, title: false, break: false})
+            .break(mc:hideable) &nbsp;
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Article List")
+          +article-container
+            +article-item("body")
+            +article-more("body")
+        tr(mc:repeatable="body", mc:variant="Event List")
+          td.cont.event-list
+            +eventlist
+            +eventmore
+        tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
+          +sectionheader("column")
+        tr(mc:repeatable="body", mc:variant="Section Break")
+          +breaksection(bgcolor)
+        tr(mc:repeatable="body", mc:variant="Break (dashed line)")
+          +break({line: "dashed"})
+        tr(mc:repeatable="body", mc:variant="Break (small solid line)")
+          +break({line: "small"})
+        tr(mc:repeatable="body", mc:variant="Ad with text")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad
+        tr(mc:repeatable="body", mc:variant="Ad full-width image")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad(true)
+        tr
+          td &nbsp;
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
+      table.outer
+        tr
+          +break
+        tr(mc:repeatable="footer", mc:variant="Social Networks (University)")
+          +social(socialuniversity)
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->

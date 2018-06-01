@@ -1,0 +1,107 @@
+{
+  "dev": true,
+  "width": 660,
+  "container": 730,
+  "bgcolor": "#F3F3F5",
+  "contact": "alumnioffice@fordham.edu",
+  "mastheadtop": {
+    "alt": "Fordham",
+    "size": 168,
+    "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/d13bad7e-ca10-42ab-9563-b0ec8843403f.png"
+  },
+  "mastheads": [
+    {
+      "variant": "Gabelli",
+      "url": "http://fordham.edu/gabelli",
+      "images": [{
+        "alt": "Gabelli School of Business",
+        "size": 263,
+        "src": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/73198bab-5300-473b-a263-f3c685a716dc.png"
+      }]
+    }
+  ],
+  "articles": [
+    {
+      "title": "This is an Article Title",
+      "desc": "Aenean vulputate eleifend tellus."
+    },
+    {
+      "title": "This is Another Article Title",
+      "desc": "Quisque rutrum. Aenean imperdiet. Nam eget dui. Etiam rhoncus."
+    },
+    {
+      "title": "This is a Longer Article Title It's Got a Much Longer Name Than the Others",
+      "desc": "Sed fringilla mauris sit amet nibh."
+    },
+    {
+      "title": "Here is a Fourth Article",
+      "desc": "Lorem ipsum dolor sit amet. Aenean vulputate eleifend tellus."
+    },
+    {
+      "title": "Now We Have Lots of Article Titles",
+      "desc": "Quisque rutrum. Aenean imperdiet. Sed fringilla mauris sit amet nibh."
+    },
+    {
+      "title": "This is the Last Article Title",
+      "desc": "Sed fringilla mauris sit amet nibh. Vivamus elementum semper nisi."
+    }
+  ],
+  "columns": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "Maecenas sed ante pellentesque, posuere leo id, eleifend dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    }
+  ],
+  "events": [
+    {
+      "title": "Lorem ipsum dolor sit amet",
+      "desc": "October 1 | Lincoln Center Campus"
+    },
+    {
+      "title": "Aenean vulputate eleifend tellus.",
+      "desc": "October 5 | Yankee Stadium"
+    },
+    {
+      "title": "Quisque rutrum. Aenean imperdiet.",
+      "desc": "October 11 | United Center"
+    },
+    {
+      "title": "Nam eget dui. Etiam rhoncus.",
+      "desc": "October 12 | Metropolitan Opera"
+    },
+    {
+      "title": "Sed fringilla mauris sit amet nibh.",
+      "desc": "October 15 | Fordham Law School"
+    }
+  ],
+  "socialuniversity": {
+    "size": 30,
+    "networks": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/fordhamgsb",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/036bc93d-b5d2-48ae-a6f3-f4d3a1a1441f.png"
+      },
+      {
+        "name": "Facebook",
+        "link": "https://www.facebook.com/GSBGraduate",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/0d86e2eb-1482-438d-8f9d-943ede8e8ac6.png"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/school/15099652/",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/e61ba8ae-addd-4297-95bb-8fcf8aa93441.png"
+      },
+      {
+        "name": "YouTube",
+        "link": "https://vimeo.com/fordhamgabelli",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/7003bec7-bba2-4008-9d87-cbeb79d31ec3.png"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://www.instagram.com/fordhamgsb",
+        "image": "https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/1a40c78f-86a8-4df4-8258-a7f29704c855.png"
+      }
+    ]
+  }
+}
