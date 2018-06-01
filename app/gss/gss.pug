@@ -1,0 +1,258 @@
+extends ../_layouts/default/default
+include ../_components/buttons/btn
+include ../_components/break/break
+include ../_components/columns/columns
+include ../_components/preheader/preheader
+include ../_components/articlelist/articlelist
+include ../_components/sectionheader/sectionheader
+include ../_components/fullimage/fullimage
+include ../_components/masthead/masthead
+include ../_components/footer/footer
+include ../_components/eventlist/eventlist
+include ../_components/social/social
+include ../_components/tagline/tagline
+include ../_components/fullad/fullad
+
+block style-template
+  <!-- build:css inline styles/style.css -->
+  link(rel='stylesheet', href='styles/gss.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/gss-editable.css', data-premailer='ignore')
+  <!-- /build -->
+  link(rel='stylesheet', href='styles/gss-inlined.css')
+
+block body
+  center.wrapper.cb-lead
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#900028" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+      table.outer.outer-alt
+        tr
+          +preheader
+        each masthead in mastheads
+          tr(mc:repeatable="masthead", mc:variant=masthead.variant)
+            +masthead(masthead)
+      table.outer
+        tr.leadstory(mc:repeatable="lead", mc:variant="Title")
+          +column("lead", {size: 1, heading: "h1", aspect: 0})
+            h3 Tuesday, November 29
+            .lead
+              strong Fordham Law School
+              br
+              | 150 West 62nd Street, New York, N.Y.
+        tr(mc:repeatable="lead", mc:variant="Content")
+          +column("lead", {size: 1, title: false, aspect: 0})
+            .lead This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
+        tr(mc:repeatable="lead", mc:variant="Call to Action")
+          td.inner.contents(style="padding-top: 0")
+            +btn("lead", {size: 'lg', center: true})
+        tr(mc:repeatable="lead", mc:variant="Full-width Image")
+          +fullimage("lead")
+        tr(mc:repeatable="lead", mc:variant="Image")
+          +column("lead", {size: 1, title: false, body: false, break: false})
+        tr(mc:repeatable="lead", mc:variant="Two Columns")
+          td.cont.cont-2.lead-2
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {fullimage: true, textlink: true})
+            +column("column-2", {fullimage: true, textlink: true})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (left image)")
+          td.cont.cont-64.lead-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
+            +column("lead", {size: 6, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Sixty-forty Columns (right image)")
+          td.cont.cont-64.lead-64(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
+            +column("lead", {size: 6, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (left image)")
+          td.cont.cont-3.col-img-full.lead-23
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Two-thirds Columns (right image)")
+          td.cont.cont-3.col-img-full.lead-23(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("lead", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("lead", {size: 23, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Icons (left image)")
+          td.cont.cont-icon.lead-icon
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Icons (right image)")
+          td.cont.cont-icon.lead-icon(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="lead", mc:variant="Break")
+          +break
+            | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+
+  center.wrapper.cb-default
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#f3f3f5" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+      table.outer
+        tr(mc:repeatable="body", mc:variant="Content")
+          +column("column", {size: 1, title: false, aspect: 0})
+        tr(mc:repeatable="body", mc:variant="Image")
+          +column("column", {size: 1, title: false, body: false})
+        tr(mc:repeatable="body", mc:variant="Call to Action")
+          td.inner.contents(style="padding-top: 0")
+            +btn("body")
+        tr(mc:repeatable="body", mc:variant="Two Columns")
+          td.cont.cont-2.body-2
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {fullimage: true, textlink: true})
+            +column("column-2", {fullimage: true, textlink: true})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Three Columns")
+          td.cont.cont-3.body-3.cntr-sm
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, title: false}) A Short Title
+            +column("column-2", {size: 3, aspect: 1.5, title: false}) A Short Title
+            +column("column-3", {size: 3, aspect: 1.5, title: false}) A Short Title
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (left image)")
+          td.cont.cont-64.body-64
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Sixty-forty Columns (right image)")
+          td.cont.cont-64.body-64(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 4, aspect: 1.5, fullimage: true, title: false, body: false, caption: true})
+            +column("column-2", {size: 6, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (left image)")
+          td.cont.cont-3.body-23.col-img-full
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Two-thirds Columns (right image)")
+          td.cont.cont-3.body-23.col-img-full(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 3, aspect: 1.5, fullimage: true, title: false, body: false})
+            +column("column-2", {size: 23, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Icons (left image)")
+          td.cont.cont-icon.body-icon
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Icons (right image)")
+          td.cont.cont-icon.body-icon(dir="rtl")
+            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+            +column("column", {size: 15, aspect: 1.5, title: false, body: false})
+            +column("column-2", {size: 45, aspect: false, heading: "h3", break: false})
+            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break(mc:hideable) &nbsp;
+        tr(mc:repeatable="body", mc:variant="Article List")
+          +article-container
+            +article-item("body")
+            +article-more("body")
+        tr(mc:repeatable="body", mc:variant="Event List")
+          td.cont.event-list
+            +eventlist
+            +eventmore
+        tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
+          +sectionheader("column")
+        tr(mc:repeatable="body", mc:variant="Section Break")
+          +breaksection(bgcolor)
+        tr(mc:repeatable="body", mc:variant="Break")
+          +break
+        tr(mc:repeatable="body", mc:variant="Break (dashed line)")
+          +break({line: "dashed"})
+        tr(mc:repeatable="body", mc:variant="Break (small solid line)")
+          +break({line: "small"})
+        tr(mc:repeatable="body", mc:variant="Ad with text")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad
+        tr(mc:repeatable="body", mc:variant="Ad full-width image")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                +fullad(true)
+        tr(mc:repeatable="body", mc:variant="Ad 2-column")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                td.cont.cont-2
+                  <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+                  +column("column", {fullimage: true, textlink: true, title: false, hidecontent:false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-2", {fullimage: true, textlink: true, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break() &nbsp;
+        tr(mc:repeatable="body", mc:variant="Ad 3-column")
+          +breaksection(bgcolor)
+            table(width="100%")
+              tr
+                td.cont.cont-3.cntr-sm
+                  <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
+                  +column("column", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-2", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  +column("column-3", {size: 3, aspect: 1.5, title: false, hidecontent: false, hidecontentrow: true, break: false}) A Short Title
+                  <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+            .break() &nbsp;
+        tr
+          td &nbsp;
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+  center.wrapper
+    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#f3f3f5" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+    .webkit
+      <!--[if (gte mso 9)|(IE)]><table width="730" align="center" cellpadding="0" cellspacing="0"><tr><td><![endif]-->
+      table.outer
+        tr
+          +break
+        tr
+          +social(socialgss)
+        tr
+          +tagline
+        tr
+          +footer
+            | *|IFNOT:ARCHIVE_PAGE|*
+
+            .footer-links
+              a(href="*|ARCHIVE|*", target="_blank") Web Version
+              |  &nbsp;
+              a(href="*|FORWARD|*", target="_blank") Forward to a Friend
+              |  &nbsp;
+              a(href="http://www.fordham.edu/onlinegiving", target="_blank") Make Your Gift
+
+            p.footer-sentto This email was sent to #[a(href="mailto:*|EMAIL|*") *|EMAIL|*] by <br /> *|LIST:ADDRESS|*
+
+            p.footer-sentto *|LIST:DESCRIPTION|*
+
+            .footer-links
+              a(href="*|UNSUB|*", target="_blank") Unsubscribe *|EMAIL|* from *|LIST:NAME|* emails.
+
+            | *|END:IF|*
+            p.footer-copyright Copyright *|CURRENT_YEAR|* *|USER:COMPANY|*. All&nbsp;rights&nbsp;reserved.
+      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
+    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
