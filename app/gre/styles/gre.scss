@@ -1,0 +1,59 @@
+// Default styles
+//-------------------
+
+@import "base";
+
+
+// Components
+//-------------------
+
+@import "block",
+        "break",
+        "column",
+        "preheader",
+        "masthead",
+        "fullimage",
+        "buttons",
+        "sectionheader",
+        "leadstory",
+        "articlelist",
+        "eventlist",
+        "fullad",
+        "social",
+        "tagline",
+        "footer";
+
+
+.ws-pad {
+  padding-left: 35px;
+}
+@include bp(620px) {
+  .otr {
+    padding-top: 70px !important;
+    padding-bottom: 70px !important;
+  }
+  .std {font-size: 22px !important;}
+  .record {font-size: 60px !important;}
+}
+
+@include bp(550px) {
+  .otr{
+    padding-top:50px !important;
+    padding-bottom:50px !important;
+  }
+  .std{font-size:19px !important;}
+  .record{font-size:45px !important;}
+}
+
+@include bp(400px) {
+  .record{font-size:35px !important;}
+}
+
+@include bp(350px) {
+  .otr{
+    padding-top:40px !important;
+    padding-bottom: 40px !important;
+  }
+  .std{font-size:18px !important;}
+  .record{font-size:35px !important;}
+}

@@ -15,10 +15,10 @@ include ../_components/fullad/fullad
 
 block style-template
   <!-- build:css inline styles/style.css -->
-  link(rel='stylesheet', href='styles/default.css', data-premailer='ignore')
-  link(rel='stylesheet', href='styles/default-editable.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/gre.css', data-premailer='ignore')
+  link(rel='stylesheet', href='styles/gre-editable.css', data-premailer='ignore')
   <!-- /build -->
-  link(rel='stylesheet', href='styles/default-inlined.css')
+  link(rel='stylesheet', href='styles/gre-inlined.css')
 
 block body
   center.wrapper.cb-lead
@@ -99,8 +99,6 @@ block body
             .break(mc:hideable) &nbsp;
         tr(mc:repeatable="lead", mc:variant="Break")
           +break
-        tr(mc:repeatable="lead", mc:variant="Empty")
-          td.inner.contents.col-empty(mc:edit=`lead-desc`)
             | This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
@@ -232,19 +230,29 @@ block body
       table.outer
         tr
           +break
-        tr(mc:repeatable="footer", mc:variant="Social Networks (Alumni)")
-          +social(socialalumni)
-        tr(mc:repeatable="footer", mc:variant="Social Networks (University)")
-          +social(socialuniversity)
-        tr(mc:repeatable="footer", mc:variant="Social Networks (Athletics)")
-          +social(socialathletics)
-        tr(mc:repeatable="footer", mc:variant="Ad (with text)")
-          +fullad
-        tr(mc:repeatable="footer", mc:variant="Ad (full-width image)")
-          +fullad(true)
-        tr(mc:repeatable="tagline", mc:variant="Tagline Default")
+        tr
+          +social(socialgre)
+        tr
           +tagline
         tr
           +footer
+            | *|IFNOT:ARCHIVE_PAGE|*
+
+            .footer-links
+              a(href="*|ARCHIVE|*", target="_blank") Web Version
+              |  &nbsp;
+              a(href="*|FORWARD|*", target="_blank") Forward to a Friend
+              |  &nbsp;
+              a(href="http://www.fordham.edu/onlinegiving", target="_blank") Make Your Gift
+
+            p.footer-sentto This email was sent to #[a(href="mailto:*|EMAIL|*") *|EMAIL|*] by <br /> *|LIST:ADDRESS|*
+
+            p.footer-sentto *|LIST:DESCRIPTION|*
+
+            .footer-links
+              a(href="*|UNSUB|*", target="_blank") Unsubscribe *|EMAIL|* from *|LIST:NAME|* emails.
+
+            | *|END:IF|*
+            p.footer-copyright Copyright *|CURRENT_YEAR|* *|USER:COMPANY|*. All&nbsp;rights&nbsp;reserved.
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
