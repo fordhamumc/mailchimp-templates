@@ -2,6 +2,10 @@
 //---------------------
 
 
+.event-list .event:last-child .event-hr {
+  display: none;
+}
+
 @include bp(sm) {
 
   .event-desc {

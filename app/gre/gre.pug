@@ -32,13 +32,6 @@ block body
           tr(mc:repeatable="masthead", mc:variant=masthead.variant)
             +masthead(masthead)
       table.outer
-        tr.leadstory(mc:repeatable="lead", mc:variant="Title")
-          +column("lead", {size: 1, heading: "h1", aspect: 0})
-            h3 Tuesday, November 29
-            .lead
-              strong Fordham Law School
-              br
-              | 150 West 62nd Street, New York, N.Y.
         tr(mc:repeatable="lead", mc:variant="Content")
           +column("lead", {size: 1, title: false, aspect: 0})
             .lead This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text.
@@ -177,7 +170,6 @@ block body
         tr(mc:repeatable="body", mc:variant="Event List")
           td.cont.event-list
             +eventlist
-            +eventmore
         tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
           +sectionheader("column")
         tr(mc:repeatable="body", mc:variant="Section Break")
