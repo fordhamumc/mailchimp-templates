@@ -62,29 +62,23 @@
 // Three column layout
 //---------------------
 
-.cont-64 {
+.cont-64 .col {
+	@include column-width( $content-area * .4 );
+}
 
-	.col {
-		@include column-width( $content-area * .4 );
-	}
-
-	.col-2 {
-		@include column-width( $content-area * .6 );
-	}
+.cont-64 .col-2 {
+	@include column-width( $content-area * .6 );
 }
 
 // Icon layout
 //---------------------
 
-.cont-icon {
+.cont-icon .col {
+	@include column-width( $content-area * .2 );
+}
 
-	.col {
-		@include column-width( $content-area * .2 );
-	}
-
-	.col-2 {
-		@include column-width( $content-area * .8 );
-	}
+.cont-icon .col-2 {
+	@include column-width( $content-area * .8 );
 }
 
 

@@ -8,7 +8,7 @@
 }
 
 .article-item {
-  padding: 15px 0;
+  padding: ($container-gutter - 10) 0;
   border-bottom: 1px solid $aside-background;
 }
 

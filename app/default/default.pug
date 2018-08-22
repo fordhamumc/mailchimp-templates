@@ -180,6 +180,10 @@ block body
           td.cont.event-list
             +eventlist
             +eventmore
+        tr(mc:repeatable="body", mc:variant="Event List 2")
+          td.inner.contents.event-list2
+            +eventlist2(null, {month:"Aug", day:14, title:"Yankee Stadium Tour and Game"})
+            +eventmore
         tr.cntr-sm(mc:repeatable="body", mc:variant="Section Header")
           +sectionheader("column")
         tr(mc:repeatable="body", mc:variant="Section Break")

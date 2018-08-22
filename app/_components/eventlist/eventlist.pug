@@ -4,7 +4,7 @@ mixin eventlist(namespace, options)
   - var settings = Object.assign({title: 'This is an event title', img: "https://placehold.it/285x160", url: "#"}, options)
   - settings.rsvp = settings.rsvp || settings.url
 
-  .event(mc:repeatable=`${namespace}article`)
+  .event(mc:repeatable=`${namespace}event`)
     <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><td width="#{width / 3}" valign="top"><![endif]-->
     .col.event-img
       table(width='100%')
@@ -34,6 +34,26 @@ mixin eventlist(namespace, options)
     .break &nbsp;
     .event-hr
 
+mixin eventlist2(namespace, options)
+  - namespace = (namespace) ? namespace + '-' : ''
+  - var settings = Object.assign({title: 'This is an event title', img: "https://placehold.it/285x160", url: "#"}, options)
+  - settings.rsvp = settings.rsvp || settings.url
+
+
+  table.events(width='100%')
+    tr(mc:repeatable=`${namespace}event2`)
+      td.event-date
+        .event-date-cont
+          .event-month(mc:edit=`${namespace}event-month`) #{settings.month}
+          .event-day(mc:edit=`${namespace}event-day`)  #{settings.day}
+      td.event-info
+        h4(mc:edit=`${namespace}event-title`)
+          a(href=settings.url, target="_blank") #{settings.title}
+        .textlink(mc:edit=`${namespace}event-desc`)
+          block
+          if (!block)
+            | Bronx, NY
+
 mixin eventmore(namespace)
   - namespace = (namespace) ? namespace + '-' : '';
   table(width="100%", mc:hideable)
@@ -42,5 +62,5 @@ mixin eventmore(namespace)
         .event-more(mc:edit=`${namespace}event-more`)
           block
           if (!block)
-            a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") +20 more events this month. View the calendar.
+            a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") See a complete list of events, including those in your area.
         .break &nbsp;

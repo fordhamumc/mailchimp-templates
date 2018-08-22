@@ -16,3 +16,41 @@
   text-align: center;
 }
 
+
+// Event list 2
+//---------------------
+
+.event-list2 {
+  padding-top: 5px;
+}
+
+.event-date,
+.event-info {
+  vertical-align: top;
+  border-bottom: 1px solid $aside-background;
+  padding-bottom: ($container-gutter - 10);
+  padding-top: ($container-gutter - 5);
+}
+
+.event-info h4 {
+  Margin-bottom: 4px;
+}
+
+.event-date {
+  width: $content-area * .1;
+}
+
+.event-date-cont {
+  display: inline-block;
+  text-align: center;
+}
+
+.event-month {
+  line-height: 1.4;
+}
+
+.event-day {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base * 2;
+  line-height: 1.2;
+}
