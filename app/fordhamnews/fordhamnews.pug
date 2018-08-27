@@ -7,6 +7,7 @@ include ../_components/masthead/masthead
 include ../_components/footer/footer
 include ../_components/social/social
 include ../_components/socialcard/socialcard
+include ../_components/eventlist/eventlist
 include ../_components/tagline/tagline
 
 block style-template
@@ -24,25 +25,10 @@ block body
       <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
       table.outer
         tr
-          +preheader(true) From Our Campus to Your Inbox
+          +preheader() From Our Campus to Your Inbox
         each masthead in mastheads
           tr
             +masthead(masthead)
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-    <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
-  center.wrapper.social-bnr--cont
-    <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#eeeeee"><tr><td><![endif]-->
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      table.outer
-        tr(dir="rtl")
-          td.cont.cont-2
-            <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
-            +column("viewlink", {aspect: 0, textlink: true, title: false, break: false})
-              a(href="*|ARCHIVE|*", target="_blank") View in your browser.
-            +column("social", {blank: true})
-              +social(socialuniversity, "social-bnr")
-            <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
   center.wrapper
@@ -69,30 +55,23 @@ block body
             table(width="100%")
               tr
                 td(mc:edit="column-2-desc", style="padding: 12px 25px; background-color: #fcfcfb; border: 1px solid #c7c2b6;") This is dummy copy. It has been placed here to demonstrate the look and feel of finished, typeset text.
+              tr
+                +break
         tr
-          +break({line: "dashed"})
+          +break
+      table.outer.if-list(mc:repeatable="insidefordham" mc:variant="list")
         tr
-          +break()
+          +sectionheader2("column")
         tr
-          td.inner.contents.if-logo
-            img(src="https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/57a87033-8db6-46f3-9635-947958e7e838.png", width="400")
-        tr.break-reduce
-          +break()
-      table.outer(mc:repeatable="insidefordham" mc:variant="no image")
-        tr.cntr-sm
-          +sectionheader("column")
-        tr
-          td.inner.contents.if-list(mc:edit="column-2-desc")
+          td.inner.contents.h4(mc:edit="column-2-desc")
             ul
               li Someday this space will be occupied by real copy that is meant to be read.
               li It is strictly for mock-ups. You may mock it up as strictly as you wish.
+      table.outer.if-list(mc:repeatable="insidefordham" mc:variant="list with image")
         tr
-          +break()
-      table.outer(mc:repeatable="insidefordham" mc:variant="with image")
-        tr.cntr-sm
-          +sectionheader("column")
+          +sectionheader2("column")
         tr
-          td.cont.cont-3.col-img-full.if-list
+          td.cont.cont-3.col-img-full
             <!--[if (gte mso 9)|(IE)]><table width="100%"><tr><![endif]-->
             +column("column", {size: 3, aspect: 1.75, fullimage: true, title: false, body: false})
             +column("column-2", {size: 23, aspect: false, title: false, break: false, hidecontent: false})
@@ -100,6 +79,16 @@ block body
                 li Someday this space will be occupied by real copy that is meant to be read.
                 li It is strictly for mock-ups. You may mock it up as strictly as you wish.
             <!--[if (gte mso 9)|(IE)]></tr></table><![endif]-->
+        tr
+          +break
+      table.outer(mc:repeatable="insidefordham" mc:variant="event list")
+        tr
+          +sectionheader2("column")
+        tr
+          td.inner.contents.event-list2
+            +eventlist2(null, {month: "Aug", day: 14, title: "Yankee Stadium Tour and Game"})
+            +eventmore(null, false)
+              a(href="https://news.fordham.edu/events", target="_blank") See a complete list of events.
             .break-cont &nbsp;
       .break-cont &nbsp;
 
@@ -108,13 +97,11 @@ block body
 
   center.wrapper.pq-cont
     <!--[if (gte mso 9)|(IE)]><table width="100%" align="center" bgcolor="#eeeeee"><tr><td><![endif]-->
-    .webkit
-      <!--[if (gte mso 9)|(IE)]><table width="730" align="center"><tr><td><![endif]-->
-      table.outer
-        tr.cntr-sm
-          +sectionheader("column") This Week on Social Media
-      <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
     table.outer
+      tr
+        td.inner.section-header2(style="padding-bottom: 15px")
+          .break-cont &nbsp;
+          .contents(mc:edit="social-sectionheader") On Social Media
       tr
         td.cont.cont-2
           <!--[if (gte mso 9)|(IE)]><table><tr><![endif]-->
@@ -131,6 +118,8 @@ block body
       table.outer
         tr
           +break
+        tr
+          +social(socialuniversity)
         tr
           +tagline
         tr

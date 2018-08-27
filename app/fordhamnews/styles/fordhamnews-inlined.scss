@@ -15,26 +15,51 @@
         "masthead-inlined",
         "social-inlined",
         "socialcard-inlined",
+        "sectionheader-inlined",
+        "eventlist-inlined",
         "tagline-inlined",
         "footer-inlined";
+
+
+//
+//  Masthead
+//  ---------------------------------
+
+.masthead {
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
 
 
 //
 //  Inside Fordham
 //  ---------------------------------
 
+.if-list .inner {
+  padding-top: 20px;
+}
+
+.if-list .section-header {
+  padding-top: 10px;
+}
+
 .if-logo img {
   width: 400px;
   overflow: visible;
 }
 
+.event-list2 {
+  padding-top: 0;
+}
 
-//
-//  Section header
-//  ---------------------------------
+.event-date {
+  padding-left: 15px;
+}
 
-.section-header {
+.h4 {
+  font-size: floor($font-size-base * 1.15);
   font-weight: $font-weight-bold;
+  line-height: 1.4;
 }
 
 

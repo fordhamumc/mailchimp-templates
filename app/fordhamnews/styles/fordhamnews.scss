@@ -14,14 +14,35 @@
         "masthead",
         "social",
         "socialcard",
+        "sectionheader",
+        "eventlist",
         "tagline",
         "footer";
+
 
 //
 //  Inside Fordham
 //  ---------------------------------
 
-.if-list ul {
-  Margin: 0;
-  padding-left: 25px;
+.if-list {
+  ul {
+    Margin: 0;
+    padding-left: 25px;
+  }
+}
+
+.h4 ul {
+  list-style: none;
+  padding-left: 15px;
+}
+
+.h4 li {
+  Margin-bottom: $container-gutter;
+}
+
+@include bp(md) {
+  .h4 ul,
+  .event-date {
+    padding-left: 0 !important;
+  }
 }

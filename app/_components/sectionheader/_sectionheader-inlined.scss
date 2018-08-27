@@ -10,3 +10,37 @@
   padding-top: 10px;
 }
 
+.section-header2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.section-header2 .contents {
+  font-size: floor($font-size-base * 1.1);
+  font-weight: $font-weight-bold;
+  text-align: center;
+  text-transform: uppercase;
+  width: auto;
+}
+
+.section-header2 .bg {
+  background: #f9f9f9;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+  font-size: ceil($font-size-base * .9);
+  padding: 5px 15px;
+  text-align: left;
+}
+
+.section-side {
+  border-bottom: 1px solid $content-border-color;
+  height: 1px;
+}
+
+@include bp(md) {
+  .section-header2 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

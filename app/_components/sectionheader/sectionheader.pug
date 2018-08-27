@@ -4,3 +4,13 @@ mixin sectionheader(namespace, options)
     block
     if (!block)
       | Section Header
+
+mixin sectionheader2(namespace, options)
+  - namespace = (namespace) ? namespace + '-' : ''
+  td.inner.section-header2
+    table(width="100%")
+      tr
+        td.contents.bg(valign="middle", mc:edit=`${namespace}sectionheader`)
+          block
+          if (!block)
+            | Section Header

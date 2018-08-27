@@ -54,13 +54,12 @@ mixin eventlist2(namespace, options)
           if (!block)
             | Bronx, NY
 
-mixin eventmore(namespace)
+mixin eventmore(namespace, inner)
   - namespace = (namespace) ? namespace + '-' : '';
+  - inner = typeof inner != "undefined" ? inner : true
   table(width="100%", mc:hideable)
     tr
-      td.inner.contents
-        .event-more(mc:edit=`${namespace}event-more`)
-          block
-          if (!block)
-            a(href="http://www.alumni.fordham.edu/calendar/list.aspx", target="_blank") See a complete list of events, including those in your area.
-        .break &nbsp;
+      td.event-more(class=`${(inner) ? "inner contents" : "em-cont"}`, mc:edit=`${namespace}event-more`)
+        block
+        if (!block)
+          a(href="https://news.fordham.edu/events", target="_blank") See a complete list of events, including those in your area.

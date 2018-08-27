@@ -2,16 +2,22 @@ include ../columns/columns
 
 mixin mastheadimage(options)
   - var top = Object.assign({}, mastheadtop, options.top)
+  - var topsize = top.size
+  if !isNaN(topsize)
+    - topsize = topsize + 'px'
   - var nimg = (options.images) ? options.images.length : 0
   a(href=options.url, target="_blank")
-    img(src=top.src, width=top.size, alt=`${top.alt}`, style=`width:  ${top.size}px`)
+    img(src=top.src, width=top.size, alt=`${top.alt}`, style=`width: ${topsize};`)
     if options.images
       br
-      img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width=top.size, alt='', style=`width:  ${top.size}px; margin-top: 3px`)
+      img(src='https://gallery.mailchimp.com/e19eaab070a2a271d949326af/images/2cd5e077-3742-40ed-b5d4-62dd39b9b34b.png', width=top.size, alt='', style=`width: ${topsize}; margin-top: 3px`)
       br
       each image, i in options.images
         - var spacer = (i === nimg - 1) ? '|' : ''
-        img(src=image.src, width=image.size, alt=`${image.alt} ${spacer}`, style=`width:  ${image.size}px`)
+        - var imagesize = image.size
+        if !isNaN(imagesize)
+          - imagesize = imagesize + 'px'
+        img(src=image.src, width=image.size, alt=`${image.alt} ${spacer}`, style=`width: ${imagesize}`)
 
 mixin masthead(options)
   if (options.dual)
