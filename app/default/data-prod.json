@@ -13,17 +13,17 @@
 
     {
       "variant": "Fordham",
-      "url": "http://fordham.edu"
+      "url": "https://www.fordham.edu"
     },
     {
       "variant": "Fordham with Title",
-      "url": "http://forever.fordham.edu/s/1362/rd/start.aspx",
+      "url": "https://www.fordham.edu",
       "dual": "Alumni News: October 2016"
 
     },
     {
       "variant": "Gabelli",
-      "url": "http://fordham.edu/gabelli",
+      "url": "https://www.fordham.edu/gabelli",
       "images": [{
         "alt": "Gabelli School of Business",
         "size": 263,
@@ -32,7 +32,7 @@
     },
     {
       "variant": "FCLC",
-      "url": "http://fordham.edu/fclc",
+      "url": "https://www.fordham.edu/fclc",
       "images": [{
         "alt": "College at",
         "size": 200,
@@ -46,7 +46,7 @@
     },
     {
       "variant": "FCRH",
-      "url": "http://fordham.edu/fcrh",
+      "url": "https://www.fordham.edu/fcrh",
       "images": [{
         "alt": "College at Rose Hill",
         "size": 295,
@@ -55,7 +55,7 @@
     },
     {
       "variant": "GRE",
-      "url": "http://fordham.edu/gre",
+      "url": "https://www.fordham.edu/gre",
       "images": [
         {
           "alt": "Graduate School of Religion",
@@ -71,7 +71,7 @@
     },
     {
       "variant": "GSAS",
-      "url": "http://fordham.edu/gsas",
+      "url": "https://www.fordham.edu/gsas",
       "images": [{
         "alt": "Graduate School of",
         "size": 196,
@@ -85,7 +85,7 @@
     },
     {
       "variant": "GSE",
-      "url": "http://fordham.edu/gse",
+      "url": "https://www.fordham.edu/gse",
       "images": [{
         "alt": "Graduate School of Education",
         "size": 300,
@@ -94,7 +94,7 @@
     },
     {
       "variant": "GSS",
-      "url": "http://fordham.edu/gss",
+      "url": "https://www.fordham.edu/gss",
       "images": [{
         "alt": "Graduate School of",
         "size": 196,
@@ -108,7 +108,7 @@
     },
     {
       "variant": "LAW",
-      "url": "http://fordham.edu/law",
+      "url": "https://www.fordham.edu/law",
       "images": [{
         "alt": "School of Law",
         "size": 141,
@@ -117,7 +117,7 @@
     },
     {
       "variant": "PCS",
-      "url": "http://fordham.edu/pcs",
+      "url": "https://www.fordham.edu/pcs",
       "images": [
         {
           "alt": "School of Professional",
@@ -133,7 +133,7 @@
     },
     {
       "variant": "MC",
-      "url": "http://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&gid=1&pgid=359",
+      "url": "https://forever.fordham.edu/s/1362/rd/index.aspx?sid=1362&gid=1&pgid=359",
       "top": {
         "alt": "Marymount College of Fordham University",
         "size": 321,
