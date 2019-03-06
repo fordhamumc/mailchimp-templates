@@ -160,20 +160,20 @@ block body
       table.outer
         tr
           +break
-        tr(mc:repeatable="footer", mc:variant="Social Networks (Alumni)")
-          +social(socialalumni)
-        tr(mc:repeatable="footer", mc:variant="Social Networks (University)")
-          +social(socialuniversity)
-        tr(mc:repeatable="footer", mc:variant="Social Networks (Athletics)")
-          +social(socialathletics)
+        tr(mc:repeatable="footer", mc:variant="Tagline Default")
+          +tagline()
+        tr(mc:repeatable="footer", mc:variant="Tagline Giving Day")
+          +tagline('giveday')
         tr(mc:repeatable="footer", mc:variant="Ad (with text)")
           +fullad
         tr(mc:repeatable="footer", mc:variant="Ad (full-width image)")
           +fullad(true)
-        tr(mc:repeatable="tagline", mc:variant="Tagline Giving Day")
-          +tagline('giveday')
-        tr(mc:repeatable="tagline", mc:variant="Tagline Default")
-          +tagline()
+        tr(mc:repeatable="social", mc:variant="Social Networks (Alumni)")
+          +social(socialalumni)
+        tr(mc:repeatable="social", mc:variant="Social Networks (University)")
+          +social(socialuniversity)
+        tr(mc:repeatable="social", mc:variant="Social Networks (Athletics)")
+          +social(socialathletics)
         tr
           +footer
       <!--[if (gte mso 9)|(IE)]></td></tr></table><![endif]-->
